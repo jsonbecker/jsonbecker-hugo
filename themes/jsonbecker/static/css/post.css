@@ -1,0 +1,31 @@
+
+pre, code { 
+  font-family: Hack, monospace; 
+  font-size: 0.80rem;
+}
+
+.post-list {
+  
+}
+
+.gutter{
+  clear: both;
+}
+.post-item {
+  list-style-type: none;
+  clear: both;
+  padding-top: 5;
+  padding-bottom: 5;
+  display: block;
+}
+
+.date {
+  float: left;
+  padding: 5 10 5 0 ;
+}
+
+.post-title {
+  padding: 5 0 5 10 ;
+}
+
+

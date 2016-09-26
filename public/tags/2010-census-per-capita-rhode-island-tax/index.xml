@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2010 Census Per Capita Rhode Island Tax on JSONBecker</title>
+    <link>http://www.jsonbecker.com/tags/2010-census-per-capita-rhode-island-tax/</link>
+    <description>Recent content in 2010 Census Per Capita Rhode Island Tax on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Oct 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.jsonbecker.com/tags/2010-census-per-capita-rhode-island-tax/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GoLocalProv -- Bad at Math</title>
+      <link>http://www.jsonbecker.com/post/golocalprov-bad-at-math/</link>
+      <pubDate>Sun, 16 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.jsonbecker.com/post/golocalprov-bad-at-math/</guid>
+      <description>&lt;p&gt;There are lots of things that are misleading about &lt;a href=&#34;http://www.golocalprov.com/news/10820/&#34;&gt;this story&lt;/a&gt; published on GoLocalProv. It is utterly ridiculous to report numbers like how many total tax dollars are being collected by different communities for the sake of comparison. You cannot compare a total number like this which is so dependent upon things like, I don&amp;rsquo;t know, the &lt;strong&gt;dramatic difference in the size of these communities&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;In the 2010 Census, Providence had a population of &lt;strong&gt;178,042&lt;/strong&gt;. New Shoreham had a population of &lt;strong&gt;1,051&lt;/strong&gt;. Is anyone surprised that one of these communities is on the top of the list and the other on the bottom?&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s more than size at play, but the least GLP could have done was to correct for population and present the per capita levy. All it takes is one quick Google search and we can get the 2010 Census numbers which are probably pretty damn close to the current population so we can get a decent, somewhat level playing field to compare cities and towns on. &lt;a href=&#34;http://www.dlt.ri.gov/lmi/census/pop/townpop.htm&#34;&gt;Here&amp;rsquo;s the 2010 Census numbers from the RI Department of Labor and Training&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So with 5 minutes in Excel (thanks, GLP, for making your charts images instead of tables), here&amp;rsquo;s a much more interesting list:&lt;/p&gt;
+
+&lt;table width=&#34;250&#34; border=&#34;1&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;
+  &lt;colgroup&gt; 
+    &lt;col width=&#34;85&#34; align=&#34;left&#34;&gt;&lt;/col&gt;
+    &lt;col width=&#34;69&#34; align=&#34;right&#34;&gt;&lt;/col&gt;
+    &lt;col width=&#34;50&#34; align=&#34;right&#34;&gt;&lt;/col&gt;
+    &lt;col width=&#34;55&#34; align=&#34;right&#34;&gt;&lt;/col&gt;
+  &lt;/colgroup&gt;
+  &lt;tbody style=&#34;background-color:white&#34;&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;75&#34; height=&#34;12&#34; align=&#34;left&#34;&gt;
+      **Community**
+    &lt;/td&gt;
+    &lt;td width=&#34;70&#34;&gt;
+      **FY12 Levy**
+    &lt;/td&gt;
+    &lt;td width=&#34;50&#34;&gt;
+      **2010 Pop**
+    &lt;/td&gt;
+    &lt;td width=&#34;55&#34;&gt;
+      **Per Capita**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      New Shoreham
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$8,187,149
+    &lt;/td&gt;
+    &lt;td&gt;
+      1,051
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$7,790**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Jamestown
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$18,653,102
+    &lt;/td&gt;
+    &lt;td&gt;
+      5,405
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$3,451**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Barrington
+
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$55,162,905
+    &lt;/td&gt;
+    &lt;td&gt;
+      16,310
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$3,382**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      East Greenwich
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$44,015,850
+    &lt;/td&gt;
+    &lt;td&gt;
+     13,146
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$3,348**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      West Greenwich
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$17,703,664
+    &lt;/td&gt;
+    &lt;td&gt;
+      6,135
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,886**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Little Compton
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$10,004,530
+    &lt;/td&gt;
+    &lt;td&gt;
+      3,492
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,865*&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Narragansett
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$44,732,180
+    &lt;/td&gt;
+    &lt;td&gt;
+      15,868
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,819**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Westerly
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$63,547,705
+
+    &lt;/td&gt;
+    &lt;td&gt;
+      22,787
+    &lt;/td&gt;
+    &lt;td&gt;
+    **\$2,789**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Charlestown
+
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$21,611,447
+
+    &lt;/td&gt;
+    &lt;td&gt;
+      7,827
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,761**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Portsmouth
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$45,807,376
+    &lt;/td&gt;
+    &lt;td&gt;
+     17,389
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,634**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Warwick
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$216,867,072
+    &lt;/td&gt;
+    &lt;td&gt;
+      82,672
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,623**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Middletown
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$41,588,607
+    &lt;/td&gt;
+    &lt;td&gt;
+      16,150
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,575**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Newport
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      \$63,519,526
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      24,672
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      **\$2,575**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+    North Kingstown
+    &lt;/td&gt;
+    &lt;td&gt;
+    \$67,598,341
+    &lt;/td&gt;
+    &lt;td&gt;
+     26,486
+    &lt;/td&gt;
+    &lt;td&gt;
+    **\$2,552**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Scituate
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      \$25,492,269
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      10,329
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      **\$2,468**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Lincoln
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      \$51,960,896
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      21,105
+    &lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;
+      **\$2,462**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Foster
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$11,221,591
+    &lt;/td&gt;
+    &lt;td&gt;
+      4,606
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,436**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Johnston
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$68,570,772
+    &lt;/td&gt;
+    &lt;td&gt;
+     28,769
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,383**
+    
+    &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      North Smithfield
+    &lt;/td&gt;
+    &lt;td&gt;
+      \$27,592,721
+    &lt;/td&gt;
+    &lt;td&gt;
+     11,967
+    &lt;/td&gt;
+    &lt;td&gt;
+      **\$2,306**
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td height=&#34;12&#34;&gt;
+      Smithfield
+    &lt;td&gt;
+      \$49,357,148
+    &lt;/td&gt;
+&lt;td&gt;
+ 21,430
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td&gt;
+**\$2,303**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Tiverton
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$35,771,014
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 15,780
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,267**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Cranston
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$180,715,853
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 80,387
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,248**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+South Kingstown
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$66,120,832
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 30,639
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,158**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Hopkinton
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$17,630,988
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 8,188
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,153**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Glocester
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$20,971,276
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 9,746
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,152**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+North Providence
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$67,218,014
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 32,078
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,095**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Warren
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$21,971,276
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 10,611
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,071**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Richmond
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$15,705,615
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 7,708
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$2,038**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Exeter
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$12,619,379
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 6,425
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,964**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Providence
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$324,460,407
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 178,042
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,822**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+West Warwick
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$52,337,257
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 29,191
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,793**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Coventry
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$61,860,355
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 35,014
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,767**
+
+&lt;/td&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;tr&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;td height=&#34;12&#34;&gt;
+Cumberland
+
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$57,890,766
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+33,506
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,728**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&#34;12&#34;&gt;
+Burrillville
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$26,687,010
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+15,955
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,673**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&#34;12&#34;&gt;
+Bristol
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$35,697,780
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+22,954
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,555**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&#34;12&#34;&gt;
+Pawtucket
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$96,340,757
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+71,148
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,354**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&#34;12&#34;&gt;
+Woonsocket
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$53,984,558
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+41,186
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$1,311**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&#34;12&#34;&gt;
+Central Falls
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+\$13,148,778
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+ 19,376
+&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;
+**\$679**
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,8 @@
+{{ partial "post_header.html" }} 
+  <div class = 'page-list col-3'>
+    {{- range .Data.Pages}}
+      {{ partial "li.html" . }}
+    {{- end}}
+  </div>
+</body>
+</html>

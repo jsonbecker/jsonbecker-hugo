@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Non Mers Pension Pension Reform Politics Providence Public Sector Unions Rhode Island Ri Rstats Union on JSONBecker</title>
+    <link>http://www.jsonbecker.com/tags/non-mers-pension-pension-reform-politics-providence-public-sector-unions-rhode-island-ri-rstats-union/</link>
+    <description>Recent content in Non Mers Pension Pension Reform Politics Providence Public Sector Unions Rhode Island Ri Rstats Union on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Jan 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.jsonbecker.com/tags/non-mers-pension-pension-reform-politics-providence-public-sector-unions-rhode-island-ri-rstats-union/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Providence Pensions-- Let&#39;s Call a Spade a Spade (or the COLA a Raise)</title>
+      <link>http://www.jsonbecker.com/post/providence-pensions-lets-call-a-spade-a-spade-or-the-cola-a-raise/</link>
+      <pubDate>Wed, 25 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.jsonbecker.com/post/providence-pensions-lets-call-a-spade-a-spade-or-the-cola-a-raise/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/#!/tednesi&#34;&gt;Ted Nesi&lt;/a&gt; has done a pretty solid job tracing the &lt;a href=&#34;http://www.wpri.com/dpp/news/local_news/providence/prov-pensions-hit-by-comedy-of-errors?2&#34;&gt;history&lt;/a&gt; of some awful decisions made by union-dominated boards that resulted in a significant number of retirees in the early-90s receiving 5% or 6% annually compounded interest on their retirement income. These are often called COLAs, or &lt;a href=&#34;http://en.wikipedia.org/wiki/Cost-of-living_adjustment&#34;&gt;cost-of-living adjustments&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today, I am inspired by Nesi&amp;rsquo;s &lt;a href=&#34;http://blogs.wpri.com/2012/01/25/chart-the-decline-and-fall-of-the-providence-pension-system/&#34;&gt;post&lt;/a&gt; on the rapid decline of the Providence municipal pension fund health that occurred since 6% &amp;ldquo;COLA&amp;rdquo; was introduced in 1989 through today. You see, something has really been bugging me about the conversation on municipal pensions in Rhode Island. A true COLA is key to ensuring that purchasing power is maintained throughout retirement. Essentially, quality of life and ability to buy required goods should be consistent from the day you retire until the day you die. This is a goal that makes a lot of sense. But the cost of goods has not increased 5% or 6% year-over-year ever in the past twenty years &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I chose a key moment in the history of Providence municipal pensions&amp;ndash; a 1991 consent decree &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:decree&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:decree&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; that then Mayor Buddy Cianci signed, solidifying and legitimizing the extremely high &amp;ldquo;COLA&amp;rdquo; for workers. I wanted to know, &amp;ldquo;What would a worker retiring in the following year (1992) be making today if they retired with a \$25,000 annual pension and had a 6% &amp;lsquo;COLA&amp;rsquo;, 5% &amp;lsquo;COLA&amp;rsquo;, or a COLA based on the Northeast CPI-U?&amp;rdquo; Not wanting to make a key mistake and &lt;a href=&#34;http://en.wikipedia.org/wiki/Cost-of-living_adjustment#CPI_is_not_a_COLA&#34;&gt;equate a CPI with a COLA&lt;/a&gt;, I increased the CPI-U for each year by 25%, figuring that this is a reasonable approximation of the marginal taxes that would be paid on additional income by these retirees.&lt;/p&gt;
+
+&lt;p&gt;I suspected that 5% and 6% do not really result in a cost-of-living adjustment, but rather a clear wage increase for retired workers. I have no problem maintaining parity or near-parity with retirement level income, but there&amp;rsquo;s absolute no reason someone who retired should receive a wage. My support for a true COLA is so strong that I made the adjustment for taxes on income!&lt;/p&gt;
+
+&lt;p&gt;What were the results?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;|filename|/images/inflation1.png&#34; alt=&#34;Amazing what compound interest does&#34; title=&#34;Comparing COLA to CPI-U&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A Providence employee who retired in 1992 with a \$25,000 pension would be receiving \$46,132 in 2011 if their retirement was increased by inflation + the marginal tax rate (assumed here as 25%). But a Providence employee who retired with the same pension in 1992 under the conditions in Providence could expect \$63,174 at 5% or \$75,640 at the 5% and 6% rates, respectively. This is a MASSIVE difference which cannot constitute a &amp;ldquo;COLA&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;So I move that we stop referring to these particular pensions as having a &amp;ldquo;COLA&amp;rdquo;, because what really happened was a fixed raise was created to last for the rest of retirees&amp;rsquo; lives.&lt;/p&gt;
+
+&lt;p&gt;Some additional neat facts:&lt;/p&gt;
+
+&lt;p&gt;Over 20 years, an individual who has a 6% raise per year will have collected \$228,672 more than someone who had a COLA. An individual with a 5% raise per year will have collected \$135,681.10 over the same 20 year period.&lt;/p&gt;
+
+&lt;p&gt;And of course, here&amp;rsquo;s the code I used to produce the graph above in R&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;compound &amp;lt;- function(start,rate,timespan){
+  x &amp;lt;- vector(mode = &#39;numeric&#39;, length = timespan)
+  for(i in 1:timespan){
+    if(i == 1){
+      x[i] &amp;lt;- start
+    }
+    else{
+          x[i] &amp;lt;- x[i-1]*(1+rate)
+    }
+  }
+  return(x)
+ }
+    
+inflate &amp;lt;- function(start, inflation){
+  x &amp;lt;- vector(mode=&#39;numeric&#39;, length=dim(inflation)[1])
+  for(i in 1:dim(inflation)[1]){
+    if(i==1){
+      x[i] &amp;lt;- start
+    }
+    else{
+      x[i] &amp;lt;- x[i-1]*(1+(1.25*(inflation[i,2]/100)))
+    }
+  }
+  return(x)
+}
+
+cpiu &amp;lt;- cbind(seq(from=1992,to=2011), c(0.0, 2.8, 2.4, 2.6, 2.8, 2.4, 1.4, 
+                                        2.1, 3.4, 2.8, 2.1, 2.8, 3.5, 3.6,
+                                        3.6, 2.6, 4.0, 0.0, 2.0, 3.0))
+
+inflation &amp;lt;- data.frame(cbind(cpiu[,1], inflate(25000, cpiu), 
+                              compound(25000, .05, 2), 
+                              compound(25000, .06, 20)))
+
+names(inflation) &amp;lt;- c(&#39;year&#39;, &#39;NECPI.U&#39;, &#39;FivePercent&#39;, &#39;SixPercent&#39;)
+png(filename=&amp;quot;inflation.png&amp;quot;, height=640, width=800, bg=&amp;quot;white&amp;quot;)
+par(mar=c(6, 5, 5, 3))
+plot(inflation$NECPI.U, type=&#39;o&#39;, col=rgb(0,0.5,0), ylim=c(20000,80000), 
+     axes=FALSE, ann=FALSE, lwd=1.5)
+axis(1, at=1:20, lab=inflation$year)
+axis(2, las=1, at=seq(from=20000, to=80000, by=10000))
+lines(inflation$FivePercent, type=&amp;quot;o&amp;quot;, pch=22, lty=2, col=rgb(0,0,0.5), 
+      lwd=1.5)
+lines(inflation$SixPercent, type=&amp;quot;o&amp;quot;, pch=23, lty=2, col=&#39;red&#39;, lwd=1.5)
+title(main=&amp;quot;COLA or Raise?\n CPI-U v. Pension COLAs in Providence&amp;quot;, col.    main=&amp;quot;black&amp;quot;)
+title(xlab=&amp;quot;Year&amp;quot;)
+title(ylab=&amp;quot;Annual Pension in Dollars\n&amp;quot;)
+legend(1, 80000, c(&#39;CPI-U NE + 25%&#39;, &#39;Five Percent&#39;, &#39;Six Percent&#39;), col=c(   &#39;green&#39;, &#39;blue&#39;, &#39;red&#39;), pch=21:23, lty=1:3)
+text(1,25000, 25000, pos=3, col=&#39;black&#39;)
+text(20, max(inflation$SixPercent), round(max(inflation$SixPercent), 0), pos=3,     col=&#39;red&#39;)
+text(20, max(inflation$FivePercent), round(max(inflation$FivePercent), 0)   ,pos=3, col=rgb(0,0,0.5))
+text(20, max(inflation$NECPI.U), round(max(inflation$NECPI.U), 0), pos=3,     col=rgb(0,0.5,0))
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;This post reflects my personal views and opinions. I am a member of Local 2012 of the RIAFT and was a supporter of the statewide pension reform in the Fall of 2011. I am also a resident of Providence.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;http://www.bls.gov/ro1/9140.htm&#34;&gt;Consumer Price Index Northeast from the Bureau of Labor Statistics&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:decree&#34;&gt;See the first link in this post
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:decree&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;Sorry this code is not well-commented, but I believe it&amp;rsquo;s fairly straight forward
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

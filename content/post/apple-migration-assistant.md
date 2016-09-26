@@ -1,0 +1,43 @@
+---
+title: Apple Migration Assistant
+date: 2011-09-14
+author: Jason
+category: Apple
+tags: Apple, Linux, Mac Mini, Macbook Pro, Migration Assistant, OSX, OSX Lion
+summary: Apple makes setting up a new Mac a breeze.
+---
+
+For several years I considered switching to Apple. I've been a wannabe believer since OSX. I was using [Linux][]as my every day operating system. This was one part about learning, one part frustration with Windows perpetual funky instabilities, and part a growing appreciation for things like the command line interface and free and open source
+software. OSX offered many things I liked-- [a great CLI][] I was already getting intimately familiar with, [rock hard stability][], beautiful graphic effects like those I enjoyed with Compiz, etc. More importantly, OSX could do all this while providing me with a decent experience on some of the software I'd love to dump but simply could not like Microsoft Office. Additionally, I wouldn't have all kinds of problems on the web surfing pages that were supposedly platform neutral and using browsers that were supposedly cross-platform (Flash on Linux was a joke as recently as two years ago when I abandoned Linux as my every day operating system). Of course, perhaps first and foremost, I would never have to worry about whether an update will cause a conflict because I was forced to use a deprecated driver to get my hardware to work or that some of my hardware would be limited because there wasn't a fully functional driver available. But every time it came to a decision on purchasing a new machine, I could not bring myself to pay the "[Apple tax][]". I was a [student][], and while I've generally felt that the Macbook Pro/Powerbook have had reasonable economics and a physical
+design well beyond their competitors, I just couldn't justify the price to power ratio. So I continued to build my own desktops and work on an IBM Thinkpad I would buy after finding a good deal.
+
+A year ago that changed when I purchased a 13" Macbook Pro. My laptop had totally crapped out on me and I needed a replacement fast. Combining the education discount (which I used a recently expired student ID for), a free printer and iPod, and tax-free weekend in Massachusetts meant I could buy a brand new MBP for around \$900. Nothing really could compete with this-- the price was right, the battery life, weight, size, and power were all right and I couldn't even
+reach parody with another PC. So I purchased my Macbook Pro.
+
+I was very happy with that laptop. A great keyboard is a must, and the Macbook Pro was the best I used other than my old Thinkpad T43. In addition to the keyboard, I also got a trackpad that was far superior to any I had used before that actually allowed me to ditch the mouse I normally carried with me everywhere I went. The battery life was a
+ridiculous 8hrs-- my previous laptop got 2.5hrs at best and I used to think that was an accomplishment. Power wise I never ran into any hiccups. The stability was solid. OSX was easy to adopt to as a full-time OS and I was on my merry way.
+
+Except one, tiny, problem.
+
+I hate using a laptop if I don't have to. Whenever I was home I plugged right into a much bigger screen, an external keyboard, and mouse and sat a desk to use my computer. Call me old-fashioned, but I have never been as comfortable working on a laptop as I am using a separate keyboard, mouse, and monitor. And laptop speakers? Don't even get me started.
+
+Now none of this would be a problem because I used my laptop on the go. At the time I purchased my machine, I was just coming off of five years of school, during which I constantly worked in libraries, coffee shops, friends houses, etc. I also had worked as a consultant at several places over the past year, so bringing my workstation with me on the go was a
+necessity. One month after I got my laptop, I was working a normal desk job but was assigned a desktop from the stone age that was barely functional. I found myself doing a significant amount of my work on my personal laptop that I brought with me from home. But about six months ago, my job purchased me a new desktop that was blazing fast. I work with confidential data virtually all day long, which was a huge hassle when I used an old machine. I often performed various data management activities with no more than one application open on my work computer, prepare the data in non-confidential format, and ship it off to my laptop for more in-depth analysis. The workflow was atrocious. Having a
+functional desktop made it pointless to bring my laptop to work-- most of what I do couldn't be done on a personal machine anyway. So while my workflow became much more efficient, my laptop lost utility. More and more I found myself simply leaving my laptop plugged in at my desk at home and operating it like a desktop. Fast forward to today and I fried
+my battery, which now holds only 3-4 hours of charge and I haven't used my laptop as a portable computer in months.
+
+I decided I should sell my laptop and replace it with a Mac Mini, which brings me to the title of this post. Perhaps the most pleasant experience I've had on any computer since I first used a Gateway 2000 c. 1992 came from using Apple's Migration Assistant. Upon turning on my Mac Mini for the first time, the setup wizard offered  the opportunity to transfer files and settings from another computer. Now this is a feature that browsers and other software have offered for years and the experience has never been all that useful to me. But this time I decided
+to try it and I plugged my laptop into my Mac Mini using an ethernet cable. Approximate 2 hours later my Mac Mini restarted and the experience was breathtaking.
+
+Everything, and I mean everything, transferred over to my new computer. All my applications were installed. All of my settings, including those made by software like Onyx and Geek Tool, transferred over. All my documents were where I left them. The experience was indistinguishable from logging onto my laptop.
+
+This is an astonishingly great and useful feature. It seems so simple in theory, but execution can easily be botched. Apple hit a home run with Migration Assistant, at least as of the version that comes standard in
+Lion.
+
+Ultimately, my experience with Migration Assistant, along with the great resale value on my Macbook Pro, has pretty much ensured that my next computer will be an Apple.
+
+[Linux]: http://images.memegenerator.net/instances/400x/6300003.jpg
+[a great CLI]: http://imgs.xkcd.com/comics/sandwich.png
+[rock hard stability]: http://www.eatliver.com/img/2005/294.jpg
+[Apple tax]: http://www.urbandictionary.com/define.php?term=Apple+Tax
+[student]: http://hollywoodroaster.com/wp-content/uploads/2008/10/maruchan.jpg

@@ -1,0 +1,35 @@
+---
+title: "Garrahy Complex: Rules for Public Investment in Parking"
+author: Jason P. Becker
+date: 2014-01-07
+tags: providence, urban, transit, parking, downcity
+---
+
+James over at [TransportPVD](http://www.transportprovidence.blogspot.com) has a great [post today](http://www.transportprovidence.blogspot.com/2014/01/how-do-you-prevent-surface-parking-lot.html) talking about a Salt Lake City ordinance that makes property owners responsible for providing a bond that funds the landscaping and maintenance of vacant lots left after demolition. I love this as much as he does and would probably add several other provisions (like forfeiting any tax breaks on that property or any other property in the city and potentially forfeiture of the property itself if a demolition was approved based on site plans that are not adhered to within a given time frame). Ultimately, I do think the best solution to surface parking where it doesn't belong, of either the temporary or permanent (and isn't it all actually permanent?) kind, is a [land value tax](http://streetsblog.net/2012/12/10/want-to-end-the-scourge-of-surface-parking-tax-land-not-buildings/).
+
+James goes one step further and suggests that we should adopt some similar rules around ALL parking developments and proposes a few. His hopes were that a mayoral candidate would chime in. For now, he will have to do with me.
+
+His recommendations are built somewhat specific to the commission looking at building a state-funded parking garage in front of the [Garrahy Complex](http://www.gcpvd.org/2013/10/24/projo-commission-meets-to-discuss-possible-garrahy-complex-parking-garage/) in Downcity, about which many urbanists and transit advocates have expressed reservations or outright rejection. They are:
+
+> 1. The garage is parking neutral. As many spots need to be removed from the downtown as are added. 
+> 2. An added bonus would be if some of the spots removed were on-street ones, to create protected bike lanes or transit lanes with greenery separating them from car traffic.
+> 3. The garage has the proposed bus hub.
+> 4. There are ground-level shops.
+> 5. The garage is left open 24-hours so that it can limit the need for other lots (this happens when a garage is used only during the day, or only at night, instead of letting it serve both markets).
+> 6. Cars pay full market price to park.
+
+(Note: I've numbered rather than kept the bullets of the original to make responding easier.)
+
+I disagree with the first and second point, which are really one and the same. We are in a district that has tremendously underutilized land. We want that space to be developed and as a result of that development we expect their to be much increased need for transit capacity. The goal should be *both* to increase accessibility *and* increase the share of transit capacity offered by walking, biking, or riding a bus or light rail. This does not require that we demand a spot-for-spot when building a public garage. I agree with the sentiment but disagree with the degree. Part of building rules and policies like this is to ensure comprehensive consideration of the transit context when developing parking. I see no reason to a priori assume that garages should only be permitted if they eliminate the same number of spaces they create.
+
+The reason I combine these two points is because the city does not have the ability to remove off-street parking that is not publicly owned. Investing in smaller garages by footprint that have to be built taller and provide no change in capacity probably make no sense at all. If we're going to build any kind of public garage at all, it should be with the goal of consolidating parking into infrastructure with reasonable land utilization. We would rather 3 or 4 large garages properly located than all of the current lots. Limiting their size because of the flexibility available due to reducing on-street parking or the footprint on existing lots doesn't achieve that and doesn't factor in orders-of-magnitude changes in capacity we should need for all transit modes in the next 20 years.
+
+On point three, I am skeptical. I like the idea of improving bus infrastructure when building parking infrastructure in general. In fact, I voted against the \\$40M Providence road paving bond even though that was much needed maintenance. My rationale was purely ideological-- we should not use debt to pay for car maintenance without also investing in ways to reduce future maintenance costs through better utilization of those roads. However, I have a hard time believing that the Garrahy location is any good as a bus hub. If RIPTA did a great job identifying the need for an additional bus hub that the Garrahy location met the criteria for, I think it's a reasonable idea. Short of that, it feels like throwing the transit community a wasteful bone.
+
+I mostly agree on point four, but I doubt at the scale James would like to see. I think an appropriate level is probably not that different from the recently erected Johnson and Wales garage. The reality is that street-level retail is the right form, but there isn't sufficient foot traffic to support it right now and won't be for some time. There has to be street-level activation of any garage built in this area, but the square footage is likely fairly timid.
+
+I absolutely agree with point five, without qualification. Not a dime should be spent on a public parking spot that is closed at any point in time, anywhere in the city. I would actually ditto this for surface parking lots on commercial properties of any kind after business hours. Not only should they have to be open, they should have to provide signs indicating the hours of commercial activity when parking is restricted and the hours when parking is available to the public. These hours of operations should require board approval. Owners could choose to charge during these off hours, but cars must be able to access the lot.
+
+And point six should be a given for any public parking.
+
+The real problem with Garrahy, in my opinion, is the cost is absurd, likely to be at least \\$35,000 per space. There is plenty of existing parking, suggesting the demand right now is illusory and market rate for those spots right now means the investment is unlikely to ever be recovered. In a world with limited capacity for government spending on transit as a public good, I would rather subsidize transit infrastructure that benefits the poor and directly impacts the share of non-car transit as it increases capacity. Spending limited funds on parking infrastructure is ludicrous when demand isn't sufficient to recover the investment. We already more than sufficiently subsidize parking in the area. And of course, the "study commission" is not really a study-- it's a meeting convened by those who want the project to happen putting the required usual suspects in the room to tepidly rubber stamp it. At least that's my cynical take.

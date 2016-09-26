@@ -1,0 +1,15 @@
+{{ partial "post_header.html" . }}
+<div class = 'container'>
+  <div class = 'row'>
+    <div class = 'col-6'>
+      <h1>{{ .Title }}</h1>
+      <h6>{{ .Date.Format "2006-01-02" }}</h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . -}}

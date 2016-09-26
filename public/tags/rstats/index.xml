@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstats on JSONBecker</title>
+    <link>http://www.jsonbecker.com/tags/rstats/</link>
+    <description>Recent content in Rstats on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.jsonbecker.com/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>News on Assertions in R</title>
+      <link>http://www.jsonbecker.com/post/news-on-assertions-in-r/</link>
+      <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.jsonbecker.com/post/news-on-assertions-in-r/</guid>
+      <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){
+if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;)){
+    stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;)
+  } 
+...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not &lt;em&gt;type safe&lt;/em&gt;, meaning function arguments do not have to conform to specified data types. But most of my R code is not run interactively. I have to trust my code to run on servers on schedules or on demand as a part of production systems. So I find myself frequently writing code like the above&amp;ndash; manually writing type checks for safety.&lt;/p&gt;
+
+&lt;p&gt;There has been some great action in the R community around &lt;em&gt;assertive programming&lt;/em&gt;, as you can see in the link. My favorite development, by far, are type-safe functions in the &lt;a href=&#34;https://github.com/smbache/ensurer&#34;&gt;ensurer package&lt;/a&gt;. The above function definition can now be written like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function_(dob ~ Date, enddate ~ Date: as.Date(&amp;quot;2015-07-05&amp;quot;), {
+  ...
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All the type-checking is done.&lt;/p&gt;
+
+&lt;p&gt;I really like the reuse of the formula notation &lt;code&gt;~&lt;/code&gt; and the use of &lt;code&gt;:&lt;/code&gt; to indicate default values.&lt;/p&gt;
+
+&lt;p&gt;Along with packages like &lt;a href=&#34;https://github.com/hadley/testthat&#34;&gt;testthat&lt;/a&gt;, R is really growing up and modernizing.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

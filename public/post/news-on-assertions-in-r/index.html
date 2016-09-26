@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link href = "http://www.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css" />
+  <link href = "http://www.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+
+<div class = 'container'>
+  <div class = 'row'>
+    <div class = 'col-6'>
+      <h1>News on Assertions in R</h1>
+      <h6>2015-07-05</h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      <p>How many times have you written R functions that start with a bunch of code that looks like this?</p>
+
+<pre><code class="language-r">my_funct &lt;- function(dob, enddate = &quot;2015-07-05&quot;){
+if (!inherits(dob, &quot;Date&quot;) | !inherits(enddate, &quot;Date&quot;)){
+    stop(&quot;Both dob and enddate must be Date class objects&quot;)
+  } 
+...
+}
+</code></pre>
+
+<p>Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not <em>type safe</em>, meaning function arguments do not have to conform to specified data types. But most of my R code is not run interactively. I have to trust my code to run on servers on schedules or on demand as a part of production systems. So I find myself frequently writing code like the above&ndash; manually writing type checks for safety.</p>
+
+<p>There has been some great action in the R community around <em>assertive programming</em>, as you can see in the link. My favorite development, by far, are type-safe functions in the <a href="https://github.com/smbache/ensurer">ensurer package</a>. The above function definition can now be written like this:</p>
+
+<pre><code class="language-r">my_funct &lt;- function_(dob ~ Date, enddate ~ Date: as.Date(&quot;2015-07-05&quot;), {
+  ...
+})
+</code></pre>
+
+<p>All the type-checking is done.</p>
+
+<p>I really like the reuse of the formula notation <code>~</code> and the use of <code>:</code> to indicate default values.</p>
+
+<p>Along with packages like <a href="https://github.com/hadley/testthat">testthat</a>, R is really growing up and modernizing.</p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
