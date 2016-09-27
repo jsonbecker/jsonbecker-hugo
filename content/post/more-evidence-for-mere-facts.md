@@ -16,7 +16,7 @@ One of the "old" divides in education, from before the current crop of "edreform
 
 This is very attractive. It seems to match our adult experiences accumulating knowledge and using it in our work. It seems to address students' boredom with learning *irrelevant* information. It leaves space for groups to advocate for teaching whatever content they want since everyone can argue that content is fundamentally limited in value.
 
-In classic **[turns out](|filename|/images/turnsout.mp3)** sense, however, the evidence keeps mounting that one must teach from the "Facts" approach to achieve the goals of the "Skills" position.
+In classic **[turns out](/img/turnsout.mp3)** sense, however, the evidence keeps mounting that one must teach from the "Facts" approach to achieve the goals of the "Skills" position.
 
 **Turns out:** skills and knowledge do not transfer well across domains. There is little evidence that learning how to read literary fiction translates to reading technical manuals with comprehension. In other words, critical thinking is not really an independent ability free of domain context [^critthinking]. In fact, experts are able to learn more quickly, but only in their domain and only when they have prior knowledge to use as scaffolding [^scaffold].
 

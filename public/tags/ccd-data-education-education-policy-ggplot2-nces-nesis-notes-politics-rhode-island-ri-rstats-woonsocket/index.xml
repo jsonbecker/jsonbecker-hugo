@@ -25,30 +25,30 @@
 
 &lt;p&gt;First, go to  the &lt;a href=&#34;http://nces.ed.gov/ccd/bat&#34;&gt;NCES Common Core Data Build a Table&lt;/a&gt; site. On the drop down, select &amp;ldquo;District&amp;rdquo; as the row variable and select the last fifteen years excluding 2009-10 (since there is no current financial data available for that year).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces1.png&#34; alt=&#34;1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces1.png&#34; alt=&#34;1&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After clicking next, hit &amp;ldquo;I Agree&amp;rdquo; on the pop-up.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces2.png&#34; alt=&#34;2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces2.png&#34; alt=&#34;2&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now select &amp;ldquo;Finance Per Pupil Ratios&amp;rdquo; for the first column.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces3.png&#34; alt=&#34;3&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces3.png&#34; alt=&#34;3&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Click the green arrow that selects all years for local sources per
 student and state sources per student.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces4.png&#34; alt=&#34;4&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces4.png&#34; alt=&#34;4&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Click &amp;ldquo;Next&amp;gt;&amp;gt;&amp;rdquo; on the top right. Now select only RI-Rhode Island for
 your row variable.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces5.png&#34; alt=&#34;5&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces5.png&#34; alt=&#34;5&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, click view table to see the results. I recommend downloading
 the Test (.csv) file to work with.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;|filename|/images/nces6.png&#34; alt=&#34;6&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.jsonbecker.com/img/nces6.png&#34; alt=&#34;6&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And finally, here&amp;rsquo;s the R code to reshape/rejigger the data I used and
 produce the graphics from the Nesi&amp;rsquo;s Notes post.&lt;/p&gt;

@@ -93,7 +93,7 @@ dev.off()
 [post]: http://blogs.wpri.com/2012/01/25/chart-the-decline-and-fall-of-the-providence-pension-system/
 [Consumer Price Index Northeast from the Bureau of Labor Statistics]: http://www.bls.gov/ro1/9140.htm
 [equate a CPI with a COLA]: http://en.wikipedia.org/wiki/Cost-of-living_adjustment#CPI_is_not_a_COLA
-[Amazing what compound interest does]: |filename|/images/inflation1.png
+[Amazing what compound interest does]: /img/inflation1.png
   "Comparing COLA to CPI-U"
 
 [^decree]: See the first link in this post

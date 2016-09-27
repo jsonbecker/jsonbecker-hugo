@@ -125,7 +125,7 @@ PlotOnStaticMap(map,lon=providence$lng,lat=providence$lat)
 ```
 
 
-[Providence Home Sales 9-12-11 to 12-27-11]: |filename|/images/homesales.png
+[Providence Home Sales 9-12-11 to 12-27-11]: /img/homesales.png
   "Providence Home Sales 9-12-11 to 12-27-11"
 [posting the functions I used]: http://stackoverflow.com/questions/3257441/geocoding-in-r-with-google-maps
 [Stack Overflow]: http://stackoverflow.com/

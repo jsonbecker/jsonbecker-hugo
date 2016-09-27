@@ -59,7 +59,7 @@ question.
 
 
 [Core Connector]: http://providencecoreconnector.com/
-[Quick and dirty Core Connector modification]: |filename|/images/Route-November-3.png
+[Quick and dirty Core Connector modification]: /img/Route-November-3.png
   "CoreConnectorRouteModified"
 [restaurants]: http://suraprovidence.com/
 [boutique]: http://www.queenofheartsandmodernlove.com/

@@ -1,3 +1,9 @@
+
+pre, code { 
+  font-family: Hack, monospace; 
+  font-size: 0.80rem;
+}
+
 .post-list {
   
 }

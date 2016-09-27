@@ -31,7 +31,7 @@ Past Reboot's have featured the [Providence Train Station][] and [Olneyville Squ
 
 *The original title of this post was unintentionally, overly similar to GCPVD's post on this issue. I recognized this oversight independently and have edited the title.*
 
-[111 Westminster lit at night by Flickr user kehuston]: |filename|/images/111west.jpg
+[111 Westminster lit at night by Flickr user kehuston]: /img/111west.jpg
 [has chosen to leave]: http://www.pbn.com/Bank-of-America-to-vacate-Superman-building-,64983
 [environmental advocates]: http://www.theatlanticcities.com/housing/2012/01/why-most-environmental-building-building-weve-already-built/1016/
 [businessmen]: http://chronicle.com/blogs/buildings/costume-jewelry-factory-will-become-browns-medical-school-saving-35-million/26293

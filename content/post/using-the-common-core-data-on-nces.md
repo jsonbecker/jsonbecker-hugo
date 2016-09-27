@@ -285,9 +285,9 @@ proportion <- function(data){
 [guest post]: http://blogs.wpri.com/category/nesis-notes/
 [here]: |filename|follow-up-to-nesis-notes-guest-post-woonsocket-school-funding.md
 
-[1]: |filename|/images/nces1.png
-[2]: |filename|/images/nces2.png
-[3]: |filename|/images/nces3.png
-[4]: |filename|/images/nces4.png
-[5]: |filename|/images/nces5.png
-[6]: |filename|/images/nces6.png
+[1]: /img/nces1.png
+[2]: /img/nces2.png
+[3]: /img/nces3.png
+[4]: /img/nces4.png
+[5]: /img/nces5.png
+[6]: /img/nces6.png

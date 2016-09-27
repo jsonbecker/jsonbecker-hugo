@@ -39,7 +39,7 @@ Create a street like this. Encourage development on the west led by Brown Univer
 [popular site for entrepreneurs]: http://www.ri-cie.org/start-incubator/start-incubator
 [Brown University's Continuing Education]: http://brown.edu/ce/
 [executive master's programs]: http://www.browndailyherald.com/proposed-executive-master-s-program-would-diversify-revenue-streams-1.2718694
-[Chapinero, Bogotá Bike Path via Wikipedia]: |filename|/images/Chapinero_bike_path.jpg "Chapinero Bike Path"
+[Chapinero, Bogotá Bike Path via Wikipedia]: /img/Chapinero_bike_path.jpg "Chapinero Bike Path"
 
 [^core]: I am not being sarcastic here, even if I'm generally dismissive and flippant about the wacky ideas that the "elite" in Providence and the state of Rhode Island have about this space
 [^busy]: Okay, so here I'm being sarcastic

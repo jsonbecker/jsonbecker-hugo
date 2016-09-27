@@ -359,11 +359,11 @@ visualize <- function(quest,scaleName='sdsa',desc){
 
 [Likert-scale data]: http://en.wikipedia.org/wiki/Likert_scale
 
-[Greaterthan]: |filename|/images/rankedlikert.png
+[Greaterthan]: /img/rankedlikert.png
   "Example of a Net Stacked Likert"
 
 [net stacked distribution graphs]: http://www.organizationview.com/net-stacked-distribution-a-better-way-to-visualize-likert-data
 
-[I wish it were prettier, but this is where I got.]: |filename|/images/fakeexample.png
+[I wish it were prettier, but this is where I got.]: /img/fakeexample.png
 
 [^1]: Mainly, I would like to abstract this code further. I am only about halfway there to assuring that I can use Likert-scale data of any size. I also would like to take in more than one question simultaneously with the visualize function. The latter is already possible in my production code and is particularly high impact for these kinds of graphics

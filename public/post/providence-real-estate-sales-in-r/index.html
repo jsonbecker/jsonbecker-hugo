@@ -2,6 +2,10 @@
 <head>
   <link href = "http://www.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css" />
   <link href = "http://www.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css" />
+  <link rel="stylesheet" href="http://www.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://www.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 
@@ -18,7 +22,7 @@
 
 <p>With a little bit of Google skills and just enough R know-how I was able to produce this image:</p>
 
-<p><img src="|filename|/images/homesales.png" alt="Providence Home Sales 9-12-11 to 12-27-11" title="Providence Home Sales 9-12-11 to 12-27-11" /></p>
+<p><img src="/img/homesales.png" alt="Providence Home Sales 9-12-11 to 12-27-11" title="Providence Home Sales 9-12-11 to 12-27-11" /></p>
 
 <p>There were a few things that were kind of tricky for me. First, for sometime I couldn&rsquo;t get latitude and longitude components for the addresses. I figured there was something wrong with the way I was using the *apply class of functions in R. apply() (and the related class of functions lapply, sapply, etc.) are really handy if a bit tricky for beginning R users. This function permits quickly &ldquo;applying&rdquo; a function across multiple elements. Traditionally this is done with a loop, but the apply() functions &ldquo;vectorize&rdquo; this process (R folks always talk about making your code more vectorized which has something to do with the structure of objects in R but is beyond my computer science skills&ndash; essentially, vectorized code runs much faster and more efficiency than loops because of some underlying feature of the language). After playing around with apply, lapply, and sapply, I decided to move back into my &ldquo;old&rdquo; way of thinking and just write a loop:</p>
 

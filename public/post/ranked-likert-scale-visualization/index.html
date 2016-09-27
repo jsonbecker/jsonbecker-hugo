@@ -2,6 +2,10 @@
 <head>
   <link href = "http://www.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css" />
   <link href = "http://www.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css" />
+  <link rel="stylesheet" href="http://www.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://www.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 
@@ -24,7 +28,7 @@
 
 <p>I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch. As I peeled away the layers of context-specific aspects of my nearing-production level code, I ran into all kinds of trouble. So I apologize for the somewhat sloppy and unfinished code<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
 
-<p><img src="|filename|/images/rankedlikert.png" alt="Greaterthan" title="Example of a Net Stacked Likert" /> <sup class="footnote-ref" id="fnref:netstacked"><a rel="footnote" href="#fn:netstacked">2</a></sup></p>
+<p><img src="/img/rankedlikert.png" alt="Greaterthan" title="Example of a Net Stacked Likert" /> <sup class="footnote-ref" id="fnref:netstacked"><a rel="footnote" href="#fn:netstacked">2</a></sup></p>
 
 <p>My preferred method for visualizing Likert-scale data from surveys is using <a href="http://www.organizationview.com/net-stacked-distribution-a-better-way-to-visualize-likert-data">net stacked distribution graphs</a>. There are two major benefits of these kinds of graphs. First, they immediately draw attention to <em>how strongly</em> respondents feel about a question, particularly when multiple questions are visualized at once. The total width of any bar is equal to the total number of responded who had a non-neutral answer. Second, these graphs make it very easy to distinguish between positive and negative responses. In some cases, it is critical to view the distribution of data to visualize the differences in responses to one question or another. However, most of the time it is informative enough to simply know how positive or negative responses are. I find this is particularly true with 3, 4, and 5-point Likert scales, the most common I come across in education research.</p>
 
@@ -129,7 +133,7 @@ visualize &lt;- function(data,
 
 <p>And the results of all that?</p>
 
-<p><img src="|filename|/images/fakeexample.png" alt="I wish it were prettier, but this is where I got." /></p>
+<p><img src="/img/fakeexample.png" alt="I wish it were prettier, but this is where I got." /></p>
 
 <h2 id="update-1">UPDATE:</h2>
 

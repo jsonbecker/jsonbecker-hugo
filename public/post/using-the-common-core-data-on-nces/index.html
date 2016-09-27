@@ -2,6 +2,10 @@
 <head>
   <link href = "http://www.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css" />
   <link href = "http://www.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css" />
+  <link rel="stylesheet" href="http://www.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://www.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 
@@ -24,30 +28,30 @@
 
 <p>First, go to  the <a href="http://nces.ed.gov/ccd/bat">NCES Common Core Data Build a Table</a> site. On the drop down, select &ldquo;District&rdquo; as the row variable and select the last fifteen years excluding 2009-10 (since there is no current financial data available for that year).</p>
 
-<p><img src="|filename|/images/nces1.png" alt="1" /></p>
+<p><img src="/img/nces1.png" alt="1" /></p>
 
 <p>After clicking next, hit &ldquo;I Agree&rdquo; on the pop-up.</p>
 
-<p><img src="|filename|/images/nces2.png" alt="2" /></p>
+<p><img src="/img/nces2.png" alt="2" /></p>
 
 <p>Now select &ldquo;Finance Per Pupil Ratios&rdquo; for the first column.</p>
 
-<p><img src="|filename|/images/nces3.png" alt="3" /></p>
+<p><img src="/img/nces3.png" alt="3" /></p>
 
 <p>Click the green arrow that selects all years for local sources per
 student and state sources per student.</p>
 
-<p><img src="|filename|/images/nces4.png" alt="4" /></p>
+<p><img src="/img/nces4.png" alt="4" /></p>
 
 <p>Click &ldquo;Next&gt;&gt;&rdquo; on the top right. Now select only RI-Rhode Island for
 your row variable.</p>
 
-<p><img src="|filename|/images/nces5.png" alt="5" /></p>
+<p><img src="/img/nces5.png" alt="5" /></p>
 
 <p>Finally, click view table to see the results. I recommend downloading
 the Test (.csv) file to work with.</p>
 
-<p><img src="|filename|/images/nces6.png" alt="6" /></p>
+<p><img src="/img/nces6.png" alt="6" /></p>
 
 <p>And finally, here&rsquo;s the R code to reshape/rejigger the data I used and
 produce the graphics from the Nesi&rsquo;s Notes post.</p>
