@@ -10,7 +10,7 @@ tags: r, rstats, age_calc, eeptools, code
 
 I recently updated the function I [posted] about back in June that calculates the difference between two dates in days, months, or years in R. It is still surprising to me that `difftime` can only return units from seconds up until weeks. I suspect this has to do with the challenge of properly defining a "month" or "year" as a unit of time, since these are variable.
 
-[posted]: |filename|/calculating-age-in-r.md
+[posted]: {{< relref "calculating-age-in-r.md" >}}
 
 While there was nothing wrong with the original function, it did irk me that it always returned an integer. In other words, function returned only complete months or years. If the start date was on `2012-12-13` and the end date was on `2013-12-03`, the function would return `0` years. Most of the time, this is the behavior I expect when calcuating age. But it is completely reasonable to want to include partial years or months, e.g. in the aforementioned example returning `0.9724605`.
 
