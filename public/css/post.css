@@ -1,3 +1,31 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600';
+
+/* Root Fonts */
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #00997C
+}
+
+a {
+  color: #1177bb;
+  font-weight: 500;
+}
+
+a:hover, a:visited {
+  color: #3b185f;
+}
+
+blockquote > p {
+  font-weight: 500;
+  font-style: italic;
+  border-left: 10px solid #00997C;
+  padding: 0.5em 10px;
+}
 
 pre, code { 
   font-family: Hack, monospace; 
@@ -22,10 +50,22 @@ pre, code {
 .date {
   float: left;
   padding: 5 10 5 0 ;
+  font-weight: 600;
+  -webkit-margin-before: .05em;
+  -webkit-margin-after:  .67em;
 }
 
 .post-title {
   padding: 5 0 5 10 ;
 }
 
+table {
+  border-spacing: 0;
+  width: 100%;
+}
 
+th {
+  border-bottom: 2px solid #ccc; 
+  border-collapse: collapse;
+  font-weight: 700;
+}
