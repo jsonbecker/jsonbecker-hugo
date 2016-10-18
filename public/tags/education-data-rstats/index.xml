@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education Data Rstats on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/education-data-rstats/</link>
+    <link>http://www.jsonbecker.com/tags/education-data-rstats.html</link>
     <description>Recent content in Education Data Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Sep 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/education-data-rstats/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.jsonbecker.com/tags/education-data-rstats.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using R to Calculate Student Moblity</title>
-      <link>http://www.jsonbecker.com/post/using-R-to-calculate-student-moblity/</link>
+      <link>http://www.jsonbecker.com/2013/09/using-r-to-calculate-student-moblity</link>
       <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/using-R-to-calculate-student-moblity/</guid>
+      <guid>http://www.jsonbecker.com/2013/09/using-r-to-calculate-student-moblity</guid>
       <description>
 
 &lt;p&gt;In a couple of previous posts, I outlined the importance of &lt;a href=&#34;filename|documentation-of-business-rules-and-analysis.md&#34;&gt;documenting business rules for common education statistics&lt;/a&gt; and described my take on how to &lt;a href=&#34;new-calculation-for-student-mobility.md&#34;&gt;best calculate student mobility&lt;/a&gt;. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:optimization&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:optimization&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.&lt;/p&gt;
@@ -452,10 +452,10 @@ output[id %in% last[exit_date&amp;lt;exitby][[sid]], moves:=moves+1L]
     
     <item>
       <title>A New Calculation for Student Mobility</title>
-      <link>http://www.jsonbecker.com/post/new-calculation-for-student-mobility/</link>
+      <link>http://www.jsonbecker.com/2013/09/a-new-calculation-for-student-mobility</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/new-calculation-for-student-mobility/</guid>
+      <guid>http://www.jsonbecker.com/2013/09/a-new-calculation-for-student-mobility</guid>
       <description>
 
 &lt;p&gt;How do we calculate student mobility? I am currently soliciting responses from other data professionals across the country. But when I needed to produce mobility numbers for some of my work a couple of months ago, I decided to develop a set of business rules without any exposure to how the federal government, states, or other existing systems define mobility. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ignorance&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ignorance&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
@@ -511,10 +511,10 @@ Each students minimum enrollment date is compared to &lt;code&gt;enrollment by&l
     
     <item>
       <title>Documentation of Business Rules and Analysis</title>
-      <link>http://www.jsonbecker.com/post/documentation-of-business-rules-and-analysis/</link>
+      <link>http://www.jsonbecker.com/2013/09/documentation-of-business-rules-and-analysis</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/documentation-of-business-rules-and-analysis/</guid>
+      <guid>http://www.jsonbecker.com/2013/09/documentation-of-business-rules-and-analysis</guid>
       <description>&lt;p&gt;One of the most challenging aspects of being a data analyst is translating programmatic terms like &amp;ldquo;student mobility&amp;rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.&lt;/p&gt;
 
 &lt;p&gt;Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&amp;rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.g. how many students were proficient in math, how many students graduated in four years, what proportion of students were chronically absent? All too often documentation of business rules is poor or non-existent. The result is that two analysts with the same data will produce inconsistent statistics. This is not because of something inherent in the quality of the data or an indictment of the analyst’s skills. In most cases, the undocumented business rules are essentially trivial, in that the results of any decision has a small impact on the final result and any of the decisions made by the analysts are equally defensible.&lt;/p&gt;

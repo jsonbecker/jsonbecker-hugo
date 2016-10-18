@@ -1,0 +1,404 @@
+<html>
+<head>
+  <link href = "http://www.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css" />
+  <link href = "http://www.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css" />
+  <link rel="stylesheet" href="http://www.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://www.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+	    inlineMath: [['$','$'], ['\\(','\\)']],
+	    displayMath: [['$$','$$'], ['\[','\]']],
+	    processEscapes: true,
+	    processEnvironments: true,
+	    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	    TeX: { equationNumbers: { autoNumber: "AMS" },
+	         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+	  }
+	});
+	</script>
+	
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Queue(function() {
+	    
+	    
+	    
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+		});
+	</script>
+</head>
+<body>
+
+<div class = 'container'>
+  <div class = 'row'>
+    <div class = 'col-6'>
+      <h1>Ranked Likert-Scale Visualization</h1>
+      <h6 class = "date">2012-07-10</h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      
+
+<h2 id="update">Update</h2>
+
+<p>See below for more information now that Ethan Brown has <a href="http://statisfactions.com/2012/improved-net-stacked-distribution-graphs-via-ggplot2-trickery/">weighed in with some great code</a>.</p>
+
+<p>A <a href="http://blog.ouseful.info/2012/07/09/fumblings-with-ranked-likert-scale-data-in-r/">recent post</a> I came across on <a href="http://www.r-bloggers.com/">r-bloggers</a> asked for input on visualizing ranked <a href="http://en.wikipedia.org/wiki/Likert_scale">Likert-scale data</a>.</p>
+
+<p>I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch. As I peeled away the layers of context-specific aspects of my nearing-production level code, I ran into all kinds of trouble. So I apologize for the somewhat sloppy and unfinished code<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+
+<p><img src="/img/rankedlikert.png" alt="Greaterthan" title="Example of a Net Stacked Likert" /> <sup class="footnote-ref" id="fnref:netstacked"><a rel="footnote" href="#fn:netstacked">2</a></sup></p>
+
+<p>My preferred method for visualizing Likert-scale data from surveys is using <a href="http://www.organizationview.com/net-stacked-distribution-a-better-way-to-visualize-likert-data">net stacked distribution graphs</a>. There are two major benefits of these kinds of graphs. First, they immediately draw attention to <em>how strongly</em> respondents feel about a question, particularly when multiple questions are visualized at once. The total width of any bar is equal to the total number of responded who had a non-neutral answer. Second, these graphs make it very easy to distinguish between positive and negative responses. In some cases, it is critical to view the distribution of data to visualize the differences in responses to one question or another. However, most of the time it is informative enough to simply know how positive or negative responses are. I find this is particularly true with 3, 4, and 5-point Likert scales, the most common I come across in education research.</p>
+
+<p>Anyway, without further ado, some starter code for producing net stacked distribution graphs.</p>
+
+<pre><code class="language-r">require(ggplot2)
+require(scales)
+require(plyr)
+dataSet &lt;- data.frame(
+  q1=as.ordered(round(runif(1500, 1, 15) + runif(1500,1,15))),
+  q2=as.ordered(round(runif(1500, 1, 15) + runif(1500,1,15))))
+dataSet[['q1']] &lt;- with(dataSet, ifelse(q1&lt;7,1,
+                                       ifelse(q1&gt;=7 &amp; q1&lt;13,2,
+                                             ifelse(q1&gt;=13 &amp; q1&lt;20,3,
+                                                   ifelse(q1&gt;=20 &amp; q1&lt;26,4,5)))))
+dataSet[['q2']] &lt;- with(dataSet, ifelse(q2&lt;3,1,
+                                       ifelse(q2&gt;=3 &amp; q2&lt;14,2,
+                                             ifelse(q2&gt;=14 &amp; q2&lt;26,3,
+                                                   ifelse(q2&gt;=26 &amp; q2&lt;28,4,5)))))
+dataSet[['q1']] &lt;- as.ordered(dataSet[['q1']])
+dataSet[['q2']] &lt;- as.ordered(dataSet[['q2']])
+levels(dataSet[['q1']]) &lt;- c('Strongly Disagree',
+                             'Disagree',
+                             'Neither Agree or Disagree',
+                             'Agree',
+                             'Strongly Agree')
+levels(dataSet[['q2']]) &lt;- c('Strongly Disagree',
+                             'Disagree',
+                             'Neither Agree or Disagree',
+                             'Agree',
+                             'Strongly Agree')
+# Convert the integer levels to have meaning.
+q1Proportions &lt;- data.frame(Name='q1', prop.table(table(dataSet[['q1']])))
+q2Proportions &lt;- data.frame(Name='q2', prop.table(table(dataSet[['q2']])))
+# Produces a data frame with the proportions of respondents in each level.
+
+# ggplot2 function for graphs
+visualize &lt;- function(data,
+                      responses=c('Strongly Disagree',
+                                  'Disagree',
+                                  'Neither Agree or Disagree',
+                                  'Agree',
+                                  'Strongly Agree'),
+                      desc='Title',
+                      rm.neutral=TRUE){
+  # This function will create net stacked distribution graphs. These are
+  # a particularly useful visualization of Likert data when there is a neutral
+  # option available and/or when emphasizing the difference between positive and
+  # negative responses is a goal.
+  # Args:
+  #   data: This is a dataframe with percentages labeled with responses.
+  #   responses: This is a vector with the response labels.
+  #   desc: This is the title of the output ggplot2 graphic, typically the
+  #         question text.
+  #   rm.neutral: This is a single element logical vector that determines if the
+  #               neutral response should be removed from the data. The default
+  #               value is TRUE.
+  for(i in 1:ceiling(length(responses)/2)-1){
+      # This loop negates all the negative, non-neutral responses regardless of
+      # the number of possible responses. This will center the non-neutral
+      # responses around 0.
+      data[i,3] &lt;- -data[i,3]
+  }
+  if(rm.neutral==T){
+    data &lt;- ddply(data,.(Name), function(x) x[-(ceiling(length(responses)/2)),])
+    responses &lt;- responses[-(ceiling(length(responses)/2))]
+  }
+  else{
+
+  }
+  print(data)
+  stackedchart &lt;- ggplot() +
+                  layer(data=data[1:2,],
+                        mapping=aes(Name,Freq,fill=Var1,order=-as.numeric(Var1)),
+                        geom='bar',
+                        position='stack',
+                        stat='identity')
+  stackedchart &lt;- stackedchart +
+                  layer(data=data[3:4,],
+                        mapping=aes(Name,Freq,fill=Var1,order=Var1),
+                        geom='bar',
+                        position='stack',
+                        stat='identity')
+  stackedchart &lt;- stackedchart +
+                  geom_hline(yintercept=0) +
+                  opts(legend.title=theme_blank()) +
+                  opts(axis.title.x=theme_blank()) +
+                  opts(axis.title.y=theme_blank()) +
+                  opts(title=desc) +
+                  scale_y_continuous(labels=percent,
+                                     limits=c(-1,1),
+                                     breaks=seq(-1,1,.2)) +
+                  scale_fill_manual(limits=responses,
+                                    values=c('#AA1111',
+                                             '#BB6666',
+                                             '#66BB66',
+                                             '#11AA11')) +
+                  coord_flip()
+  stackedchart
+}
+</code></pre>
+
+<p>And the results of all that?</p>
+
+<p><img src="/img/fakeexample.png" alt="I wish it were prettier, but this is where I got." /></p>
+
+<h2 id="update-1">UPDATE:</h2>
+
+<p>So now that Ethan has weighed in with his code I thought I would add some things to make this post better reflect my production code. Below, I have included my comment on his blog as well as an actual copy of my current production code (which definitely is not sufficiently refactored for easy use across multiple projects). Again, excuse what I consider to be incomplete work on my part. I do intend on refactoring this code and eventually including it in my broader set of custom functions available across all of my projects. I suspect along that path that I will be &ldquo;stealing&rdquo; some of Ethan&rsquo;s ideas.</p>
+
+<h3 id="comment">Comment</h3>
+
+<p>Hi Ethan! Super excited to see this post. This is exactly why I put up my code&ndash; so others could run with it. There are a few things that you do here that I actually already had implemented into my code and removed in an attempt to be more neutral to scale that I really like.</p>
+
+<p>For starters, in my actual production code I also separate out the positive and negative responses. In my code, I have a parameter called <code>scaleName</code> that allows me to switch between all of the scales that are available in my survey data. This includes Strongly Disagree to Strongly Agree (<code>scaleName=='sdsa'</code>), Never -&gt; Always (<code>scaleName=='sdsa'</code>) and even simple yes/no (<code>scaleName=='ny'</code>). This is not ideal because it does require 1) knowing all possible scales and including some work in the function to treat them differently 2) including an additional parameter. However, because I use this work to analyze just a few surveys, the upfront work of including this as a parameter has made this very flexible in dealing with multiple scales. As a result, I do not need to require that the columns are ordered in any particular way, just that the titles match existing scales. So I have a long set of if elseif statements that look something like this:</p>
+
+<pre><code class="language-r"> if(scaleName=='sdsa'){
+ scale &lt;- c('Strongly Disagree','Disagree','Agree','Strongly Agree')
+ pos &lt;- c('Agree','Strongly Agree')
+ neg &lt;- c('Strongly Disagree','Disagree')
+ }
+</code></pre>
+
+<p>This is actually really helpful for producing negative values and including some scales in my function which do not have values that are negative (so that it can be used for general stacked charts instead of just net-stacked):</p>
+
+<pre><code class="language-r">if(length(neg)&gt;0){
+quest[,names(quest) %in% c(neg)] &lt;- -(quest[,names(quest) %in% c(neg)])
+</code></pre>
+
+<p>(Recall that quest is what I call the dataframe and is equivalent to x in your code)</p>
+
+<p>Another neat trick that I have instituted is having dynamic x-axis limits rather than always going from -100 to 100. I generally like to keep my scales representing the full logical range of data (0 - 100 for percentages, etc) so I might consider this a manipulation. However, after getting many charts with stubby centers, I found I was not really seeing sufficient variation by sticking to my -100 to 100 setup. So I added this:</p>
+
+<pre><code class="language-r">pos_lims =0)+1))[1,]),
+sum(subset(quest,select=c(which(quest[2,-1]&gt;=0)+1))[2,])))
+neg_lims &lt;- max(abs(c(sum(subset(quest, 
+                                 select=c(which(quest[1,-1]&lt;=0) + 1))[1,]),
+sum(subset(quest,select=c(which(quest[2,-1]&lt;=0)+1))[2,]))))
+x_axis_lims &lt;- max(pos_lims,neg_lims)
+</code></pre>
+
+<p>Which helps to determine the value furthest from 0 in either direction across the data frame (I have to admit, this code looks a bit like magic reading it back. My comments actually are quite helpful:</p>
+
+<pre><code class="language-r"># pos_lims and neg_lims subset each row of the data based on sign, then
+# sums the values that remain (gettting the total positive or negative
+# percentage for each row). Then, the max of the rows is saved as a candidate
+# for the magnitude of the axis.
+</code></pre>
+
+<p>To make this more generalizable (my production code always compares two bars at once) , it would be fairly trivial to loop over all the rows (or use the apply functions which I&rsquo;m still trying to get a hang of).</p>
+
+<p>I then pad the <code>x_limits</code> value by some percent inside the <code>limits</code> attribute.</p>
+
+<p>In my production code I also have the <code>scale_fill_manual</code> attribute
+added separately to the ggplot object. However, rather than add this
+after the fact like at the point of rendering, I include this in my
+function again set by <code>scaleName</code>. However, I think the best organization
+is probably to have a separate function that makes it easy to select the
+color scheme you want and apply it so that your final call could be
+something like <code>colorNetStacked(net_stacked(x), 'blues')</code>.</p>
+
+<p>My actual final return looks like this:</p>
+
+<pre><code class="language-r">    return(stackedchart + scale_fill_manual(limits=scale,
+    values=colors) +
+    coord_flip())
+</code></pre>
+
+<p>Where colors is set by a line like: <code>colors &lt;- brewer.pal(name='Blues',n=7)[3:7]</code></p>
+
+<p>Seriously though, I am super excited you found my post and thought it was useful and improved what I presented!</p>
+
+<h3 id="current-production-code">Current production code:</h3>
+
+<pre><code class="language-r">visualize &lt;- function(quest,scaleName='sdsa',desc){
+  # Produces the main net-stacked Likert graphic used for survey data in the
+  # diagnostic tool
+  # Args:
+  #  quest: data.frame from pull() or pullByLevel() output
+  #  scaleName: string code for the type of scale that is used for the question.
+  #  desc: string for the title that will be displayed on the graphic.
+  # Returns:
+  # Net-Stacked Likert chart with a bar/row for each row in quest. Most scales
+  # center around 0 with a distinct positive and negative set of responses.
+  # The graphs are custom colored based on what best reflects the scale.
+  # The x-axis limits are set dynamically based on a 10% buffer of the largest
+  # magnitude to either the positive or negative responses.
+
+  if(scaleName=='sdsa'){
+    scale &lt;- c('Strongly Disagree','Disagree','Agree','Strongly Agree')
+    pos   &lt;- c('Agree','Strongly Agree')
+    neg   &lt;- c('Strongly Disagree','Disagree')
+  }else if(scaleName=='da'){
+    scale &lt;- c('Disagree','Agree')
+    pos   &lt;- c('Agree')
+    neg   &lt;- c('Disagree')
+  }else if(scaleName=='neal'){
+    scale &lt;- c('Never','Sometimes','Usually','Always')
+    pos   &lt;- c('Usually','Always')
+    neg   &lt;- c('Never','Sometimes')
+  }else if(scaleName=='noalot'){
+    scale &lt;- c('None','A Little','Some','A Lot')
+    pos   &lt;- c('None','A Little','Some','A Lot')
+    neg   &lt;- c()
+  }else if(scaleName=='noall'){
+    scale &lt;- c('None of them','Some','Most','All of them')
+    pos   &lt;- c('None of them','Some','Most','All of them')
+    neg   &lt;- c()
+  }else if(scaleName=='neda'){
+    scale &lt;- c('Never','A Few Times a Year','Monthly','Weekly','Daily')
+    pos   &lt;- c('Never','A Few Times a Year','Monthly','Weekly','Daily')
+    neg   &lt;- c()
+  }else if(scaleName=='ny'){
+    scale &lt;- c('No','Yes')
+    pos   &lt;- c('Yes')
+    neg   &lt;- c('No')
+  }else{
+    print('Unrecognized Scale Name')
+  }
+  # Remove neutral and non-response based values in the pull tables like
+  # n-size, Not Applicable, etc.
+  quest &lt;- quest[,!names(quest) %in%
+    c('n','Not Applicable',&quot;I don't know&quot;)]
+
+  # Produce values less than 0 for negative responses
+  if(length(neg)&gt;0){
+  quest[,names(quest) %in% c(neg)] &lt;-
+    -(quest[,names(quest) %in% c(neg)])
+  # pos_lims and neg_lims subset each row of the data based on sign, then
+  # sums the values that remain (gettting the total positive or negative
+  # percentage for each row). Then, the max of the rows is saved as a candidate
+  # for the magnitude of the axis.
+  pos_lims &lt;- max(c(sum(subset(quest,select=c(which(quest[1,-1]&gt;=0)+1))[1,]),
+                    sum(subset(quest,select=c(which(quest[2,-1]&gt;=0)+1))[2,])))
+  neg_lims &lt;- max(abs(c(sum(subset(quest,select=c(which(quest[1,-1]&lt;=0)+1))[1,]),
+                        sum(subset(quest,select=c(which(quest[2,-1]&lt;=0)+1))[2,]))))
+
+  # The actual magnitude of the axis is the largest magnitude listed in pos_lims
+  # or neg_lims, and will be inflated by .1 in each direction in the scale later
+  x_axis_lims &lt;- max(pos_lims,neg_lims)
+  }else{
+
+  }
+  # Reshape the data so that each row has one value with a variable label.
+  quest &lt;- melt(quest,id.vars='Var1')
+
+  # Factoring and ordering the response label ensures they are listed in the
+  # proper order in the legend and on the stacked chart, i.e. strongly disagree
+  # is furthest left and strongly agree is furthest right.
+  quest[['variable']] &lt;- factor(quest[['variable']],
+                                levels=scale,
+                                ordered=TRUE)
+
+  # Build the plot using ggplot(). Layers are used so that positive and negative
+  # can be drawn separately. This is important because the order of the negative
+  # values needs to be switched.
+
+  ##### Control flow required to change the behavior for the questions that
+  ##### business requirements call for 0-100 scale with no indication of
+  ##### positive or negative, i.e. the neda, noalot, and noall scaleName.
+  stackedchart &lt;- ggplot() +
+    layer(data=subset(quest,
+                      variable %in% pos),
+          mapping=aes(Var1,
+                      value,
+                      fill=factor(variable)),
+          geom='bar',
+          stat='identity',
+          position='stack') +
+    geom_hline(yintercept=0) +
+    opts(legend.title=theme_blank()) +
+    opts(axis.title.x=theme_blank()) +
+    opts(axis.title.y=theme_blank()) +
+    opts(title=desc)
+  if(length(neg)&gt;0){
+    stackedchart &lt;- stackedchart +
+      layer(data=subset(quest,
+                        variable %in% neg),
+            mapping=aes(Var1,
+                        value,
+                        fill=factor(variable),
+                        order=-as.numeric(variable)),
+            geom='bar',
+            stat='identity',
+            position='stack')
+  }else{
+
+  }
+  if(scaleName %in% c('sdsa','neal')){
+    colors &lt;- c('#AA1111','#BB6666','#66BB66','#11AA11')
+    stackedchart &lt;-  stackedchart +
+      scale_y_continuous(labels=percent,
+                         limits=c(-x_axis_lims-.1, x_axis_lims+.1),
+                         breaks=seq(-round(x_axis_lims,1)-.1,
+                                    round(x_axis_lims,1)+.1,
+                                    .2))
+  }else if(scaleName %in% c('ny','da')){
+    colors &lt;- c('#BB6666','#66BB66')
+    stackedchart &lt;-  stackedchart +
+      scale_y_continuous(labels=percent,
+                         limits=c(-x_axis_lims-.1, x_axis_lims+.1),
+                         breaks=seq(-round(x_axis_lims,1)-.1,
+                                    round(x_axis_lims,1)+.1,
+                                    .2))
+  }else if(scaleName %in% c('noalot','noall')){
+    colors &lt;- brewer.pal(name='Blues',n=6)[3:6]
+    stackedchart &lt;-  stackedchart +
+      scale_y_continuous(labels=percent,
+                         limits=c(0,1.05),
+                         breaks=seq(0,1,.1))
+  }else if(scaleName %in% c('neda')){
+    colors &lt;- brewer.pal(name='Blues',n=7)[3:7]
+    stackedchart &lt;-  stackedchart +
+      scale_y_continuous(labels=percent,
+                         limits=c(0,1.05),
+                         breaks=seq(0,1,.1))
+  }else{
+    print('Unrecognized scaleName')
+  }
+  return(stackedchart + scale_fill_manual(limits=scale,
+                                          values=colors) +
+                        coord_flip())
+}
+</code></pre>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Mainly, I would like to abstract this code further. I am only about halfway there to assuring that I can use Likert-scale data of any size. I also would like to take in more than one question simultaneously with the visualize function. The latter is already possible in my production code and is particularly high impact for these kinds of graphics
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:netstacked">Net Stacked Likert graphs are excellent for comparing how different groups responded to the same question. There is both high information density and clarity.
+ <a class="footnote-return" href="#fnref:netstacked"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
+<div class = "container">
+  <div class = "row">
+    <footer class = "right col-9">
+      <a href="http://www.jsonbecker.compost"> Archives </a>
+    </footer>
+  </div>
+</div>
+</html>

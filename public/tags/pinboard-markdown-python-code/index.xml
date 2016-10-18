@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pinboard Markdown Python Code on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/pinboard-markdown-python-code/</link>
+    <link>http://www.jsonbecker.com/tags/pinboard-markdown-python-code.html</link>
     <description>Recent content in Pinboard Markdown Python Code on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 May 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/pinboard-markdown-python-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.jsonbecker.com/tags/pinboard-markdown-python-code.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Pindown: Failed Dreams</title>
-      <link>http://www.jsonbecker.com/post/marky-and-pinboard/</link>
+      <link>http://www.jsonbecker.com/2014/05/pindown-failed-dreams</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/marky-and-pinboard/</guid>
+      <guid>http://www.jsonbecker.com/2014/05/pindown-failed-dreams</guid>
       <description>&lt;p&gt;I had never thought of a use for &lt;a href=&#34;http://www.brettterpstra.com&#34;&gt;Brett Terpstra&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://heckyesmarkdown.com&#34;&gt;Marky the Markdownifier&lt;/a&gt; before listening today&amp;rsquo;s &lt;a href=&#34;http://5by5.tv/systematic/96&#34;&gt;Systematic&lt;/a&gt;. Why would I want to turn a webpage into Markdown?&lt;/p&gt;
 
 &lt;p&gt;When I heard that Marky has an API, I was inspired. &lt;a href=&#34;http://pinboard.in&#34;&gt;Pinboard&lt;/a&gt; has a &amp;ldquo;description&amp;rdquo; field that allows up to 65,000 characters. I never know what to put in this box. Wouldn&amp;rsquo;t it be great to put the full content of the page in Markdown into this field?&lt;/p&gt;

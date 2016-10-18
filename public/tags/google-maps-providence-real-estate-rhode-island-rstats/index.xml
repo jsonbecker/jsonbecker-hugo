@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/</link>
+    <link>http://www.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats.html</link>
     <description>Recent content in Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Providence Real Estate Sales in R</title>
-      <link>http://www.jsonbecker.com/post/providence-real-estate-sales-in-r/</link>
+      <link>http://www.jsonbecker.com/2012/01/providence-real-estate-sales-in-r</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/providence-real-estate-sales-in-r/</guid>
+      <guid>http://www.jsonbecker.com/2012/01/providence-real-estate-sales-in-r</guid>
       <description>&lt;p&gt;The past few months I&amp;rsquo;ve been learning how to use R. This morning, I decided to try out two first&amp;ndash; importing a table of data that is being read of the web and overlaying location data onto a map.&lt;/p&gt;
 
 &lt;p&gt;With a little bit of Google skills and just enough R know-how I was able to produce this image:&lt;/p&gt;

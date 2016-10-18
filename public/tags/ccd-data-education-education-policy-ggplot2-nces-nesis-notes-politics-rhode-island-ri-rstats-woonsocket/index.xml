@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ccd Data Education Education Policy Ggplot2 Nces Nesis Notes Politics Rhode Island Ri Rstats Woonsocket on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/</link>
+    <link>http://www.jsonbecker.com/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket.html</link>
     <description>Recent content in Ccd Data Education Education Policy Ggplot2 Nces Nesis Notes Politics Rhode Island Ri Rstats Woonsocket on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.jsonbecker.com/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using the Common Core Data on NCES</title>
-      <link>http://www.jsonbecker.com/post/using-the-common-core-data-on-nces/</link>
+      <link>http://www.jsonbecker.com/2012/07/using-the-common-core-data-on-nces</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/post/using-the-common-core-data-on-nces/</guid>
+      <guid>http://www.jsonbecker.com/2012/07/using-the-common-core-data-on-nces</guid>
       <description>&lt;p&gt;My analysis on &lt;a href=&#34;http://blogs.wpri.com/?p=62059&#34;&gt;Nesi&amp;rsquo;s Notes&lt;/a&gt; depended entirely on the &lt;a href=&#34;http://nces.ed.gov/ccd/bat&#34;&gt;National Center for Education Statistics&amp;rsquo; Common Core Data&lt;/a&gt;. The per pupil amounts reported to NCES may look a bit different from state sources of this information. There are several explanations of this. First, the enrollment counts used to generate per pupil amounts are based on an October 1st headcount. In Rhode Island, we use something called &amp;ldquo;average daily membership&amp;rdquo; (ADM) as the denominator and not a headcount. The ADM of a district is calculated by taking all the students who attended the district at any point in the year and adding up the number of school days they were enrolled for. The total membership (i.e. all the student*days, for those who like to think about this in units) is divided by the number of school days per year, almost always 180 (so student*days / days/year = students/year). Additionally, NCES does not record the final three digits on most financial data. These rounding issues will also make the per pupil data seem different from state reports.&lt;/p&gt;
 
 &lt;p&gt;I wanted to use the NCES to make sure that the data in my post was easily reproducible by any member of the public. I also thought using NCES would serve as a great learning opportunity for the wonks and nerds out there who never even realized how much rich data about schools and school finance are available through the federal government. That being said, I do believe that the state reported numbers are far more accurate than those available from the federal government. That is not to say that the federal data is bad. On the contrary, that data is substantially vetted and validated and is very useful for research. My concern was only that some of the tiny differences in the NCES data that deviated from what I would consider to be ideal data might reach the level where they affected the validity of the conclusions I wanted to draw.&lt;/p&gt;
