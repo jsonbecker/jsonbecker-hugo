@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/rstats.html</link>
+    <link>http://dev.jsonbecker.com/tags/rstats.html</link>
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/rstats.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/rstats.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.jsonbecker.com/2015/07/news-on-assertions-in-r</link>
+      <link>http://dev.jsonbecker.com/2015/07/news-on-assertions-in-r</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/07/news-on-assertions-in-r</guid>
+      <guid>http://dev.jsonbecker.com/2015/07/news-on-assertions-in-r</guid>
       <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){

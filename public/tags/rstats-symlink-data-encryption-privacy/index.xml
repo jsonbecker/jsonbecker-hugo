@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Symlink Data Encryption Privacy on JSONBecker</title>
-    <link>http://www.jsonbecker.com/tags/rstats-symlink-data-encryption-privacy.html</link>
+    <link>http://dev.jsonbecker.com/tags/rstats-symlink-data-encryption-privacy.html</link>
     <description>Recent content in Rstats Symlink Data Encryption Privacy on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/tags/rstats-symlink-data-encryption-privacy.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/rstats-symlink-data-encryption-privacy.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Symlinking Your Data</title>
-      <link>http://www.jsonbecker.com/2014/04/symlinking-your-data</link>
+      <link>http://dev.jsonbecker.com/2014/04/symlinking-your-data</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/04/symlinking-your-data</guid>
+      <guid>http://dev.jsonbecker.com/2014/04/symlinking-your-data</guid>
       <description>&lt;p&gt;I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by &lt;a href=&#34;http://support.apple.com/kb/HT1578?viewlocale=en_US&amp;amp;locale=en_US&#34;&gt;creating encrypted disk images&lt;/a&gt; with secure passwords (stored in &lt;a href=&#34;https://agilebits.com&#34;&gt;1Password&lt;/a&gt;). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow. I just have to remember to mount and unmount the disk images.&lt;/p&gt;
 
 &lt;p&gt;However, it can be inconvenient from a project perspective to refer to data in a distant location like &lt;code&gt;/Volumes/ClientData/Entity/facttable.csv&lt;/code&gt;. In most cases, I would prefer the data &amp;ldquo;reside&amp;rdquo; in &lt;code&gt;data/&lt;/code&gt; or &lt;code&gt;cache/&lt;/code&gt; &amp;ldquo;inside&amp;rdquo; of my project directory.&lt;/p&gt;

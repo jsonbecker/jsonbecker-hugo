@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JSONBecker</title>
-    <link>http://www.jsonbecker.com/</link>
+    <link>http://dev.jsonbecker.com/</link>
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.jsonbecker.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Second Post</title>
-      <link>http://www.jsonbecker.com/2016/09/second-post</link>
+      <link>http://dev.jsonbecker.com/2016/09/second-post</link>
       <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2016/09/second-post</guid>
+      <guid>http://dev.jsonbecker.com/2016/09/second-post</guid>
       <description>
 
 &lt;h2 id=&#34;this-is-for-a-test&#34;&gt;This is for a test&lt;/h2&gt;
@@ -63,20 +63,20 @@
     
     <item>
       <title>First Hugo Post</title>
-      <link>http://www.jsonbecker.com/2016/09/first-hugo-post</link>
+      <link>http://dev.jsonbecker.com/2016/09/first-hugo-post</link>
       <pubDate>Sat, 24 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2016/09/first-hugo-post</guid>
+      <guid>http://dev.jsonbecker.com/2016/09/first-hugo-post</guid>
       <description>&lt;p&gt;This is a hugo post.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Songs in the Key of Allovue</title>
-      <link>http://www.jsonbecker.com/2016/07/songs-in-the-key-of-allovue</link>
+      <link>http://dev.jsonbecker.com/2016/07/songs-in-the-key-of-allovue</link>
       <pubDate>Sat, 09 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2016/07/songs-in-the-key-of-allovue</guid>
+      <guid>http://dev.jsonbecker.com/2016/07/songs-in-the-key-of-allovue</guid>
       <description>&lt;p&gt;When I entered high school, video games were beginning to lose their appeal. So I sold my four video game systems and all their games at a garage sale and that money, plus some Chanukkah money, bought me my first guitar and amp. I had just tried joined a band as a singer with a couple of guys I knew from school. I didn&amp;rsquo;t know anything about playing guitar. In fact, it took me a while to figure out what distortion was and why I my guitar didn&amp;rsquo;t sound like Kris Roe from The Ataris.&lt;/p&gt;
 
 &lt;p&gt;In the beginning, being in a band was rough. We had a lot of fun playing together, but just keeping time and making it all the way through a song was a slog. We had agreed I wouldn&amp;rsquo;t try playing guitar with the band until I had been playing at least three months, self-taught. But this was 2001 and I lived on Long Island and we were playing pop-punk, so it didn&amp;rsquo;t take too long to catch up. Soon I was writing music, actual original music. To this day, I don&amp;rsquo;t really enjoy playing other people&amp;rsquo;s music, because from the moment I picked up a guitar it was an instrument for creating new music with other people.&lt;/p&gt;
@@ -101,10 +101,10 @@
     
     <item>
       <title>A note on sequels</title>
-      <link>http://www.jsonbecker.com/2016/04/a-note-on-sequels</link>
+      <link>http://dev.jsonbecker.com/2016/04/a-note-on-sequels</link>
       <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2016/04/a-note-on-sequels</guid>
+      <guid>http://dev.jsonbecker.com/2016/04/a-note-on-sequels</guid>
       <description>&lt;p&gt;I read a lot of science fiction and fantasy, genres filled with long running book series. Until the last couple of years, I mostly avoided any series that wasn’t already complete. First, I don’t like truly “epic” sci-fi fantasy. On-going series without an end in sight, or series that go beyond roughly 3,000 to 4,000 pages never end well for me&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. I simply lose interest. Second, I worry that series won’t actually reach completion, either because the books are not successful enough or the author gets writer’s block&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, or even just getting caught up in waiting way too long between books&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Third, I like to actually remember what happened, especially in the kind of complex stories I like to read.&lt;/p&gt;
 
 &lt;p&gt;Some series do really well with sequels. I recently read through Kelly McCullough’s &lt;em&gt;Fallen Blade&lt;/em&gt; series, and although it is complete and I did read the books in succession, they always made a clear attempt to reintroduce everything about the novel and the necessary bits of past events. In fact, McCullough was so good at this , it was almost obnoxious to read the series all in one go&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
@@ -134,10 +134,10 @@
     
     <item>
       <title>Returning to Tumblr</title>
-      <link>http://www.jsonbecker.com/2015/07/returning-to-tumblr</link>
+      <link>http://dev.jsonbecker.com/2015/07/returning-to-tumblr</link>
       <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/07/returning-to-tumblr</guid>
+      <guid>http://dev.jsonbecker.com/2015/07/returning-to-tumblr</guid>
       <description>&lt;p&gt;I have had a &lt;a href=&#34;http://tumblr.jsonbecker.com&#34;&gt;Tumblr site&lt;/a&gt; for a long time but never knew what to do with it. What is Tumblr exactly? Is it a hosted blog? Is it a hosted blog for hipsters? Is it a social network? Why should I put content into Tumblr?&lt;/p&gt;
 
 &lt;p&gt;I have this &lt;a href=&#34;http://blog.jsonbecker.com&#34;&gt;blog&lt;/a&gt;, but I barely use it. I don’t have a Facebook page, because I don’t trust Facebook and how it repeatedly changed and confused privacy settings and after college, I rarely found that Facebook was a net positive in my life. Recently I crossed &lt;em&gt;1000&lt;/em&gt; followers on Twitter.&lt;/p&gt;
@@ -162,10 +162,10 @@
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.jsonbecker.com/2015/07/news-on-assertions-in-r</link>
+      <link>http://dev.jsonbecker.com/2015/07/news-on-assertions-in-r</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/07/news-on-assertions-in-r</guid>
+      <guid>http://dev.jsonbecker.com/2015/07/news-on-assertions-in-r</guid>
       <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){
@@ -195,10 +195,10 @@ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date
     
     <item>
       <title>Rhode Island Disease</title>
-      <link>http://www.jsonbecker.com/2015/06/rhode-island-disease</link>
+      <link>http://dev.jsonbecker.com/2015/06/rhode-island-disease</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/06/rhode-island-disease</guid>
+      <guid>http://dev.jsonbecker.com/2015/06/rhode-island-disease</guid>
       <description>&lt;p&gt;When discussing policy in Rhode Island, I almost always encounter two bizarre arguments.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -214,10 +214,10 @@ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date
     
     <item>
       <title>Acceptable Terms</title>
-      <link>http://www.jsonbecker.com/2015/04/acceptable-terms</link>
+      <link>http://dev.jsonbecker.com/2015/04/acceptable-terms</link>
       <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/04/acceptable-terms</guid>
+      <guid>http://dev.jsonbecker.com/2015/04/acceptable-terms</guid>
       <description>
 
 &lt;p&gt;An &lt;a href=&#34;http://www.gcpvd.org/2015/04/15/pawsox-providence-stadium-proposal/&#34;&gt;initial proposal&lt;/a&gt; has been made to the city of Providence and state of Rhode Island to keep the PawSox in Rhode Island and move them to a new stadium along the river in Providence.&lt;/p&gt;
@@ -288,10 +288,10 @@ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date
     
     <item>
       <title>A PostgreSQL Cheat Sheet for OSX and R</title>
-      <link>http://www.jsonbecker.com/2015/01/a-postgresql-cheat-sheet-for-osx-and-r</link>
+      <link>http://dev.jsonbecker.com/2015/01/a-postgresql-cheat-sheet-for-osx-and-r</link>
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/01/a-postgresql-cheat-sheet-for-osx-and-r</guid>
+      <guid>http://dev.jsonbecker.com/2015/01/a-postgresql-cheat-sheet-for-osx-and-r</guid>
       <description>&lt;p&gt;I keep this on my desktop.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Install:&lt;/strong&gt;&lt;/p&gt;
@@ -337,10 +337,10 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
     
     <item>
       <title>Taking Control</title>
-      <link>http://www.jsonbecker.com/2015/01/taking-control</link>
+      <link>http://dev.jsonbecker.com/2015/01/taking-control</link>
       <pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2015/01/taking-control</guid>
+      <guid>http://dev.jsonbecker.com/2015/01/taking-control</guid>
       <description>
 
 &lt;h2 id=&#34;severing-my-daemon&#34;&gt;Severing My Daemon&lt;/h2&gt;
@@ -392,10 +392,10 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
     
     <item>
       <title>Amazon Creating A Services Marketplace Online</title>
-      <link>http://www.jsonbecker.com/2014/11/amazon-creating-a-services-marketplace-online</link>
+      <link>http://dev.jsonbecker.com/2014/11/amazon-creating-a-services-marketplace-online</link>
       <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/11/amazon-creating-a-services-marketplace-online</guid>
+      <guid>http://dev.jsonbecker.com/2014/11/amazon-creating-a-services-marketplace-online</guid>
       <description>&lt;p&gt;A few thoughts:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -409,10 +409,10 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
     
     <item>
       <title>The Power Of Sound</title>
-      <link>http://www.jsonbecker.com/2014/11/the-power-of-sound</link>
+      <link>http://dev.jsonbecker.com/2014/11/the-power-of-sound</link>
       <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/11/the-power-of-sound</guid>
+      <guid>http://dev.jsonbecker.com/2014/11/the-power-of-sound</guid>
       <description>&lt;p&gt;It has been said a thousand times before, but I feel the need to say it again. So much of what Star Wars got right was creating a fully realized, fascinating world. As much as stunning visual effects that have largely stood the test of time were a part of that story, it was how Star Wars &lt;em&gt;sounded&lt;/em&gt; that is most remarkable.&lt;/p&gt;
 
 &lt;p&gt;Watch that trailer. It has moments that &lt;em&gt;look&lt;/em&gt; an awful lot like Star Wars&amp;ndash; vast dunes in the middle of the desert, the Millenium Falcon speeding along, flipping at odd angles emphasizing its unique flat structure. But it also has a lot of elemetns that are decidedly modern and not Star Wars like. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:shakes&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:shakes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; I think what&amp;rsquo;s most remarkable is I can close my eyes and just listen. Immediately I can &lt;em&gt;hear&lt;/em&gt; Star Wars. The sounds of Star Wars are not just iconic, they are deeply embedded in my psyche and embued with profound meaning.&lt;/p&gt;
@@ -432,10 +432,10 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
     
     <item>
       <title>School Funding Reform, Hard Work and Fraught with Potential</title>
-      <link>http://www.jsonbecker.com/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</link>
+      <link>http://dev.jsonbecker.com/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</guid>
+      <guid>http://dev.jsonbecker.com/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Because of the primacy of equity as a goal in school finance system design, the formulas disproportionately benefit less wealthy districts and those with high concentrations of needier students.
 &amp;hellip;
@@ -463,10 +463,10 @@ because of the universal impact on communities, school finance legislation requi
     
     <item>
       <title>How do we attract the best teachers to struggling schools?</title>
-      <link>http://www.jsonbecker.com/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools</link>
+      <link>http://dev.jsonbecker.com/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools</link>
       <pubDate>Thu, 13 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools</guid>
+      <guid>http://dev.jsonbecker.com/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools</guid>
       <description>&lt;p&gt;There are some basic facts about the teacher labor market that are &lt;em&gt;inconvenient&lt;/em&gt; for many folks working to improve education. I am going to go through a few premises that I think should be broadly accepted and several lemma and contentions that I hope clarifies my own view on education resources and human capital management.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Teaching in low performing schools is challenging.&lt;/strong&gt;&lt;/p&gt;
@@ -497,10 +497,10 @@ because of the universal impact on communities, school finance legislation requi
     
     <item>
       <title>NaNo(Blo)WriMo</title>
-      <link>http://www.jsonbecker.com/2014/11/nanoblowrimo</link>
+      <link>http://dev.jsonbecker.com/2014/11/nanoblowrimo</link>
       <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.jsonbecker.com/2014/11/nanoblowrimo</guid>
+      <guid>http://dev.jsonbecker.com/2014/11/nanoblowrimo</guid>
       <description>&lt;p&gt;November marks the start of National Novel Writing Month (NaNoWriMo). The quick version is folks band together and support each other to write 50,000 words in November.&lt;/p&gt;
 
 &lt;p&gt;I would love to write a novel one day. I am not sure I could do it well, but I am pretty sure I could hit 50,000-80,000 words if I dedicated time to tell a story.&lt;/p&gt;
