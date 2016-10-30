@@ -8,7 +8,11 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #00997C
+  color: #00997C;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 
 a {
@@ -47,16 +51,25 @@ pre, code {
   display: block;
 }
 
-.date {
-  float: left;
-  padding: 5 10 5 0 ;
+.post-meta {
   font-weight: 600;
-  -webkit-margin-before: .05em;
-  -webkit-margin-after:  .67em;
+  color: #00997C;
+  max-height: 40px;
+  line-height: 1em;
+}
+
+.post-meta .date {
+  float: left;
+}
+
+.post-meta .archive{
+  float: right;
 }
 
 .post-title {
-  padding: 5 0 5 10 ;
+  padding: 5 0 5 0 ;
+  max-height: 80px;
+  font-size: 2.25em;
 }
 
 table {
@@ -68,4 +81,9 @@ th {
   border-bottom: 2px solid #ccc; 
   border-collapse: collapse;
   font-weight: 700;
+}
+
+footer.license {
+  padding: 10 0 10 0;
+  font-size: 0.75em;
 }

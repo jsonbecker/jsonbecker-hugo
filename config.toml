@@ -2,6 +2,5 @@ baseurl = "http://dev.jsonbecker.com"
 languageCode = "en-us"
 title = "JSONBecker"
 theme = 'jsonbecker'
-uglyurls = true
 [permalinks]
 post= "/:year/:month/:title"
