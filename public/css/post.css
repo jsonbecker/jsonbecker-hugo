@@ -1,0 +1,144 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600';
+
+/* Root Fonts */
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #00997C;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+a {
+  color: #1177bb;
+  font-weight: 500;
+}
+
+a:hover, a:visited {
+  color: #3b185f;
+}
+
+blockquote > p {
+  font-weight: 500;
+  font-style: italic;
+  border-left: 10px solid #00997C;
+  padding: 0.5em 10px;
+}
+
+pre, code { 
+  font-family: Hack, monospace; 
+  font-size: 0.80rem;
+}
+
+.post-list {
+  
+}
+
+.gutter{
+  clear: both;
+}
+.post-item {
+  list-style-type: none;
+  clear: both;
+  padding-top: 5;
+  padding-bottom: 5;
+  display: flex;
+}
+
+.title-bar {
+  background-color: #00997C;
+  height: 4em;
+  width: auto;
+  padding: 0 20 0 20;
+}
+
+.title-bar .title {
+  float: left;
+  bottom: 0;
+  color: #FFFFFF;
+}
+
+.title-bar .nav {
+  float: right;
+  bottom: 0;
+  -webkit-margin-before: 1.25em;
+  color: #FFFFFF;
+}
+
+.title-bar .nav a{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.date {
+  float: left;
+}
+
+.perma {
+  float: right;
+}
+
+.post-item .post-title {
+  max-height: 80px;
+  margin-left: 25;
+}
+
+.post-item .date {
+  min-width: 100px;
+}
+
+.post-title h1 {
+  font-size: 2.5rem;
+}
+
+figure {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.22);
+}
+
+figure img {
+  max-width: 100%;
+  max-height: 500px;
+  margin: auto;
+  display: block;
+}
+
+figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5 10 5 10;
+	font-style: italic;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: white;
+  display: block;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+th {
+  border-bottom: 2px solid #ccc; 
+  border-collapse: collapse;
+  font-weight: 700;
+}
+
+footer.license {
+  background-color: #00997C;
+  color: #fff;
+  padding: 10 0 10 0;
+  font-size: 0.75em;
+}
+
+footer img {
+	display: block;
+	margin: auto;
+}

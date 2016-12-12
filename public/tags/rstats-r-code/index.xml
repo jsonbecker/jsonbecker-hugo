@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstats R Code on JSONBecker</title>
+    <link>http://dev.jsonbecker.com/tags/rstats-r-code/</link>
+    <description>Recent content in Rstats R Code on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dev.jsonbecker.com/tags/rstats-r-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Calculating Age in R</title>
+      <link>http://dev.jsonbecker.com/2013/06/calculating-age-in-r</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.jsonbecker.com/2013/06/calculating-age-in-r</guid>
+      <description>&lt;p&gt;A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data.&lt;/p&gt;
+
+&lt;p&gt;I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:wrote&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:wrote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;age_calc &amp;lt;- function(dob, enddate=Sys.Date(), units=&#39;months&#39;){
+  if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;))
+    stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;)
+  start &amp;lt;- as.POSIXlt(dob)
+  end &amp;lt;- as.POSIXlt(enddate)
+  
+  years &amp;lt;- end$year - start$year
+  if(units==&#39;years&#39;){
+    result &amp;lt;- ifelse((end$mon &amp;lt; start$mon) | 
+                      ((end$mon == start$mon) &amp;amp; (end$mday &amp;lt; start$mday)),
+                      years - 1, years)    
+  }else if(units==&#39;months&#39;){
+    months &amp;lt;- (years-1) * 12
+    result &amp;lt;- months + start$mon
+  }else if(units==&#39;days&#39;){
+    result &amp;lt;- difftime(end, start, units=&#39;days&#39;)
+  }else{
+    stop(&amp;quot;Unrecognized units. Please choose years, months, or days.&amp;quot;)
+  }
+  return(result)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A few notes on proper usage and the choices I made in writing this function:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The parameters &lt;code&gt;dob&lt;/code&gt; and &lt;code&gt;enddate&lt;/code&gt; expect data that is already in one of the various classes that minimally inherits the base class &lt;code&gt;Date&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;This function takes advantage of the way that R treats vectors, so both &lt;code&gt;dob&lt;/code&gt; and &lt;code&gt;enddate&lt;/code&gt; can be a single or multi-element vector. For example &lt;code&gt;enddate&lt;/code&gt; is a single date, as is the default, then the function will return a vector that calculates the difference between &lt;code&gt;dob&lt;/code&gt; and that single date for each element in &lt;code&gt;dob&lt;/code&gt;. If &lt;code&gt;dob&lt;/code&gt; and &lt;code&gt;enddate&lt;/code&gt; are both vectors with n&amp;gt;1, then the returned vector will contain the &lt;a href=&#34;http://heather.cs.ucdavis.edu/~matloff/r.old.html#elementwise&#34;&gt;element-wise&lt;/a&gt; difference between &lt;code&gt;dob&lt;/code&gt; and &lt;code&gt;enddate&lt;/code&gt;. When the vectors are of different sizes, the shorter vector will be repeated over until it reaches the same length as the longer vector. This is known as &lt;a href=&#34;http://cran.r-project.org/doc/manuals/R-intro.html#The-recycling-rule&#34;&gt;recycling&lt;/a&gt;, and it is the default behavior in R.&lt;/li&gt;
+&lt;li&gt;This function always returns an integer. Calculating age in years will never return, say, 26.2. Instead, it assumes that the correct behavior for age calculations is something like a &lt;code&gt;floor&lt;/code&gt; function. For examle, the function will only return 27 if &lt;code&gt;enddate&lt;/code&gt; is minimally your 27th birthday. Up until that day you are considered 26. The same is true for age in months.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is probably the first custom function in almost 3 years using R that I wrote to be truly generalizable. I was inspired by three factors. First, this is a truly frequent task that I will have to apply to many data sets in the future that I don&amp;rsquo;t want to have to revisit. Second, a professional acquaintance, &lt;a href=&#34;http://jaredknowles.com/&#34;&gt;Jared Knowles&lt;/a&gt;, is putting together a CRAN package with various convenience functions for folks who are new to R and using it to analyze education data &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:https-github-com-jknowles-eeptools&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:https-github-com-jknowles-eeptools&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. This seemed like an appropriate addition to that package, so I wanted to write it to that standard. In fact, it was my first (and to date, only) submitted and accepted pull request on Github. Third, it is a tiny, simple function so it was easy to wrap my head around and write it well. I will let you be the judge of my success or failure &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inspiration&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:inspiration&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:wrote&#34;&gt;I originally used &lt;code&gt;Sys.time()&lt;/code&gt; not realizing there was a &lt;code&gt;Sys.Date()&lt;/code&gt; function. Thanks to Jared Knowles for that edit in preparation for a CRAN check.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:wrote&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:https-github-com-jknowles-eeptools&#34;&gt; &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:https-github-com-jknowles-eeptools&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:inspiration&#34;&gt;Thanks to &lt;a href=&#34;http://mcfromnz.wordpress.com/2013/06/12/updated-age-calculation-function/&#34;&gt;Matt&amp;rsquo;s Stats n Stuff&lt;/a&gt; for getting me to write this post. When I saw another age calculation function pop up on the r-bloggers feed I immediately thought of this function. Matt pointed out that it was quite hard to Google for age calculations in R, lamenting that Google doesn&amp;rsquo;t meaningfully crawl Github where I linked to find my code. So this post is mostly about providing some help to less experience R folks who are frantically Googling as both Matt and I did when faced with this need.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:inspiration&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

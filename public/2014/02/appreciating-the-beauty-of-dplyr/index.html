@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link href = "http://dev.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
+  <link href = "http://dev.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css">
+  
+  <link rel="stylesheet" href="http://dev.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://dev.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>  
+    hljs.initHighlightingOnLoad();
+  </script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://dev.jsonbecker.com">Home</a> | 
+          <a href = "http://dev.jsonbecker.com/archive">Archives</a> |
+          <a href = "http://dev.jsonbecker.com/resume.html">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+  
+
+    <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Appreciating the Beauty of dplyr</h1>
+    <h6 class = "date">February 18, 2014</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2014/02/appreciating-the-beauty-of-dplyr">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      <p><a href="http://had.co.nz">Hadley Wickham</a> has <a href="https://github.com/hadley">once again</a><sup class="footnote-ref" id="fnref:seriously"><a rel="footnote" href="#fn:seriously">1</a></sup> made R ridiculously better. Not only is <code>dplyr</code> incredibly fast, but the new syntax allows for some really complex operations to be expressed in a ridiculously beautiful way.</p>
+
+<p>Consider a data set, <code>course</code>, with a student identifier, <code>sid</code>, a course identifier, <code>courseno</code>, a quarter, <code>quarter</code>, and a grade on a scale of 0 to 4, <code>gpa</code>. What if I wanted to know the number of a courses a student has failed over the entire year, as defined by having an overall grade of less than a 1.0?</p>
+
+<p>In dplyr:</p>
+
+<pre><code class="language-r">course %.% 
+group_by(sid, courseno) %.%
+summarise(gpa = mean(gpa)) %.%
+filter(gpa &lt;= 1.0) %.%
+summarise(fails = n())
+</code></pre>
+
+<p>I refuse to even sully this post with the way I would have solved this problem in the past.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:seriously">Seriously, how many of the packages he has managed/written are indispensable to using R today? It is no exaggeration to say that the world would have many more Stata, SPSS, and SAS users if not for Hadleyverse.
+ <a class="footnote-return" href="#fnref:seriously"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+  <footer class = "license center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </footer>
+    </body>
+</html>

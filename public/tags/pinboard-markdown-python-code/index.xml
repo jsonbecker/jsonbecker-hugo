@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pinboard Markdown Python Code on JSONBecker</title>
+    <link>http://dev.jsonbecker.com/tags/pinboard-markdown-python-code/</link>
+    <description>Recent content in Pinboard Markdown Python Code on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dev.jsonbecker.com/tags/pinboard-markdown-python-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pindown: Failed Dreams</title>
+      <link>http://dev.jsonbecker.com/2014/05/pindown-failed-dreams</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.jsonbecker.com/2014/05/pindown-failed-dreams</guid>
+      <description>&lt;p&gt;I had never thought of a use for &lt;a href=&#34;http://www.brettterpstra.com&#34;&gt;Brett Terpstra&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://heckyesmarkdown.com&#34;&gt;Marky the Markdownifier&lt;/a&gt; before listening today&amp;rsquo;s &lt;a href=&#34;http://5by5.tv/systematic/96&#34;&gt;Systematic&lt;/a&gt;. Why would I want to turn a webpage into Markdown?&lt;/p&gt;
+
+&lt;p&gt;When I heard that Marky has an API, I was inspired. &lt;a href=&#34;http://pinboard.in&#34;&gt;Pinboard&lt;/a&gt; has a &amp;ldquo;description&amp;rdquo; field that allows up to 65,000 characters. I never know what to put in this box. Wouldn&amp;rsquo;t it be great to put the full content of the page in Markdown into this field?&lt;/p&gt;
+
+&lt;p&gt;I set out to write a quick Python script to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Grab recent Pinboard links.&lt;/li&gt;
+&lt;li&gt;Check to see if the URLs still resolve.&lt;/li&gt;
+&lt;li&gt;Send the link to Marky and collect a Markdown version of the content.&lt;/li&gt;
+&lt;li&gt;Post an updated link to Pinboard with the Markdown in the description field.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If all went well, I would release this script on Github as &lt;strong&gt;Pindown&lt;/strong&gt;, a great way to put Markdown page content into your Pinboard links.&lt;/p&gt;
+
+&lt;p&gt;The script below is far from well-constructed. I would have spent more time cleaning it up with things like better error handling and a more complete CLI to give more granular control over which links receive Markdown content.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I found that Pinboard consistently returns a &lt;a href=&#34;http://www.checkupdown.com/status/E414.html&#34;&gt;414 error code&lt;/a&gt; because the URLs are too long. Why is this a problem? Pinboard, in an attempt to &lt;a href=&#34;https://pinboard.in/api/&#34;&gt;maintain compatibility&lt;/a&gt; with the &lt;a href=&#34;http://del.ico.us&#34;&gt;del.ico.us&lt;/a&gt; API uses only GET requests, whereas this kind of request would typically use a POST end point. As a result, I cannot send along a data payload.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m sharing this just for folks who are interested in playing with Python, RESTful APIs, and Pinboard. I&amp;rsquo;m also posting for my own posterity since a &lt;a href=&#34;https://groups.google.com/d/msg/pinboard-dev/Od6sCzREeBU/L-WKgX6vUDoJ&#34;&gt;non-Del.ico.us compatible version 2 of the Pinboard API is coming&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import requests
+import json
+import yaml
+
+
+def getDataSet(call):
+  r = requests.get(&#39;https://api.pinboard.in/v1/posts/recent&#39; + call)
+  data_set = json.loads(r._content)
+  return data_set
+
+def checkURL(url=&amp;quot;&amp;quot;):
+  newurl = requests.get(url)
+  if newurl.status_code==200:
+    return newurl.url
+  else:
+    raise ValueError(&#39;your message&#39;, newurl.status_code)
+
+def markyCall(url=&amp;quot;&amp;quot;):
+  r = requests.get(&#39;http://heckyesmarkdown.com/go/?u=&#39; + url)
+  return r._content
+
+def process_site(call):
+  data_set = getDataSet(call)
+  processed_site = []
+  errors = []
+  for site in data_set[&#39;posts&#39;]:
+    try:
+      url = checkURL(site[&#39;href&#39;])
+    except ValueError:
+      errors.append(site[&#39;href&#39;])
+    description = markyCall(url)
+    site[&#39;extended&#39;] = description
+    processed_site.append(site)
+  print errors
+  return processed_site
+
+def write_pinboard(site, auth_token):
+  stem = &#39;https://api.pinboard.in/v1/posts/add?format=json&amp;amp;auth_token=&#39;
+  payload = {}
+  payload[&#39;url&#39;] = site.get(&#39;href&#39;)
+  payload[&#39;description&#39;] = site.get(&#39;description&#39;, &#39;&#39;)
+  payload[&#39;extended&#39;] = site.get(&#39;extended&#39;, &#39;&#39;)
+  payload[&#39;tags&#39;] = site.get(&#39;tags&#39;, &#39;&#39;)
+  payload[&#39;shared&#39;] = site.get(&#39;extended&#39;, &#39;no&#39;)
+  payload[&#39;toread&#39;] = site.get(&#39;toread&#39;, &#39;no&#39;)           
+  r = requests.get(stem + auth_token, params = payload)
+  print(site[&#39;href&#39;] + &#39;\t\t&#39; + r.status_code)
+
+def main():
+  settings = file(&#39;AUTH.yaml&#39;, &#39;rw&#39;)
+  identity = yaml.load(AUTH.yaml)
+  auth_token = identity[&#39;user_name&#39;] + &#39;:&#39; + identity[&#39;token&#39;]
+  valid_sites = process_site(&#39;?format=json&amp;amp;auth_token=&#39; + auth_token)
+  for site in valid_sites:
+    write_pinboard(site, auth_token)
+
+if __name__ == &#39;__main__&#39;:
+  main()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

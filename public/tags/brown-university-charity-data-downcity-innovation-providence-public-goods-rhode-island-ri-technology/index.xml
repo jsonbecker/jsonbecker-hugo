@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brown University Charity Data Downcity Innovation Providence Public Goods Rhode Island Ri Technology on JSONBecker</title>
+    <link>http://dev.jsonbecker.com/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/</link>
+    <description>Recent content in Brown University Charity Data Downcity Innovation Providence Public Goods Rhode Island Ri Technology on JSONBecker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://dev.jsonbecker.com/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Providence needs a little innovation</title>
+      <link>http://dev.jsonbecker.com/2012/03/providence-needs-a-little-innovation</link>
+      <pubDate>Tue, 20 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.jsonbecker.com/2012/03/providence-needs-a-little-innovation</guid>
+      <description>&lt;p&gt;Have you ever tried to access public information about &lt;a href=&#34;http://www.providenceri.com&#34;&gt;Providence&lt;/a&gt; on the web? Due to the recent, and new, requirement that residents reapply for their homestead tax exemption in Providence, I decided to poke around the Providence webpage to see what kind of &lt;a href=&#34;http://providence.ias-clt.com/parcel.list.php&#34;&gt;public information on property was available online&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I was greeted with an IT nightmare&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The system was clearly a third-party developed or purchased front end designed for searching public records on property and sold to municipalities throughout the country by winning contracts through the RFP process. It&amp;rsquo;s also clearly no longer supported (or supported poorly), outdated, and running on hardware that&amp;rsquo;s probably about as powerful as an 8-year-old desktop computer. The system crawls, when it&amp;rsquo;s not completely still, and provides no means of easy export that I can find.&lt;/p&gt;
+
+&lt;p&gt;This was really disappointing to me. In an earlier post, I began to look at some simple data available on the Providence Journal&amp;rsquo;s webpage about recent sales. I was hoping to use an API (and in the worst case, a massive data dump) to get access to information about the assessed value of recently sold properties and to play around a bit with various heat maps and see what patterns are revealed. Even if there were some way to get access to the data, the application is so poor I definitely do not have the patience required.&lt;/p&gt;
+
+&lt;p&gt;This is a real shame, because one of the great things about data on property is that it is all public information. This means that the data could be shared widely to creative policy wonks, data geeks, and CS nerds looking for a weekend project. There are now two cities&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;in the US that are employing a &lt;a href=&#34;http://www.theatlanticcities.com/technology/2012/03/dawn-muncipal-chief-innovation-officer/1516&#34;&gt;new kind of CIO&lt;/a&gt;&amp;ndash; the Chief &lt;em&gt;Innovation&lt;/em&gt; Officer&amp;ndash; whose role is to connect government resources, be they employees, data, or infrastructure, with folks who can do something new, exciting, and useful for city residents.&lt;/p&gt;
+
+&lt;p&gt;Developers designed one application in San Francisco to reduce the &amp;ldquo;notoriously cumbersome hurdles for starting a new business.&amp;rdquo;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;Does anyone happen to know of another city, perhaps without the rich, entrepreneurial technology and science economy it lusts for, that is not known as an easy place to set up shop? &lt;a href=&#34;http://www.providenceri.com&#34;&gt;Hint&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When Brown University has an excellent computer science department made up of undergrads who work on side projects like &lt;a href=&#34;http://brown.mochacourses.com&#34;&gt;developing an online course catalog&lt;/a&gt; since the &lt;a href=&#34;http://www.browndailyherald.com/2.12225/ucs-criticizes-new-banner-course-catalog-1.1674252#.T2frNWJSRe8&#34;&gt;Brown purchased system sucks&lt;/a&gt;, it&amp;rsquo;s hard not to conclude that there are latent geek talents just waiting to be tapped. And it&amp;rsquo;s not just Brown that could be engaged. What about &lt;a href=&#34;http://swipely.com/&#34;&gt;Swipely&lt;/a&gt;, the newest tech startup from entrepreneur &lt;a href=&#34;http://angusdavis.com/&#34;&gt;Angus Davis&lt;/a&gt;, a Rhode Island native who is very active in local government and developing Providence. An exciting. fledging technology company with young, smart folks who do application development with huge swaths of data every day is an excellent source of the kind of talent Providence needs. Why hasn&amp;rsquo;t someone approached Swipely about a charity opportunity&amp;ndash; take all non-essential staff off their current projects, give them a break from the deadlines and typical day, and get them working furiously for a week on rolling out something awesome and useful for city residents. It would reinvigorate young coders and greatly benefit the city.&lt;/p&gt;
+
+&lt;p&gt;Heck, something as simple as getting in and teaching government employees how to spin up instances of &lt;a href=&#34;http://aws.amazon.com/&#34;&gt;Amazon EC2&lt;/a&gt; &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; so they can migrate off self-managed, slow servers for non-secure information would be huge. Imagine this, plus rolling an API for critical municipal data sets. There would be a rich environment for hobbyists, students, and professionals alike to spark some creative ways to understand and interact with Providence.&lt;/p&gt;
+
+&lt;p&gt;Another example, assuming it&amp;rsquo;s legal, how long do you think it would take a smart developer, dedicated solely to one task, to roll a system that would cross-reference Providence landowners with the DMV registration database so that myself and other residents didn&amp;rsquo;t have to trek out documentation to City Hall to avoid a 50% tax hike?&lt;/p&gt;
+
+&lt;p&gt;Providence is not San Francisco, but there are many talented developers and data scientists who are passionate enough about the city to donate their time and expertise. Honestly, for many of these folks there are real personal benefits, even without appealing to some sentiment of civic duty. So let&amp;rsquo;s open up our data, our infrastructure, and our employees. Let&amp;rsquo;s encourage folks from outside of government to inject excitement and new skills for current government IT employees and analysts.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s time for Providence&amp;rsquo;s own &amp;ldquo;Summer of Code&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;To be fair, when I accessed the site today the site was substantially more functional than it was in two previous visits several weeks ago
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;San Francisco, unsurprisingly, and Philadelphia
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;From &lt;a href=&#34;http://www.theatlanticcities.com&#34;&gt;The Atlantic Cities&lt;/a&gt; article linked above.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;&lt;a href=&#34;http://csrc.nist.gov/groups/SMA/fisma/index.html&#34;&gt;FISMA&lt;/a&gt; compliant
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:4&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
