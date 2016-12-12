@@ -3,17 +3,12 @@
   
   <url>
     <loc>http://dev.jsonbecker.com/</loc>
-    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dev.jsonbecker.com/2016/09/second-post</loc>
-    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dev.jsonbecker.com/2016/09/first-hugo-post</loc>
-    <lastmod>2016-09-24T00:00:00+00:00</lastmod>
+    <loc>http://dev.jsonbecker.com/image/a-strange-occurrence/</loc>
+    <lastmod>2016-11-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -477,7 +472,11 @@
   </url>
   
   <url>
-    <loc>http://dev.jsonbecker.com/resume.html</loc>
+    <loc>http://dev.jsonbecker.com/resume/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dev.jsonbecker.com/archive/archive/</loc>
   </url>
   
 </urlset>

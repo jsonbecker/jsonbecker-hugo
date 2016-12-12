@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.16" />
+  <link href = "http://dev.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
+  <link href = "http://dev.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css">
+  <link rel="stylesheet" href="http://dev.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://dev.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>  
+    hljs.initHighlightingOnLoad();
+  </script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://dev.jsonbecker.com">Home</a> | 
+          <a href = "http://dev.jsonbecker.comarchive">Archives</a> |
+          <a href = "http://dev.jsonbecker.comresume.html">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+  
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>A Strange Occurrence</h1>
+    <h6 class = "date">November 26, 2016</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/image/a-strange-occurrence/">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+     <figure>
+       <img src = /img/weather.png>
+       <figcaption> Sometimes it&#39;s hard to tell if your data is bad, or you&#39;re actually seeing a rare occurrence. </figcaption>
+     </figure>
+    </div>
+  </div>
+
+
+
+<hr>
+      
+          <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Smarter Balance Released Items Scare Me</h1>
+    <h6 class = "date">July 23, 2013</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2013/07/smarter-balance-released-items-scare-me">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      CCSSI Mathematics posted a scathing look at the items released by the Smarter Balanced Assessment Consortium (SBAC). While the rest of the internet seems to be obsessed over Georgia leaving the Partnership for Assessment of College and Careers1, the real concern should be over the quality of these test items. Although CCSSI also deligently point out questions that are not well aligned to the standards, this is the least of my worries.
+      
+        <h6 class="perma"><a href="/2013/07/smarter-balance-released-items-scare-me">Read More…</a></h6>
+      
+    </div>
+  </div>
+
+
+      
+      <hr>
+      
+          <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Summer Reading</h1>
+    <h6 class = "date">July 23, 2013</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2013/07/summer-reading">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      This summer has been very productive for my fiction reading backlog. Here are just some of the things I have read since Memorial Day. 1 Novels The Name of the Wind by Patrick Rothfuss I picked up The Name of the Wind on a whim while cruising through the bookstore. I was glad I did. This book tells a classic story&ndash; a precocious young wizard learns to use his powers, building toward being the most important person in the world.
+      
+        <h6 class="perma"><a href="/2013/07/summer-reading">Read More…</a></h6>
+      
+    </div>
+  </div>
+
+
+      
+      <hr>
+      
+          <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Economic Policy Institute is Wrong</h1>
+    <h6 class = "date">June 20, 2013</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2013/06/economic-policy-institute-is-wrong">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      The Economic Policy Institute has release a short issue brief on the Rhode Island Retirement Security Act (RIRSA) by Robert Hiltonsmith that manages to get all of the details right but the big picture entirely wrong. The EPI Issue Brief details the differences between the retirement system for state workers before and after the passage of RIRSA as accurately and clearly as I have ever seen. Mr. Hiltonsmith has done a notable job explaining the differences between the new system and the old system.
+      
+        <h6 class="perma"><a href="/2013/06/economic-policy-institute-is-wrong">Read More…</a></h6>
+      
+    </div>
+  </div>
+
+
+      
+      <hr>
+      
+          <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Calculating Age in R</h1>
+    <h6 class = "date">June 12, 2013</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2013/06/calculating-age-in-r">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data. I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote 1: age_calc &lt;- function(dob, enddate=Sys.Date(), units='months'){ if (!inherits(dob, &quot;Date&quot;) | !inherits(enddate, &quot;Date&quot;)) stop(&quot;Both dob and enddate must be Date class objects&quot;) start &lt;- as.POSIXlt(dob) end &lt;- as.POSIXlt(enddate) years &lt;- end$year - start$year if(units=='years'){ result &lt;- ifelse((end$mon &lt; start$mon) | ((end$mon == start$mon) &amp; (end$mday &lt; start$mday)), years - 1, years) }else if(units=='months'){ months &lt;- (years-1) * 12 result &lt;- months + start$mon }else if(units=='days'){ result &lt;- difftime(end, start, units='days') }else{ stop(&quot;Unrecognized units.
+      
+        <h6 class="perma"><a href="/2013/06/calculating-age-in-r">Read More…</a></h6>
+      
+    </div>
+  </div>
+
+
+      
+      <hr>
+    <div class ="row">
+      <div class = "col-12">
+        
+          <a class = "left" href="/page/8/">
+            &larr; Previous Page
+          </a>
+        
+        
+          <a href="/page/10/" style = "float: right;">
+            Next Page &rarr;
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

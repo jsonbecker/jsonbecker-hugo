@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Service Home Improvement on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/service-home-improvement.html</link>
+    <link>http://dev.jsonbecker.com/tags/service-home-improvement/</link>
     <description>Recent content in Service Home Improvement on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Nov 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/service-home-improvement.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/service-home-improvement/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Amazon Creating A Services Marketplace Online</title>

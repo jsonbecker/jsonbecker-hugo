@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cpt Edtech Education on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/cpt-edtech-education.html</link>
+    <link>http://dev.jsonbecker.com/tags/cpt-edtech-education/</link>
     <description>Recent content in Cpt Edtech Education on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/cpt-edtech-education.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/cpt-edtech-education/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>What if the technology revolution in schools is really about the simple stuff?</title>

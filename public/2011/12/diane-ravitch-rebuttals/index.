@@ -1,0 +1,60 @@
+<html>
+<head>
+  <link href = "http://dev.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
+  <link href = "http://dev.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css">
+  <link rel="stylesheet" href="http://dev.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://dev.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>  
+    hljs.initHighlightingOnLoad();
+  </script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://dev.jsonbecker.com">Home</a> | 
+          <a href = "http://dev.jsonbecker.comarchive">Archives</a> |
+          <a href = "http://dev.jsonbecker.comresume.html">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+  
+
+    <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>Diane Ravitch, rebuttals.</h1>
+    <h6 class = "date">December 12, 2011</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2011/12/diane-ravitch-rebuttals.">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      <p>So I wrote a <a href="http://blog.jasonpbecker.com/2011/11/28/is-diane-ravitch-a-reliable-historian/">harsh post</a> after reading a <a href="http://www.tnr.com/print/article/politics/magazine/97765/diane-ravitch-education-reform">harsh article</a> by Kevin Carey in <a href="http://www.tnr.com/">The New Republic</a> about <a href="http://www.dianeravitch.com/">Diane Ravitch</a>. I still standby what I said. Namely, I&rsquo;m very cautious about trusting Ravitch as a reliable narrator of history because I&rsquo;m:</p>
+
+<ul>
+<li>unfamiliar with good historiography/methodology so it&rsquo;s hard for me to judge the quality of her work simply from the product itself</li>
+<li>unaware of a rich discourse around education history in NYC and 20th century America in general that wrestles with, or even corroborates, Ravitch&rsquo;s account</li>
+<li>certain that Ravitch&rsquo;s more recent writings often mischaracterizes the power and meaning behind quantitative research and exhibits selection bias to fit a particular narrative</li>
+<li>generally distrustful of public academics, particularly when their writing is mainly outside of their primary discipline.</li>
+</ul>
+
+<p>That being said, there have been several well-written critiques of Carey&rsquo;s piece and I thought it&rsquo;s only fair that I link to them to present a more complete picture of what many folks, some who agree and some who disagree with Ravitch&rsquo;s current ideology, think of Ravitch&rsquo;s work.</p>
+
+<p><a href="http://www.edexcellence.net/about-us/people/michael-j-petrilli.html">Mike Petrilli</a> is certainly no fan of Ravitch&rsquo;s rebirth as the anti-choice, anti-accountability voice <em>du jour</em>. But <a href="http://www.educationgadfly.net/flypaper/2011/11/what-kevin-carey-didnt-say-about-diane-ravitch-but-should-have/">his piece</a> in Flypaper in response to Carey is quite clear: the idea that Ravitch&rsquo;s personal life  had an impact on her criticism of then NYC Schools
+Chancellor <a href="http://en.wikipedia.org/wiki/Joel_Klein">Joel Klein</a> is unfair and wrong. As someone who worked directly with Ravitch and who had, independently, overseen the awarding of a grant to <a href="http://www.huffingtonpost.com/mary-butz">Mary Butz</a>&rsquo;s leadership program, Petrilli sees a different line of thought. Ravitch, in his view, simply correctly pointed to the flaw in Klein&rsquo;s &ldquo;clear the field&rdquo; approach that tended to cut down successful or promising programs alongside the dead weight.</p>
+
+<p><a href="http://www.danagoldstein.net/dana_goldstein/about-dana.html">Dana Goldstein</a>&rsquo;s <a href="http://www.danagoldstein.net/dana_goldstein/2011/11/thoughts-on-kevin-careys-profile-of-diane-ravitch-history-and-ideology.html">response</a> suggests that Kevin Carey ignored the context in which Ravitch wrote. Goldstein suggests that Ravitch had to fight against a sexist academy in a discipline that increasingly had taken on a polemicists tone, as a liberal who did not quite fit the mold
+of her times. These factors combined to generate the type of histories and writing that Ravitch would produce and are critical in understanding, without undermining, her work.</p>
+
+<p>Finally, <a href="http://www.dianasenechal.com/bio.html">Diane Senechal</a> writes in The New Republic <a href="http://www.tnr.com/article/politics/98379/diane-ravitch-school-reform?page=0,0">today</a> that Ravitch&rsquo;s history is a far more balanced critique than Carey would have you believe, very well documented, and self-consistent. She does concede that Ravitch writes with a fiery, decidedly non-academic tone that&rsquo;s
+intended as a public intellectual. But here, Senechal views this as a strength, &ldquo;arous[ing] general interest in matters that might otherwise seem out of reach or obscure.&rdquo; Ultimately, Senechal&rsquo;s main point is that Ravitch&rsquo;s work is of very high quality and thorough and that her tone should not overshadow the accomplishment of her scholarship.</p>
+
+    </div>
+  </div>
+
+  </div>
+  <footer class = "license center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </footer>
+    </body>
+</html>

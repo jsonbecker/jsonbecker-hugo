@@ -51,12 +51,13 @@ h4 {
 
 h5 {
   font-size: 1rem;
-  font-weight: 500i;
+  font-weight: 500;
+  font-style: italic;
 }
 
 h6 {
   font-size: 0.875rem;
-  font-weight: 400i
+  font-weight: 400;
 }
 
 p {

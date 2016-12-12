@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link href = "http://dev.jsonbecker.com/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
+  <link href = "http://dev.jsonbecker.com/css/post.css" rel = "stylesheet" type = "text/css">
+  <link rel="stylesheet" href="http://dev.jsonbecker.com/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://dev.jsonbecker.com/js/highlight.pack.js"></script>
+  <script>  
+    hljs.initHighlightingOnLoad();
+  </script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://dev.jsonbecker.com">Home</a> | 
+          <a href = "http://dev.jsonbecker.comarchive">Archives</a> |
+          <a href = "http://dev.jsonbecker.comresume.html">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+  
+
+    <div class = 'row post-title'>
+    <div class = 'col-9'>
+      <h1>News on Assertions in R</h1>
+    <h6 class = "date">July 05, 2015</h6> 
+    <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2015/07/news-on-assertions-in-r">Permalink</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-9'>
+      <p>How many times have you written R functions that start with a bunch of code that looks like this?</p>
+
+<pre><code class="language-r">my_funct &lt;- function(dob, enddate = &quot;2015-07-05&quot;){
+if (!inherits(dob, &quot;Date&quot;) | !inherits(enddate, &quot;Date&quot;)){
+    stop(&quot;Both dob and enddate must be Date class objects&quot;)
+  } 
+...
+}
+</code></pre>
+
+<p>Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not <em>type safe</em>, meaning function arguments do not have to conform to specified data types. But most of my R code is not run interactively. I have to trust my code to run on servers on schedules or on demand as a part of production systems. So I find myself frequently writing code like the above&ndash; manually writing type checks for safety.</p>
+
+<p>There has been some great action in the R community around <em>assertive programming</em>, as you can see in the link. My favorite development, by far, are type-safe functions in the <a href="https://github.com/smbache/ensurer">ensurer package</a>. The above function definition can now be written like this:</p>
+
+<pre><code class="language-r">my_funct &lt;- function_(dob ~ Date, enddate ~ Date: as.Date(&quot;2015-07-05&quot;), {
+  ...
+})
+</code></pre>
+
+<p>All the type-checking is done.</p>
+
+<p>I really like the reuse of the formula notation <code>~</code> and the use of <code>:</code> to indicate default values.</p>
+
+<p>Along with packages like <a href="https://github.com/hadley/testthat">testthat</a>, R is really growing up and modernizing.</p>
+
+    </div>
+  </div>
+
+  </div>
+  <footer class = "license center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </footer>
+    </body>
+</html>

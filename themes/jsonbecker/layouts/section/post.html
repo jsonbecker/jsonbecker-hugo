@@ -1,17 +1,10 @@
-{{ partial "post_header.html" }} 
+{{ partial "header.html" }} 
   <div class = 'container'>
-    <div class = 'row'>
-      <div class = 'col-12 page-title'>
-        <h1> Posts </h1>
-      </div>
-      <div class = 'col-1 gutter'>
-      </div>
-      <div class = 'col-11'>
+      <div class = 'col-12'>
         {{- range .Data.Pages}}
           {{ partial "li.html" . }}
         {{- end}}
       </div>
     </div>
-  </div>
 </body>
 </html>

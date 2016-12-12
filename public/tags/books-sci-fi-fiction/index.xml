@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books Sci Fi Fiction on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/books-sci-fi-fiction.html</link>
+    <link>http://dev.jsonbecker.com/tags/books-sci-fi-fiction/</link>
     <description>Recent content in Books Sci Fi Fiction on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Jul 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/books-sci-fi-fiction.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/books-sci-fi-fiction/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Summer Reading</title>

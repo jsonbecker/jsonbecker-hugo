@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Occupy Occupy Providence on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/occupy-occupy-providence.html</link>
+    <link>http://dev.jsonbecker.com/tags/occupy-occupy-providence/</link>
     <description>Recent content in Occupy Occupy Providence on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Oct 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/occupy-occupy-providence.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/occupy-occupy-providence/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TEA Party and Occupy Wall Street</title>

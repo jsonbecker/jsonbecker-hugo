@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education Poverty Research on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/education-poverty-research.html</link>
+    <link>http://dev.jsonbecker.com/tags/education-poverty-research/</link>
     <description>Recent content in Education Poverty Research on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/education-poverty-research.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/education-poverty-research/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>It&#39;s Poverty Stupid... or is it?</title>

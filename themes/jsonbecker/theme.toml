@@ -3,15 +3,15 @@
 
 name = "Jsonbecker"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/json/huge-site/blob/master/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "http://jsonbecker.com/"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.15
 
 [author]
-  name = ""
+  name = "Jason Becker"
   homepage = ""
 
 # If porting an existing theme

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pawsox I195 Development on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/pawsox-i195-development.html</link>
+    <link>http://dev.jsonbecker.com/tags/pawsox-i195-development/</link>
     <description>Recent content in Pawsox I195 Development on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Apr 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/pawsox-i195-development.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/pawsox-i195-development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Acceptable Terms</title>

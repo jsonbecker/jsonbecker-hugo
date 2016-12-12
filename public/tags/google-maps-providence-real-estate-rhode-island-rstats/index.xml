@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats.html</link>
+    <link>http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/</link>
     <description>Recent content in Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Providence Real Estate Sales in R</title>
