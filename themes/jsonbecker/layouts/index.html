@@ -8,7 +8,8 @@
   {{- end }}
 {{- end }}
 <hr>
-{{- range after 1 (.Paginator 5).Pages }}
+{{ $paginator := .Paginate (after 1 .Site.Pages) 5 }}
+{{- range $paginator.Pages }}
       {{ if eq .Type "post" }}
         {{ .Render "summary" }}
       {{- end }}

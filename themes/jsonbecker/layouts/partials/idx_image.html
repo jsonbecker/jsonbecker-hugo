@@ -6,11 +6,19 @@
     </div>
   </div>
   <div class = 'row'>
-    <div class = 'col-9'>
-     <figure>
-       <img src = {{ .Params.image }}>
-       <figcaption> {{ .Params.caption }} </figcaption>
-     </figure>
+    <div class = 'col-9 center'>
+      <a href= {{ (print "#" .Title) | urlize }}>
+       <figure>
+         <img src = {{ .Params.image }}>
+         <figcaption> {{ .Params.caption }} </figcaption>
+       </figure>
+     </a>
+     <a href="#_" class="lightbox" id = {{ .Title | urlize }}>
+       <figure>
+         <img src = {{ .Params.image }}>
+         <figcaption> {{ .Params.caption }} </figcaption>
+       </figure>
+     </a>
     </div>
   </div>
 
