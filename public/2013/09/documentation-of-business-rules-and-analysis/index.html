@@ -9,6 +9,15 @@
   <script>  
     hljs.initHighlightingOnLoad();
   </script>
+	<script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-40920108-1', 'auto');
+  	ga('send', 'pageview');
+	</script>
 <body>
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
@@ -32,7 +41,7 @@
     <div class = 'col-9'>
       <p>One of the most challenging aspects of being a data analyst is translating programmatic terms like &ldquo;student mobility&rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.</p>
 
-<p>Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.g. how many students were proficient in math, how many students graduated in four years, what proportion of students were chronically absent? All too often documentation of business rules is poor or non-existent. The result is that two analysts with the same data will produce inconsistent statistics. This is not because of something inherent in the quality of the data or an indictment of the analyst’s skills. In most cases, the undocumented business rules are essentially trivial, in that the results of any decision has a small impact on the final result and any of the decisions made by the analysts are equally defensible.</p>
+<p>Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.g. how many students were proficient in math, how many students graduated in four years, what proportion of students were chronically absent? All too often documentation of business rules is poor or non-existent. The result is that two analysts with the same data will produce inconsistent statistics. This is not because of something inherent in the quality of the data or an indictment of the analyst&rsquo;s skills. In most cases, the undocumented business rules are essentially trivial, in that the results of any decision has a small impact on the final result and any of the decisions made by the analysts are equally defensible.</p>
 
 <p>This major problem of lax or non-existent documentation is one of the main reasons I feel that analysts, and in particular analysts working in the public sector, should extensively use tools for code sharing and version control like <a href="http://www.github.com/">Github</a>, use free tools whenever possible, and generally adhere to best practices in reproducible research.</p>
 
@@ -49,7 +58,7 @@
 
 <p>Today I submitted by second pull request that I hope will be accepted. This time I covered a much more complex task&ndash; calculating student mobility. To be honest, I am completely unaware of existing business rules and algorithms used to produce the mobility numbers that are federally reported. I wrote this function from scratch thinking through how I would calculate the number of schools attended by a student in a given year. I am really proud of both the business rules I have developed and the code I wrote to apply those rules. My custom function can accept fairly arbitrary inputs, fails gracefully when it finds data it does not expect, and is pretty fast. The original version of my code took close to 10 minutes to run on ~30,000 rows of data. I have reduced that with a complete rewrite prior to submission to 16 seconds.</p>
 
-<p>While I am not sure if this request will be accepted, I will be thrilled if it is. Mobility is a tremendously important statistic in education research and a standard, reproducible way to calculate it would be a great help to researchers. How great would it be if <code>eeptools</code> becomes one of the first packages education data analysts load and my mobility calculations are used broadly by researchers and analysts? But even if it’s not accepted because it falls out of scope, the process of developing the business rules, writing an initial implementation of those rules, and then refining that code to be far simpler, faster, and less error prone was incredibly rewarding.</p>
+<p>While I am not sure if this request will be accepted, I will be thrilled if it is. Mobility is a tremendously important statistic in education research and a standard, reproducible way to calculate it would be a great help to researchers. How great would it be if <code>eeptools</code> becomes one of the first packages education data analysts load and my mobility calculations are used broadly by researchers and analysts? But even if it&rsquo;s not accepted because it falls out of scope, the process of developing the business rules, writing an initial implementation of those rules, and then refining that code to be far simpler, faster, and less error prone was incredibly rewarding.</p>
 
 <p>My next post will probably be a review of that process and some parts of my <code>moves_calc</code> function that I&rsquo;m particularly proud of.</p>
 <div class="footnotes">

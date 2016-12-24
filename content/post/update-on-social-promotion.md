@@ -10,8 +10,8 @@ This [poignant post][] from [Michael Goldstein][] ends with a few policy though
 
 Goldstein's second point is worth highlighting:
 
-> Anyway, in a small school, large-scale research isn’t the key
-> determinant anyway. The team’s implementation is.
+> Anyway, in a small school, large-scale research isn't the key
+> determinant anyway. The team's implementation is.
 
 On the same day that [Shanker Blog][] is assuring us that [rigorous social science is worth it][], Goldstein delivers researchers a healthy dose of humility. Rigorous research is all about doing the best we can to remove all the confounding explanatory factors that have an impact on our observed outcomes to isolate an intervention. But even in the most rigorous studies social scientists are often measuring the [**A**verage **T**reatment **E**ffect][].
 
