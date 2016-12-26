@@ -128,8 +128,7 @@ figure img {
 }
 
 .lightbox img {
-  max-width: 100%;
-  max-height: 95%;
+  max-height: 95vh;
   margin-top: 2%;
 }
 
