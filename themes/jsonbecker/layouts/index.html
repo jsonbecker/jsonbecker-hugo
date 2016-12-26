@@ -1,37 +1,44 @@
 {{ partial "header.html" . }}  
-{{- range first 1 .Site.Pages }}
+
+{{ $paginator := .Paginate (after 1 .Site.Pages) 5 }}
+{{ if .Paginator.HasPrev }}
+
+{{ else }}
+
+  {{- range first 1 .Site.Pages }}
+    {{ if eq .Type "post" }}
+      {{ partial "idx_post.html" . }}
+    {{- end }}
+    {{ if eq .Type "image" }}
+      {{ partial "idx_image.html" . }}
+    {{- end }}
+  {{ end }}
+
+{{- end }}
+
+{{- range $paginator.Pages }}
   {{ if eq .Type "post" }}
-    {{ partial "idx_post.html" . }}
+    {{ .Render "summary" }}
   {{- end }}
   {{ if eq .Type "image" }}
     {{ partial "idx_image.html" . }}
   {{- end }}
 {{- end }}
-<hr>
-{{ $paginator := .Paginate (after 1 .Site.Pages) 5 }}
-{{- range $paginator.Pages }}
-      {{ if eq .Type "post" }}
-        {{ .Render "summary" }}
-      {{- end }}
-      {{ if eq .Type "image" }}
-        {{ partial "idx_image.html" . }}
-      {{- end }}
-      <hr>
-    {{- end }}
-    <div class ="row">
-      <div class = "col-12">
-        {{ if .Paginator.HasPrev }}
-          <a class = "left" href="{{ .Paginator.Prev.URL }}">
-            &larr; Previous Page
-          </a>
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-          <a href="{{ .Paginator.Next.URL }}" style = "float: right;">
-            Next Page &rarr;
-          </a>
-        {{ end }}
-      </div>
+
+  <div class ="row">
+    <div class = "col-12">
+      {{ if .Paginator.HasPrev }}
+        <a class = "left" href="{{ .Paginator.Prev.URL }}">
+          &larr; Previous Page
+        </a>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" style = "float: right;">
+          Next Page &rarr;
+        </a>
+      {{ end }}
     </div>
   </div>
+</div> <!-- container from header-->
 </body>
 </html>

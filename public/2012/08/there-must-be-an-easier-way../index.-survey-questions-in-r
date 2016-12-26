@@ -31,14 +31,14 @@
   
 
     <div class = 'row post-title'>
-    <div class = 'col-9'>
+    <div class = 'col-12'>
       <h1>There must be an easier way... survey questions in R</h1>
     <h6 class = "date">August 22, 2012</h6> 
     <h6 class = "perma"><a href = "http://dev.jsonbecker.com/2012/08/there-must-be-an-easier-way...-survey-questions-in-r">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
-    <div class = 'col-9'>
+    <div class = 'col-12'>
       <p>So I have this great little custom function I&rsquo;ve used when looking at survey data in R. I call this function <code>pull()</code>. The goal of <code>pull()</code> is to quickly produce frequency tables with n sizes from individual-level survey data.</p>
 
 <p>Before using <code>pull()</code>, I create a big table that includes information about the survey questions I want to pull. The data are structured like this:</p>
