@@ -1,10 +1,8 @@
 {{ partial "header.html" . }}  
 
 {{ $paginator := .Paginate (after 1 .Site.Pages) 5 }}
-{{ if .Paginator.HasPrev }}
 
-{{ else }}
-
+{{ if not .Paginator.HasPrev }}
   {{- range first 1 .Site.Pages }}
     {{ if eq .Type "post" }}
       {{ partial "idx_post.html" . }}
@@ -13,8 +11,7 @@
       {{ partial "idx_image.html" . }}
     {{- end }}
   {{ end }}
-
-{{- end }}
+{{ end }}
 
 {{- range $paginator.Pages }}
   {{ if eq .Type "post" }}
@@ -39,6 +36,4 @@
       {{ end }}
     </div>
   </div>
-</div> <!-- container from header-->
-</body>
-</html>
+{{ partial "footer.html" . }}

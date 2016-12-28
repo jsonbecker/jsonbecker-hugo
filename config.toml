@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "JSONBecker"
 theme = 'jsonbecker'
 [permalinks]
-post= "/:year/:month/:title"
+post= "/:year/:month/:slug"

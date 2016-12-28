@@ -6,8 +6,24 @@
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://dev.jsonbecker.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing json.blog</title>
+      <link>http://dev.jsonbecker.com/2016/12/introducing-jsonblog</link>
+      <pubDate>Mon, 26 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dev.jsonbecker.com/2016/12/introducing-jsonblog</guid>
+      <description>&lt;p&gt;I have written a lot on the internet. This isn&amp;rsquo;t a surprise, I&amp;rsquo;ve been here since the mid-90s. But the truth is, most of what I write on the internet doesn&amp;rsquo;t make me proud. It hasn&amp;rsquo;t made the world any better. It certainly hasn&amp;rsquo;t made me feel any better. A long time ago, I chose to use my real name as my online identity, which means that most of this terrible writing is easy to associate with me. Using my real name was supposed to make sure that I would stand by what I said, but I think the truth is that I am not always my better self on internet forums, Facebook, Twitter, or other places I get to write.&lt;/p&gt;
+
+&lt;p&gt;A personal blog is a bit different. For some reason, although it takes a lot more work to get here and reaches far fewer people, the writing I&amp;rsquo;ve done over the years at my own domains has been&amp;hellip; less embarrassing. I don&amp;rsquo;t mean to say that the quality of the writing is any better (it&amp;rsquo;s not); it&amp;rsquo;s just that the extra thought involved in opening up a text editor, writing something in Markdown, and taking the steps to post it has resulted in fewer emotional tirades. I do a much better job of deleting or never completing posts on my blog than I ever did writing somewhere someone else owned.&lt;/p&gt;
+
+&lt;p&gt;This site has been a testing ground, my space on the web is where I&amp;rsquo;ve learned to use Wordpress, Pelican, and now Hugo. It&amp;rsquo;s been a place to think about templating, structure, CSS, shared hosting, Github pages, server management, nginx and the like. This is where I try different types of writing like link posts, lists, professional-ish informational posts, public versions of notes to myself, images, and more. This blog hasn&amp;rsquo;t had a topic or a format. It&amp;rsquo;s my personal lab bench.&lt;/p&gt;
+
+&lt;p&gt;I think today I am starting what I consider to be the final version of this blog. I feel confident in the name, I feel comfortable with Hugo, I feel good about my fully custom theme being something I can grow with, and I feel great about not having comments. The look and feel and content will all change many times again, but I feel good that from here forward I&amp;rsquo;ll be using and evolving this space.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Our New Home</title>
@@ -448,36 +464,6 @@ because of the universal impact on communities, school finance legislation requi
 &lt;p&gt;&lt;strong&gt;The primary mechanism to get &amp;ldquo;more&amp;rdquo; education is increasing the quality or quantity of teaching.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Let us take the leap of suggesting that teaching is a key part of the production of education. If we want to improve educational equity and address the needs of low performing schools, we need some combination of more and higher quality teaching. This is a key driver of policies like extended learning time (more), smaller class sizes (more), professional development (better), and teacher evaluation and support systems (better). It is what is behind improving teacher preparation programs (better), alternative certification (better), and progressive support programs like RTI (more and better).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>NaNo(Blo)WriMo</title>
-      <link>http://dev.jsonbecker.com/2014/11/nanoblowrimo</link>
-      <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://dev.jsonbecker.com/2014/11/nanoblowrimo</guid>
-      <description>&lt;p&gt;November marks the start of National Novel Writing Month (NaNoWriMo). The quick version is folks band together and support each other to write 50,000 words in November.&lt;/p&gt;
-
-&lt;p&gt;I would love to write a novel one day. I am not sure I could do it well, but I am pretty sure I could hit 50,000-80,000 words if I dedicated time to tell a story.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t have a story to tell.&lt;/p&gt;
-
-&lt;p&gt;So this year, I have decided to not feel guilty about skipping out on another NaNoWriMo (&lt;em&gt;always the reader, never the author&lt;/em&gt;), and instead I am modifying it to meet my needs. With no story to tell and no experience tackling a single project the size of a novel, I am going to tackle a smaller problem&amp;ndash; this blog.&lt;/p&gt;
-
-&lt;p&gt;Instead of 50,000 words in 30 days, I am going to try and write 1000 words a day for the next four weeks. I will not hold myself to a topic. I will not even hold myself to non-fiction. I will not hold myself to a number of posts or the size of the posts I write. I will not even hold myself to true daily count, instead reviewing where I stand at the end of each week.&lt;/p&gt;
-
-&lt;p&gt;I am hoping that the practice of simply writing will grease my knuckles and start the avalanche that leads to writing more. A small confession&amp;ndash; I write two or three blog posts every week that never leave my drafts. I find myself unable to hit publish because the ideas tend to be far larger or far smaller than I anticipate when I set out to write and share my frustrations. I also get nervous, particularly when writing about things I do professionally, about not writing the perfect post that&amp;rsquo;s clear, heavily researched, and expresses my views definitively and completely. This month, I say goodbye to that anxiety and start simply hitting publish.&lt;/p&gt;
-
-&lt;p&gt;I will leave you with several warnings.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Things might get topically wacky. I might suddenly become a food blogger, or write about more personal issues, or write a short story and suddenly whiplash to talking about programming, education policy, or the upcoming election. If high volume, random topics aren&amp;rsquo;t your thing, you should probably unsubscribe from my RSS feed and check back in a month.&lt;/li&gt;
-&lt;li&gt;I might write terrible arguments that are poorly supported and don&amp;rsquo;t reflect my views. This month, I will not accept my most common excuses for not publishing, which boil down to fear people will hold me to the views I express in my first-draft thinking. I am going to make mistakes this month in public and print the dialog I am having with myself. The voices I allow room to speak as I struggle with values, beliefs, and opinions may be shock and offend. This month, this blog is my internal dialog. Please read it as a struggle, however definitive the tone.&lt;/li&gt;
-&lt;li&gt;I am often disappointed that the only things I publish are smaller ideas written hastily with poor editing. Again, this month I embrace the reality that almost everything I write that ends up published is the result of 20 minutes of furious typing with no looking back, rather than trying to be a strong writer with a strong view point and strong support.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I hope that the end of this month I will have written at least a couple of pieces I feel proud of, and hopefully, I will have a little less fear of hitting publish in the future.&lt;/p&gt;
 </description>
     </item>
     
