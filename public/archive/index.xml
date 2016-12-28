@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/archive/</link>
+    <link>http://www.json.blog/archive/</link>
     <description>Recent content in Archives on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://dev.jsonbecker.com/archive/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.json.blog/archive/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Archive</title>
-      <link>http://dev.jsonbecker.com/archive/archive/</link>
+      <link>http://www.json.blog/archive/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dev.jsonbecker.com/archive/archive/</guid>
+      <guid>http://www.json.blog/archive/archive/</guid>
       <description></description>
     </item>
     

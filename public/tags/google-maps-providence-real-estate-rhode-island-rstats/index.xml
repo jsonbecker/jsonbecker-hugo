@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/</link>
+    <link>http://www.json.blog/tags/google-maps-providence-real-estate-rhode-island-rstats/</link>
     <description>Recent content in Google Maps Providence Real Estate Rhode Island Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/google-maps-providence-real-estate-rhode-island-rstats/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.json.blog/tags/google-maps-providence-real-estate-rhode-island-rstats/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Providence Real Estate Sales in R</title>
-      <link>http://dev.jsonbecker.com/2012/01/providence-real-estate-sales-in-r</link>
+      <link>http://www.json.blog/2012/01/providence-real-estate-sales-in-r</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://dev.jsonbecker.com/2012/01/providence-real-estate-sales-in-r</guid>
+      <guid>http://www.json.blog/2012/01/providence-real-estate-sales-in-r</guid>
       <description>&lt;p&gt;The past few months I&amp;rsquo;ve been learning how to use R. This morning, I decided to try out two first&amp;ndash; importing a table of data that is being read of the web and overlaying location data onto a map.&lt;/p&gt;
 
 &lt;p&gt;With a little bit of Google skills and just enough R know-how I was able to produce this image:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dev.jsonbecker.com/img/homesales.png&#34; alt=&#34;Providence Home Sales 9-12-11 to 12-27-11&#34; title=&#34;Providence Home Sales 9-12-11 to 12-27-11&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/homesales.png&#34; alt=&#34;Providence Home Sales 9-12-11 to 12-27-11&#34; title=&#34;Providence Home Sales 9-12-11 to 12-27-11&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There were a few things that were kind of tricky for me. First, for sometime I couldn&amp;rsquo;t get latitude and longitude components for the addresses. I figured there was something wrong with the way I was using the *apply class of functions in R. apply() (and the related class of functions lapply, sapply, etc.) are really handy if a bit tricky for beginning R users. This function permits quickly &amp;ldquo;applying&amp;rdquo; a function across multiple elements. Traditionally this is done with a loop, but the apply() functions &amp;ldquo;vectorize&amp;rdquo; this process (R folks always talk about making your code more vectorized which has something to do with the structure of objects in R but is beyond my computer science skills&amp;ndash; essentially, vectorized code runs much faster and more efficiency than loops because of some underlying feature of the language). After playing around with apply, lapply, and sapply, I decided to move back into my &amp;ldquo;old&amp;rdquo; way of thinking and just write a loop:&lt;/p&gt;
 

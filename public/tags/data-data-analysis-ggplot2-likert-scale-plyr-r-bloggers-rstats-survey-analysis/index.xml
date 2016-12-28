@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Data Analysis Ggplot2 Likert Scale Plyr R Bloggers Rstats Survey Analysis on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/data-data-analysis-ggplot2-likert-scale-plyr-r-bloggers-rstats-survey-analysis/</link>
+    <link>http://www.json.blog/tags/data-data-analysis-ggplot2-likert-scale-plyr-r-bloggers-rstats-survey-analysis/</link>
     <description>Recent content in Data Data Analysis Ggplot2 Likert Scale Plyr R Bloggers Rstats Survey Analysis on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jul 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/data-data-analysis-ggplot2-likert-scale-plyr-r-bloggers-rstats-survey-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.json.blog/tags/data-data-analysis-ggplot2-likert-scale-plyr-r-bloggers-rstats-survey-analysis/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ranked Likert-Scale Visualization</title>
-      <link>http://dev.jsonbecker.com/2012/07/ranked-likert-scale-visualization</link>
+      <link>http://www.json.blog/2012/07/ranked-likert-scale-visualization</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://dev.jsonbecker.com/2012/07/ranked-likert-scale-visualization</guid>
+      <guid>http://www.json.blog/2012/07/ranked-likert-scale-visualization</guid>
       <description>
 
 &lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
@@ -25,7 +25,7 @@
 
 &lt;p&gt;I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch. As I peeled away the layers of context-specific aspects of my nearing-production level code, I ran into all kinds of trouble. So I apologize for the somewhat sloppy and unfinished code&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dev.jsonbecker.com/img/rankedlikert.png&#34; alt=&#34;Greaterthan&#34; title=&#34;Example of a Net Stacked Likert&#34; /&gt; &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:netstacked&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:netstacked&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/rankedlikert.png&#34; alt=&#34;Greaterthan&#34; title=&#34;Example of a Net Stacked Likert&#34; /&gt; &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:netstacked&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:netstacked&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;My preferred method for visualizing Likert-scale data from surveys is using &lt;a href=&#34;http://www.organizationview.com/net-stacked-distribution-a-better-way-to-visualize-likert-data&#34;&gt;net stacked distribution graphs&lt;/a&gt;. There are two major benefits of these kinds of graphs. First, they immediately draw attention to &lt;em&gt;how strongly&lt;/em&gt; respondents feel about a question, particularly when multiple questions are visualized at once. The total width of any bar is equal to the total number of responded who had a non-neutral answer. Second, these graphs make it very easy to distinguish between positive and negative responses. In some cases, it is critical to view the distribution of data to visualize the differences in responses to one question or another. However, most of the time it is informative enough to simply know how positive or negative responses are. I find this is particularly true with 3, 4, and 5-point Likert scales, the most common I come across in education research.&lt;/p&gt;
 
@@ -130,7 +130,7 @@ visualize &amp;lt;- function(data,
 
 &lt;p&gt;And the results of all that?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://dev.jsonbecker.com/img/fakeexample.png&#34; alt=&#34;I wish it were prettier, but this is where I got.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/fakeexample.png&#34; alt=&#34;I wish it were prettier, but this is where I got.&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;update-1&#34;&gt;UPDATE:&lt;/h2&gt;
 

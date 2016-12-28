@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Textexpander Code Snippets on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/textexpander-code-snippets/</link>
+    <link>http://www.json.blog/tags/textexpander-code-snippets/</link>
     <description>Recent content in Textexpander Code Snippets on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/textexpander-code-snippets/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.json.blog/tags/textexpander-code-snippets/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cleaning URLs with TextExpander</title>
-      <link>http://dev.jsonbecker.com/2013/05/cleaning-urls-with-textexpander</link>
+      <link>http://www.json.blog/2013/05/cleaning-urls-with-textexpander</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://dev.jsonbecker.com/2013/05/cleaning-urls-with-textexpander</guid>
+      <guid>http://www.json.blog/2013/05/cleaning-urls-with-textexpander</guid>
       <description>&lt;p&gt;One thing I really dislike about Google Reader is it replaces the links to posts in my RSS feed. My &lt;a href=&#34;http://pinboard.in/u:jasonpbecker&#34;&gt;Pinboard account&lt;/a&gt; is littered with links that start with &lt;code&gt;http://feedproxy.google.com&lt;/code&gt;. I am quite concerned that with the demise of &lt;a href=&#34;http://googlereader.blogspot.com/2013/03/powering-down-google-reader.html&#34;&gt;Google Reader&lt;/a&gt; on July 1, 2013, these redirects will no longer work.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s not just Google that obscures the actually address of links on the internet. The popularity of using link shortening services, both to save characters on Twitter and to collect analytics, has proliferated the &lt;em&gt;Internet of Redirects&lt;/em&gt;.&lt;/p&gt;

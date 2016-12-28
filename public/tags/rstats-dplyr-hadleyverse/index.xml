@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Dplyr Hadleyverse on JSONBecker</title>
-    <link>http://dev.jsonbecker.com/tags/rstats-dplyr-hadleyverse/</link>
+    <link>http://www.json.blog/tags/rstats-dplyr-hadleyverse/</link>
     <description>Recent content in Rstats Dplyr Hadleyverse on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Feb 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://dev.jsonbecker.com/tags/rstats-dplyr-hadleyverse/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.json.blog/tags/rstats-dplyr-hadleyverse/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Appreciating the Beauty of dplyr</title>
-      <link>http://dev.jsonbecker.com/2014/02/appreciating-the-beauty-of-dplyr</link>
+      <link>http://www.json.blog/2014/02/appreciating-the-beauty-of-dplyr</link>
       <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://dev.jsonbecker.com/2014/02/appreciating-the-beauty-of-dplyr</guid>
+      <guid>http://www.json.blog/2014/02/appreciating-the-beauty-of-dplyr</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://had.co.nz&#34;&gt;Hadley Wickham&lt;/a&gt; has &lt;a href=&#34;https://github.com/hadley&#34;&gt;once again&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:seriously&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:seriously&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; made R ridiculously better. Not only is &lt;code&gt;dplyr&lt;/code&gt; incredibly fast, but the new syntax allows for some really complex operations to be expressed in a ridiculously beautiful way.&lt;/p&gt;
 
 &lt;p&gt;Consider a data set, &lt;code&gt;course&lt;/code&gt;, with a student identifier, &lt;code&gt;sid&lt;/code&gt;, a course identifier, &lt;code&gt;courseno&lt;/code&gt;, a quarter, &lt;code&gt;quarter&lt;/code&gt;, and a grade on a scale of 0 to 4, &lt;code&gt;gpa&lt;/code&gt;. What if I wanted to know the number of a courses a student has failed over the entire year, as defined by having an overall grade of less than a 1.0?&lt;/p&gt;
