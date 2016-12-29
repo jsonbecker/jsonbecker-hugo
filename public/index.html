@@ -41,22 +41,100 @@
     
         <div class = 'row post-title'>
     <div class = 'col-12'>
-      <h1>Introducing json.blog</h1>
-    <h6 class = "date">December 28, 2016</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2016/12/introducing-jsonblog">&infin;</a></h6>
+      <h1>A Gateway Drug to purrr</h1>
+    <h6 class = "date">December 29, 2016</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2016/12/a-gateway-drug-to-purrr">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
-      <p>I have written a lot on the internet. This isn&rsquo;t a surprise, I&rsquo;ve been here since the mid-90s. But the truth is, most of what I write on the internet doesn&rsquo;t make me proud. It hasn&rsquo;t made the world any better. It certainly hasn&rsquo;t made me feel any better. Most of this terrible writing is easy to associate with me, because a long time ago, I chose to use my real name as my online identity. Using my real name was supposed to make sure that I would stand by what I said, but the truth is that I am not always my better self on internet forums, Facebook, Twitter, or other places I get to write.</p>
+      <p>A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents where the dollars are sourced from and an object code that represents what the dollars are being used to purchase (e.g. salaries, benefits, supplies). This is a little like the <code>factor</code> data type in <code>R</code>, which to the frustration of many modern analysts is represented internally as an integer that is mapped to a character label (which is a level).</p>
 
-<p>My personal blog is a bit different. The writing I&rsquo;ve done over the years at my own domains has been&hellip; less embarrassing. I don&rsquo;t mean to say that the quality of the writing is any better (it&rsquo;s not); it&rsquo;s just that the extra thought involved in opening up a text editor, writing something in Markdown, and taking the steps to post it has resulted in fewer emotional tirades. I do a much better job of deleting or never completing posts on my blog than I ever did writing somewhere someone else owned. It&rsquo;s too bad the audience here is much smaller and harder to come by.</p>
+<p>I am often looking at data stored like this:</p>
 
-<p>My blog has always been a testing ground. It&rsquo;s where I&rsquo;ve learned how to use Wordpress, Pelican, and now Hugo. It&rsquo;s been a place to think about templating, structure, CSS, shared hosting, Github pages, server management, nginx and the like. This is where I try different types of writing like link posts, lists, professional-ish informational posts, public versions of notes to myself, images, and more. This blog hasn&rsquo;t had a topic or a format. I&rsquo;m not convinced it ever will. For me, a self-hosted blog is meant to be a personal lab bench.</p>
+<table>
+<thead>
+<tr>
+<th align="left">fund_code</th>
+<th align="left">object_code</th>
+<th align="right">debit</th>
+<th align="right">credit</th>
+</tr>
+</thead>
 
-<p>I hope today I am starting what I consider to be the final version of this blog. I feel confident in the domain and name. I feel comfortable with Hugo and the flexiblility of my fully custom theme. I feel great about not having comments.</p>
+<tbody>
+<tr>
+<td align="left">1000</td>
+<td align="left">2121</td>
+<td align="right">0</td>
+<td align="right">10000</td>
+</tr>
 
-<p>The look and content will change many times again, but I feel good that from here forward I&rsquo;ll be using and evolving <a href="http://json.blog">json.blog</a>. This is my home on the web.</p>
+<tr>
+<td align="left">1000</td>
+<td align="left">2122</td>
+<td align="right">1000</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+
+<p>with the labels stored in another set of tables:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">fund_code</th>
+<th align="left">fund_name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1000</td>
+<td align="left">General</td>
+</tr>
+</tbody>
+</table>
+
+<p>and</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">object_code</th>
+<th align="left">object_name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">2121</td>
+<td align="left">Social Security</td>
+</tr>
+
+<tr>
+<td align="left">2122</td>
+<td align="left">Life Insurance</td>
+</tr>
+</tbody>
+</table>
+
+<p>Before <code>purrr</code>, I might have done a series of <code>dplyr::left_join</code> or <code>merge</code> to combine these data sets and get the labels in the same <code>data.frame</code> as my data.</p>
+
+<p>But no longer!</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I just used purrr:reduce_right with left_join and cackled with joy. <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a></p>&mdash; Jason Becker (@jsonbecker) <a href="https://twitter.com/jsonbecker/status/813793775260733441">December 27, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Now, I can just create a <code>list</code>, add all of my data to it, and use <code>purrr:reduce</code> to bring all of that data together, which is really convenient when up to 9 codes might exist for a single record!</p>
+
+<pre><code class="language-r"># Assume each code-name pairing is in a CSV file in a directory
+data_codes &lt;- lapply(dir('codes/are/here/', full.names = TRUE ), 
+                     readr::read_csv)
+data_codes$transactions &lt;- readr::read_csv('my_main_data_table.csv')
+transactions &lt;- purrr:reduce_right(data_codes, dplyr::left_join)
+</code></pre>
 
     </div>
   </div>
@@ -65,6 +143,26 @@
     
   
 
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>Introducing json.blog</h1>
+    <h6 class = "date">December 28, 2016</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2016/12/introducing-jsonblog">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      I have written a lot on the internet. This isn&rsquo;t a surprise, I&rsquo;ve been here since the mid-90s. But the truth is, most of what I write on the internet doesn&rsquo;t make me proud. It hasn&rsquo;t made the world any better. It certainly hasn&rsquo;t made me feel any better. Most of this terrible writing is easy to associate with me, because a long time ago, I chose to use my real name as my online identity.
+      
+        <h6 class="perma"><a href="/2016/12/introducing-jsonblog">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
   
   
       <div class = 'row post-title'>
@@ -156,26 +254,6 @@
       I read a lot of science fiction and fantasy, genres filled with long running book series. Until the last couple of years, I mostly avoided any series that wasn&rsquo;t already complete. First, I don&rsquo;t like truly “epic” sci-fi fantasy. On-going series without an end in sight, or series that go beyond roughly 3,000 to 4,000 pages never end well for me1. I simply lose interest. Second, I worry that series won&rsquo;t actually reach completion, either because the books are not successful enough or the author gets writer&rsquo;s block2, or even just getting caught up in waiting way too long between books3.
       
         <h6 class="perma"><a href="/2016/04/a-note-on-sequels">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Returning to Tumblr</h1>
-    <h6 class = "date">July 06, 2015</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2015/07/returning-to-tumblr">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      I have had a Tumblr site for a long time but never knew what to do with it. What is Tumblr exactly? Is it a hosted blog? Is it a hosted blog for hipsters? Is it a social network? Why should I put content into Tumblr? I have this blog, but I barely use it. I don&rsquo;t have a Facebook page, because I don&rsquo;t trust Facebook and how it repeatedly changed and confused privacy settings and after college, I rarely found that Facebook was a net positive in my life.
-      
-        <h6 class="perma"><a href="/2015/07/returning-to-tumblr">Read More&hellip;</a></h6>
       
     </div>
     <hr>
