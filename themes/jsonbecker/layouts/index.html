@@ -6,9 +6,11 @@
   {{- range first 1 .Site.Pages }}
     {{ if eq .Type "post" }}
       {{ partial "idx_post.html" . }}
+      <hr>
     {{- end }}
     {{ if eq .Type "image" }}
       {{ partial "idx_image.html" . }}
+      <hr>
     {{- end }}
   {{ end }}
 {{ end }}
