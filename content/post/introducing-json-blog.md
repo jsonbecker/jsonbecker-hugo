@@ -14,4 +14,4 @@ My blog has always been a testing ground. It's where I've learned how to use Wor
 
 I hope today I am starting what I consider to be the final version of this blog. I feel confident in the domain and name. I feel comfortable with Hugo and the flexiblility of my fully custom theme. I feel great about not having comments. 
 
-The look and content will change many times again, but I feel good that from here forward I'll be using and evolving [json.blog](json.blog). This is my home on the web.
+The look and content will change many times again, but I feel good that from here forward I'll be using and evolving [json.blog](http://json.blog). This is my home on the web.
