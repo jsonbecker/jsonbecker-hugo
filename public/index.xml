@@ -15,7 +15,7 @@
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2016/12/a-gateway-drug-to-purrr</guid>
-      <description>&lt;p&gt;A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents where the dollars are sourced from and an object code that represents what the dollars are being used to purchase (e.g. salaries, benefits, supplies). This is a little like the &lt;code&gt;factor&lt;/code&gt; data type in &lt;code&gt;R&lt;/code&gt;, which to the frustration of many modern analysts is represented internally as an integer that is mapped to a character label (which is a level).&lt;/p&gt;
+      <description>&lt;p&gt;A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents the account&amp;rsquo;s source of dollars and an object code that signals what is bought (e.g. salaries, benefits, supplies). This is a little like the &lt;code&gt;factor&lt;/code&gt; data type in &lt;code&gt;R&lt;/code&gt;, which to the frustration of many modern analysts is internally an integer that mapped to a character label (which is a level) with a fixed number of possible values.&lt;/p&gt;
 
 &lt;p&gt;I am often looking at data stored like this:&lt;/p&gt;
 
@@ -94,7 +94,7 @@
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I just used purrr:reduce_right with left_join and cackled with joy. &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jason Becker (@jsonbecker) &lt;a href=&#34;https://twitter.com/jsonbecker/status/813793775260733441&#34;&gt;December 27, 2016&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;p&gt;Now, I can just create a &lt;code&gt;list&lt;/code&gt;, add all of my data to it, and use &lt;code&gt;purrr:reduce&lt;/code&gt; to bring all of that data together, which is really convenient when up to 9 codes might exist for a single record!&lt;/p&gt;
+&lt;p&gt;Now, I can just create a &lt;code&gt;list&lt;/code&gt;, add all the data to it, and use &lt;code&gt;purrr:reduce&lt;/code&gt; to bring the data together. Incredibly convenient when up to 9 codes might exist for a single record!&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Assume each code-name pairing is in a CSV file in a directory
 data_codes &amp;lt;- lapply(dir(&#39;codes/are/here/&#39;, full.names = TRUE ), 

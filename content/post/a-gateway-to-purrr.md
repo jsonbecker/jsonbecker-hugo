@@ -5,7 +5,7 @@ date: 2016-12-29
 tags: 
 ---
 
-A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents where the dollars are sourced from and an object code that represents what the dollars are being used to purchase (e.g. salaries, benefits, supplies). This is a little like the `factor` data type in `R`, which to the frustration of many modern analysts is represented internally as an integer that is mapped to a character label (which is a level).
+A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents the account's source of dollars and an object code that signals what is bought (e.g. salaries, benefits, supplies). This is a little like the `factor` data type in `R`, which to the frustration of many modern analysts is internally an integer that mapped to a character label (which is a level) with a fixed number of possible values.
 
 I am often looking at data stored like this:
 
@@ -33,7 +33,7 @@ But no longer!
 
 {{< tweet 813793775260733441 >}}
 
-Now, I can just create a `list`, add all of my data to it, and use `purrr:reduce` to bring all of that data together, which is really convenient when up to 9 codes might exist for a single record!
+Now, I can just create a `list`, add all the data to it, and use `purrr:reduce` to bring the data together. Incredibly convenient when up to 9 codes might exist for a single record!
 
 ```r
 # Assume each code-name pairing is in a CSV file in a directory

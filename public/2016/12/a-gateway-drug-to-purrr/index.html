@@ -39,7 +39,7 @@
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
-      <p>A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents where the dollars are sourced from and an object code that represents what the dollars are being used to purchase (e.g. salaries, benefits, supplies). This is a little like the <code>factor</code> data type in <code>R</code>, which to the frustration of many modern analysts is represented internally as an integer that is mapped to a character label (which is a level).</p>
+      <p>A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents the account&rsquo;s source of dollars and an object code that signals what is bought (e.g. salaries, benefits, supplies). This is a little like the <code>factor</code> data type in <code>R</code>, which to the frustration of many modern analysts is internally an integer that mapped to a character label (which is a level) with a fixed number of possible values.</p>
 
 <p>I am often looking at data stored like this:</p>
 
@@ -118,7 +118,7 @@
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I just used purrr:reduce_right with left_join and cackled with joy. <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a></p>&mdash; Jason Becker (@jsonbecker) <a href="https://twitter.com/jsonbecker/status/813793775260733441">December 27, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>Now, I can just create a <code>list</code>, add all of my data to it, and use <code>purrr:reduce</code> to bring all of that data together, which is really convenient when up to 9 codes might exist for a single record!</p>
+<p>Now, I can just create a <code>list</code>, add all the data to it, and use <code>purrr:reduce</code> to bring the data together. Incredibly convenient when up to 9 codes might exist for a single record!</p>
 
 <pre><code class="language-r"># Assume each code-name pairing is in a CSV file in a directory
 data_codes &lt;- lapply(dir('codes/are/here/', full.names = TRUE ), 
