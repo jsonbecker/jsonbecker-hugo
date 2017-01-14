@@ -41,6 +41,26 @@
   
       <div class = 'row post-title'>
     <div class = 'col-12'>
+      <h1>A note on sequels</h1>
+    <h6 class = "date">April 24, 2016</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2016/04/a-note-on-sequels">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      I read a lot of science fiction and fantasy, genres filled with long running book series. Until the last couple of years, I mostly avoided any series that wasn&rsquo;t already complete. First, I don&rsquo;t like truly “epic” sci-fi fantasy. On-going series without an end in sight, or series that go beyond roughly 3,000 to 4,000 pages never end well for me1. I simply lose interest. Second, I worry that series won&rsquo;t actually reach completion, either because the books are not successful enough or the author gets writer&rsquo;s block2, or even just getting caught up in waiting way too long between books3.
+      
+        <h6 class="perma"><a href="/2016/04/a-note-on-sequels">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
       <h1>Returning to Tumblr</h1>
     <h6 class = "date">July 06, 2015</h6> 
     <h6 class = "perma"><a href = "http://www.json.blog/2015/07/returning-to-tumblr">&infin;</a></h6>
@@ -111,24 +131,6 @@
       An initial proposal has been made to the city of Providence and state of Rhode Island to keep the PawSox in Rhode Island and move them to a new stadium along the river in Providence. The team is proposing that they privately finance all of the construction costs of the stadium while the land remains state (or city? I am not clear) owned. The state will lease the land underneath the stadium (the real value) with an option to buy for 30 years at $1 a year.
       
         <h6 class="perma"><a href="/2015/04/acceptable-terms">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>A PostgreSQL Cheat Sheet for OSX and R</h1>
-    <h6 class = "date">January 23, 2015</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2015/01/a-postgresql-cheat-sheet-for-osx-and-r">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      I keep this on my desktop. Install: brew install postgresql initdb /usr/local/var/postgres -E utf8 gem install lunchy ### Start postgres with lunchy mkdir -p ~/Library/LaunchAgents cp /usr/local/Cellar/postgresql/9.3.3/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/ Setup DB from SQL file: ### Setup DB lunchy start postgres created $DBNAME psql -d $DBNAME -f '/path/to/file.sql' lunchy stop postgres Starting and Stopping PostgreSQL lunchy start postgres lunchy stop postgres may run into trouble with local socket… try this: rm /usr/local/var/postgres/postmaster.pid Connecting with R # make sure lunch start postgres in terminal first) require(dplyr) db &lt;- src_postgres(dbname=$DBNAME) Inspired by seeing this post and thought I should toss out what I do.
       
     </div>
     <hr>

@@ -6,8 +6,122 @@
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Siri Won&#39;t Catch Alexa</title>
+      <link>http://www.json.blog/2017/01/siri-wont-catch-alexa</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/01/siri-wont-catch-alexa</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I just got an Amazon Echo and surprisingly, I really love it.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In one form or another, &lt;a href=&#34;https://www.macstories.net/reviews/astra-brings-amazons-alexa-voice-assistant-to-the-iphone/&#34;&gt;this story&lt;/a&gt; has repeated &lt;a href=&#34;https://sixcolors.com/post/2015/12/my-favorite-gadget-of-2015-the-amazon-echo/&#34;&gt;again&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/marcoarment/status/715611484567511040&#34;&gt;again&lt;/a&gt; across the internet. So while the recent headline seemed to be &lt;a href=&#34;http://www.theverge.com/ces/2017/1/4/14169550/amazon-alexa-so-many-things-at-ces-2017&#34;&gt;&amp;ldquo;Amazon’s Alexa is everywhere at CES 2017&amp;rdquo;&lt;/a&gt;, it really feels like this year was the Amazon Alexa year.&lt;/p&gt;
+
+&lt;p&gt;I have an Amazon Echo. I bought around a year ago during a sale as the buzz seemed to have peaked &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:peaked&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:peaked&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. My experience with the Amazon Echo has mostly been &amp;ldquo;I don&amp;rsquo;t get it.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I think I’m using the Echo wrong because despite what the whole internet is saying, it’s not doing much Siri doesn’t do.&lt;/p&gt;&amp;mdash; Jason Becker (@jsonbecker) &lt;a href=&#34;https://twitter.com/jsonbecker/status/736174308129705985&#34;&gt;May 27, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Month 3 of Echo ownership. I still use it for practically nothing.&lt;/p&gt;&amp;mdash; Jason Becker (@jsonbecker) &lt;a href=&#34;https://twitter.com/jsonbecker/status/747087351084683264&#34;&gt;June 26, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Apple Watch is doomed!&lt;br&gt;&lt;br&gt;But even my tepid explanations of what I like about mine are more complete than anything I could say about Echo&lt;/p&gt;&amp;mdash; Jason Becker (@jsonbecker) &lt;a href=&#34;https://twitter.com/jsonbecker/status/747087927247777793&#34;&gt;June 26, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The Echo was kind of fun with Philip&amp;rsquo;s Hue lights or for a timer or unit conversion in the kitchen from time to time, but not much else. I was not much of a Siri user, and it turned out I was not much of an Amazon Echo user.&lt;/p&gt;
+
+&lt;p&gt;But I just bought and Echo Dot.&lt;/p&gt;
+
+&lt;h2 id=&#34;homekit-and-siri-can-t-compete&#34;&gt;HomeKit and Siri Can&amp;rsquo;t Compete&lt;/h2&gt;
+
+&lt;p&gt;Siri and HomeKit should be a match made in heaven, but if I say &amp;ldquo;Hey Siri, turn off the bedroom lights,&amp;rdquo; the most common response is &amp;ldquo;Sorry, I cannot find device &amp;lsquo;bedroom lights&amp;rsquo;.&amp;rdquo; I then repeat the same command and the lights go off. This literally has happened once in almost a year of Echo ownership, but it happened nearly every time with Siri.&lt;/p&gt;
+
+&lt;p&gt;Apple is miserable at sharing &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:sharing&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:sharing&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, and that means that even if Siri worked perfectly, HomeKit is built on a bad model.&lt;/p&gt;
+
+&lt;p&gt;My Philips Hue lights are HomeKit compatible. I use Family Sharing so that my partner Elsa can have access to all the apps I buy. Yet it took months to get the email to invite her to my home to send and work. And really, why should I have to invite someone to anything to turn on the lights in my home? Apple knows all about proximity, with it&amp;rsquo;s &lt;a href=&#34;http://appleinsider.com/articles/13/12/06/first-look-using-ibeacon-location-awareness-at-an-apple-store&#34;&gt;awesome use of iBeacons in its own stores&lt;/a&gt;. If being within reach of my light switches or thermostats were enough security to control my devices before, why is Apple making it so hard for people to access them via HomeKit? &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:security&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:security&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-better-model-for-homekit&#34;&gt;A Better Model for HomeKit&lt;/h2&gt;
+
+&lt;p&gt;HomeKit&amp;rsquo;s insistence that all devices have the same security profile and complex approval has meant that devices are rarely HomeKit compatible while everything is compatible with Alexa&amp;rsquo;s simple skills program.&lt;/p&gt;
+
+&lt;p&gt;Imagine if the HomeKit app and excellent Control Center interface
+&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:controlcenter&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:controlcenter&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; existed at the launch of HomeKit. Imagine if instead of a complex encryption setup that required new hardware, Apple had tiered security requirements, where door locks and video surveillance lay on one side with heavy security, but lights and thermostats lay on the other. Imagine if HomeKit sharing was a simple check box interface that the primary account with Family Sharing could click on and off. Imagine if controlling low security profile devices with Siri worked for anyone within a certain proximity using iBeacons.&lt;/p&gt;
+
+&lt;p&gt;This is a world where Apple&amp;rsquo;s Phil Schiller &lt;a href=&#34;https://backchannel.com/phil-schiller-on-iphones-launch-how-it-changed-apple-and-why-it-will-keep-going-for-50-years-e4412ad2c8f5#.8jw6uh7fe&#34;&gt;is right&lt;/a&gt; that &amp;ldquo;having my iPhone with me&amp;rdquo; could provide a better experience than a device designed to live in one place.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s not the product we have. And even if Apple gets into the &amp;ldquo;tower with microphones plugged into a wall&amp;rdquo; game, I don&amp;rsquo;t see them producing an Echo Dot like product that makes sure your voice assistant is everywhere. My iPhone might be with me. I may be able to turn on and off the lights with my voice. But without something like iBeacons in the picture, if someone comes to stay in my guest room they&amp;rsquo;re back to using the switch on the wall. If a family member uses Android, they are out of luck. If I have a child under the age where a cell phone is appropriate, they are back to living in a dumb home. The inexpensive Echo Dot means you can sprinkle Alexa everywhere the devices you want to control are for anyone to interact with.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:privilege&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:privilege&#34;&gt;5&lt;/a&gt;&lt;/sup&gt; Apple doesn&amp;rsquo;t do inexpensive well.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not sure they can resolve the product decisions around HomeKit that make it less appealing to hardware manufacturers. Worse, some of Alexa&amp;rsquo;s best skills are entirely software. Alexa&amp;rsquo;s skills can seemingly shoot off requests to API endpoints all over the place. So instead of needing to buy a Logitech Harmony Hub with complex encryption and specialized SiriKit/HomeKit skills, and tight integration, my existing Harmony Hub that has an API used by Logitech&amp;rsquo;s own application supports Alexa skills. An Alexa skill can be built in a day. Apple is allergic to doing simple services like this well, even though the entire web runs on them.&lt;/p&gt;
+
+&lt;h2 id=&#34;my-dot&#34;&gt;My Dot&lt;/h2&gt;
+
+&lt;p&gt;Our new bedroom in Baltimore does not have recessed lighting much like our old bedroom. We&amp;rsquo;re using one of those inexpensive, black tower lamps in the bedroom. I don&amp;rsquo;t have a switch for the outlets in there. Philips doesn&amp;rsquo;t make any Hue bulbs that provides enough light to light the room with one lamp.&lt;/p&gt;
+
+&lt;p&gt;I needed an instant way to get the light on and off. That&amp;rsquo;s when I remembered I had an old WeMo bought from before the days of HomeKit. I used that WeMo to have a simple nightly schedule (turn some lights on at sundown and off at midnight each night) and never really thought about it. The WeMo was perfect, and lo and behold, it works with Alexa. Our Echo is a bit far from the bedroom though, and I don&amp;rsquo;t want to shout across the house to turn off the lights.&lt;/p&gt;
+
+&lt;p&gt;Not only was the inexpensive Echo Dot perfectly for sprinkling a little voice in the bedroom, it also meant our master bathroom can have Hue lights that are controlled with voice again. And, now I have a way to get Spotify onto my Kanto YU5 speakers in the bedroom without fussing with Bluetooth&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:dumpsterfire&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:dumpsterfire&#34;&gt;6&lt;/a&gt;&lt;/sup&gt; from my phone by just connecting an &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt;&amp;rdquo; phono plug in permanently.&lt;/p&gt;
+
+&lt;p&gt;Now we say &amp;ldquo;Alexa, turn on the bedroom light&amp;rdquo; and &amp;ldquo;Alexa, play Jazz for Sleep&amp;rdquo;. It&amp;rsquo;s great. It always works. If we had a guest bedroom with the same setup, anyone who stayed there would be able to use it just as easily. No wonder why the Wynn is &lt;a href=&#34;http://www.cnbc.com/2016/12/14/wynn-las-vegas-to-add-amazon-alexa-to-all-hotel-rooms.html&#34;&gt;putting Amazon Echo in their hotel&lt;/a&gt;. Apple literally can&amp;rsquo;t do that.&lt;/p&gt;
+
+&lt;h2 id=&#34;whither-voice-control&#34;&gt;Whither Voice Control&lt;/h2&gt;
+
+&lt;p&gt;Amazon, Apple, and Google seemed locked in a battle over voice &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:microsoft&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:microsoft&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;. I can think of four main times I want to use voice:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Walking with headphones&lt;/li&gt;
+&lt;li&gt;Driving in the car&lt;/li&gt;
+&lt;li&gt;Cooking in the kitchen&lt;/li&gt;
+&lt;li&gt;Sharing an interface to shared devices&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For Phil Schiller, and by extension, Apple, the killer feature of Siri is you always have it. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:watch&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:watch&#34;&gt;8&lt;/a&gt;&lt;/sup&gt; In a &lt;a href=&#34;https://backchannel.com/phil-schiller-on-iphones-launch-how-it-changed-apple-and-why-it-will-keep-going-for-50-years-e4412ad2c8f5#.8jw6uh7fe&#34;&gt;recent interview&lt;/a&gt;, Schiller is quoted as saying:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Personally, I still think the best intelligent assistant is the one that’s with you all the time. Having my iPhone with me as the thing I speak to is better than something stuck in my kitchen or on a wall somewhere.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apple AirPods are all about maximizing (1). Siri works pretty well when I&amp;rsquo;m out with the dogs and need a quick bit of information or to make a call. But the truth is, I don&amp;rsquo;t really need to learn a lot from Siri on those dog walks. When I&amp;rsquo;m out walking, Siri is better than pulling out my phone, but once I&amp;rsquo;ve got a podcast or music going I don&amp;rsquo;t really need anything from Siri in those moments.&lt;/p&gt;
+
+&lt;p&gt;Driving is another great context for voice control. I can&amp;rsquo;t look much at a screen and shouldn&amp;rsquo;t anyway. Ignoring CarPlay, Apple&amp;rsquo;s real move here is Bluetooth interfaces, which places Siri in most cars. But again, what is my real use for voice control in this scenario? Reading SMS and iMessages makes for a cool demo, but not really something I need. Getting directions to a location by name is probably the best use here, but Apple&amp;rsquo;s location database is shit for this. Plus, most of the time I choose where I am going when I get in the car, when I can still use my screen and would prefer to. The most important use of voice control in the car is calling a contact, which Voice Control, the on-device precursor to Siri, did just fine. &lt;a href=&#34;http://www.geekwire.com/2016/ford-working-on-amazon-echo-integration-connecting-cars-to-homes/&#34;&gt;And now Alexa is entering the car space too&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;While cooking, it is great to be able to set timers, convert measurement units, and change music or podcast while my hands are occupied. This is why so many people place their Amazon Echo in the kitchen&amp;ndash; it works great for these simple task. &amp;ldquo;Hey Siri&amp;rdquo; and a Bluetooth speaker is a terrible solution in comparison. In fact, one thing that the Amazon Echo has done is cause me to wear my headphones less while cooking or doing the dishes, since the Amazon Echo works better and doesn&amp;rsquo;t mean I can&amp;rsquo;t hear Elsa in the other room. This isn&amp;rsquo;t a killer feature though. Early adopters may be all about the $180 kitchen timer with a modest speaker, but the Echo won&amp;rsquo;t be a mass product if this is its best value proposition.&lt;/p&gt;
+
+&lt;h2 id=&#34;shared-interface-to-shared-devices&#34;&gt;Shared Interface to Shared Devices&lt;/h2&gt;
+
+&lt;p&gt;There is a reason why home automation is where the Echo shines. Our homes are full of technology: light switches, appliances, televisions and all the boxes that plug in them, and everyone who enters the home has cause to control them. We expect that basically all home technology is reasonably transparent to anyone inside. Everyone knows how to lock and unlock doors, turn on the TV, turn on and off lights, or adjust the thermostat. Home automation has long been a geek honey pot that angers every cohabitant and visitor, but voice control offers an interface as easy and common as a light switch.&lt;/p&gt;
+
+&lt;p&gt;Home automation is the early adopter use case that reveals how and why voice control is a compelling user interface. Turning on the bedroom lights means saying &amp;ldquo;Alexa, turn on the bedroom lights.&amp;rdquo; There is no pause for Siri to be listening. There is no taking out my phone or lifting up my watch. There is no invite process. There is no worrying about guests being confused. Anyone inside my home has always been able to hit a light switch. Anyone inside my home can say &amp;ldquo;Alexa, turn on the living room lights.&amp;rdquo; That&amp;rsquo;s why Apple erred by not having a lower security, proximity based way to control HomeKit devices.&lt;/p&gt;
+
+&lt;p&gt;Voice control is great because it provides a shared interface to devices that are shared by multiple people. Computers, smartphones, and really most screen-based interfaces that we use are the aberration, pushing toward and suggesting that technology is becoming more personal. The world we actually live in is filled with artifacts that are communal, and as computer and information technology grow to infuse into the material technologies of our lives, we need communal interfaces. Amazon is well positioned to be a part of this future, but I don&amp;rsquo;t think Apple has a shot with its existing product strategy.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:peaked&#34;&gt;It hadn&amp;rsquo;t.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:peaked&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:sharing&#34;&gt;We still don&amp;rsquo;t have multi-user iPads or iPhones. I have a new AppleTV, but all the TV app recommendations don&amp;rsquo;t work because two people watch TV. Unlike Netflix, we can&amp;rsquo;t have separate profiles. And the Apple Watch is billed as &lt;a href=&#34;http://www.apple.com/pr/library/2014/09/09Apple-Unveils-Apple-Watch-Apples-Most-Personal-Device-Ever.html&#34;&gt;their most personal device yet&lt;/a&gt;. Where Amazon moves into the world of ever-present, open communal interfaces, Apple is looking toward individual, private worlds.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:sharing&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:security&#34;&gt;Ok, here comes the critiques about how HomeKit can be used to open door locks or activate video surveillance, etc. Great&amp;ndash; those are cool uses of technology that also have mostly proximity based security but fine, I can see a case for heavy encryption and complex sharing setups for those devices. But the truth is, most of the &lt;a href=&#34;https://twitter.com/internetofshit&#34;&gt;internet of things&lt;/a&gt; aren&amp;rsquo;t these kinds of devices. A good product would easily scale to different security profiles.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:security&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:controlcenter&#34;&gt;An unconscionable amount of the time I see &amp;ldquo;No Response&amp;rdquo; in Control Center under my devices. Worse, I have to sit and wait for Apple to realize those devices are there because eventually they pop on. Instant interfaces matter, and they matter even more when trying to replace a light switch.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:controlcenter&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:privilege&#34;&gt;There&amp;rsquo;s probably a good critique about privilege here, assuming that you have multiple rooms that would need a separate assistant device. But I would like to remind you that we&amp;rsquo;re talking about spending hundreds of dollars on cylinders plugged into walls that you talk to to control things that cost 4x their traditional counterparts. For the foreseeable future, we are addressing a market of rich people and this technology will succeed or fail there long before we get to ubiquity. Plus, who cares what Apple has to say about any of this if we&amp;rsquo;re not talking about rich people? Apple&amp;rsquo;s market is rich people and that isn&amp;rsquo;t going to change. Affordable luxury is the brand and target, where affordable in the global scheme means fairly well off.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:privilege&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:dumpsterfire&#34;&gt;Bluetooth is a dumpster fire when you have two phones, two sets of wireless headphones, a Bluetooth speaker in the bathroom, a Bluetooth speaker in the bedroom, and a shared car with Bluetooth. All of these things will choose at various times to ~conveniently~ connect to whatever phone they want if you&amp;rsquo;re not diligent about powering things down all the time. Bluetooth audio is a shit experience.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:dumpsterfire&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:microsoft&#34;&gt;Cortana isn&amp;rsquo;t anywhere that matters, so it doesn&amp;rsquo;t matter yet.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:microsoft&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:watch&#34;&gt;Apple Watch is about extending Siri wherever you are, but I don&amp;rsquo;t use Siri on my Watch much, because it&amp;rsquo;s not great in any of those four contexts. If I can raise my hand I have hands and I&amp;rsquo;d rather use my phone.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:watch&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>A Gateway Drug to purrr</title>
@@ -495,37 +609,6 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
 &lt;ol&gt;
 &lt;li id=&#34;fn:shakes&#34;&gt;Shakey-cam is the primary culprit.
  &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:shakes&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>School Funding Reform, Hard Work and Fraught with Potential</title>
-      <link>http://www.json.blog/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</link>
-      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.json.blog/2014/11/school-funding-reform-hard-work-and-fraught-with-potential</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Because of the primacy of equity as a goal in school finance system design, the formulas disproportionately benefit less wealthy districts and those with high concentrations of needier students.
-&amp;hellip;
-because of the universal impact on communities, school finance legislation requires broad political buy-in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think it is worth contrasting the political realities of constructing school finance law with the need and justification for state funding of education in the first place.&lt;/p&gt;
-
-&lt;p&gt;The state is the in the business of funding schools for redistributive purposes. If that wasn&amp;rsquo;t required, there&amp;rsquo;s little reason to not trade an inefficient pass through of sales and income tax dollars through to communities that could have lower sales and income taxes (or state sales and income taxes) replaced with local sales, income, property taxes , and fees. We come together as states to solve problems that extend beyond parochial boundaries, and our political unions exist to tackle problems we&amp;rsquo;re not better off tackling alone.&lt;/p&gt;
-
-&lt;p&gt;There are limits to redistributive policy. Support for the needs of other communities might wane, leading to challenging and reducing the rights of children with new law or legal battles, serious political consequences for supporters of redistirbution, and decreased in economic activity (in education, property value). These are real pressures that need to be combatted both by convincing voters and through policy success &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:lack&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:lack&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. There are also considerations around the ethics of &amp;ldquo;bailing out&amp;rdquo; communities that made costly mistakes like constructing too many buildings or offering far too generous rights to staff in contracts that they cannot afford to maintain. We struggle as policy experts to not create the opportunity for moral hazards as we push to support children who need our help today.&lt;/p&gt;
-
-&lt;p&gt;Policy experts and legal experts cannot excuse the needs of children today, nor can they fail to face the limits of support for redistribution or incentivizing bad adult behavior.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:lack&#34;&gt;I don&amp;rsquo;t doubt that support for redistributive policy goes south when it appears that our efforts to combat poverty and provide equal opportunities appear to fail, over and over again, and in many cases may actually make things worse.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:lack&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
