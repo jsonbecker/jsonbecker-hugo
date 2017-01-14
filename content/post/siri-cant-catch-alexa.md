@@ -7,7 +7,7 @@ tags:
 
 > "I just got an Amazon Echo and surprisingly, I really love it."
 
-In one form or another, [this story](https://www.macstories.net/reviews/astra-brings-amazons-alexa-voice-assistant-to-the-iphone/) has repeated [again](https://sixcolors.com/post/2015/12/my-favorite-gadget-of-2015-the-amazon-echo/) and [again](https://twitter.com/marcoarment/status/715611484567511040) across the internet. So while the recent headline seemed to be ["Amazon’s Alexa is everywhere at CES 2017"](http://www.theverge.com/ces/2017/1/4/14169550/amazon-alexa-so-many-things-at-ces-2017), it really feels like this year was the Amazon Alexa year.
+In one form or another, [this story](https://www.macstories.net/reviews/astra-brings-amazons-alexa-voice-assistant-to-the-iphone/) has repeated [again](https://sixcolors.com/post/2015/12/my-favorite-gadget-of-2015-the-amazon-echo/) and [again](https://twitter.com/marcoarment/status/715611484567511040) across the internet. So while the recent headline seemed to be ["Amazon's Alexa is everywhere at CES 2017"](http://www.theverge.com/ces/2017/1/4/14169550/amazon-alexa-so-many-things-at-ces-2017), it really feels like this year was the Amazon Alexa year.
 
 I have an Amazon Echo. I bought around a year ago during a sale as the buzz seemed to have peaked [^peaked]. My experience with the Amazon Echo has mostly been "I don't get it." 
 
