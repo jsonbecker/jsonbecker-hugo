@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Dplyr Data.Table Algorithms on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-dplyr-data/index.table-algorithms/</link>
+    <link>http://www.json.blog/tags/rstats-dplyr-data.table-algorithms/index.xml</link>
     <description>Recent content in Rstats Dplyr Data.Table Algorithms on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/tags/rstats-dplyr-data.table-algorithms/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

@@ -2,12 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JSONBecker</title>
-    <link>http://www.json.blog/</link>
+    <link>http://www.json.blog/index.xml</link>
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Feb 2017 13:02:58 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My confrontation with the mainstream</title>
+      <link>http://www.json.blog/2017/02/my-confrontation-with-the-mainstream</link>
+      <pubDate>Mon, 27 Feb 2017 13:02:58 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/02/my-confrontation-with-the-mainstream</guid>
+      <description>&lt;p&gt;You can check my &lt;a href=&#34;https://www.goodreads.com/user/show/5380958-jason&#34;&gt;Goodreads profile&lt;/a&gt;. I love science fiction and fantasy. And I know in 2017 and everyone has already observed the dominance of &amp;ldquo;geek culture&amp;rdquo;, with the dominance of Disney properties from Marvel and now Star Wars. Hell, &lt;a href=&#34;http://io9.gizmodo.com/suicide-squad-is-now-an-oscar-winning-movie-1792769922&#34;&gt;Suicide Squad won a goddamn Oscar&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div style= &#34;float:right;&#34;&gt;
+  &lt;a href = &#34;#powell_best_selling&#34;&gt;   
+      &lt;figure&gt;
+          &lt;img src = &#34;/img/powell_best_selling.jpg&#34; height = &#34;800&#34;&gt;
+          &lt;figcaption&gt; Powell&#39;s Best Selling Fiction, 2017-02-26&lt;/figcaption&gt;
+      &lt;/figure&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;#_&#34; class=&#34;lightbox&#34; id = &#34;powell_best_selling&#34;&gt;
+      &lt;figure&gt;
+          &lt;img src = &#34;/img/powell_best_selling.jpg&#34;&gt;
+          &lt;figcaption&gt;Powell&#39;s Best Selling Fiction, 2017-02-26&lt;/figcaption&gt;
+      &lt;/figure&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But I never felt like SFF was all that mainstream. SyFy might have made (and renewed) a TV series based on &lt;em&gt;The Magicians&lt;/em&gt;, but I still feel like the disaffected entitled shit that held onto his love of genre fiction too long when I crawl into bed and hide in speculative fiction (thank you Quentin, for so completely capturing what a shit I was at 14).&lt;/p&gt;
+
+&lt;p&gt;Yesterday, I was confronted with the reality of SFF going mainstream at &lt;a href=&#34;http://www.powells.com&#34;&gt;Powell&amp;rsquo;s City of Books&lt;/a&gt;. I was fully unprepared to see the contents of their Best Selling Fiction shelf.&lt;/p&gt;
+
+&lt;p&gt;By my count, at least 16 of the top 42 are SFF. &lt;em&gt;The Name of the Wind&lt;/em&gt;, &lt;em&gt;The Left Hand of Darkness&lt;/em&gt;, &lt;em&gt;The Fifth Season&lt;/em&gt;, &lt;em&gt;2312&lt;/em&gt;, and &lt;em&gt;Uprooted&lt;/em&gt; are some of the best books I&amp;rsquo;ve ready in the last four or five years. To think of these books as best sellers when they don&amp;rsquo;t have a TV show coming out (like &lt;em&gt;American Gods&lt;/em&gt;, &lt;em&gt;The Handmaid&amp;rsquo;s Tale&lt;/em&gt;, &lt;em&gt;The Man in the High Castle&lt;/em&gt;, and &lt;em&gt;The Magicians&lt;/em&gt;) and aren&amp;rsquo;t assigned in high school classrooms (&lt;em&gt;1984&lt;/em&gt;, &lt;em&gt;Slaughterhouse-Five&lt;/em&gt;) is just shocking. In my mind, these aren&amp;rsquo;t best sellers, they&amp;rsquo;re tiny nods between myself and other quiet bookshoppers that we are kin.&lt;/p&gt;
+
+&lt;p&gt;I am not sad though. I am thrilled. I want to live in a world where I can just assume acquaintances are reading &lt;em&gt;The Fifth Season&lt;/em&gt; and &lt;em&gt;Uprooted&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Siri Won&#39;t Catch Alexa</title>
@@ -588,29 +621,6 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
 &lt;li&gt;If you have tried to find a reliable carpenter, electrician, plumber, house cleaning service, etc lately, it should be obvious the value that Amazon can provide. Even as a subscriber to Angie&amp;rsquo;s List, which has been invaluable, finding reliable, affordable, and quality services is still a frustrating experience.&lt;/li&gt;
 &lt;li&gt;This is why technology companies get huge valuations. It is hard to anticipate just how technologies to become the first online booksellers will lead to a massive number of accounts with credit cards and a strongly trusted brand. It is hard to anticipate how book reviews and powerful search andfiltering become the way you find people to come into your home and fix a toilet. But truly, it&amp;rsquo;s hard to anticipate the limits of a company with massive reach into people&amp;rsquo;s wallets that scales.&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Power Of Sound</title>
-      <link>http://www.json.blog/2014/11/the-power-of-sound</link>
-      <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.json.blog/2014/11/the-power-of-sound</guid>
-      <description>&lt;p&gt;It has been said a thousand times before, but I feel the need to say it again. So much of what Star Wars got right was creating a fully realized, fascinating world. As much as stunning visual effects that have largely stood the test of time were a part of that story, it was how Star Wars &lt;em&gt;sounded&lt;/em&gt; that is most remarkable.&lt;/p&gt;
-
-&lt;p&gt;Watch that trailer. It has moments that &lt;em&gt;look&lt;/em&gt; an awful lot like Star Wars&amp;ndash; vast dunes in the middle of the desert, the Millenium Falcon speeding along, flipping at odd angles emphasizing its unique flat structure. But it also has a lot of elemetns that are decidedly modern and not Star Wars like. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:shakes&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:shakes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; I think what&amp;rsquo;s most remarkable is I can close my eyes and just listen. Immediately I can &lt;em&gt;hear&lt;/em&gt; Star Wars. The sounds of Star Wars are not just iconic, they are deeply embedded in my psyche and embued with profound meaning.&lt;/p&gt;
-
-&lt;p&gt;I first had the opportunity to see Star Wars on the big screen it was during the release of the &amp;ldquo;Special Editions&amp;rdquo;. There is nothing like hearing Star Wars in a theater.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:shakes&#34;&gt;Shakey-cam is the primary culprit.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:shakes&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     

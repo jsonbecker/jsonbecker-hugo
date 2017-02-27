@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Providence Urban Transit Parking Downcity on JSONBecker</title>
-    <link>http://www.json.blog/tags/providence-urban-transit-parking-downcity/</link>
+    <link>http://www.json.blog/tags/providence-urban-transit-parking-downcity/index.xml</link>
     <description>Recent content in Providence Urban Transit Parking Downcity on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/tags/providence-urban-transit-parking-downcity/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

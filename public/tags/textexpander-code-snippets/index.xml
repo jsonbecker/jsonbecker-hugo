@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Textexpander Code Snippets on JSONBecker</title>
-    <link>http://www.json.blog/tags/textexpander-code-snippets/</link>
+    <link>http://www.json.blog/tags/textexpander-code-snippets/index.xml</link>
     <description>Recent content in Textexpander Code Snippets on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/tags/textexpander-code-snippets/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
