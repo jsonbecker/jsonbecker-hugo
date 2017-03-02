@@ -6,8 +6,91 @@
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Feb 2017 13:02:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Contributing to vegalite</title>
+      <link>http://www.json.blog/2017/03/contributing-to-vegalite</link>
+      <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/03/contributing-to-vegalite</guid>
+      <description>&lt;p&gt;One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor &lt;a href=&#34;https://www.github.com/leeper/rio&#34;&gt;rio&lt;/a&gt;. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.&lt;/p&gt;
+
+&lt;p&gt;I have been on the lookout for a Javascript powered interactive charting library since &lt;code&gt;ggvis&lt;/code&gt; was announced in 2014. But &lt;code&gt;ggvis&lt;/code&gt; seems to have stalled out in favor of other projects (for now) and the evolution of &lt;code&gt;rCharts&lt;/code&gt; into &lt;code&gt;htmlwidgets&lt;/code&gt; left me feeling like there were far too many options and no clear choices.&lt;/p&gt;
+
+&lt;p&gt;What I was looking for was a plotting library to make clean, attractive graphics with tool tips that came with clear documentation and virtually no knowledge of Javascript required. Frankly, all of the &lt;code&gt;htmlwidgets&lt;/code&gt; stuff was very intimidating. From my vantage point skimming blog posts and watching stuff come by on Twitter, &lt;code&gt;htmlwidgets&lt;/code&gt;-based projects all felt very much directed at Javascript polyglots.&lt;/p&gt;
+
+&lt;p&gt;Vega and Vega-Lite had a lot of the qualities I sought in a plotting library. Reading and writing JSON is very accessible compared to learning Javascript, especially with R&amp;rsquo;s excellent translation from lists to JSON. And although I know almost no Javascript, I found in both Vega and Vega-Lite easy to understand documents that felt a lot like building grammar of graphics &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:thegg&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:thegg&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; plots.&lt;/p&gt;
+
+&lt;p&gt;So I decided to take the plunge&amp;ndash; there was a &lt;code&gt;vegalite&lt;/code&gt; &lt;a href=&#34;https://github.com/hrbrmstr/vegalite&#34;&gt;package&lt;/a&gt; and the examples didn&amp;rsquo;t look so bad. It was time to use my first &lt;code&gt;htmlwidgets&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;p&gt;Things went great. I had some simple data and I wanted to make a bar chart. I wrote:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;vegalite() %&amp;gt;%
+add_data(my_df) %&amp;gt;%
+encode_x(&#39;schools&#39;, type = &#39;nominal&#39;) %&amp;gt;%
+encode_y(&#39;per_pupil&#39;, type = &#39;quantitative&#39;) %&amp;gt;%
+mark_bar()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A bar chart was made! But then I wanted to use the font Lato, which is what we use at &lt;a href=&#34;http://www.allovue.com&#34;&gt;Allovue&lt;/a&gt;. No worries, Vega-Lite has a property called &lt;code&gt;titleFont&lt;/code&gt; for axes. So I went to do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;vegalite() %&amp;gt;%
+add_data(my_df) %&amp;gt;%
+encode_x(&#39;schools&#39;, type = &#39;nominal&#39;) %&amp;gt;%
+encode_y(&#39;per_pupil&#39;, type = &#39;quantitative&#39;) %&amp;gt;%
+mark_bar() %&amp;gt;%
+axis_x(titleFont = &#39;Lato&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bummer. It didn&amp;rsquo;t work. I almost stopped there, experiment over. But then I remembered my goal and I thought, maybe I need to learn to contribute to a package that is an &lt;code&gt;htmlwidget&lt;/code&gt; and not simply use an &lt;code&gt;htmlwidget&lt;/code&gt;-based package. I should at least &lt;em&gt;look&lt;/em&gt; at the code.&lt;/p&gt;
+
+&lt;p&gt;What I found surprised me. Under the hood, all the R package does is build up lists. It makes so much sense&amp;ndash; pass JSON to Javascript to process and do what&amp;rsquo;s needed.&lt;/p&gt;
+
+&lt;p&gt;So it turned out, &lt;code&gt;vegalite&lt;/code&gt; for R was a bit behind the current version of &lt;code&gt;vegalite&lt;/code&gt; and didn&amp;rsquo;t have the &lt;code&gt;titleFont&lt;/code&gt; property yet. And with that, I made my &lt;a href=&#34;https://github.com/hrbrmstr/vegalite/commit/8f4d4db057985bac4fc8c5743780b4746dd56c56&#34;&gt;first commit&lt;/a&gt;. All I had to do was update the function definition and add the new arguments to the axis data like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if (!is.null(titleFont))    vl$x$encoding[[chnl]]$axis$titleFont &amp;lt;- titleFont
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But why stop there? I wanted to update all of &lt;code&gt;vegalite&lt;/code&gt; to use the newest available arguments. Doing so looked like a huge pain though. The original package author made these great functions like &lt;code&gt;axis_x&lt;/code&gt; and &lt;code&gt;axis_y&lt;/code&gt;. They both had the same arguments, the only difference was the &amp;ldquo;channel&amp;rdquo; was preset as &lt;code&gt;x&lt;/code&gt; or &lt;code&gt;y&lt;/code&gt; based on which function was called. Problem was that all of the arguments, all of the assignments, and all of the documentation had to be copied twice. It was worse with &lt;code&gt;encode&lt;/code&gt; and &lt;code&gt;scale&lt;/code&gt; which had many, many functions that are similar or identical in their &amp;ldquo;signature&amp;rdquo;. No wonder the package was missing so many Vega-Lite features&amp;ndash; they were a total pain to add.&lt;/p&gt;
+
+&lt;p&gt;So as a final step, I decided I would do a light refactor across the whole package. In each of the core functions, like &lt;code&gt;encode&lt;/code&gt; and &lt;code&gt;axis&lt;/code&gt;, I would write a single generic function like &lt;code&gt;encode_vl()&lt;/code&gt; that would hold all of the possible arguments for the &lt;a href=&#34;https://vega.github.io/vega-lite/docs/encoding.html&#34;&gt;encoding portion&lt;/a&gt; of Vega-Lite. Then the specific functions like &lt;code&gt;encode_x&lt;/code&gt; could become wrapper functions that internally call &lt;code&gt;encode_vl&lt;/code&gt; like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;encode_x &amp;lt;- function(vl, ...) {
+  vl &amp;lt;- encode_vl(vl, chnl = &amp;quot;x&amp;quot;, ...)
+  vl
+}
+
+encode_y &amp;lt;- function(vl, ...) {
+  vl &amp;lt;- encode_vl(vl, chnl =&amp;quot;y&amp;quot;, ...)
+  vl
+}
+
+encode_color &amp;lt;- function(vl, ...) {
+  vl &amp;lt;- encode_vl(vl, chnl = &amp;quot;color&amp;quot;, ...)
+  vl
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, in order to update the documentation and the arguments for &lt;code&gt;encoding&lt;/code&gt;, I just have to update the &lt;code&gt;encode_vl&lt;/code&gt; function. It&amp;rsquo;s a really nice demonstration, in my opinion, of the power of R&amp;rsquo;s &lt;code&gt;...&lt;/code&gt; syntax. All of the wrapper functions can just pass whatever additional arguments the caller wants to &lt;code&gt;encode_vl&lt;/code&gt; without having to explicitly list them each time.&lt;/p&gt;
+
+&lt;p&gt;This greatly reduced duplication in the code and made it far easier to update &lt;code&gt;vegalite&lt;/code&gt; to the newest version of Vega-Lite, which I also decided to do.&lt;/p&gt;
+
+&lt;p&gt;Now Vega-Lite itself is embarking on a 2.0 release that I have a feeling will have some pretty big changes in store. I&amp;rsquo;m not sure if I&amp;rsquo;ll be the one to update &lt;code&gt;vegalite&lt;/code&gt;&amp;ndash; in the end, I think that Vega-Lite is too simple for the visualizations I need to do&amp;ndash; but I am certain whoever does the update will have a much easier go of it now than they would have just over a month ago.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://github.com/hrbrmstr&#34;&gt;Bob Rudis&lt;/a&gt; for making &lt;code&gt;vegalite&lt;/code&gt; and giving me free range after a couple of commits to go hog-wild on his package!&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:thegg&#34;&gt;The &lt;code&gt;gg&lt;/code&gt; in &lt;code&gt;ggplot2&lt;/code&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:thegg&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>My confrontation with the mainstream</title>
@@ -604,23 +687,6 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
  &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:db&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Amazon Creating A Services Marketplace Online</title>
-      <link>http://www.json.blog/2014/11/amazon-creating-a-services-marketplace-online</link>
-      <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.json.blog/2014/11/amazon-creating-a-services-marketplace-online</guid>
-      <description>&lt;p&gt;A few thoughts:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;This is a very interesting way to take advantage of a number of existing Amazon technologies&amp;ndash;primarily their payment processing and review system.&lt;/li&gt;
-&lt;li&gt;Services are an increasingly important part of the economy and is less subject to commoditization. This is Amazon dipping into a massive growth area by commoditizing discovery and payment. It also offloads some of the risk from both sides of the transaction. It&amp;rsquo;s very bold, possibly brilliant.&lt;/li&gt;
-&lt;li&gt;If you have tried to find a reliable carpenter, electrician, plumber, house cleaning service, etc lately, it should be obvious the value that Amazon can provide. Even as a subscriber to Angie&amp;rsquo;s List, which has been invaluable, finding reliable, affordable, and quality services is still a frustrating experience.&lt;/li&gt;
-&lt;li&gt;This is why technology companies get huge valuations. It is hard to anticipate just how technologies to become the first online booksellers will lead to a massive number of accounts with credit cards and a strongly trusted brand. It is hard to anticipate how book reviews and powerful search andfiltering become the way you find people to come into your home and fix a toilet. But truly, it&amp;rsquo;s hard to anticipate the limits of a company with massive reach into people&amp;rsquo;s wallets that scales.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

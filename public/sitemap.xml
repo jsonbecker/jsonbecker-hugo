@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.json.blog/2017/03/contributing-to-vegalite</loc>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.json.blog/2017/02/my-confrontation-with-the-mainstream</loc>
     <lastmod>2017-02-27T13:02:58+00:00</lastmod>
   </url>
@@ -872,7 +877,7 @@
   
   <url>
     <loc>http://www.json.blog/</loc>
-    <lastmod>2017-02-27T13:02:58+00:00</lastmod>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -926,7 +931,7 @@
   
   <url>
     <loc>http://www.json.blog/post/</loc>
-    <lastmod>2017-02-27T13:02:58+00:00</lastmod>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -962,7 +967,7 @@
   
   <url>
     <loc>http://www.json.blog/tags/rstats/</loc>
-    <lastmod>2015-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
