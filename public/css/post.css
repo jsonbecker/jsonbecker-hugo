@@ -33,7 +33,7 @@ blockquote > p {
 
 pre, code { 
   font-family: Hack, monospace; 
-  font-size: 0.80rem;
+  font-size: 1rem;
 }
 
 .post-list {
