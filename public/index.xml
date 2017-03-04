@@ -6,8 +6,142 @@
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.json.blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Labeling Data with purrr</title>
+      <link>http://www.json.blog/2017/03/labeling-data-with-purrr</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Abbr&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Alabama&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AL&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;01&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Alaska&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AK&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;02&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Arizona&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AZ&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;04&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Arkansas&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AR&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;05&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;California&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;06&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Colorado&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CO&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;08&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Connecticut&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CT&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;09&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Delaware&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;DE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;All of your data is labeled with the &lt;code&gt;code&lt;/code&gt; value. In this case, you want to do a &lt;code&gt;join&lt;/code&gt; so that you can use the actual names because it&amp;rsquo;s 2017 and we&amp;rsquo;re not animals.&lt;/p&gt;
+
+&lt;p&gt;But what if your data, like the accounting data we deal with at &lt;a href=&#34;http://www.allovue.com&#34;&gt;Allovue&lt;/a&gt;, has lots of code fields. You probably either have one table that contains all of the look ups in &amp;ldquo;long&amp;rdquo; format, where there is a column that represents which column in your data the code is for like this:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;code&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;type&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;01&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Alabama&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;02&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Alaska&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Alternatively, you may have a lookup table per data element (so one called fips, one called account, one called function, etc).&lt;/p&gt;
+
+&lt;p&gt;I bet most folks do the following in this scenario:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;account &amp;lt;- left_join(account, account_lookup)
+account &amp;lt;- left_join(account, fips)
+
+## Maybe this instead ##
+account %&amp;lt;&amp;gt;%
+  left_join(account_lookup) %&amp;gt;%
+  left_join(fips)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I want to encourage you to do this a little different using &lt;code&gt;purrr&lt;/code&gt;. Here&amp;rsquo;s some annotated code that uses &lt;code&gt;reduce_right&lt;/code&gt; to make magic.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load a directory of .csv files that has each of the lookup tables
+lookups &amp;lt;- map(dir(&#39;data/lookups&#39;), read.csv, stringsAsFactors = FALSE)
+# Alternatively if you have a single lookup table with code_type as your
+# data attribute you&#39;re looking up
+# lookups &amp;lt;- split(lookups, code_type)
+lookups$real_data &amp;lt;- read.csv(&#39;data/real_data.csv&#39;, 
+                              stringsAsFactors = FALSE)
+real_data &amp;lt;- reduce_right(lookups, left_join)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Boom, now you went from data with attributes like &lt;code&gt;funds_code&lt;/code&gt;, &lt;code&gt;function_code&lt;/code&gt;, &lt;code&gt;state_code&lt;/code&gt; to data that also has &lt;code&gt;funds_name&lt;/code&gt;, &lt;code&gt;function_name&lt;/code&gt;, &lt;code&gt;state_name&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:namingconventions&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:namingconventions&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. What&amp;rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&amp;rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&amp;rsquo;t care at all.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:namingconventions&#34;&gt;My recommendation is to use consistent naming conventions like &lt;code&gt;_code&lt;/code&gt; and &lt;code&gt;_name&lt;/code&gt; so that knowing how to do the lookups is really straightforward. This is not unlike the convention with Microsoft SQL where the primary key of a table is named &lt;code&gt;Id&lt;/code&gt; and a foreign key to that table is named &lt;code&gt;TableNameId&lt;/code&gt;. Anything that helps you figure out how to put things together without thinking is worth it.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:namingconventions&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Contributing to vegalite</title>
@@ -632,61 +766,6 @@ db &amp;lt;- src_postgres(dbname=$DBNAME)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Inspired by seeing &lt;a href=&#34;http://altons.github.io/r/2015/01/22/an-easy-way-of-installing-rpostgresql-on-mac/&#34;&gt;this post&lt;/a&gt; and thought I should toss out what I do.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Taking Control</title>
-      <link>http://www.json.blog/2015/01/taking-control</link>
-      <pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.json.blog/2015/01/taking-control</guid>
-      <description>
-
-&lt;h2 id=&#34;severing-my-daemon&#34;&gt;Severing My Daemon&lt;/h2&gt;
-
-&lt;p&gt;When I was in high school, I piggy-backed on a friend&amp;rsquo;s website to host a page for my band. We could post pictures, show locations and dates, lyrics, and pretend like we produced music people cared about. It was mostly a fun way for me to play with the web and something to show folks when I said I played guitar and sang in a band. One day, my friend canceled his hosting. He wasn&amp;rsquo;t using his site for anything and he forgot that I had been using the site. I was 18, I never thought about backups, and I had long deleted all those pesky photos taking up space on my memory cards and small local hard drive.&lt;/p&gt;
-
-&lt;p&gt;Four years of photos from some of the best experiences of my life are gone. No one had copies. Everyone was using the site. In the decade since, no set of pictures has ever been as valuable as the ones I lost that day.&lt;/p&gt;
-
-&lt;h2 id=&#34;who-controls-the-past&#34;&gt;Who controls the past&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;As you can imagine, this loss has had a profound effect on how I think about both my data and the permanence of the internet. Today, I have a deep system of backups for any digital data I produce, and I am far more likely to err on keeping data than discarding it. Things still sometimes go missing. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:stage&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:stage&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;Perhaps the more lasting impact is my desire to maintain some control over all of my data. I use &lt;a href=&#34;http://www.fastmail.fm/?STKI=11467093&#34;&gt;Fastmail&lt;/a&gt; for my email, even after over 10 years of GMail use. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:early&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:early&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; I like knowing that I am storing some of my most important data in a standard way that easily syncs locally and backs up. I like that I pay directly for such an important service so that all of the incentive for my email provider is around making email work better for me. I am the customer. I use &lt;a href=&#34;http://www.getsync.com&#34;&gt;Bittorrent Sync&lt;/a&gt; for a good chunk of my data. I want redundancy across multiple machines and syncing, but I don&amp;rsquo;t want all of my work and all of my data to depend on being on a third party server like it is with Dropbox. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:db&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:db&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. I also use a &lt;a href=&#34;http://www.esn.fm/sponsors/&#34;&gt;Transporter&lt;/a&gt; so that some of my files are stored on a local hard drive.&lt;/p&gt;
-
-&lt;h2 id=&#34;raison-d-être&#34;&gt;Raison D&amp;rsquo;être&lt;/h2&gt;
-
-&lt;p&gt;Why does this blog exist? I have played with &lt;a href=&#34;http://tumblr.jsonbecker.com&#34;&gt;Tumblr&lt;/a&gt; in the past and I like its social and discovery tools, but I do not like the idea of pouring my thoughts into someone else&amp;rsquo;s service with no guarantee of easy or clean exit. I tried using Wordpress on a self-hosted blog for a while, but I took one look at the way my blog posts were being stored in the Wordpress database and kind of freaked out. All those convenient plugins and short codes were transforming the way my actual text was stored in hard to recover way. Plus, I didn&amp;rsquo;t really understand how my data was stored well enough to be comfortable I had solid back ups. I don&amp;rsquo;t want to lose my writing like I lost those pictures.&lt;/p&gt;
-
-&lt;p&gt;This blog exists, built on &lt;a href=&#34;http://www.getpelican.com&#34;&gt;Pelican&lt;/a&gt;, because I needed to a place to write my thoughts in plain text that was as easy to back up as it was to share with the world. I don&amp;rsquo;t write often, and I feel I rarely write the &amp;ldquo;best&amp;rdquo; of my thoughts, but if I am going to take the time to put something out in the world I want to be damn sure that I control it.&lt;/p&gt;
-
-&lt;h2 id=&#34;bag-end&#34;&gt;Bag End&lt;/h2&gt;
-
-&lt;p&gt;I recently began a journey that I thought was about simplifying tools. I began using &lt;code&gt;vim&lt;/code&gt; a lot more for text editing, including writing prose like this post. But I quickly found that my grasping for new ways to do work was less about simplifying and more about better control. I want to be able to work well, with little interruption, on just about any computer. I don&amp;rsquo;t want to use anything that&amp;rsquo;s overly expensive or available only on one platform if I can avoid it. I want to strip away dependencies as much as possible. And while much of what I already use is free software, I didn&amp;rsquo;t feel like I was in &lt;em&gt;control&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;For example, &lt;code&gt;git&lt;/code&gt; has been an amazing change for how I do all my work since about 2011. Github is a major part of my daily work and has saved me a bunch of money by allowing me to host this site for free. But I started getting frustrated with limitations of not having an actual server and not really having access to the power and control that a real server provides. So I recently moved this site off of Github and on to a &lt;a href=&#34;https://www.digitalocean.com/?refcode=7377c1fcbe67&#34;&gt;Digital Ocean&lt;/a&gt; droplet. This is my first experiment with running a Linux VPS. Despite using desktop Linux for four years full time, I have never administered a server. It feels like a skill I should have and I really like the control.&lt;/p&gt;
-
-&lt;h2 id=&#34;quentin-s-land&#34;&gt;Quentin&amp;rsquo;s Land&lt;/h2&gt;
-
-&lt;p&gt;This whole blog is about having a place I control where I can write things. I am getting better at the control part, but I really need to work on the writing things part.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s what I hope to do in the next few months. I am going to choose (or write) a new theme for the site that&amp;rsquo;s responsive and has a bit more detail. I am probably going to write a little bit about the cool, simple things I learned about &lt;code&gt;nginx&lt;/code&gt; and how moving to my own server is helping me run this page (and other experiments) with a lot more flexibility. I am also going to try and shift some of my writing from tweetstorms to short blog posts. If I am truly trying to control my writing, I need to do a better job of thinking out loud in this space versus treating them as disposable and packing them on to Twitter. I will also be sharing more code snippets and ideas and less thoughts on policy and local (Rhode Island) politics. The code/statistics/data stuff feels easier to write and has always gotten more views and comments.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s the plan for 2015. Time to execute.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:stage&#34;&gt;I recently found some rare music missing that I had to retrieve through some heroic efforts that included [Archive.org]() and stalking someone from an online forum that no longer exists (successfully).
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:stage&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:early&#34;&gt;I was a very early adopter of Gmail.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:early&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:db&#34;&gt;I still use Dropbox. I&amp;rsquo;m not an animal. But I like having an alternative.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:db&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
 </description>
     </item>
     

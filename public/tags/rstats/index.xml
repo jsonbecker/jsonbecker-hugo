@@ -9,6 +9,140 @@
     <atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Labeling Data with purrr</title>
+      <link>http://www.json.blog/2017/03/labeling-data-with-purrr</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr</guid>
+      <description>&lt;p&gt;Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Abbr&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Alabama&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AL&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;01&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Alaska&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AK&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;02&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Arizona&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AZ&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;04&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Arkansas&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;AR&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;05&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;California&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;06&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Colorado&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CO&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;08&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Connecticut&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;CT&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;09&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Delaware&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;DE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;All of your data is labeled with the &lt;code&gt;code&lt;/code&gt; value. In this case, you want to do a &lt;code&gt;join&lt;/code&gt; so that you can use the actual names because it&amp;rsquo;s 2017 and we&amp;rsquo;re not animals.&lt;/p&gt;
+
+&lt;p&gt;But what if your data, like the accounting data we deal with at &lt;a href=&#34;http://www.allovue.com&#34;&gt;Allovue&lt;/a&gt;, has lots of code fields. You probably either have one table that contains all of the look ups in &amp;ldquo;long&amp;rdquo; format, where there is a column that represents which column in your data the code is for like this:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;code&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;type&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;01&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Alabama&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;02&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;Alaska&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Alternatively, you may have a lookup table per data element (so one called fips, one called account, one called function, etc).&lt;/p&gt;
+
+&lt;p&gt;I bet most folks do the following in this scenario:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;account &amp;lt;- left_join(account, account_lookup)
+account &amp;lt;- left_join(account, fips)
+
+## Maybe this instead ##
+account %&amp;lt;&amp;gt;%
+  left_join(account_lookup) %&amp;gt;%
+  left_join(fips)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I want to encourage you to do this a little different using &lt;code&gt;purrr&lt;/code&gt;. Here&amp;rsquo;s some annotated code that uses &lt;code&gt;reduce_right&lt;/code&gt; to make magic.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load a directory of .csv files that has each of the lookup tables
+lookups &amp;lt;- map(dir(&#39;data/lookups&#39;), read.csv, stringsAsFactors = FALSE)
+# Alternatively if you have a single lookup table with code_type as your
+# data attribute you&#39;re looking up
+# lookups &amp;lt;- split(lookups, code_type)
+lookups$real_data &amp;lt;- read.csv(&#39;data/real_data.csv&#39;, 
+                              stringsAsFactors = FALSE)
+real_data &amp;lt;- reduce_right(lookups, left_join)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Boom, now you went from data with attributes like &lt;code&gt;funds_code&lt;/code&gt;, &lt;code&gt;function_code&lt;/code&gt;, &lt;code&gt;state_code&lt;/code&gt; to data that also has &lt;code&gt;funds_name&lt;/code&gt;, &lt;code&gt;function_name&lt;/code&gt;, &lt;code&gt;state_name&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:namingconventions&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:namingconventions&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. What&amp;rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&amp;rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&amp;rsquo;t care at all.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:namingconventions&#34;&gt;My recommendation is to use consistent naming conventions like &lt;code&gt;_code&lt;/code&gt; and &lt;code&gt;_name&lt;/code&gt; so that knowing how to do the lookups is really straightforward. This is not unlike the convention with Microsoft SQL where the primary key of a table is named &lt;code&gt;Id&lt;/code&gt; and a foreign key to that table is named &lt;code&gt;TableNameId&lt;/code&gt;. Anything that helps you figure out how to put things together without thinking is worth it.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:namingconventions&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Contributing to vegalite</title>
       <link>http://www.json.blog/2017/03/contributing-to-vegalite</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
