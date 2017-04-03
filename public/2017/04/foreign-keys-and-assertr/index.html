@@ -57,12 +57,12 @@
 
 <p><code>assertr</code> anticipates just this, with the <code>in_set</code> helper. This way I can <code>assert</code> that my data is in a defined set of values or get an error.</p>
 
-<pre><code class="language-r">&gt; my_df &lt;- data.frame(x = c(0,1,1,2))
-&gt; assert(df, in_set(0,1), x)
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-Error: assertr stopped execution
+<pre><code class="language-r">my_df &lt;- data.frame(x = c(0,1,1,2))
+assert(my_df, in_set(0,1), x)
+# Column 'x' violates assertion 'in_set(0, 1)' 1 time
+#   index value
+# 1     4     2
+# Error: assertr stopped execution
 </code></pre>
 
 <h2 id="please-don-t-stop">Please Don&rsquo;t stop()</h2>
@@ -73,28 +73,23 @@ Error: assertr stopped execution
 
 <p>By using <code>error_append</code>, <code>assert</code> will return the original <code>data.frame</code> when there&rsquo;s a failure with a special attribute called <code>assertr_errors</code> that can be accessed later with all the information about failed assertions.</p>
 
-<pre><code class="language-r">&gt; my_df %&lt;&gt;%
-+   assert(in_set(0,1), x, error_fun = error_append) %&gt;%
-+   verify(x == 1, error_fun = error_append)
-&gt; my_df
-  x
-1 0
-2 1
-3 1
-4 2
-&gt; attr(my_df, 'assertr_errors')
-[[1]]
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-
-[[2]]
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-
-[[3]]
-verification [x == 1] failed! (2 failures)
+<pre><code class="language-r">my_df %&lt;&gt;%
+  assert(in_set(0,1), x, error_fun = error_append) %&gt;%
+  verify(x == 1, error_fun = error_append)
+my_df
+#   x
+# 1 0
+# 2 1
+# 3 1
+# 4 2
+attr(my_df, 'assertr_errors')
+# [[1]]
+# Column 'x' violates assertion 'in_set(0, 1)' 1 time
+#   index value
+# 1     4     2
+# 
+# [[2]]
+# verification [x == 1] failed! (2 failures)
 </code></pre>
 
 <p>(Ok I cheated there folks. I used <code>verify</code>, a new function from <code>assertr</code> and a bunch of <code>magrittr</code> pipes like <code>%&lt;&gt;%</code>)</p>
@@ -220,10 +215,12 @@ $objects
 
   names(reporter) &lt;- accumulated_errors %&gt;%
                      map_chr('message') %&gt;%
-                     gsub(&quot;^Column \'([a-zA-Z]+)\' .*$&quot;, '\\1', x = .)
+                     gsub('Column \'(\\S*?)\'.*$', '\\1', x = .)
   reporter
 }
 </code></pre>
+
+<p><em>My thanks to <a href="https://jcarroll.com.au">Jonathan Carroll</a> who was kind enough to read this post closely and actually tried to run the code. As a result, I&rsquo;ve fixed a couple of typos and now have an improved regex pattern above.</em></p>
 <div class="footnotes">
 
 <hr />

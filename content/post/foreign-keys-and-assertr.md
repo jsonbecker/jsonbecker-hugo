@@ -22,12 +22,12 @@ Yup! That's right! In some ways like R's _beloved_ `factors`, I want to have pro
 `assertr` anticipates just this, with the `in_set` helper. This way I can `assert` that my data is in a defined set of values or get an error.
 
 ```r
-> my_df <- data.frame(x = c(0,1,1,2))
-> assert(df, in_set(0,1), x)
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-Error: assertr stopped execution
+my_df <- data.frame(x = c(0,1,1,2))
+assert(my_df, in_set(0,1), x)
+# Column 'x' violates assertion 'in_set(0, 1)' 1 time
+#   index value
+# 1     4     2
+# Error: assertr stopped execution
 ```
 
 ## Please Don't stop()
@@ -39,28 +39,23 @@ Even better, `assert` has an argument for `error_fun`, which, combined with some
 By using `error_append`, `assert` will return the original `data.frame` when there's a failure with a special attribute called `assertr_errors` that can be accessed later with all the information about failed assertions.
 
 ```r
-> my_df %<>%
-+   assert(in_set(0,1), x, error_fun = error_append) %>%
-+   verify(x == 1, error_fun = error_append)
-> my_df
-  x
-1 0
-2 1
-3 1
-4 2
-> attr(my_df, 'assertr_errors')
-[[1]]
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-
-[[2]]
-Column 'x' violates assertion 'in_set(0, 1)' 1 time
-  index value
-1     4     2
-
-[[3]]
-verification [x == 1] failed! (2 failures)
+my_df %<>%
+  assert(in_set(0,1), x, error_fun = error_append) %>%
+  verify(x == 1, error_fun = error_append)
+my_df
+#   x
+# 1 0
+# 2 1
+# 3 1
+# 4 2
+attr(my_df, 'assertr_errors')
+# [[1]]
+# Column 'x' violates assertion 'in_set(0, 1)' 1 time
+#   index value
+# 1     4     2
+# 
+# [[2]]
+# verification [x == 1] failed! (2 failures)
 ```
 
 (Ok I cheated there folks. I used `verify`, a new function from `assertr` and a bunch of `magrittr` pipes like `%<>%`)
@@ -193,10 +188,12 @@ all_valid_fk <- function(data, fk_list, id = 'code') {
 
   names(reporter) <- accumulated_errors %>%
                      map_chr('message') %>%
-                     gsub("^Column \'([a-zA-Z]+)\' .*$", '\\1', x = .)
+                     gsub('Column \'(\\S*?)\'.*$', '\\1', x = .)
   reporter
 }
 ```
+
+_My thanks to [Jonathan Carroll](https://jcarroll.com.au) who was kind enough to read this post closely and actually tried to run the code. As a result, I've fixed a couple of typos and now have an improved regex pattern above._
 
 [this]: {{< relref "news-on-assertions-in-r.md" >}}
 [last post]: {{< relref "a-gateway-to-purrr.md" >}}
