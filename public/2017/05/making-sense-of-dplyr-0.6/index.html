@@ -1,0 +1,122 @@
+<html>
+<head>
+  <link href = "http://www.json.blog/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
+  <link href = "http://www.json.blog/css/post.css" rel = "stylesheet" type = "text/css">
+  
+  <link rel="stylesheet" href="http://www.json.blog/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="http://www.json.blog/js/highlight.pack.js"></script>
+  <script>  
+    hljs.initHighlightingOnLoad();
+  </script>
+	<script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-40920108-1', 'auto');
+  	ga('send', 'pageview');
+	</script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://www.json.blog">Home</a> | 
+          <a href = "http://www.json.blog/archive">Archives</a> |
+          <a href = "http://jsonbecker.com">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+  
+
+    <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>Making Sense of dplyr 0.6</h1>
+    <h6 class = "date">May 18, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      
+
+<p>Non-standard evaluation is one of R&rsquo;s best features, and also one of it&rsquo;s most perplexing. Recently I have been making good use of <code>wrapr::let</code> to allow me to write reusable functions without a lot of assumptions about my data. For example, let&rsquo;s say I always want to <code>group_by</code> schools when adding up dollars spent, but that sometimes my data calls what is conceptually a school <code>schools</code>, <code>school</code>, <code>location</code>, <code>cost_center</code>, <code>Loc.Name</code>, etc. What I have been doing is storing a set of parameters in a <code>list</code> that mapped the actual names in my data to consistent names I want to use in my code. Sometimes that comes from using <code>params</code> in an Rmd file. So the top of my file may say something like:</p>
+
+<pre><code class="language-yaml">params:
+    school: &quot;locations&quot;
+    amount: &quot;dollars&quot;
+    enrollment: n
+</code></pre>
+
+<p>In my code, I may want to write a chain like</p>
+
+<pre><code class="language-r">create_per_pupil &lt;- . %&gt;%
+                    group_by(school) %&gt;%
+                    summarize(per_pupil = sum(amount) / n)
+pp &lt;- district_data %&gt;%
+      create_per_pupil
+</code></pre>
+
+<p>Only my problem is that <code>school</code> isn&rsquo;t always <code>school</code>. In this toy case, you could use <code>group_by_(params$school)</code>, but it&rsquo;s pretty easy to run into limitations with the <code>_</code> functions in <code>dplyr</code> when writing functions.</p>
+
+<p>Using <code>wrapr::let</code>, I can easily use the code above:</p>
+
+<pre><code class="language-r">let(alias = params, {
+    create_per_pupil &lt;- . %&gt;%
+                        group_by(school) %&gt;%
+                        summarize(per_pupil = sum(amount)/n)
+})
+
+pp &lt;- district_data %&gt;%
+      create_per_pupil
+</code></pre>
+
+<p>The core of <code>wrapr::let</code> is really scary.</p>
+
+<pre><code class="language-r">body &lt;- strexpr
+for (ni in names(alias)) {
+    value &lt;- as.character(alias[[ni]])
+    if (ni != value) {
+        pattern &lt;- paste0(&quot;\\b&quot;, ni, &quot;\\b&quot;)
+        body &lt;- gsub(pattern, value, body)
+    }
+}
+parse(text = body)
+</code></pre>
+
+<p>Basically let is holidng onto the code block contained within it, iterating over the list of key-value pairs that are provided, and then runs a <code>gsub</code> on word boundaries to replace all instances of the list names with their values. Yikes.</p>
+
+<p>This works, I use it all over, but I have never felt confident about it.</p>
+
+<h2 id="the-new-world-of-tidyeval">The New World of tidyeval</h2>
+
+<p>The release of dplyr 0.6 along with tidyeval brings wtih it a ton of features to making programming over dplyr functions far better supported. I am going to <a href="http://dplyr.tidyverse.org/articles/programming.html">read this page</a> by Hadley Wickham at least 100 times. There are all kinds of new goodies (<code>!!!</code> looks amazing).</p>
+
+<p>So how would I re-write the chain above sans <code>let</code>?</p>
+
+<pre><code class="language-r">create_per_pupil &lt;- . %&gt;%
+                    group_by(!!sym(school)) %&gt;%
+                    summarize(per_pupil = sum(amount)/n)
+</code></pre>
+
+<p>If I understand <code>tidyeval</code>, then this is what&rsquo;s going on.</p>
+
+<ul>
+<li><code>sym</code> evaluates <code>school</code> and makes the result a <code>symbol</code></li>
+<li>and <code>!!</code> says, roughly &ldquo;evaluate that symbol now&rdquo;.</li>
+</ul>
+
+<p>This way with <code>params$school</code> having the value <code>&quot;school_name&quot;</code>, <code>sym(school)</code> creates evaulates that to <code>&quot;school_name&quot;</code> and then makes it an unquoted symbol <code>school_name</code>. Then <code>!!</code> tells R &ldquo;You can evaluate this next thing in place as it is.&rdquo;</p>
+
+<p>I originally wrote this post trying to understand <code>enquo</code>, but I never got it to work right and it makes no sense to yet. What&rsquo;s great is that <code>rlang::sym</code> and <code>rlang::syms</code> with <code>!!</code> and <code>!!!</code> respectively work really well so far. There is definitely less flexibility&ndash; with the full on <code>quosure</code> stuff you can have very complex evaluations. But I&rsquo;m mostly worried about having very generic names for my data so <code>sym</code> and <code>syms</code> seems to work great.</p>
+
+    </div>
+  </div>
+
+  </div>
+  <footer class = "license center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </footer>
+    </body>
+</html>
