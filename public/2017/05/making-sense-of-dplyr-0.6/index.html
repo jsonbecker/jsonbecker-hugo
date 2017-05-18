@@ -109,7 +109,7 @@ parse(text = body)
 
 <p>This way with <code>params$school</code> having the value <code>&quot;school_name&quot;</code>, <code>sym(school)</code> creates evaulates that to <code>&quot;school_name&quot;</code> and then makes it an unquoted symbol <code>school_name</code>. Then <code>!!</code> tells R &ldquo;You can evaluate this next thing in place as it is.&rdquo;</p>
 
-<p>I originally wrote this post trying to understand <code>enquo</code>, but I never got it to work right and it makes no sense to yet. What&rsquo;s great is that <code>rlang::sym</code> and <code>rlang::syms</code> with <code>!!</code> and <code>!!!</code> respectively work really well so far. There is definitely less flexibility&ndash; with the full on <code>quosure</code> stuff you can have very complex evaluations. But I&rsquo;m mostly worried about having very generic names for my data so <code>sym</code> and <code>syms</code> seems to work great.</p>
+<p>I originally wrote this post trying to understand <code>enquo</code>, but I never got it to work right and it makes no sense to me yet. What&rsquo;s great is that <code>rlang::sym</code> and <code>rlang::syms</code> with <code>!!</code> and <code>!!!</code> respectively work really well so far. There is definitely less flexibility&ndash; with the full on <code>quosure</code> stuff you can have very complex evaluations. But I&rsquo;m mostly worried about having very generic names for my data so <code>sym</code> and <code>syms</code> seems to work great.</p>
 
     </div>
   </div>
