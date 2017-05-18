@@ -2,24 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education Poverty Research on JSONBecker</title>
-    <link>http://www.json.blog/tags/education-poverty-research/index.xml</link>
+    <link>http://www.json.blog/tags/education-poverty-research/</link>
     <description>Recent content in Education Poverty Research on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/education-poverty-research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/education-poverty-research/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>It&#39;s Poverty Stupid... or is it?</title>
-      <link>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it</link>
+      <link>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it</guid>
-      <description>&lt;p&gt;If I had to point to the key fissure in the education policy and research community it would be around poverty. Some seem to view it as an inexorable obstacle, deeply believing that the key improvement strategy is to decrease inequity of inputs. Some seem to view it as an obstacle that can be overcome by systems functioning at peak efficacy, deeply believing the great challenge is achieving that efficacy sustainably at scale. Both positions seem to grossly simplify causes and suggest policy structures and outcomes that are unachievable.&lt;/p&gt;
-
-&lt;p&gt;Paraphrasing &lt;a href=&#34;http://www.kungfugrippe.com&#34;&gt;Merlin Mann&lt;/a&gt;, &lt;em&gt;always be skeptical of &amp;ldquo;turns out&amp;rdquo; research&lt;/em&gt;. In this case, are the results really that surprising? If they are, I might suggest that you have been focusing too much on the partial equilibrium impact of poverty and ignoring the bigger picture.&lt;/p&gt;
-
-&lt;p&gt;Not that I think integration is likely, easy, quick, or magically fixes things.&lt;/p&gt;
-</description>
+      <guid>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it/</guid>
+      <description>If I had to point to the key fissure in the education policy and research community it would be around poverty. Some seem to view it as an inexorable obstacle, deeply believing that the key improvement strategy is to decrease inequity of inputs. Some seem to view it as an obstacle that can be overcome by systems functioning at peak efficacy, deeply believing the great challenge is achieving that efficacy sustainably at scale.</description>
     </item>
     
   </channel>

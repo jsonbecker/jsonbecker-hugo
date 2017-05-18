@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.18.1" />
+	<meta name="generator" content="Hugo 0.21-DEV" />
   <link href = "http://www.json.blog/css/simple-grid.css" rel = "stylesheet" type = "text/css"> 
   <link href = "http://www.json.blog/css/post.css" rel = "stylesheet" type = "text/css">
   
@@ -41,206 +41,84 @@
     
         <div class = 'row post-title'>
     <div class = 'col-12'>
-      <h1>Foreign Keys and assertr</h1>
-    <h6 class = "date">April 02, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/04/foreign-keys-and-assertr">&infin;</a></h6>
+      <h1>Making Sense of dplyr 0.6</h1>
+    <h6 class = "date">May 18, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       
 
-<p>I have been fascinated with assertive programming in R since <a href="/2015/07/news-on-assertions-in-r">this</a> from 2015 <sup class="footnote-ref" id="fnref:missing"><a rel="footnote" href="#fn:missing">1</a></sup>. Tony Fischetti wrote a <a href="http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/">great blog post</a> to announce <code>assertr</code> 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.</p>
+<p>Non-standard evaluation is one of R&rsquo;s best features, and also one of it&rsquo;s most perplexing. Recently I have been making good use of <code>wrapr::let</code> to allow me to write reusable functions without a lot of assumptions about my data. For example, let&rsquo;s say I always want to <code>group_by</code> schools when adding up dollars spent, but that sometimes my data calls what is conceptually a school <code>schools</code>, <code>school</code>, <code>location</code>, <code>cost_center</code>, <code>Loc.Name</code>, etc. What I have been doing is storing a set of parameters in a <code>list</code> that mapped the actual names in my data to consistent names I want to use in my code. Sometimes that comes from using <code>params</code> in an Rmd file. So the top of my file may say something like:</p>
 
-<p>UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the <code>assertr</code> package.</p>
-
-<h2 id="what-do-you-mean-foreign-key-constraints">What do you mean, foreign key constraints?</h2>
-
-<p>Well, in many ways this is an extension of my <a href="/2016/12/a-gateway-drug-to-purrr">last post</a> on using <code>purrr::reduce</code>. I have a set of data with codes (like FIPS codes, or user ids, etc) and I want to make sure that all of those codes are &ldquo;real&rdquo; codes (as in I have a defintion for that value). So I may have a FIPS code <code>data.frame</code> with <code>fips_code</code> and <code>name</code> as the columns or a user <code>data.frame</code> with columns <code>id</code>, <code>fname</code>, <code>lname</code>, <code>email</code>.</p>
-
-<p>In a database, I might have a foreign key constraint on my table that just has codes so that I could not create a row that uses an <code>id</code> or <code>code</code> value or whatever that did not exist in my lookup table. Of course in R, our data is disconnected and non-relational. New users may exist in my dataset that weren&rsquo;t there the last time I downloaded the <code>users</code> table, for example.</p>
-
-<h2 id="ok-so-these-are-just-collections-of-enumerated-values">Ok, so these are just collections of enumerated values</h2>
-
-<p>Yup! That&rsquo;s right! In some ways like R&rsquo;s <em>beloved</em> <code>factors</code>, I want to have problems when my data contains values that don&rsquo;t have a corresponding row in another <code>data.frame</code>, just like trying to insert a value into a <code>factor</code> that isn&rsquo;t an existing level.</p>
-
-<p><code>assertr</code> anticipates just this, with the <code>in_set</code> helper. This way I can <code>assert</code> that my data is in a defined set of values or get an error.</p>
-
-<pre><code class="language-r">my_df &lt;- data.frame(x = c(0,1,1,2))
-assert(my_df, in_set(0,1), x)
-# Column 'x' violates assertion 'in_set(0, 1)' 1 time
-#   index value
-# 1     4     2
-# Error: assertr stopped execution
+<pre><code class="language-yaml">params:
+    school: &quot;locations&quot;
+    amount: &quot;dollars&quot;
+    enrollment: n
 </code></pre>
 
-<h2 id="please-don-t-stop">Please Don&rsquo;t stop()</h2>
+<p>In my code, I may want to write a chain like</p>
 
-<p>By default, <code>assert</code> raises an error with an incredibly helpful message. It tells you which column the assertion was on, what the assertion was, how many times that assertion failed, and then returns the column index and value of the failed cases.</p>
-
-<p>Even better, <code>assert</code> has an argument for <code>error_fun</code>, which, combined with some built in functions, can allow for all kinds of fun behavior when an assertion fails. What if, for example, I actually want to collect that error message for later and not have a hard stop if an assertion failed?</p>
-
-<p>By using <code>error_append</code>, <code>assert</code> will return the original <code>data.frame</code> when there&rsquo;s a failure with a special attribute called <code>assertr_errors</code> that can be accessed later with all the information about failed assertions.</p>
-
-<pre><code class="language-r">my_df %&lt;&gt;%
-  assert(in_set(0,1), x, error_fun = error_append) %&gt;%
-  verify(x == 1, error_fun = error_append)
-my_df
-#   x
-# 1 0
-# 2 1
-# 3 1
-# 4 2
-attr(my_df, 'assertr_errors')
-# [[1]]
-# Column 'x' violates assertion 'in_set(0, 1)' 1 time
-#   index value
-# 1     4     2
-# 
-# [[2]]
-# verification [x == 1] failed! (2 failures)
+<pre><code class="language-r">create_per_pupil &lt;- . %&gt;%
+                    group_by(school) %&gt;%
+                    summarize(per_pupil = sum(amount) / n)
+pp &lt;- district_data %&gt;%
+      create_per_pupil
 </code></pre>
 
-<p>(Ok I cheated there folks. I used <code>verify</code>, a new function from <code>assertr</code> and a bunch of <code>magrittr</code> pipes like <code>%&lt;&gt;%</code>)</p>
+<p>Only my problem is that <code>school</code> isn&rsquo;t always <code>school</code>. In this toy case, you could use <code>group_by_(params$school)</code>, but it&rsquo;s pretty easy to run into limitations with the <code>_</code> functions in <code>dplyr</code> when writing functions.</p>
 
-<h2 id="enough-with-the-toy-examples">Enough with the toy examples</h2>
+<p>Using <code>wrapr::let</code>, I can easily use the code above:</p>
 
-<p>Ok, so here&rsquo;s the code I wrote today. This started as a huge mess I ended up turning into two functions. First <code>is_valid_fk</code> provides a straight forward way to get <code>TRUE</code> or <code>FALSE</code> on whether or not all of your codes/ids exist in a lookup <code>data.frame</code>.</p>
+<pre><code class="language-r">let(alias = params, {
+    create_per_pupil &lt;- . %&gt;%
+                        group_by(school) %&gt;%
+                        summarize(per_pupil = sum(amount)/n)
+})
 
-<pre><code class="language-r">is_valid_fk &lt;- function(data, key, values,
-                        error_fun = error_logical,
-                        success_fun = success_logical){
+pp &lt;- district_data %&gt;%
+      create_per_pupil
+</code></pre>
 
-  assert_(data, in_set(values), key,
-          error_fun = error_fun, success_fun = success_fun)
+<p>The core of <code>wrapr::let</code> is really scary.</p>
 
+<pre><code class="language-r">body &lt;- strexpr
+for (ni in names(alias)) {
+    value &lt;- as.character(alias[[ni]])
+    if (ni != value) {
+        pattern &lt;- paste0(&quot;\\b&quot;, ni, &quot;\\b&quot;)
+        body &lt;- gsub(pattern, value, body)
+    }
 }
+parse(text = body)
 </code></pre>
 
-<p>The first argument <code>data</code> is your <code>data.frame</code>, the second argument <code>key</code> is the foreign key column in <code>data</code>, and <code>values</code> are all valide values for <code>key</code>. Defaulting the <code>error_fun</code> and <code>success_fun</code> to <code>*_logical</code> means a single boolean is the expected response.</p>
+<p>Basically let is holidng onto the code block contained within it, iterating over the list of key-value pairs that are provided, and then runs a <code>gsub</code> on word boundaries to replace all instances of the list names with their values. Yikes.</p>
 
-<p>But I don&rsquo;t really want to do these one column at a time. I want to check if all of the foreign keys in a table are good to go. I also don&rsquo;t want a boolean, I want to get back all the errors in a useable format. So I wrote <code>all_valid_fk</code>.</p>
+<p>This works, I use it all over, but I have never felt confident about it.</p>
 
-<p>Let&rsquo;s take it one bit at a time.</p>
+<h2 id="the-new-world-of-tidyeval">The New World of tidyeval</h2>
 
-<pre><code class="language-r">all_valid_fk &lt;- function(data, fk_list, id = 'code') {
+<p>The release of dplyr 0.6 along with tidyeval brings wtih it a ton of features to making programming over dplyr functions far better supported. I am going to <a href="http://dplyr.tidyverse.org/articles/programming.html">read this page</a> by Hadley Wickham at least 100 times. There are all kinds of new goodies (<code>!!!</code> looks amazing).</p>
+
+<p>So how would I re-write the chain above sans <code>let</code>?</p>
+
+<pre><code class="language-r">create_per_pupil &lt;- . %&gt;%
+                    group_by(!!sym(school)) %&gt;%
+                    summarize(per_pupil = sum(amount)/n)
 </code></pre>
 
-<ol>
-<li><code>data</code> is the <code>data.frame</code> we&rsquo;re checking foreign keys in.</li>
-<li><code>fk_list</code> is a list of <code>data.frames</code>. Each element is named for the <code>key</code> that it looks up; each <code>data.frame</code> contains the valid values for that <code>key</code> named&hellip;</li>
-<li><code>id</code>, the name of the column in each <code>data.frame</code> in the list <code>fk_list</code> that corresponds to the valid <code>keys</code>.</li>
-</ol>
+<p>If I understand <code>tidyeval</code>, then this is what&rsquo;s going on.</p>
 
-<pre><code class="language-r">verify(data, do.call(has_all_names, as.list(names(fk_list))))
-</code></pre>
+<ul>
+<li><code>sym</code> evaluates <code>school</code> and makes the result a <code>symbol</code></li>
+<li>and <code>!!</code> says, roughly &ldquo;evaluate that symbol now&rdquo;.</li>
+</ul>
 
-<p>Right away, I want to know if my data has all the values my <code>fk_list</code> says it should. I have to do some <code>do.call</code> magic because <code>has_all_names</code> wants something like <code>has_all_names('this', 'that', 'the_other')</code> not <code>has_all_names(c('this', 'that', 'the_other')</code>.</p>
+<p>This way with <code>params$school</code> having the value <code>&quot;school_name&quot;</code>, <code>sym(school)</code> creates evaulates that to <code>&quot;school_name&quot;</code> and then makes it an unquoted symbol <code>school_name</code>. Then <code>!!</code> tells R &ldquo;You can evaluate this next thing in place as it is.&rdquo;</p>
 
-<p>The next part is where the magic happens.</p>
-
-<pre><code class="language-r">accumulated_errors &lt;- map(names(fk_list),
-                            ~ is_valid_fk(data,
-                                          key = .x,
-                                          values = fk_list[[.x]][[id]],
-                                          error_fun = error_append,
-                                          success_fun = success_continue)) %&gt;%
-                        map(attr, 'assertr_errors') %&gt;%
-                        reduce(append)
-</code></pre>
-
-<p>Using <code>map</code>, I am able to call <code>is_valid_fk</code> on each of the columns in <code>data</code> that have a corresponding lookup table in <code>fk_list</code>. The valid values are <code>fk_list[[.x]][[id]]</code>, where <code>.x</code> is the name of the <code>data.frame</code> in <code>fk_list</code> (which corresponds to the name of the code we&rsquo;re looking up in <code>data</code> and exists for sure, thanks to that <code>verify</code> call) and <code>id</code> is the name of the key in that <code>data.frame</code> as stated earlier. I&rsquo;ve replaced <code>error_fun</code> and <code>success_fun</code> so that the code does not exist <code>map</code> as soon there are any problems. Instead, the data is returned for each assertion with the error attribute if one exists. <sup class="footnote-ref" id="fnref:memory"><a rel="footnote" href="#fn:memory">2</a></sup> Immediately, <code>map</code> is called on the resulting list of <code>data.frame</code>s to collect the <code>assertr_errors</code>, which are <code>reduce</code>d using <code>append</code> into a flattened list.</p>
-
-<p>If there are no errors accumulated, <code>accumulated_errors</code> is <code>NULL</code>, and the function exits early.</p>
-
-<pre><code class="language-r">if(is.null(accumulated_errors)) return(list())
-</code></pre>
-
-<p>I could have stopped here and returned all the messages in <code>accumulated_errors</code>. But I don&rsquo;t like all that text, I want something neater to work with later. The structure I decided on was a list of <code>data.frame</code>s, with each element named for the column with the failed foreign key assertion and the contents being the index and value that failed the constraint.</p>
-
-<p>By calling <code>str</code> on <code>data.frame</code>s returned by assertion, I was able to see that the <code>index</code> and <code>value</code> tables printed in the failed <code>assert</code> messages are contained in <code>error_df</code>. So next I extract each of those <code>data.frame</code>s into a single list.</p>
-
-<pre><code class="language-r">reporter &lt;- accumulated_errors %&gt;%
-            map('error_df') %&gt;%
-            map(~ map_df(.x, as.character)) # because factors suck
-</code></pre>
-
-<p>I&rsquo;m almost done. I have no way of identifying which column created each of those <code>error_df</code> in <code>reporter</code>. So to name each element based on the column that failed the foreign key contraint, I have to extract data from the <code>message</code> attribute. Here&rsquo;s what I came up with.</p>
-
-<pre><code class="language-r">names(reporter) &lt;- accumulated_errors %&gt;%
-                   map_chr('message') %&gt;%
-                   gsub(&quot;^Column \'([a-zA-Z]+)\' .*$&quot;, '\\1', x = .)
-reporter
-</code></pre>
-
-<p>So let&rsquo;s create some fake data and run <code>all_valid_fk</code> to see the results:</p>
-
-<pre><code class="language-r">&gt; df &lt;- data.frame(functions = c('1001','1002', '3001', '3002'),
-                   objects = c('100','102', '103', '139'),
-                   actuals = c(10000, 2431, 809, 50000),
-                   stringsAsFactors = FALSE)
-
-&gt; chart &lt;- list(functions = data.frame(code = c('1001', '1002', '3001'),
-                                       name = c('Foo', 'Bar', 'Baz'),
-                                       stringsAsFactors = FALSE),
-                objects =   data.frame(code = c('100', '102', '103'),
-                                       name = c('Mom', 'Dad', 'Baby'),
-                                       stringsAsFactors = FALSE))
-&gt; all_valid_fk(data = df, fk_list = chart, id = 'code')
-$functions
-# A tibble: 1 × 2
-  index value
-  &lt;chr&gt; &lt;chr&gt;
-1     4  3002
-
-$objects
-# A tibble: 1 × 2
-  index value
-  &lt;chr&gt; &lt;chr&gt;
-1     4   139
-</code></pre>
-
-<p>Beautiful!</p>
-
-<p>And here&rsquo;s <code>all_valid_fk</code> in one big chunk.</p>
-
-<pre><code class="language-r">all_valid_fk &lt;- function(data, fk_list, id = 'code') {
-  verify(data, do.call(has_all_names, as.list(names(fk_list))))
-
-  accumulated_errors &lt;- map(names(fk_list),
-                            ~ is_valid_fk(data,
-                                          key = .x,
-                                          values = fk_list[[.x]][[id]],
-                                          error_fun = error_append,
-                                          success_fun = success_continue)) %&gt;%
-                        map(attr, 'assertr_errors') %&gt;%
-                        reduce(append)
-
-  if(is.null(accumulated_errors)) return(list())
-
-  reporter &lt;- accumulated_errors %&gt;%
-              map('error_df') %&gt;%
-              map(~ map_df(.x, as.character))
-
-  names(reporter) &lt;- accumulated_errors %&gt;%
-                     map_chr('message') %&gt;%
-                     gsub('Column \'(\\S*?)\'.*$', '\\1', x = .)
-  reporter
-}
-</code></pre>
-
-<p><em>My thanks to <a href="https://jcarroll.com.au">Jonathan Carroll</a> who was kind enough to read this post closely and actually tried to run the code. As a result, I&rsquo;ve fixed a couple of typos and now have an improved regex pattern above.</em></p>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:missing">I appear to have forgotten to build link post types into my Hugo blog, so the missing link from that post is <a href="http://4dpiecharts.com/2015/07/03/the-state-of-assertions-in-r/">here</a>.
- <a class="footnote-return" href="#fnref:missing"><sup>[return]</sup></a></li>
-<li id="fn:memory">I am a little concerned about memory here. Eight assertions would mean, at least briefly, eight copies of the same <code>data.frame</code> copied here without the need for that actual data. There is probably a better way.
- <a class="footnote-return" href="#fnref:memory"><sup>[return]</sup></a></li>
-</ol>
-</div>
+<p>I originally wrote this post trying to understand <code>enquo</code>, but I never got it to work right and it makes no sense to yet. What&rsquo;s great is that <code>rlang::sym</code> and <code>rlang::syms</code> with <code>!!</code> and <code>!!!</code> respectively work really well so far. There is definitely less flexibility&ndash; with the full on <code>quosure</code> stuff you can have very complex evaluations. But I&rsquo;m mostly worried about having very generic names for my data so <code>sym</code> and <code>syms</code> seems to work great.</p>
 
     </div>
   </div>
@@ -252,9 +130,30 @@ $objects
   
       <div class = 'row post-title'>
     <div class = 'col-12'>
+      <h1>Foreign Keys and assertr</h1>
+    <h6 class = "date">April 02, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/04/foreign-keys-and-assertr/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      I have been fascinated with assertive programming in R since this from 2015 1. Tony Fischetti wrote a great blog post to announce assertr 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.
+UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the assertr package.
+      
+        <h6 class="perma"><a href="/2017/04/foreign-keys-and-assertr/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
       <h1>Labeling Data with purrr</h1>
     <h6 class = "date">March 03, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/labeling-data-with-purrr">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/labeling-data-with-purrr/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -262,7 +161,7 @@ $objects
       Here&rsquo;s a fun common task. I have a data set that has a bunch of codes like:
    Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.
       
-        <h6 class="perma"><a href="/2017/03/labeling-data-with-purrr">Read More&hellip;</a></h6>
+        <h6 class="perma"><a href="/2017/03/labeling-data-with-purrr/">Read More&hellip;</a></h6>
       
     </div>
     <hr>
@@ -275,14 +174,14 @@ $objects
     <div class = 'col-12'>
       <h1>Contributing to vegalite</h1>
     <h6 class = "date">March 02, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/contributing-to-vegalite">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/contributing-to-vegalite/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor rio. It was one of the more rewarding things I did in all of 2016. It wasn&rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.
       
-        <h6 class="perma"><a href="/2017/03/contributing-to-vegalite">Read More&hellip;</a></h6>
+        <h6 class="perma"><a href="/2017/03/contributing-to-vegalite/">Read More&hellip;</a></h6>
       
     </div>
     <hr>
@@ -295,7 +194,7 @@ $objects
     <div class = 'col-12'>
       <h1>My confrontation with the mainstream</h1>
     <h6 class = "date">February 27, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/02/my-confrontation-with-the-mainstream">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/02/my-confrontation-with-the-mainstream/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -303,7 +202,7 @@ $objects
       You can check my Goodreads profile. I love science fiction and fantasy. And I know in 2017 and everyone has already observed the dominance of &ldquo;geek culture&rdquo;, with the dominance of Disney properties from Marvel and now Star Wars. Hell, Suicide Squad won a goddamn Oscar.
   Powell's Best Selling Fiction, 2017-02-26    Powell's Best Selling Fiction, 2017-02-26    But I never felt like SFF was all that mainstream.
       
-        <h6 class="perma"><a href="/2017/02/my-confrontation-with-the-mainstream">Read More&hellip;</a></h6>
+        <h6 class="perma"><a href="/2017/02/my-confrontation-with-the-mainstream/">Read More&hellip;</a></h6>
       
     </div>
     <hr>
@@ -316,7 +215,7 @@ $objects
     <div class = 'col-12'>
       <h1>Siri Won&#39;t Catch Alexa</h1>
     <h6 class = "date">January 14, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/01/siri-wont-catch-alexa">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/01/siri-wont-catch-alexa/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -325,27 +224,7 @@ $objects
  In one form or another, this story has repeated again and again across the internet. So while the recent headline seemed to be &ldquo;Amazon&rsquo;s Alexa is everywhere at CES 2017&rdquo;, it really feels like this year was the Amazon Alexa year.
 I have an Amazon Echo. I bought around a year ago during a sale as the buzz seemed to have peaked 1.
       
-        <h6 class="perma"><a href="/2017/01/siri-wont-catch-alexa">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>A Gateway Drug to purrr</h1>
-    <h6 class = "date">December 29, 2016</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2016/12/a-gateway-drug-to-purrr">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents the account&rsquo;s source of dollars and an object code that signals what is bought (e.g. salaries, benefits, supplies). This is a little like the factor data type in R, which to the frustration of many modern analysts is internally an integer that mapped to a character label (which is a level) with a fixed number of possible values.
-      
-        <h6 class="perma"><a href="/2016/12/a-gateway-drug-to-purrr">Read More&hellip;</a></h6>
+        <h6 class="perma"><a href="/2017/01/siri-wont-catch-alexa/">Read More&hellip;</a></h6>
       
     </div>
     <hr>

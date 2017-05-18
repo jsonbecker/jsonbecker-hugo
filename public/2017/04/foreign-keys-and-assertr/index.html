@@ -34,20 +34,20 @@
     <div class = 'col-12'>
       <h1>Foreign Keys and assertr</h1>
     <h6 class = "date">April 02, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/04/foreign-keys-and-assertr">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/04/foreign-keys-and-assertr/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       
 
-<p>I have been fascinated with assertive programming in R since <a href="/2015/07/news-on-assertions-in-r">this</a> from 2015 <sup class="footnote-ref" id="fnref:missing"><a rel="footnote" href="#fn:missing">1</a></sup>. Tony Fischetti wrote a <a href="http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/">great blog post</a> to announce <code>assertr</code> 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.</p>
+<p>I have been fascinated with assertive programming in R since <a href="/2015/07/news-on-assertions-in-r/">this</a> from 2015 <sup class="footnote-ref" id="fnref:missing"><a rel="footnote" href="#fn:missing">1</a></sup>. Tony Fischetti wrote a <a href="http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/">great blog post</a> to announce <code>assertr</code> 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.</p>
 
 <p>UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the <code>assertr</code> package.</p>
 
 <h2 id="what-do-you-mean-foreign-key-constraints">What do you mean, foreign key constraints?</h2>
 
-<p>Well, in many ways this is an extension of my <a href="/2016/12/a-gateway-drug-to-purrr">last post</a> on using <code>purrr::reduce</code>. I have a set of data with codes (like FIPS codes, or user ids, etc) and I want to make sure that all of those codes are &ldquo;real&rdquo; codes (as in I have a defintion for that value). So I may have a FIPS code <code>data.frame</code> with <code>fips_code</code> and <code>name</code> as the columns or a user <code>data.frame</code> with columns <code>id</code>, <code>fname</code>, <code>lname</code>, <code>email</code>.</p>
+<p>Well, in many ways this is an extension of my <a href="/2016/12/a-gateway-drug-to-purrr/">last post</a> on using <code>purrr::reduce</code>. I have a set of data with codes (like FIPS codes, or user ids, etc) and I want to make sure that all of those codes are &ldquo;real&rdquo; codes (as in I have a defintion for that value). So I may have a FIPS code <code>data.frame</code> with <code>fips_code</code> and <code>name</code> as the columns or a user <code>data.frame</code> with columns <code>id</code>, <code>fname</code>, <code>lname</code>, <code>email</code>.</p>
 
 <p>In a database, I might have a foreign key constraint on my table that just has codes so that I could not create a row that uses an <code>id</code> or <code>code</code> value or whatever that did not exist in my lookup table. Of course in R, our data is disconnected and non-relational. New users may exist in my dataset that weren&rsquo;t there the last time I downloaded the <code>users</code> table, for example.</p>
 

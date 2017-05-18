@@ -2,40 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Symlink Data Encryption Privacy on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/index.xml</link>
+    <link>http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/</link>
     <description>Recent content in Rstats Symlink Data Encryption Privacy on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Symlinking Your Data</title>
-      <link>http://www.json.blog/2014/04/symlinking-your-data</link>
+      <link>http://www.json.blog/2014/04/symlinking-your-data/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/04/symlinking-your-data</guid>
-      <description>&lt;p&gt;I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by &lt;a href=&#34;http://support.apple.com/kb/HT1578?viewlocale=en_US&amp;amp;locale=en_US&#34;&gt;creating encrypted disk images&lt;/a&gt; with secure passwords (stored in &lt;a href=&#34;https://agilebits.com&#34;&gt;1Password&lt;/a&gt;). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow. I just have to remember to mount and unmount the disk images.&lt;/p&gt;
-
-&lt;p&gt;However, it can be inconvenient from a project perspective to refer to data in a distant location like &lt;code&gt;/Volumes/ClientData/Entity/facttable.csv&lt;/code&gt;. In most cases, I would prefer the data &amp;ldquo;reside&amp;rdquo; in &lt;code&gt;data/&lt;/code&gt; or &lt;code&gt;cache/&lt;/code&gt; &amp;ldquo;inside&amp;rdquo; of my project directory.&lt;/p&gt;
-
-&lt;p&gt;Luckily, there is a great way that allows me to point to &lt;code&gt;data/facttable.csv&lt;/code&gt; in my R code without actually having &lt;code&gt;facttable.csv&lt;/code&gt; reside there: symlinking.&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&#34;http://en.wikipedia.org/wiki/Symbolic_link&#34;&gt;symlink&lt;/a&gt; is a &lt;strong&gt;symbolic link&lt;/strong&gt; file that sits in the preferred location and references the file path to the actual file. This way, when I refer to &lt;code&gt;data/facttable.csv&lt;/code&gt; the file system knows to direct all of that activity to the actual file in &lt;code&gt;/Volumes/ClientData/Entity/facttable.csv&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;From the command line, a symlink can be generated with a simple command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ln -s target_path link_path
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;R offers a function that does the same thing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;file.symlink(target_path, link_path)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;where &lt;code&gt;target_path&lt;/code&gt; and &lt;code&gt;link_path&lt;/code&gt; are both strings surrounded by quotation marks.&lt;/p&gt;
-
-&lt;p&gt;One of the first things I do when setting up a new analysis is add common data storage file extensions like &lt;code&gt;.csv&lt;/code&gt; and &lt;code&gt;.xls&lt;/code&gt; to my &lt;code&gt;.gitignore&lt;/code&gt; file so that I do not mistakenly put any data in a remote repository. The second thing I do is set up symlinks to the mount location of the encrypted data.&lt;/p&gt;
-</description>
+      <guid>http://www.json.blog/2014/04/symlinking-your-data/</guid>
+      <description>I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by creating encrypted disk images with secure passwords (stored in 1Password). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow.</description>
     </item>
     
   </channel>

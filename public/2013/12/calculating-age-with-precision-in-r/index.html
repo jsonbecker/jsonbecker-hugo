@@ -34,7 +34,7 @@
     <div class = 'col-12'>
       <h1>Calculating Age with Precision in R</h1>
     <h6 class = "date">December 04, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/12/calculating-age-with-precision-in-r">&infin;</a></h6>
+    <h6 class = "perma"><a href = "http://www.json.blog/2013/12/calculating-age-with-precision-in-r/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -42,7 +42,7 @@
       <p><strong>Update</strong>
 &gt; Turns out the original code below was pretty messed up. All kinds of little errors I didn&rsquo;t catch. I&rsquo;ve updated it below. There are a lot of options to refactor this further that I&rsquo;m currently considering. Sometimes it is really hard to know just how flexible something this big really should be. I think I am going to wait until I start developing tests to see where I land. I have a feeling moving toward a more test-driven work flow is going to force me toward a different structure.</p>
 
-<p>I recently updated the function I <a href="/2013/06/calculating-age-in-r">posted</a> about back in June that calculates the difference between two dates in days, months, or years in R. It is still surprising to me that <code>difftime</code> can only return units from seconds up until weeks. I suspect this has to do with the challenge of properly defining a &ldquo;month&rdquo; or &ldquo;year&rdquo; as a unit of time, since these are variable.</p>
+<p>I recently updated the function I <a href="/2013/06/calculating-age-in-r/">posted</a> about back in June that calculates the difference between two dates in days, months, or years in R. It is still surprising to me that <code>difftime</code> can only return units from seconds up until weeks. I suspect this has to do with the challenge of properly defining a &ldquo;month&rdquo; or &ldquo;year&rdquo; as a unit of time, since these are variable.</p>
 
 <p>While there was nothing wrong with the original function, it did irk me that it always returned an integer. In other words, function returned only complete months or years. If the start date was on <code>2012-12-13</code> and the end date was on <code>2013-12-03</code>, the function would return <code>0</code> years. Most of the time, this is the behavior I expect when calcuating age. But it is completely reasonable to want to include partial years or months, e.g. in the aforementioned example returning <code>0.9724605</code>.</p>
 

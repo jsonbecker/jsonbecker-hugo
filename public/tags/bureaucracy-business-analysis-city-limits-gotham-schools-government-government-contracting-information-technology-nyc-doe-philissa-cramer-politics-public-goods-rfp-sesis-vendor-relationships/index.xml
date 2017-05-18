@@ -2,55 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bureaucracy Business Analysis City Limits Gotham Schools Government Government Contracting Information Technology Nyc Doe Philissa Cramer Politics Public Goods Rfp Sesis Vendor Relationships on JSONBecker</title>
-    <link>http://www.json.blog/tags/bureaucracy-business-analysis-city-limits-gotham-schools-government-government-contracting-information-technology-nyc-doe-philissa-cramer-politics-public-goods-rfp-sesis-vendor-relationships/index.xml</link>
+    <link>http://www.json.blog/tags/bureaucracy-business-analysis-city-limits-gotham-schools-government-government-contracting-information-technology-nyc-doe-philissa-cramer-politics-public-goods-rfp-sesis-vendor-relationships/</link>
     <description>Recent content in Bureaucracy Business Analysis City Limits Gotham Schools Government Government Contracting Information Technology Nyc Doe Philissa Cramer Politics Public Goods Rfp Sesis Vendor Relationships on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/bureaucracy-business-analysis-city-limits-gotham-schools-government-government-contracting-information-technology-nyc-doe-philissa-cramer-politics-public-goods-rfp-sesis-vendor-relationships/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/bureaucracy-business-analysis-city-limits-gotham-schools-government-government-contracting-information-technology-nyc-doe-philissa-cramer-politics-public-goods-rfp-sesis-vendor-relationships/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Contracting Technology in Education</title>
-      <link>http://www.json.blog/2011/11/contracting-technology-in-education</link>
+      <link>http://www.json.blog/2011/11/contracting-technology-in-education/</link>
       <pubDate>Tue, 29 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/11/contracting-technology-in-education</guid>
-      <description>&lt;p&gt;I am glad that &lt;a href=&#34;http://gothamschools.org/author/philissa-cramer/&#34;&gt;Philissa Cramer&lt;/a&gt; is reporting on some of the deeper details of the Special Education Student Information System &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:coverage&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:coverage&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; implementation at the &lt;a href=&#34;http://schools.nyc.gov/default.htm&#34;&gt;New York City Department&lt;/a&gt; of Education &lt;a href=&#34;http://gothamschools.org/2011/11/29/report-links-sesis-struggles-and-does-contractinpractices/&#34;&gt;here&lt;/a&gt;. Many people don&amp;rsquo;t really understand the ins and outs of government contracting. Folks really think NASA designs and builds the lunar module, for example, instead of realizing that they issued an RFP and contracting with &lt;a href=&#34;http://www.northropgrumman.com/&#34;&gt;Northrop Grumman&lt;/a&gt; to do that work for them. Similarly, in education, especially around complex technology projects, most districts and states purchase products or services through a bid product rather than develop solutions in house.&lt;/p&gt;
-
-&lt;p&gt;However, I am a bit disappointed in the angle that &lt;a href=&#34;http://www.citylimits.org&#34;&gt;City Limits&lt;/a&gt;, (Ms. Cramer&amp;rsquo;s &lt;a href=&#34;http://www.theinvestigativefund.org/investigations/politicsandgovernment/1581/beyond_citytime?page=1&#34;&gt;source&lt;/a&gt;) took in their reporting. There are real problems with government contracting, but they really mischaracterize the story around SESIS in an attempt to simplify the issue for casual readers.
-City Limits acts as though it is surprising, or even deplorable, that an RFP was awarded to a company with a largely existing product.&lt;/p&gt;
-
-&lt;p&gt;They point to the fact that Maximus, the vendor for the SESIS contract, was modifying an existing product to meet the requirements outlined in NYC DOE&amp;rsquo;s RFP as though this was clearly bad. City Limits uses words like &amp;ldquo;revealed&amp;rdquo; and &amp;ldquo;simply&amp;rdquo; to describe what Maximus was offering. This just ignores the reality of government contracting and shows disregard for risk mitigation. Almost all government agencies handsomely reward companies that can point to successes in developing and implementing solutions that can meet many of the requirements outlined in the issued RFP. The government wants to hire people it believes can do the job and do it well and often one of the best ways to make that determination is to see that someone has done it before. In almost all cases, this means selecting a vendor who has an existing product or process for meeting many of the requirements in the RFP that will be expanded upon or modified. But government purchasers don&amp;rsquo;t just want experienced partners, they also want to leverage efficiencies by not paying for duplication. One of the major reasons for purchasing an existing product or contracting with a vendor is that school systems actually aren&amp;rsquo;t that different from one another and the basic functionality and organizational structures required in an IT solution are shared across schools, districts, and states. Why pay substantially to build the same basic software infrastructure that already exists elsewhere? It&amp;rsquo;s a waste of money most of the time.&lt;/p&gt;
-
-&lt;p&gt;City Limits then goes on to criticize the massive increases that can occur due to change orders. This is a serious problem with government contracting, but they fail to really explore why. A change order occurs when the client wants new or additional functionality that was not included in the initial contract. Their frequency and expense are not an example of why government agencies should not contract with outside vendors, rather, they demonstrate just how poorly bureaucracies are at managing large-scale complex projects. Change orders happen due to several failures, and almost all are the government agencies&amp;rsquo; fault. In no particular order, the government agency:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;failed to do proper discovery before issuing the RFP and, therefore, missed major functional requirements that are not identified until more intensive discovery occurs during development or initial implementation;&lt;/li&gt;
-&lt;li&gt;agreed to a contract that was far too specific and did not allow for the reality that requirements do evolve over time (though often not in ways which substantially change the nature or quantity of work);&lt;/li&gt;
-&lt;li&gt;agreed to a contract that was far too vague such that the vendor can claim to have delivered a product or service when they did not meet already identified functional requirements for the system;&lt;/li&gt;
-&lt;li&gt;did not take into account the preparation and costs required to sustain the product beyond the life of the initial engagement with the vendor.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These are the main things that lead to change orders. If the government agency is doing a top-notch job, they can all be avoided and the only occasion for a change order should be large external shocks that dramatically alter the functional requirements, intentional decisions to move away from the initial functional requirements that weighed the costs of altering the vendor contract, and a desire to extend and expand a relationship because of the success of the initial implementation resulting in a substantially more advanced or mature product.&lt;/p&gt;
-
-&lt;p&gt;It is really hard to manage vendor contracts right. It requires actually knowing what you want to buy before an RFP is issued (or recognizing what is and is not known and correctly assessing the scope of the impact future decisions on unknowns will have on the work). It requires a really good team of lawyers to fight outside forces that literally make their profits on carefully abdicating as much responsibility as possible at the contracting phase. It requires selecting good partners that are adequately willing and prepared to evolve and work with the agency as their needs and knowledge grow and mature. It requires an honest assessment of future resources that will be available to assure sustainability of large investments. And perhaps most difficult of all, it requires strong project management infrastructure throughout the entire agency to ensure alignment and consistency across multiple products produced internally and by multiple external partners.&lt;/p&gt;
-
-&lt;p&gt;The benefits of outsourcing products can be huge and are worth leveraging. Vendor contracts are difficult to manage, and bureaucracies are not always well-suited to managing these projects, but all government agencies struggle with getting this right.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;One last parting thought&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In my view, the most challenging aspect of getting vendor contracting right for government agencies is spending ample upfront time, even before issuing an RFP, articulating the functional needs that a solution must meet in detail. I feel that often public sector employees are so
-intimidated by the arduous process around issuing and awarding an RFP that they rush to get an RFP out there and worry about the details during contracting and product initiation. Whenever possible, resist this temptation at all costs. Whether custom designed internally or
-provided by an external vendor, satisfaction is dependent upon clarity of the desired outcomes. This is particularly true with technology projects. Vendors will always produce &lt;em&gt;something&lt;/em&gt;, but whether the solution is any good is almost entirely up to good requirements gathering.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:coverage&#34;&gt;For pretty good coverage check out all of Gotham School&amp;rsquo;s posts &lt;a href=&#34;http://gothamschools.org/tag/sesis/&#34;&gt;http://gothamschools.org/tag/sesis/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:coverage&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>http://www.json.blog/2011/11/contracting-technology-in-education/</guid>
+      <description>I am glad that Philissa Cramer is reporting on some of the deeper details of the Special Education Student Information System 1 implementation at the New York City Department of Education here. Many people don&amp;rsquo;t really understand the ins and outs of government contracting. Folks really think NASA designs and builds the lunar module, for example, instead of realizing that they issued an RFP and contracting with Northrop Grumman to do that work for them.</description>
     </item>
     
   </channel>

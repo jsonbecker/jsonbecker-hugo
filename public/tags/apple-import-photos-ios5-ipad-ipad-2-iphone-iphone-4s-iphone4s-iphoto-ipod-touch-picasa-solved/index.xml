@@ -2,31 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple Import Photos Ios5 Ipad Ipad 2 Iphone Iphone 4s Iphone4s Iphoto Ipod Touch Picasa Solved on JSONBecker</title>
-    <link>http://www.json.blog/tags/apple-import-photos-ios5-ipad-ipad-2-iphone-iphone-4s-iphone4s-iphoto-ipod-touch-picasa-solved/index.xml</link>
+    <link>http://www.json.blog/tags/apple-import-photos-ios5-ipad-ipad-2-iphone-iphone-4s-iphone4s-iphoto-ipod-touch-picasa-solved/</link>
     <description>Recent content in Apple Import Photos Ios5 Ipad Ipad 2 Iphone Iphone 4s Iphone4s Iphoto Ipod Touch Picasa Solved on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/apple-import-photos-ios5-ipad-ipad-2-iphone-iphone-4s-iphone4s-iphoto-ipod-touch-picasa-solved/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/apple-import-photos-ios5-ipad-ipad-2-iphone-iphone-4s-iphone4s-iphoto-ipod-touch-picasa-solved/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to use Picasa with iOS5</title>
-      <link>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5</link>
+      <link>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5/</link>
       <pubDate>Sun, 11 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m mostly writing this post because I had a fairly hard time finding a resolution to a real pesky error. For some reason, my &lt;a href=&#34;http://www.apple.com/iphone/&#34;&gt;iPhone 4S&lt;/a&gt; was recognized by &lt;a href=&#34;http://picasa.google.com/&#34;&gt;Picasa&lt;/a&gt; but always failed to import photos. Whenever I tried, the Picasa was clearly scanning through the files and then presented this error:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;An error has occurred while attempting to import. Either the source is
-unavailable or the destination is full or read only (1).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The resolution was found on &lt;a href=&#34;http://www.google.com/support/forum/p/Picasa/thread?tid=36adf4b3d0209e55&amp;amp;hl=en&#34;&gt;this page&lt;/a&gt; posted by &lt;a href=&#34;http://www.google.com/support/forum/p/Picasa/user?userid=14055753863597455136&amp;amp;hl=en&#34;&gt;Tradeinstyle&lt;/a&gt;. A slightly more thorough explanation of the solution below.&lt;/p&gt;
-
-&lt;p&gt;If you are seeing this error, what appears to have happened is that several images are &amp;ldquo;corrupted&amp;rdquo; in some way on your iPhone. Unfortunately, this requires opening up &lt;a href=&#34;http://www.apple.com/ilife/iphoto/&#34;&gt;iPhoto&lt;/a&gt;. Once in iPhoto, you should be at the import screen and see all the pictures available on your phone. Several of these pictures will have a thumbnail consisting only of a dotted-line forming a square&amp;ndash; a blank thumbnail. You&amp;rsquo;ll want to import these photos and, after clicking import, be sure to select the option that removes them from your iPhone. Now move these imported photos from your newly create iPhoto library into your normal Pictures folder (or wherever you&amp;rsquo;re watching for pictures in Picasa). They&amp;rsquo;ll load just fine. Exit iPhoto, delete your iPhoto Library (probably located in ~/Pictures/iPhoto\ Library) to avoid duplicates and open Picasa. Because the &amp;ldquo;offending&amp;rdquo; pictures have now been removed, Picasa should be able to easily import your photos.&lt;/p&gt;
-
-&lt;p&gt;This problem does not appear to be specific to the iPhone 4s and is probably applicable to &lt;a href=&#34;http://www.apple.com/ipodtouch/&#34;&gt;all&lt;/a&gt; &lt;a href=&#34;http://www.apple.com/ios/&#34;&gt;iOS5&lt;/a&gt; &lt;a href=&#34;http://www.apple.com/ipad/&#34;&gt;devices&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5/</guid>
+      <description>I&amp;rsquo;m mostly writing this post because I had a fairly hard time finding a resolution to a real pesky error. For some reason, my iPhone 4S was recognized by Picasa but always failed to import photos. Whenever I tried, the Picasa was clearly scanning through the files and then presented this error:
+ An error has occurred while attempting to import. Either the source is unavailable or the destination is full or read only (1).</description>
     </item>
     
   </channel>

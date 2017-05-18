@@ -2,260 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats/index.xml</link>
+    <link>http://www.json.blog/tags/rstats/</link>
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Labeling Data with purrr</title>
-      <link>http://www.json.blog/2017/03/labeling-data-with-purrr</link>
+      <link>http://www.json.blog/2017/03/labeling-data-with-purrr/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr</guid>
-      <description>&lt;p&gt;Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Abbr&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;Code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Alabama&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AL&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;01&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Alaska&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AK&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;02&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Arizona&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AZ&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;04&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Arkansas&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;AR&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;05&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;California&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;CA&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;06&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Colorado&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;CO&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;08&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Connecticut&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;CT&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;09&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;Delaware&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;DE&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;All of your data is labeled with the &lt;code&gt;code&lt;/code&gt; value. In this case, you want to do a &lt;code&gt;join&lt;/code&gt; so that you can use the actual names because it&amp;rsquo;s 2017 and we&amp;rsquo;re not animals.&lt;/p&gt;
-
-&lt;p&gt;But what if your data, like the accounting data we deal with at &lt;a href=&#34;http://www.allovue.com&#34;&gt;Allovue&lt;/a&gt;, has lots of code fields. You probably either have one table that contains all of the look ups in &amp;ldquo;long&amp;rdquo; format, where there is a column that represents which column in your data the code is for like this:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;code&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;type&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;name&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;01&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;Alabama&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;02&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;fips&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;Alaska&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Alternatively, you may have a lookup table per data element (so one called fips, one called account, one called function, etc).&lt;/p&gt;
-
-&lt;p&gt;I bet most folks do the following in this scenario:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;account &amp;lt;- left_join(account, account_lookup)
-account &amp;lt;- left_join(account, fips)
-
-## Maybe this instead ##
-account %&amp;lt;&amp;gt;%
-  left_join(account_lookup) %&amp;gt;%
-  left_join(fips)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I want to encourage you to do this a little different using &lt;code&gt;purrr&lt;/code&gt;. Here&amp;rsquo;s some annotated code that uses &lt;code&gt;reduce_right&lt;/code&gt; to make magic.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load a directory of .csv files that has each of the lookup tables
-lookups &amp;lt;- map(dir(&#39;data/lookups&#39;), read.csv, stringsAsFactors = FALSE)
-# Alternatively if you have a single lookup table with code_type as your
-# data attribute you&#39;re looking up
-# lookups &amp;lt;- split(lookups, code_type)
-lookups$real_data &amp;lt;- read.csv(&#39;data/real_data.csv&#39;, 
-                              stringsAsFactors = FALSE)
-real_data &amp;lt;- reduce_right(lookups, left_join)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Boom, now you went from data with attributes like &lt;code&gt;funds_code&lt;/code&gt;, &lt;code&gt;function_code&lt;/code&gt;, &lt;code&gt;state_code&lt;/code&gt; to data that also has &lt;code&gt;funds_name&lt;/code&gt;, &lt;code&gt;function_name&lt;/code&gt;, &lt;code&gt;state_name&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:namingconventions&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:namingconventions&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. What&amp;rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&amp;rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&amp;rsquo;t care at all.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:namingconventions&#34;&gt;My recommendation is to use consistent naming conventions like &lt;code&gt;_code&lt;/code&gt; and &lt;code&gt;_name&lt;/code&gt; so that knowing how to do the lookups is really straightforward. This is not unlike the convention with Microsoft SQL where the primary key of a table is named &lt;code&gt;Id&lt;/code&gt; and a foreign key to that table is named &lt;code&gt;TableNameId&lt;/code&gt;. Anything that helps you figure out how to put things together without thinking is worth it.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:namingconventions&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr/</guid>
+      <description>Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:
+   Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.</description>
     </item>
     
     <item>
       <title>Contributing to vegalite</title>
-      <link>http://www.json.blog/2017/03/contributing-to-vegalite</link>
+      <link>http://www.json.blog/2017/03/contributing-to-vegalite/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/contributing-to-vegalite</guid>
-      <description>&lt;p&gt;One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor &lt;a href=&#34;https://www.github.com/leeper/rio&#34;&gt;rio&lt;/a&gt;. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.&lt;/p&gt;
-
-&lt;p&gt;I have been on the lookout for a Javascript powered interactive charting library since &lt;code&gt;ggvis&lt;/code&gt; was announced in 2014. But &lt;code&gt;ggvis&lt;/code&gt; seems to have stalled out in favor of other projects (for now) and the evolution of &lt;code&gt;rCharts&lt;/code&gt; into &lt;code&gt;htmlwidgets&lt;/code&gt; left me feeling like there were far too many options and no clear choices.&lt;/p&gt;
-
-&lt;p&gt;What I was looking for was a plotting library to make clean, attractive graphics with tool tips that came with clear documentation and virtually no knowledge of Javascript required. Frankly, all of the &lt;code&gt;htmlwidgets&lt;/code&gt; stuff was very intimidating. From my vantage point skimming blog posts and watching stuff come by on Twitter, &lt;code&gt;htmlwidgets&lt;/code&gt;-based projects all felt very much directed at Javascript polyglots.&lt;/p&gt;
-
-&lt;p&gt;Vega and Vega-Lite had a lot of the qualities I sought in a plotting library. Reading and writing JSON is very accessible compared to learning Javascript, especially with R&amp;rsquo;s excellent translation from lists to JSON. And although I know almost no Javascript, I found in both Vega and Vega-Lite easy to understand documents that felt a lot like building grammar of graphics &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:thegg&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:thegg&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; plots.&lt;/p&gt;
-
-&lt;p&gt;So I decided to take the plunge&amp;ndash; there was a &lt;code&gt;vegalite&lt;/code&gt; &lt;a href=&#34;https://github.com/hrbrmstr/vegalite&#34;&gt;package&lt;/a&gt; and the examples didn&amp;rsquo;t look so bad. It was time to use my first &lt;code&gt;htmlwidgets&lt;/code&gt; package.&lt;/p&gt;
-
-&lt;p&gt;Things went great. I had some simple data and I wanted to make a bar chart. I wrote:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;vegalite() %&amp;gt;%
-add_data(my_df) %&amp;gt;%
-encode_x(&#39;schools&#39;, type = &#39;nominal&#39;) %&amp;gt;%
-encode_y(&#39;per_pupil&#39;, type = &#39;quantitative&#39;) %&amp;gt;%
-mark_bar()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A bar chart was made! But then I wanted to use the font Lato, which is what we use at &lt;a href=&#34;http://www.allovue.com&#34;&gt;Allovue&lt;/a&gt;. No worries, Vega-Lite has a property called &lt;code&gt;titleFont&lt;/code&gt; for axes. So I went to do:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;vegalite() %&amp;gt;%
-add_data(my_df) %&amp;gt;%
-encode_x(&#39;schools&#39;, type = &#39;nominal&#39;) %&amp;gt;%
-encode_y(&#39;per_pupil&#39;, type = &#39;quantitative&#39;) %&amp;gt;%
-mark_bar() %&amp;gt;%
-axis_x(titleFont = &#39;Lato&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bummer. It didn&amp;rsquo;t work. I almost stopped there, experiment over. But then I remembered my goal and I thought, maybe I need to learn to contribute to a package that is an &lt;code&gt;htmlwidget&lt;/code&gt; and not simply use an &lt;code&gt;htmlwidget&lt;/code&gt;-based package. I should at least &lt;em&gt;look&lt;/em&gt; at the code.&lt;/p&gt;
-
-&lt;p&gt;What I found surprised me. Under the hood, all the R package does is build up lists. It makes so much sense&amp;ndash; pass JSON to Javascript to process and do what&amp;rsquo;s needed.&lt;/p&gt;
-
-&lt;p&gt;So it turned out, &lt;code&gt;vegalite&lt;/code&gt; for R was a bit behind the current version of &lt;code&gt;vegalite&lt;/code&gt; and didn&amp;rsquo;t have the &lt;code&gt;titleFont&lt;/code&gt; property yet. And with that, I made my &lt;a href=&#34;https://github.com/hrbrmstr/vegalite/commit/8f4d4db057985bac4fc8c5743780b4746dd56c56&#34;&gt;first commit&lt;/a&gt;. All I had to do was update the function definition and add the new arguments to the axis data like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if (!is.null(titleFont))    vl$x$encoding[[chnl]]$axis$titleFont &amp;lt;- titleFont
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But why stop there? I wanted to update all of &lt;code&gt;vegalite&lt;/code&gt; to use the newest available arguments. Doing so looked like a huge pain though. The original package author made these great functions like &lt;code&gt;axis_x&lt;/code&gt; and &lt;code&gt;axis_y&lt;/code&gt;. They both had the same arguments, the only difference was the &amp;ldquo;channel&amp;rdquo; was preset as &lt;code&gt;x&lt;/code&gt; or &lt;code&gt;y&lt;/code&gt; based on which function was called. Problem was that all of the arguments, all of the assignments, and all of the documentation had to be copied twice. It was worse with &lt;code&gt;encode&lt;/code&gt; and &lt;code&gt;scale&lt;/code&gt; which had many, many functions that are similar or identical in their &amp;ldquo;signature&amp;rdquo;. No wonder the package was missing so many Vega-Lite features&amp;ndash; they were a total pain to add.&lt;/p&gt;
-
-&lt;p&gt;So as a final step, I decided I would do a light refactor across the whole package. In each of the core functions, like &lt;code&gt;encode&lt;/code&gt; and &lt;code&gt;axis&lt;/code&gt;, I would write a single generic function like &lt;code&gt;encode_vl()&lt;/code&gt; that would hold all of the possible arguments for the &lt;a href=&#34;https://vega.github.io/vega-lite/docs/encoding.html&#34;&gt;encoding portion&lt;/a&gt; of Vega-Lite. Then the specific functions like &lt;code&gt;encode_x&lt;/code&gt; could become wrapper functions that internally call &lt;code&gt;encode_vl&lt;/code&gt; like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;encode_x &amp;lt;- function(vl, ...) {
-  vl &amp;lt;- encode_vl(vl, chnl = &amp;quot;x&amp;quot;, ...)
-  vl
-}
-
-encode_y &amp;lt;- function(vl, ...) {
-  vl &amp;lt;- encode_vl(vl, chnl =&amp;quot;y&amp;quot;, ...)
-  vl
-}
-
-encode_color &amp;lt;- function(vl, ...) {
-  vl &amp;lt;- encode_vl(vl, chnl = &amp;quot;color&amp;quot;, ...)
-  vl
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, in order to update the documentation and the arguments for &lt;code&gt;encoding&lt;/code&gt;, I just have to update the &lt;code&gt;encode_vl&lt;/code&gt; function. It&amp;rsquo;s a really nice demonstration, in my opinion, of the power of R&amp;rsquo;s &lt;code&gt;...&lt;/code&gt; syntax. All of the wrapper functions can just pass whatever additional arguments the caller wants to &lt;code&gt;encode_vl&lt;/code&gt; without having to explicitly list them each time.&lt;/p&gt;
-
-&lt;p&gt;This greatly reduced duplication in the code and made it far easier to update &lt;code&gt;vegalite&lt;/code&gt; to the newest version of Vega-Lite, which I also decided to do.&lt;/p&gt;
-
-&lt;p&gt;Now Vega-Lite itself is embarking on a 2.0 release that I have a feeling will have some pretty big changes in store. I&amp;rsquo;m not sure if I&amp;rsquo;ll be the one to update &lt;code&gt;vegalite&lt;/code&gt;&amp;ndash; in the end, I think that Vega-Lite is too simple for the visualizations I need to do&amp;ndash; but I am certain whoever does the update will have a much easier go of it now than they would have just over a month ago.&lt;/p&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&#34;https://github.com/hrbrmstr&#34;&gt;Bob Rudis&lt;/a&gt; for making &lt;code&gt;vegalite&lt;/code&gt; and giving me free range after a couple of commits to go hog-wild on his package!&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:thegg&#34;&gt;The &lt;code&gt;gg&lt;/code&gt; in &lt;code&gt;ggplot2&lt;/code&gt;.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:thegg&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>http://www.json.blog/2017/03/contributing-to-vegalite/</guid>
+      <description>One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor rio. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.</description>
     </item>
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.json.blog/2015/07/news-on-assertions-in-r</link>
+      <link>http://www.json.blog/2015/07/news-on-assertions-in-r/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r</guid>
-      <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){
-if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;)){
-    stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;)
-  } 
-...
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not &lt;em&gt;type safe&lt;/em&gt;, meaning function arguments do not have to conform to specified data types. But most of my R code is not run interactively. I have to trust my code to run on servers on schedules or on demand as a part of production systems. So I find myself frequently writing code like the above&amp;ndash; manually writing type checks for safety.&lt;/p&gt;
-
-&lt;p&gt;There has been some great action in the R community around &lt;em&gt;assertive programming&lt;/em&gt;, as you can see in the link. My favorite development, by far, are type-safe functions in the &lt;a href=&#34;https://github.com/smbache/ensurer&#34;&gt;ensurer package&lt;/a&gt;. The above function definition can now be written like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function_(dob ~ Date, enddate ~ Date: as.Date(&amp;quot;2015-07-05&amp;quot;), {
-  ...
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All the type-checking is done.&lt;/p&gt;
-
-&lt;p&gt;I really like the reuse of the formula notation &lt;code&gt;~&lt;/code&gt; and the use of &lt;code&gt;:&lt;/code&gt; to indicate default values.&lt;/p&gt;
-
-&lt;p&gt;Along with packages like &lt;a href=&#34;https://github.com/hadley/testthat&#34;&gt;testthat&lt;/a&gt;, R is really growing up and modernizing.&lt;/p&gt;
-</description>
+      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r/</guid>
+      <description>How many times have you written R functions that start with a bunch of code that looks like this?
+my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;)){ stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;) } ... }  Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not type safe, meaning function arguments do not have to conform to specified data types.</description>
     </item>
     
   </channel>

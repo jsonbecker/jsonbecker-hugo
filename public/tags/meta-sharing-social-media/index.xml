@@ -2,41 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meta Sharing Social Media on JSONBecker</title>
-    <link>http://www.json.blog/tags/meta-sharing-social-media/index.xml</link>
+    <link>http://www.json.blog/tags/meta-sharing-social-media/</link>
     <description>Recent content in Meta Sharing Social Media on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://www.json.blog/tags/meta-sharing-social-media/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Oct 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.json.blog/tags/meta-sharing-social-media/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Where I Share</title>
-      <link>http://www.json.blog/2012/10/where-i-share</link>
+      <link>http://www.json.blog/2012/10/where-i-share/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/where-i-share</guid>
-      <description>&lt;p&gt;I have been meaning to write this post for the past couple of weeks. Like most other people, I am constantly experimenting with different ways to publish and share my thoughts and engage with social networking. Lately, I have settled into what feels like an &amp;ldquo;end state&amp;rdquo; workflow&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. I will devote a future post to the details of how I manage my online reading, writing, and sharing workflow but for now I just wanted to let folks know where they can find me.&lt;/p&gt;
-
-&lt;p&gt;For random thoughts throughout the day I mostly turn to &lt;a href=&#34;http://www.twitter.com/#!/jasonpbecker&#34;&gt;my Twitter account&lt;/a&gt; or increasingly &lt;a href=&#34;https://alpha.app.net/jbecker&#34;&gt;my App.net account&lt;/a&gt;. I am a retweet abuser, so if you follow me there be warned. I often just retweet things I find funny or interesting, write some random complaint about coding, policy, or education when I&amp;rsquo;m frustrated and don&amp;rsquo;t understand the world, and try syndicate some of the other sources I&amp;rsquo;ll list here. I also like to talk to people on Twitter, so if you&amp;rsquo;re looking for conversation that&amp;rsquo;s the place to go. I almost use it like it&amp;rsquo;s the new IRC/AIM Chatroom. My Twitter account is a bit more Providence/Rhode Island heavy than most other ways to follow me.&lt;/p&gt;
-
-&lt;p&gt;Some of you may know that &lt;a href=&#34;http://tumblr.jasonpbecker.com&#34;&gt;I also have a Tumblr&lt;/a&gt; that has fallen in and out of favor. I used to blog over there before creating this Wordpress site&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Recently, I have used my Tumblr account much more. Since Google Reader &lt;a href=&#34;http://techcrunch.com/2011/10/20/google-reader-getting-overhauled-removing-your-friends/&#34;&gt;removed its social features&lt;/a&gt; I have tried to find the best way to share the best stuff I read each day with a few thoughts. I &lt;a href=&#34;https://plus.google.com/103283548915451814191/&#34;&gt;toyed with Google Plus&lt;/a&gt;, but it really is dead. I don&amp;rsquo;t find good content there and engagement with my sharing has been very low. Also, the &lt;a href=&#34;https://groups.google.com/forum/?fromgroups=#!topic/google-plus-developers/zBMOUy9pHFc&#34;&gt;lack of a write API&lt;/a&gt; makes it very challenging to incorporate in a non-disruptive way.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;So right now, head over and follow my Tumblr (natively or RSS) if you want to get 5-10 link posts each day of things I&amp;rsquo;ve collected across the web. Some of my favorite online friends found me through my Google Reader sharing and I suspect that they would enjoy my Tumblr most of all. If I start getting more engagement around what type of links folks are enjoying I can begin to shift the topics I post on. I collect many more links than what end up in Tumblr in Google Reader and Pinboard. I have a very specific path to end up in Tumblr that leans more towards long reads and shares from friends and not what I am watching on RSS.&lt;/p&gt;
-
-&lt;p&gt;A few months ago I ditched my original Facebook account from 2005 and reopened &lt;a href=&#34;https://www.facebook.com/jasonpaulbecker&#34;&gt;a fresh one&lt;/a&gt;. I did this for two reasons: 1) I had collected many friends that I was not truly in contact with. Because of the layers and layers of privacy changes that Facebook went through, it became very difficult to maintain settings I was comfortable with. I wanted to start fresh with friends and fresh with how I manage privacy. 2) Related to 1, I never used Facebook as a networking tool. To me, it was always supposed to be a way to interact and keep in touch with friends from &amp;ldquo;real life&amp;rdquo;. Ultimately, I didn&amp;rsquo;t find that aspect of Facebook to be all that valuable. So I&amp;rsquo;m trying to be a believer and use Facebook more like I use other social media&amp;ndash;  a way to tap into my &amp;ldquo;interest graph&amp;rdquo; and meet new people and read new things and have new conversations. You can follow me there with a few caveats. I hate using Facebook, so it is probably going to have the least content. There will still be some personal stuff as most of my friends still see Facebook as an intimate space, shocking though that may seem. Finally, I may not friend you back. Yes, the point of this account is to be more open, but Facebook still creeps me out and on any given day I may feel more or less incline to be open on there.&lt;/p&gt;
-
-&lt;p&gt;This blog will remain where I write longer pieces that are primarily &amp;ldquo;original&amp;rdquo; analysis/thoughts and less news/broadcast-like. I hope to share a lot more code and thoughts on current research in the near future now that I&amp;rsquo;m changing jobs.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;Subject to change, but I&amp;rsquo;m betting it&amp;rsquo;s more tweaks at this point than dramatic shifts
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;and I really want to leave Wordpress, but that is going to be a big project
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;Definitely more on this in my future workflow post
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>http://www.json.blog/2012/10/where-i-share/</guid>
+      <description>I have been meaning to write this post for the past couple of weeks. Like most other people, I am constantly experimenting with different ways to publish and share my thoughts and engage with social networking. Lately, I have settled into what feels like an &amp;ldquo;end state&amp;rdquo; workflow1. I will devote a future post to the details of how I manage my online reading, writing, and sharing workflow but for now I just wanted to let folks know where they can find me.</description>
     </item>
     
   </channel>
