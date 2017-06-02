@@ -6,10 +6,20 @@
     <description>Recent content in Posts on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.json.blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Announcing jsonfeedr, a new R package</title>
+      <link>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
+      <description>I have not yet spent the time to figure out how to generate a JSON feed in Hugo yet. But I have built an R package to play with JSON feeds. It&amp;rsquo;s called jsonfeedr, and it&amp;rsquo;s silly simple.
+Maybe I&amp;rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about why JSON feed even exists. Working with JSON is fun and easy.</description>
+    </item>
     
     <item>
       <title>Functions as Arguments in R</title>
