@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pinboard Markdown Python Code on JSONBecker</title>
-    <link>http://www.json.blog/tags/pinboard-markdown-python-code/</link>
+    <link>/tags/pinboard-markdown-python-code/</link>
     <description>Recent content in Pinboard Markdown Python Code on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 May 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/pinboard-markdown-python-code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/pinboard-markdown-python-code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pindown: Failed Dreams</title>
-      <link>http://www.json.blog/2014/05/pindown-failed-dreams/</link>
+      <link>/2014/05/pindown-failed-dreams/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/05/pindown-failed-dreams/</guid>
+      <guid>/2014/05/pindown-failed-dreams/</guid>
       <description>I had never thought of a use for Brett Terpstra&amp;rsquo;s Marky the Markdownifier before listening today&amp;rsquo;s Systematic. Why would I want to turn a webpage into Markdown?
 When I heard that Marky has an API, I was inspired. Pinboard has a &amp;ldquo;description&amp;rdquo; field that allows up to 65,000 characters. I never know what to put in this box. Wouldn&amp;rsquo;t it be great to put the full content of the page in Markdown into this field?</description>
     </item>

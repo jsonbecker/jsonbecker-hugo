@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2010 Census Per Capita Rhode Island Tax on JSONBecker</title>
-    <link>http://www.json.blog/tags/2010-census-per-capita-rhode-island-tax/</link>
+    <link>/tags/2010-census-per-capita-rhode-island-tax/</link>
     <description>Recent content in 2010 Census Per Capita Rhode Island Tax on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Oct 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/2010-census-per-capita-rhode-island-tax/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/2010-census-per-capita-rhode-island-tax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GoLocalProv -- Bad at Math</title>
-      <link>http://www.json.blog/2011/10/golocalprov----bad-at-math/</link>
+      <link>/2011/10/golocalprov----bad-at-math/</link>
       <pubDate>Sun, 16 Oct 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/10/golocalprov----bad-at-math/</guid>
+      <guid>/2011/10/golocalprov----bad-at-math/</guid>
       <description>There are lots of things that are misleading about this story published on GoLocalProv. It is utterly ridiculous to report numbers like how many total tax dollars are being collected by different communities for the sake of comparison. You cannot compare a total number like this which is so dependent upon things like, I don&amp;rsquo;t know, the dramatic difference in the size of these communities?
 In the 2010 Census, Providence had a population of 178,042.</description>
     </item>

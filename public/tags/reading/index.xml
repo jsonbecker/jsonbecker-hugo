@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reading on JSONBecker</title>
-    <link>http://www.json.blog/tags/reading/</link>
+    <link>/tags/reading/</link>
     <description>Recent content in Reading on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/reading/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A note on sequels</title>
-      <link>http://www.json.blog/2016/04/a-note-on-sequels/</link>
+      <link>/2016/04/a-note-on-sequels/</link>
       <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2016/04/a-note-on-sequels/</guid>
+      <guid>/2016/04/a-note-on-sequels/</guid>
       <description>I read a lot of science fiction and fantasy, genres filled with long running book series. Until the last couple of years, I mostly avoided any series that wasn&amp;rsquo;t already complete. First, I don&amp;rsquo;t like truly “epic” sci-fi fantasy. On-going series without an end in sight, or series that go beyond roughly 3,000 to 4,000 pages never end well for me1. I simply lose interest. Second, I worry that series won&amp;rsquo;t actually reach completion, either because the books are not successful enough or the author gets writer&amp;rsquo;s block2, or even just getting caught up in waiting way too long between books3.</description>
     </item>
     

@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats/</link>
+    <link>/tags/rstats/</link>
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Functions as Arguments in R</title>
-      <link>http://www.json.blog/2017/05/functions-as-arguments-in-r/</link>
+      <link>/2017/05/functions-as-arguments-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/05/functions-as-arguments-in-r/</guid>
+      <guid>/2017/05/functions-as-arguments-in-r/</guid>
       <description>Sometimes, silly small things about code I write just delight me. There are lots of ways to time things in R. 1 Tools like microbenchmark are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.
 It is really easy to use calls to Sys.time and difftime when working interactively, but I didn&amp;rsquo;t want to pepper all of my code with the same log statements all over the place.</description>
     </item>
     
     <item>
       <title>Labeling Data with purrr</title>
-      <link>http://www.json.blog/2017/03/labeling-data-with-purrr/</link>
+      <link>/2017/03/labeling-data-with-purrr/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr/</guid>
+      <guid>/2017/03/labeling-data-with-purrr/</guid>
       <description>Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:
    Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.</description>
     </item>
     
     <item>
       <title>Contributing to vegalite</title>
-      <link>http://www.json.blog/2017/03/contributing-to-vegalite/</link>
+      <link>/2017/03/contributing-to-vegalite/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/contributing-to-vegalite/</guid>
+      <guid>/2017/03/contributing-to-vegalite/</guid>
       <description>One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor rio. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.</description>
     </item>
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.json.blog/2015/07/news-on-assertions-in-r/</link>
+      <link>/2015/07/news-on-assertions-in-r/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r/</guid>
+      <guid>/2015/07/news-on-assertions-in-r/</guid>
       <description>How many times have you written R functions that start with a bunch of code that looks like this?
 my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;)){ stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;) } ... }  Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not type safe, meaning function arguments do not have to conform to specified data types.</description>
     </item>

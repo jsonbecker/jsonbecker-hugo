@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple Ios7 Osx Interface on JSONBecker</title>
-    <link>http://www.json.blog/tags/apple-ios7-osx-interface/</link>
+    <link>/tags/apple-ios7-osx-interface/</link>
     <description>Recent content in Apple Ios7 Osx Interface on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linear Thinking</title>
-      <link>http://www.json.blog/2013/06/linear-thinking/</link>
+      <link>/2013/06/linear-thinking/</link>
       <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/linear-thinking/</guid>
+      <guid>/2013/06/linear-thinking/</guid>
       <description>Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application ecosystem has matured 1, the iOS sandboxing model has felt increasingly limiting and outdated.
 I think that there is a simple change that could dramatically increase the effectiveness of multitasking on iOS by re-examining how application switching works.</description>
     </item>

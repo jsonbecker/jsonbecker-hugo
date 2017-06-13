@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brown University Charity Data Downcity Innovation Providence Public Goods Rhode Island Ri Technology on JSONBecker</title>
-    <link>http://www.json.blog/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/</link>
+    <link>/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/</link>
     <description>Recent content in Brown University Charity Data Downcity Innovation Providence Public Goods Rhode Island Ri Technology on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Mar 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/brown-university-charity-data-downcity-innovation-providence-public-goods-rhode-island-ri-technology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Providence needs a little innovation</title>
-      <link>http://www.json.blog/2012/03/providence-needs-a-little-innovation/</link>
+      <link>/2012/03/providence-needs-a-little-innovation/</link>
       <pubDate>Tue, 20 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/03/providence-needs-a-little-innovation/</guid>
+      <guid>/2012/03/providence-needs-a-little-innovation/</guid>
       <description>Have you ever tried to access public information about Providence on the web? Due to the recent, and new, requirement that residents reapply for their homestead tax exemption in Providence, I decided to poke around the Providence webpage to see what kind of public information on property was available online.
 I was greeted with an IT nightmare1.
 The system was clearly a third-party developed or purchased front end designed for searching public records on property and sold to municipalities throughout the country by winning contracts through the RFP process.</description>

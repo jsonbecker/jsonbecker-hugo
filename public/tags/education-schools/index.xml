@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education Schools on JSONBecker</title>
-    <link>http://www.json.blog/tags/education-schools/</link>
+    <link>/tags/education-schools/</link>
     <description>Recent content in Education Schools on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Feb 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/education-schools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/education-schools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dreamschooling</title>
-      <link>http://www.json.blog/2014/02/dreamschooling/</link>
+      <link>/2014/02/dreamschooling/</link>
       <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/02/dreamschooling/</guid>
+      <guid>/2014/02/dreamschooling/</guid>
       <description>My Democracy Prep colleague Lindsay Malanga and I often say we should start an organization called the Coalition of Pretty Good Schools. We&amp;rsquo;d start with the following principles.
  Every child must have a safe, warm, disruption-free classroom as a non-negotiable, fundamental right. All children should be taught to read using phonics-based instruction. All children must master basic computational skills with automaticity before moving on to higher mathematics. Every child must be given a well-rounded education that includes science, civics, history, geography, music, the arts, and physical education.</description>
     </item>

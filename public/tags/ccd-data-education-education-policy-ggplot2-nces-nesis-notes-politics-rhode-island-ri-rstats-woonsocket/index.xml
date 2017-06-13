@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ccd Data Education Education Policy Ggplot2 Nces Nesis Notes Politics Rhode Island Ri Rstats Woonsocket on JSONBecker</title>
-    <link>http://www.json.blog/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/</link>
+    <link>/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/</link>
     <description>Recent content in Ccd Data Education Education Policy Ggplot2 Nces Nesis Notes Politics Rhode Island Ri Rstats Woonsocket on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jul 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using the Common Core Data on NCES</title>
-      <link>http://www.json.blog/2012/07/using-the-common-core-data-on-nces/</link>
+      <link>/2012/07/using-the-common-core-data-on-nces/</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/using-the-common-core-data-on-nces/</guid>
+      <guid>/2012/07/using-the-common-core-data-on-nces/</guid>
       <description>My analysis on Nesi&amp;rsquo;s Notes depended entirely on the National Center for Education Statistics&amp;rsquo; Common Core Data. The per pupil amounts reported to NCES may look a bit different from state sources of this information. There are several explanations of this. First, the enrollment counts used to generate per pupil amounts are based on an October 1st headcount. In Rhode Island, we use something called &amp;ldquo;average daily membership&amp;rdquo; (ADM) as the denominator and not a headcount.</description>
     </item>
     

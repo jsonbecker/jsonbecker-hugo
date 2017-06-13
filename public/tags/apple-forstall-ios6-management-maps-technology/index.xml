@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple Forstall Ios6 Management Maps Technology on JSONBecker</title>
-    <link>http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/</link>
+    <link>/tags/apple-forstall-ios6-management-maps-technology/</link>
     <description>Recent content in Apple Forstall Ios6 Management Maps Technology on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Oct 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What Can Management Do? iOS6 Maps Monday-Morning Quarterbacking</title>
-      <link>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
+      <link>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
+      <guid>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
       <description>Philip Elmer-DeWitt has suggested the iOS6 Maps debacle falls on the shoulders of Scott Forstall1. When I first read the piece, I felt like it was unfair to blame management for this kind of failure. In my experience, the Maps application is wonderful software. The turn-by-turn directions are elegant and beautiful. The vector-based maps load fast and use substantially less data. The reality is the Map app is great; the data are less so.</description>
     </item>
     

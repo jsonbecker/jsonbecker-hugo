@@ -2,89 +2,110 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JSONBecker</title>
-    <link>http://www.json.blog/</link>
+    <link>/</link>
     <description>Recent content on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Announcing jsonfeedr, a new R package</title>
-      <link>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</link>
+      <link>/2017/06/announcing-jsonfeedr-a-new-r-package/</link>
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
+      <guid>/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
       <description>I have not yet spent the time to figure out how to generate a JSON feed in Hugo yet. But I have built an R package to play with JSON feeds. It&amp;rsquo;s called jsonfeedr, and it&amp;rsquo;s silly simple.
 Maybe I&amp;rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about why JSON feed even exists. Working with JSON is fun and easy.</description>
     </item>
     
     <item>
       <title>Functions as Arguments in R</title>
-      <link>http://www.json.blog/2017/05/functions-as-arguments-in-r/</link>
+      <link>/2017/05/functions-as-arguments-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/05/functions-as-arguments-in-r/</guid>
+      <guid>/2017/05/functions-as-arguments-in-r/</guid>
       <description>Sometimes, silly small things about code I write just delight me. There are lots of ways to time things in R. 1 Tools like microbenchmark are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.
 It is really easy to use calls to Sys.time and difftime when working interactively, but I didn&amp;rsquo;t want to pepper all of my code with the same log statements all over the place.</description>
     </item>
     
     <item>
       <title>Making Sense of dplyr 0.6</title>
-      <link>http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/</link>
+      <link>/2017/05/making-sense-of-dplyr-0.6/</link>
       <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/</guid>
+      <guid>/2017/05/making-sense-of-dplyr-0.6/</guid>
       <description>Non-standard evaluation is one of R&amp;rsquo;s best features, and also one of it&amp;rsquo;s most perplexing. Recently I have been making good use of wrapr::let to allow me to write reusable functions without a lot of assumptions about my data. For example, let&amp;rsquo;s say I always want to group_by schools when adding up dollars spent, but that sometimes my data calls what is conceptually a school schools, school, location, cost_center, Loc.</description>
     </item>
     
     <item>
       <title>Foreign Keys and assertr</title>
-      <link>http://www.json.blog/2017/04/foreign-keys-and-assertr/</link>
+      <link>/2017/04/foreign-keys-and-assertr/</link>
       <pubDate>Sun, 02 Apr 2017 21:19:30 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/04/foreign-keys-and-assertr/</guid>
+      <guid>/2017/04/foreign-keys-and-assertr/</guid>
       <description>I have been fascinated with assertive programming in R since this from 2015 1. Tony Fischetti wrote a great blog post to announce assertr 2.0&amp;rsquo;s release on CRAN that really clarified the package&amp;rsquo;s design.
 UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the assertr package.</description>
     </item>
     
     <item>
       <title>Labeling Data with purrr</title>
-      <link>http://www.json.blog/2017/03/labeling-data-with-purrr/</link>
+      <link>/2017/03/labeling-data-with-purrr/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr/</guid>
+      <guid>/2017/03/labeling-data-with-purrr/</guid>
       <description>Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:
    Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.</description>
     </item>
     
     <item>
       <title>Contributing to vegalite</title>
-      <link>http://www.json.blog/2017/03/contributing-to-vegalite/</link>
+      <link>/2017/03/contributing-to-vegalite/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/contributing-to-vegalite/</guid>
+      <guid>/2017/03/contributing-to-vegalite/</guid>
       <description>One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor rio. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.</description>
     </item>
     
     <item>
+      <title>Secular Morality in the Time of Trump</title>
+      <link>/2017/03/secular-morality-in-the-time-of-trump/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/secular-morality-in-the-time-of-trump/</guid>
+      <description>Do you believe&amp;hellip; that this is about the rule of law, and that if we lose this, we&amp;rsquo;re going to lose it all.
+ Now-Chief Strategist to the President Steve Bannon said this on his radio program while talking to now-Attorney General Jeff Sessions about immigration reform. When listening to this portion of The Daily1, I was angry. I thought we were past believing the law determines what is moral?</description>
+    </item>
+    
+    <item>
       <title>My confrontation with the mainstream</title>
-      <link>http://www.json.blog/2017/02/my-confrontation-with-the-mainstream/</link>
+      <link>/2017/02/my-confrontation-with-the-mainstream/</link>
       <pubDate>Mon, 27 Feb 2017 13:02:58 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/02/my-confrontation-with-the-mainstream/</guid>
+      <guid>/2017/02/my-confrontation-with-the-mainstream/</guid>
       <description>You can check my Goodreads profile. I love science fiction and fantasy. And I know in 2017 and everyone has already observed the dominance of &amp;ldquo;geek culture&amp;rdquo;, with the dominance of Disney properties from Marvel and now Star Wars. Hell, Suicide Squad won a goddamn Oscar.
   Powell&#39;s Best Selling Fiction, 2017-02-26    Powell&#39;s Best Selling Fiction, 2017-02-26    But I never felt like SFF was all that mainstream.</description>
     </item>
     
     <item>
+      <title>It shouldn&#39;t be an act of defiance</title>
+      <link>/2017/02/it-shouldnt-be-an-act-of-defiance/</link>
+      <pubDate>Sat, 25 Feb 2017 12:56:32 +0000</pubDate>
+      
+      <guid>/2017/02/it-shouldnt-be-an-act-of-defiance/</guid>
+      <description>It shouldn&amp;rsquo;t be an act of defiance to expect brazen sexual harassment and discrimination will result in consequences for its perpetrators.
+Now a collective will organize minions to scour our past lives, public and private, to ensure that victims never forget they are victims and never stop being victimized.
+It shouldn&amp;rsquo;t be an act of defiance to express concern about the impacts of the extremely wealthy funneling hundreds of millions of dollars into a private corporation whose core business practice involves brazenly breaking the law until they change the law.</description>
+    </item>
+    
+    <item>
       <title>Siri Won&#39;t Catch Alexa</title>
-      <link>http://www.json.blog/2017/01/siri-wont-catch-alexa/</link>
+      <link>/2017/01/siri-wont-catch-alexa/</link>
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/01/siri-wont-catch-alexa/</guid>
+      <guid>/2017/01/siri-wont-catch-alexa/</guid>
       <description>&amp;ldquo;I just got an Amazon Echo and surprisingly, I really love it.&amp;rdquo;
  In one form or another, this story has repeated again and again across the internet. So while the recent headline seemed to be &amp;ldquo;Amazon&amp;rsquo;s Alexa is everywhere at CES 2017&amp;rdquo;, it really feels like this year was the Amazon Alexa year.
 I have an Amazon Echo. I bought around a year ago during a sale as the buzz seemed to have peaked 1.</description>
@@ -92,104 +113,104 @@ I have an Amazon Echo. I bought around a year ago during a sale as the buzz seem
     
     <item>
       <title>A Gateway Drug to purrr</title>
-      <link>http://www.json.blog/2016/12/a-gateway-drug-to-purrr/</link>
+      <link>/2016/12/a-gateway-drug-to-purrr/</link>
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2016/12/a-gateway-drug-to-purrr/</guid>
+      <guid>/2016/12/a-gateway-drug-to-purrr/</guid>
       <description>A lot of the data I work with uses numeric codes rather than text to describe features of each record. For example, financial data often has a fund code that represents the account&amp;rsquo;s source of dollars and an object code that signals what is bought (e.g. salaries, benefits, supplies). This is a little like the factor data type in R, which to the frustration of many modern analysts is internally an integer that mapped to a character label (which is a level) with a fixed number of possible values.</description>
     </item>
     
     <item>
       <title>Introducing json.blog</title>
-      <link>http://www.json.blog/2016/12/introducing-jsonblog/</link>
+      <link>/2016/12/introducing-jsonblog/</link>
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2016/12/introducing-jsonblog/</guid>
+      <guid>/2016/12/introducing-jsonblog/</guid>
       <description>I have written a lot on the internet. This isn&amp;rsquo;t a surprise, I&amp;rsquo;ve been here since the mid-90s. But the truth is, most of what I write on the internet doesn&amp;rsquo;t make me proud. It hasn&amp;rsquo;t made the world any better. It certainly hasn&amp;rsquo;t made me feel any better. Most of this terrible writing is easy to associate with me, because a long time ago, I chose to use my real name as my online identity.</description>
     </item>
     
     <item>
       <title>Our New Home</title>
-      <link>http://www.json.blog/image/our-new-home/</link>
+      <link>/image/our-new-home/</link>
       <pubDate>Sun, 11 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/image/our-new-home/</guid>
+      <guid>/image/our-new-home/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Strange Occurrence</title>
-      <link>http://www.json.blog/image/a-strange-occurrence/</link>
+      <link>/image/a-strange-occurrence/</link>
       <pubDate>Sat, 26 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/image/a-strange-occurrence/</guid>
+      <guid>/image/a-strange-occurrence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Songs in the Key of Allovue</title>
-      <link>http://www.json.blog/2016/07/songs-in-the-key-of-allovue/</link>
+      <link>/2016/07/songs-in-the-key-of-allovue/</link>
       <pubDate>Sat, 09 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2016/07/songs-in-the-key-of-allovue/</guid>
+      <guid>/2016/07/songs-in-the-key-of-allovue/</guid>
       <description>When I entered high school, video games were beginning to lose their appeal. So I sold my four video game systems and all their games at a garage sale and that money, plus some Chanukkah money, bought me my first guitar and amp. I had just tried joined a band as a singer with a couple of guys I knew from school. I didn&amp;rsquo;t know anything about playing guitar. In fact, it took me a while to figure out what distortion was and why I my guitar didn&amp;rsquo;t sound like Kris Roe from The Ataris.</description>
     </item>
     
     <item>
       <title>A note on sequels</title>
-      <link>http://www.json.blog/2016/04/a-note-on-sequels/</link>
+      <link>/2016/04/a-note-on-sequels/</link>
       <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2016/04/a-note-on-sequels/</guid>
+      <guid>/2016/04/a-note-on-sequels/</guid>
       <description>I read a lot of science fiction and fantasy, genres filled with long running book series. Until the last couple of years, I mostly avoided any series that wasn&amp;rsquo;t already complete. First, I don&amp;rsquo;t like truly “epic” sci-fi fantasy. On-going series without an end in sight, or series that go beyond roughly 3,000 to 4,000 pages never end well for me1. I simply lose interest. Second, I worry that series won&amp;rsquo;t actually reach completion, either because the books are not successful enough or the author gets writer&amp;rsquo;s block2, or even just getting caught up in waiting way too long between books3.</description>
     </item>
     
     <item>
       <title>Returning to Tumblr</title>
-      <link>http://www.json.blog/2015/07/returning-to-tumblr/</link>
+      <link>/2015/07/returning-to-tumblr/</link>
       <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/07/returning-to-tumblr/</guid>
+      <guid>/2015/07/returning-to-tumblr/</guid>
       <description>I have had a Tumblr site for a long time but never knew what to do with it. What is Tumblr exactly? Is it a hosted blog? Is it a hosted blog for hipsters? Is it a social network? Why should I put content into Tumblr?
 I have this blog, but I barely use it. I don&amp;rsquo;t have a Facebook page, because I don&amp;rsquo;t trust Facebook and how it repeatedly changed and confused privacy settings and after college, I rarely found that Facebook was a net positive in my life.</description>
     </item>
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.json.blog/2015/07/news-on-assertions-in-r/</link>
+      <link>/2015/07/news-on-assertions-in-r/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r/</guid>
+      <guid>/2015/07/news-on-assertions-in-r/</guid>
       <description>How many times have you written R functions that start with a bunch of code that looks like this?
 my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){ if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;)){ stop(&amp;quot;Both dob and enddate must be Date class objects&amp;quot;) } ... }  Because R was designed to be interactive, it is incredibly tolerant to bad user input. Functions are not type safe, meaning function arguments do not have to conform to specified data types.</description>
     </item>
     
     <item>
       <title>Rhode Island Disease</title>
-      <link>http://www.json.blog/2015/06/rhode-island-disease/</link>
+      <link>/2015/06/rhode-island-disease/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/06/rhode-island-disease/</guid>
+      <guid>/2015/06/rhode-island-disease/</guid>
       <description>When discussing policy in Rhode Island, I almost always encounter two bizarre arguments.
  Rhode Island is completely unique. Ideas from other places don&amp;rsquo;t adequately take into account our local context. What is working there either won&amp;rsquo;t work here or isn&amp;rsquo;t really comparable to our situation here. What is happening nationally is directly applicable to Rhode Island. We can make broad sweeping statements about a set of policies, ideas, or institutions currently in play in Rhode Island without any knowledge of how things are going locally and how it&amp;rsquo;s different from other places.</description>
     </item>
     
     <item>
       <title>Acceptable Terms</title>
-      <link>http://www.json.blog/2015/04/acceptable-terms/</link>
+      <link>/2015/04/acceptable-terms/</link>
       <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/04/acceptable-terms/</guid>
+      <guid>/2015/04/acceptable-terms/</guid>
       <description>An initial proposal has been made to the city of Providence and state of Rhode Island to keep the PawSox in Rhode Island and move them to a new stadium along the river in Providence.
 The team is proposing that they privately finance all of the construction costs of the stadium while the land remains state (or city? I am not clear) owned. The state will lease the land underneath the stadium (the real value) with an option to buy for 30 years at $1 a year.</description>
     </item>
     
     <item>
       <title>A PostgreSQL Cheat Sheet for OSX and R</title>
-      <link>http://www.json.blog/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/</link>
+      <link>/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/</link>
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/</guid>
+      <guid>/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/</guid>
       <description>I keep this on my desktop.
 Install:
 brew install postgresql initdb /usr/local/var/postgres -E utf8 gem install lunchy ### Start postgres with lunchy mkdir -p ~/Library/LaunchAgents cp /usr/local/Cellar/postgresql/9.3.3/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/  Setup DB from SQL file:
@@ -199,49 +220,49 @@ lunchy start postgres lunchy stop postgres  may run into trouble with local sock
     
     <item>
       <title>Taking Control</title>
-      <link>http://www.json.blog/2015/01/taking-control/</link>
+      <link>/2015/01/taking-control/</link>
       <pubDate>Sun, 11 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/01/taking-control/</guid>
+      <guid>/2015/01/taking-control/</guid>
       <description>Severing My Daemon When I was in high school, I piggy-backed on a friend&amp;rsquo;s website to host a page for my band. We could post pictures, show locations and dates, lyrics, and pretend like we produced music people cared about. It was mostly a fun way for me to play with the web and something to show folks when I said I played guitar and sang in a band. One day, my friend canceled his hosting.</description>
     </item>
     
     <item>
       <title>Amazon Creating A Services Marketplace Online</title>
-      <link>http://www.json.blog/2014/11/amazon-creating-a-services-marketplace-online/</link>
+      <link>/2014/11/amazon-creating-a-services-marketplace-online/</link>
       <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/11/amazon-creating-a-services-marketplace-online/</guid>
+      <guid>/2014/11/amazon-creating-a-services-marketplace-online/</guid>
       <description>A few thoughts:
  This is a very interesting way to take advantage of a number of existing Amazon technologies&amp;ndash;primarily their payment processing and review system. Services are an increasingly important part of the economy and is less subject to commoditization. This is Amazon dipping into a massive growth area by commoditizing discovery and payment. It also offloads some of the risk from both sides of the transaction. It&amp;rsquo;s very bold, possibly brilliant.</description>
     </item>
     
     <item>
       <title>The Power Of Sound</title>
-      <link>http://www.json.blog/2014/11/the-power-of-sound/</link>
+      <link>/2014/11/the-power-of-sound/</link>
       <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/11/the-power-of-sound/</guid>
+      <guid>/2014/11/the-power-of-sound/</guid>
       <description>It has been said a thousand times before, but I feel the need to say it again. So much of what Star Wars got right was creating a fully realized, fascinating world. As much as stunning visual effects that have largely stood the test of time were a part of that story, it was how Star Wars sounded that is most remarkable.
 Watch that trailer. It has moments that look an awful lot like Star Wars&amp;ndash; vast dunes in the middle of the desert, the Millenium Falcon speeding along, flipping at odd angles emphasizing its unique flat structure.</description>
     </item>
     
     <item>
       <title>School Funding Reform, Hard Work and Fraught with Potential</title>
-      <link>http://www.json.blog/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/</link>
+      <link>/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/</guid>
+      <guid>/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/</guid>
       <description>Because of the primacy of equity as a goal in school finance system design, the formulas disproportionately benefit less wealthy districts and those with high concentrations of needier students. &amp;hellip; because of the universal impact on communities, school finance legislation requires broad political buy-in.
  I think it is worth contrasting the political realities of constructing school finance law with the need and justification for state funding of education in the first place.</description>
     </item>
     
     <item>
       <title>How do we attract the best teachers to struggling schools?</title>
-      <link>http://www.json.blog/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/</link>
+      <link>/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/</link>
       <pubDate>Thu, 13 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/</guid>
+      <guid>/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/</guid>
       <description>There are some basic facts about the teacher labor market that are inconvenient for many folks working to improve education. I am going to go through a few premises that I think should be broadly accepted and several lemma and contentions that I hope clarifies my own view on education resources and human capital management.
 Teaching in low performing schools is challenging.
 If I am looking for a job, all else being equal, I will generally not choose the more challenging one.</description>
@@ -249,10 +270,10 @@ If I am looking for a job, all else being equal, I will generally not choose the
     
     <item>
       <title>NaNo(Blo)WriMo</title>
-      <link>http://www.json.blog/2014/11/nanoblowrimo/</link>
+      <link>/2014/11/nanoblowrimo/</link>
       <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/11/nanoblowrimo/</guid>
+      <guid>/2014/11/nanoblowrimo/</guid>
       <description>November marks the start of National Novel Writing Month (NaNoWriMo). The quick version is folks band together and support each other to write 50,000 words in November.
 I would love to write a novel one day. I am not sure I could do it well, but I am pretty sure I could hit 50,000-80,000 words if I dedicated time to tell a story.
 I don&amp;rsquo;t have a story to tell.</description>
@@ -260,10 +281,10 @@ I don&amp;rsquo;t have a story to tell.</description>
     
     <item>
       <title>Growing Up in the Internet Hate Machine</title>
-      <link>http://www.json.blog/2014/10/growing-up-in-the-internet-hate-machine/</link>
+      <link>/2014/10/growing-up-in-the-internet-hate-machine/</link>
       <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/10/growing-up-in-the-internet-hate-machine/</guid>
+      <guid>/2014/10/growing-up-in-the-internet-hate-machine/</guid>
       <description>A terrible thing is happening this year. Women all across the internet are finding themselves the target of violence, simply for existing. Women are being harassed for talking about video games, women are being harassed for talking about the technology industry, women are being harassed for talking, women are being harassed.
 A terrible thing is happening. Women are finding themselves the target of violence.
 A terrible thing has always happened.</description>
@@ -271,145 +292,145 @@ A terrible thing has always happened.</description>
     
     <item>
       <title>When We Legislate and Ajudicate Our World View</title>
-      <link>http://www.json.blog/2014/06/when-we-legislate-and-ajudicate-our-world-view/</link>
+      <link>/2014/06/when-we-legislate-and-ajudicate-our-world-view/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/06/when-we-legislate-and-ajudicate-our-world-view/</guid>
+      <guid>/2014/06/when-we-legislate-and-ajudicate-our-world-view/</guid>
       <description>The Vergara v. California case has everyone in education talking. Key teacher tenure provisions in California are on the ropes, presumably because of the disparate impact on teacher, annd therefore education, quality for students who are less fortunate.
 I have fairly loosely held views about the practice of tenure itself and the hiring and firing of teachers. However, I have strongly held views that unions made mistake with their efforts to move a lot of rules about the teaching labor market into state laws across the country.</description>
     </item>
     
     <item>
       <title>They really don&#39;t make them like they used to...</title>
-      <link>http://www.json.blog/2014/05/they-really-dont-make-them-like-they-used-to.../</link>
+      <link>/2014/05/they-really-dont-make-them-like-they-used-to.../</link>
       <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/05/they-really-dont-make-them-like-they-used-to.../</guid>
+      <guid>/2014/05/they-really-dont-make-them-like-they-used-to.../</guid>
       <description>I have never found dictionaries or even a thesaurus particularly useful as part of the writing process. I like to blame this on my lack of creative careful writing.
 But just maybe, I have simply been using the wrong dictionaries. It is hard not to be seduced by the seeming superiority of Webster&amp;rsquo;s original style. A dictionary that is one-part explanatory and one-part exploratory provides a much richer experience of English as an enabler of ideas that transend meager vocabulary.</description>
     </item>
     
     <item>
       <title>Pindown: Failed Dreams</title>
-      <link>http://www.json.blog/2014/05/pindown-failed-dreams/</link>
+      <link>/2014/05/pindown-failed-dreams/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/05/pindown-failed-dreams/</guid>
+      <guid>/2014/05/pindown-failed-dreams/</guid>
       <description>I had never thought of a use for Brett Terpstra&amp;rsquo;s Marky the Markdownifier before listening today&amp;rsquo;s Systematic. Why would I want to turn a webpage into Markdown?
 When I heard that Marky has an API, I was inspired. Pinboard has a &amp;ldquo;description&amp;rdquo; field that allows up to 65,000 characters. I never know what to put in this box. Wouldn&amp;rsquo;t it be great to put the full content of the page in Markdown into this field?</description>
     </item>
     
     <item>
       <title>Symlinking Your Data</title>
-      <link>http://www.json.blog/2014/04/symlinking-your-data/</link>
+      <link>/2014/04/symlinking-your-data/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/04/symlinking-your-data/</guid>
+      <guid>/2014/04/symlinking-your-data/</guid>
       <description>I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by creating encrypted disk images with secure passwords (stored in 1Password). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow.</description>
     </item>
     
     <item>
       <title>Expressiveness Counts</title>
-      <link>http://www.json.blog/2014/03/expressiveness-counts/</link>
+      <link>/2014/03/expressiveness-counts/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/03/expressiveness-counts/</guid>
+      <guid>/2014/03/expressiveness-counts/</guid>
       <description>Education data often come in annual snapshots. Each year, students are able to identify anew, and while student identification numbers may stay the same, names, race, and gender can often change. Sometimes, even data that probably should not change, like a date of birth, is altered at some point. While I could spend all day talking about data collection processes and automated validation that should assist with maintaining clean data, most researchers face multiple characteristics per student, unsure of which one is accurate.</description>
     </item>
     
     <item>
       <title>Latinos in Rhode Island Face Housing Burden</title>
-      <link>http://www.json.blog/2014/02/latinos-in-rhode-island-face-housing-burden/</link>
+      <link>/2014/02/latinos-in-rhode-island-face-housing-burden/</link>
       <pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/02/latinos-in-rhode-island-face-housing-burden/</guid>
+      <guid>/2014/02/latinos-in-rhode-island-face-housing-burden/</guid>
       <description>We burden Latinos (and other traditionally underserved communities) with expensive housing because of the widespread practice of using homestead exemptions in Rhode Island. By lowering the real estate tax rate, typically by 50%, for owner occupied housing, we dramatically inflate the tax rate paid by Rhode Islanders who are renting.
 Echoing a newly filed lawsuit in New York City over discriminatory real estate tax regimes, this new report emphasizes the racist incentives built into our property tax.</description>
     </item>
     
     <item>
       <title>Appreciating the Beauty of dplyr</title>
-      <link>http://www.json.blog/2014/02/appreciating-the-beauty-of-dplyr/</link>
+      <link>/2014/02/appreciating-the-beauty-of-dplyr/</link>
       <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/02/appreciating-the-beauty-of-dplyr/</guid>
+      <guid>/2014/02/appreciating-the-beauty-of-dplyr/</guid>
       <description>Hadley Wickham has once again1 made R ridiculously better. Not only is dplyr incredibly fast, but the new syntax allows for some really complex operations to be expressed in a ridiculously beautiful way.
 Consider a data set, course, with a student identifier, sid, a course identifier, courseno, a quarter, quarter, and a grade on a scale of 0 to 4, gpa. What if I wanted to know the number of a courses a student has failed over the entire year, as defined by having an overall grade of less than a 1.</description>
     </item>
     
     <item>
       <title>Freedom Should Be Reserved for the Wealthy</title>
-      <link>http://www.json.blog/2014/02/freedom-should-be-reserved-for-the-wealthy/</link>
+      <link>/2014/02/freedom-should-be-reserved-for-the-wealthy/</link>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/02/freedom-should-be-reserved-for-the-wealthy/</guid>
+      <guid>/2014/02/freedom-should-be-reserved-for-the-wealthy/</guid>
       <description>These quotes are absolutely striking, in that they give a clear glimpse into the ideological commitments of the Republican Party. From Sen. Blunt and Rep. Cole, we get the revelation that— for conservatives— the only “work” worth acknowledging is wage labor. To myself, and many others, someone who retires early to volunteer— or leaves a job to care for their children— is still working, they&amp;rsquo;re just outside the formal labor market.</description>
     </item>
     
     <item>
       <title>Dreamschooling</title>
-      <link>http://www.json.blog/2014/02/dreamschooling/</link>
+      <link>/2014/02/dreamschooling/</link>
       <pubDate>Thu, 06 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/02/dreamschooling/</guid>
+      <guid>/2014/02/dreamschooling/</guid>
       <description>My Democracy Prep colleague Lindsay Malanga and I often say we should start an organization called the Coalition of Pretty Good Schools. We&amp;rsquo;d start with the following principles.
  Every child must have a safe, warm, disruption-free classroom as a non-negotiable, fundamental right. All children should be taught to read using phonics-based instruction. All children must master basic computational skills with automaticity before moving on to higher mathematics. Every child must be given a well-rounded education that includes science, civics, history, geography, music, the arts, and physical education.</description>
     </item>
     
     <item>
       <title>Garrahy Complex: Rules for Public Investment in Parking</title>
-      <link>http://www.json.blog/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</link>
+      <link>/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</guid>
+      <guid>/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</guid>
       <description>James over at TransportPVD has a great post today talking about a Salt Lake City ordinance that makes property owners responsible for providing a bond that funds the landscaping and maintenance of vacant lots left after demolition. I love this as much as he does and would probably add several other provisions (like forfeiting any tax breaks on that property or any other property in the city and potentially forfeiture of the property itself if a demolition was approved based on site plans that are not adhered to within a given time frame).</description>
     </item>
     
     <item>
       <title>Did public schools build economies, or did economies build public schools?</title>
-      <link>http://www.json.blog/2013/12/did-public-schools-build-economies-or-did-economies-build-public-schools/</link>
+      <link>/2013/12/did-public-schools-build-economies-or-did-economies-build-public-schools/</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/12/did-public-schools-build-economies-or-did-economies-build-public-schools/</guid>
+      <guid>/2013/12/did-public-schools-build-economies-or-did-economies-build-public-schools/</guid>
       <description>We find that public schools offered practically zero return education on the margin, yet they did enjoy significant political and financial support from local political elites, if they taught in the “right” language of instruction.
  One thing that both progressives and libertarians agree upon are that social goals of education are woefully underappreciated and considered in the current school reform discussion. Both school choice and local, democratic control of schools are reactions to centralization resulting in &amp;ldquo;elites&amp;hellip; [selecting] the &amp;lsquo;right&amp;rsquo; language of instruction.</description>
     </item>
     
     <item>
       <title>Calculating Age with Precision in R</title>
-      <link>http://www.json.blog/2013/12/calculating-age-with-precision-in-r/</link>
+      <link>/2013/12/calculating-age-with-precision-in-r/</link>
       <pubDate>Wed, 04 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/12/calculating-age-with-precision-in-r/</guid>
+      <guid>/2013/12/calculating-age-with-precision-in-r/</guid>
       <description>Update &amp;gt; Turns out the original code below was pretty messed up. All kinds of little errors I didn&amp;rsquo;t catch. I&amp;rsquo;ve updated it below. There are a lot of options to refactor this further that I&amp;rsquo;m currently considering. Sometimes it is really hard to know just how flexible something this big really should be. I think I am going to wait until I start developing tests to see where I land.</description>
     </item>
     
     <item>
       <title>A Different Angle on PISA</title>
-      <link>http://www.json.blog/2013/12/a-different-angle-on-pisa/</link>
+      <link>/2013/12/a-different-angle-on-pisa/</link>
       <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/12/a-different-angle-on-pisa/</guid>
+      <guid>/2013/12/a-different-angle-on-pisa/</guid>
       <description>I wanted to call attention to these interesting PISA results. Turns out that student anxiety in the United States is lower than the OECD average and belief in ability is higher 1. I thought that all of the moves in education since the start of standard&amp;rsquo;s based reform were supposed to be generating tremendous anxiety and failing to produce students who had high sense of self-efficacy?
 It is also worth noting that students in the United States were more likely to skip out on school dand this had a higher than typical impact on student performance.</description>
     </item>
     
     <item>
       <title>A Good Long Read on Assessment and Accountability</title>
-      <link>http://www.json.blog/2013/11/a-good-long-read-on-assessment-and-accountability/</link>
+      <link>/2013/11/a-good-long-read-on-assessment-and-accountability/</link>
       <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/a-good-long-read-on-assessment-and-accountability/</guid>
+      <guid>/2013/11/a-good-long-read-on-assessment-and-accountability/</guid>
       <description>Although it clocks in at 40+ pages, this is a worthwhile and relatively fast read for anyone in education policy on the future of assessment if we&amp;rsquo;re serious about college and career readiness. There is a ton to unpack, with a fair amount it agree with and a lot I am quite a bit less sure on.
 I think this paper is meant for national and state level policy-makers, and so my major quibble is I think this is much more valuable for a district-level audience.</description>
     </item>
     
     <item>
       <title>Bilingual Education at Providence Public Schools</title>
-      <link>http://www.json.blog/2013/11/bilingual-education-at-providence-public-schools/</link>
+      <link>/2013/11/bilingual-education-at-providence-public-schools/</link>
       <pubDate>Thu, 21 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/bilingual-education-at-providence-public-schools/</guid>
+      <guid>/2013/11/bilingual-education-at-providence-public-schools/</guid>
       <description>“We are trying to work towards late-exit ELL programs so (students) can learn the concepts in (their) native language,” Lusi said. Administrative goals have recently shifted to a focus on proficiency in both languages because bilingual education is preferred, she added.
 But instituting district-wide bilingual education would require funding to hire teachers certified in both languages and to buy dual-language materials, she said.
  I am pretty sure this is new.</description>
@@ -417,182 +438,182 @@ But instituting district-wide bilingual education would require funding to hire 
     
     <item>
       <title>DeBlasio: Weak on Implementation</title>
-      <link>http://www.json.blog/2013/11/deblasio-weak-on-implementation/</link>
+      <link>/2013/11/deblasio-weak-on-implementation/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/deblasio-weak-on-implementation/</guid>
+      <guid>/2013/11/deblasio-weak-on-implementation/</guid>
       <description>De Blasio and his advisers are still figuring out how much rent to charge well-funded charter schools, his transition team told me. “It would depend on the resources of the charter school or charter network,” he told WNYC, in early October. “Some are clearly very, very well resourced and have incredible wealthy backers. Others don&amp;rsquo;t. So my simple point was that programs that can afford to pay rent should be paying rent.</description>
     </item>
     
     <item>
       <title>More evidence for &#34;mere facts&#34;</title>
-      <link>http://www.json.blog/2013/11/more-evidence-for-mere-facts/</link>
+      <link>/2013/11/more-evidence-for-mere-facts/</link>
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/more-evidence-for-mere-facts/</guid>
+      <guid>/2013/11/more-evidence-for-mere-facts/</guid>
       <description>To recap, the first study discussed above established that children from disadvantaged backgrounds know less about a topic (i.e., birds) than their middle-class peers. Next, in study two, the researchers showed that differences in domain knowledge influenced children&amp;rsquo;s ability to understand words out of context, and to comprehend a story. Moreover, poor kids — who also had more limited knowledge — perform worse on these tasks than did their middle class peers.</description>
     </item>
     
     <item>
       <title>The four ways to really fix education</title>
-      <link>http://www.json.blog/2013/11/the-four-ways-to-really-fix-education/</link>
+      <link>/2013/11/the-four-ways-to-really-fix-education/</link>
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/the-four-ways-to-really-fix-education/</guid>
+      <guid>/2013/11/the-four-ways-to-really-fix-education/</guid>
       <description>More schooling, reoriented calendar Wider range of higher education Cheaper four-year degrees Eliminate property tax-based public education   This is an interesting list. I don&amp;rsquo;t agree with number four. There are several benefits to using property taxes not the least of which is their stability and lagged response during traditional economic downturns. However, there are many things we should do to reform our revenue system for education. I am keen on more taxes on &amp;ldquo;property&amp;rdquo;, using land value taxes that are levvied either statewide or regionally to address some of the inequities traditional, highly localized property taxes can lead to.</description>
     </item>
     
     <item>
       <title>It&#39;s Poverty Stupid... or is it?</title>
-      <link>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it/</link>
+      <link>/2013/11/its-poverty-stupid...-or-is-it/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/11/its-poverty-stupid...-or-is-it/</guid>
+      <guid>/2013/11/its-poverty-stupid...-or-is-it/</guid>
       <description>If I had to point to the key fissure in the education policy and research community it would be around poverty. Some seem to view it as an inexorable obstacle, deeply believing that the key improvement strategy is to decrease inequity of inputs. Some seem to view it as an obstacle that can be overcome by systems functioning at peak efficacy, deeply believing the great challenge is achieving that efficacy sustainably at scale.</description>
     </item>
     
     <item>
       <title>Incomplete Evidence</title>
-      <link>http://www.json.blog/2013/10/incomplete-evidence/</link>
+      <link>/2013/10/incomplete-evidence/</link>
       <pubDate>Tue, 08 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/10/incomplete-evidence/</guid>
+      <guid>/2013/10/incomplete-evidence/</guid>
       <description>I spent most of high school writing, practicing, and performing music. I played guitar in two separate bands, and was the lead vocalist in one of those bands, and played trumpet in various wind ensembles and the jazz band at school. When I wasn&amp;rsquo;t a part of the creation process myself, there is a pretty good chance I was listening to music. Back then, it seemed trivial to find a new artist or album to obsess over.</description>
     </item>
     
     <item>
       <title>Using R to Calculate Student Moblity</title>
-      <link>http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/</link>
+      <link>/2013/09/using-r-to-calculate-student-moblity/</link>
       <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/</guid>
+      <guid>/2013/09/using-r-to-calculate-student-moblity/</guid>
       <description>In a couple of previous posts, I outlined the importance of documenting business rules for common education statistics and described my take on how to best calculate student mobility. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. 1 At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.</description>
     </item>
     
     <item>
       <title>A New Calculation for Student Mobility</title>
-      <link>http://www.json.blog/2013/09/a-new-calculation-for-student-mobility/</link>
+      <link>/2013/09/a-new-calculation-for-student-mobility/</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/a-new-calculation-for-student-mobility/</guid>
+      <guid>/2013/09/a-new-calculation-for-student-mobility/</guid>
       <description>How do we calculate student mobility? I am currently soliciting responses from other data professionals across the country. But when I needed to produce mobility numbers for some of my work a couple of months ago, I decided to develop a set of business rules without any exposure to how the federal government, states, or other existing systems define mobility. 1
 I am fairly proud of my work on mobility.</description>
     </item>
     
     <item>
       <title>Documentation of Business Rules and Analysis</title>
-      <link>http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/</link>
+      <link>/2013/09/documentation-of-business-rules-and-analysis/</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/</guid>
+      <guid>/2013/09/documentation-of-business-rules-and-analysis/</guid>
       <description>One of the most challenging aspects of being a data analyst is translating programmatic terms like &amp;ldquo;student mobility&amp;rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.
 Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&amp;rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.</description>
     </item>
     
     <item>
       <title>Some Changes for Rhode Island State Aid to Education</title>
-      <link>http://www.json.blog/2013/08/some-changes-for-rhode-island-state-aid-to-education/</link>
+      <link>/2013/08/some-changes-for-rhode-island-state-aid-to-education/</link>
       <pubDate>Thu, 22 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/08/some-changes-for-rhode-island-state-aid-to-education/</guid>
+      <guid>/2013/08/some-changes-for-rhode-island-state-aid-to-education/</guid>
       <description>In December 2009, the education department head, Professor Kenneth K. Wong, another graduate student and myself were part of a three-person team consulting the Rhode Island Department of Education (RIDE) on how to establish a new state funding formula. We worked with finance and legal staff at the department to develop the legislation for the 2010 session that would establish a state funding formula for the first time in 15 years.</description>
     </item>
     
     <item>
       <title>What can be done for Rhode Island Pensioners?</title>
-      <link>http://www.json.blog/2013/08/what-can-be-done-for-rhode-island-pensioners/</link>
+      <link>/2013/08/what-can-be-done-for-rhode-island-pensioners/</link>
       <pubDate>Thu, 15 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/08/what-can-be-done-for-rhode-island-pensioners/</guid>
+      <guid>/2013/08/what-can-be-done-for-rhode-island-pensioners/</guid>
       <description>This post originally appeared on my old blog on January 2, 2013 but did not make the transition to this site due to error. I decided to repost it with a new date after recovering it from a cached version on the web.
 Rhode Island passed sweeping pension reform last fall, angering the major labor unions and progressives throughout the state. These reforms have significantly decreased both the short and long-run costs to the state, while decreasing the benefits of both current and future retirees.</description>
     </item>
     
     <item>
       <title>Thoughts on Teach for America</title>
-      <link>http://www.json.blog/2013/07/thoughts-on-tfa/</link>
+      <link>/2013/07/thoughts-on-tfa/</link>
       <pubDate>Mon, 29 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/07/thoughts-on-tfa/</guid>
+      <guid>/2013/07/thoughts-on-tfa/</guid>
       <description>One of the most interesting discussions I had in class during graduate school was about how to interpret the body of evidence that existed about Teach for America. At the time, Kane, Rockoff and Staiger (KRS) had just published &amp;ldquo;What does certification tell us about teacher effectiveness? Evidence from New York City&amp;rdquo; in Economics of Education Review . KRS produced value-added estimates for teachers and analyzed whether their initial certification described any variance in teacher effectiveness at raising student achievement scores.</description>
     </item>
     
     <item>
       <title>Smarter Balance Released Items Scare Me</title>
-      <link>http://www.json.blog/2013/07/smarter-balance-released-items-scare-me/</link>
+      <link>/2013/07/smarter-balance-released-items-scare-me/</link>
       <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/07/smarter-balance-released-items-scare-me/</guid>
+      <guid>/2013/07/smarter-balance-released-items-scare-me/</guid>
       <description>CCSSI Mathematics posted a scathing look at the items released by the Smarter Balanced Assessment Consortium (SBAC). While the rest of the internet seems to be obsessed over Georgia leaving the Partnership for Assessment of College and Careers1, the real concern should be over the quality of these test items.
 Although CCSSI also deligently point out questions that are not well aligned to the standards, this is the least of my worries.</description>
     </item>
     
     <item>
       <title>Summer Reading</title>
-      <link>http://www.json.blog/2013/07/summer-reading/</link>
+      <link>/2013/07/summer-reading/</link>
       <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/07/summer-reading/</guid>
+      <guid>/2013/07/summer-reading/</guid>
       <description>This summer has been very productive for my fiction reading backlog. Here are just some of the things I have read since Memorial Day. 1
 Novels The Name of the Wind by Patrick Rothfuss I picked up The Name of the Wind on a whim while cruising through the bookstore. I was glad I did. This book tells a classic story&amp;ndash; a precocious young wizard learns to use his powers, building toward being the most important person in the world.</description>
     </item>
     
     <item>
       <title>Economic Policy Institute is Wrong</title>
-      <link>http://www.json.blog/2013/06/economic-policy-institute-is-wrong/</link>
+      <link>/2013/06/economic-policy-institute-is-wrong/</link>
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/economic-policy-institute-is-wrong/</guid>
+      <guid>/2013/06/economic-policy-institute-is-wrong/</guid>
       <description>The Economic Policy Institute has release a short issue brief on the Rhode Island Retirement Security Act (RIRSA) by Robert Hiltonsmith that manages to get all of the details right but the big picture entirely wrong.
 The EPI Issue Brief details the differences between the retirement system for state workers before and after the passage of RIRSA as accurately and clearly as I have ever seen. Mr. Hiltonsmith has done a notable job explaining the differences between the new system and the old system.</description>
     </item>
     
     <item>
       <title>Calculating Age in R</title>
-      <link>http://www.json.blog/2013/06/calculating-age-in-r/</link>
+      <link>/2013/06/calculating-age-in-r/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/calculating-age-in-r/</guid>
+      <guid>/2013/06/calculating-age-in-r/</guid>
       <description>A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data.
 I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote 1:</description>
     </item>
     
     <item>
       <title>Stubborn Problem with MOOCs</title>
-      <link>http://www.json.blog/2013/06/stubborn-problem-with-moocs/</link>
+      <link>/2013/06/stubborn-problem-with-moocs/</link>
       <pubDate>Wed, 05 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/stubborn-problem-with-moocs/</guid>
+      <guid>/2013/06/stubborn-problem-with-moocs/</guid>
       <description>Kevin Carey has a great new piece on his experience taking a Massive Open Online Course (MOOC). If you have any interest in blended learning, online education, and higher education policy, I would consider this a must read.
 He carefully addresses many of the common concerns to online only course work. Can it be truly rigorous? Yes. Do you lose the &amp;ldquo;magic&amp;rdquo; of taking a big lecture course in person?</description>
     </item>
     
     <item>
       <title>Linear Thinking</title>
-      <link>http://www.json.blog/2013/06/linear-thinking/</link>
+      <link>/2013/06/linear-thinking/</link>
       <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/linear-thinking/</guid>
+      <guid>/2013/06/linear-thinking/</guid>
       <description>Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application ecosystem has matured 1, the iOS sandboxing model has felt increasingly limiting and outdated.
 I think that there is a simple change that could dramatically increase the effectiveness of multitasking on iOS by re-examining how application switching works.</description>
     </item>
     
     <item>
       <title>Cleaning URLs with TextExpander</title>
-      <link>http://www.json.blog/2013/05/cleaning-urls-with-textexpander/</link>
+      <link>/2013/05/cleaning-urls-with-textexpander/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/05/cleaning-urls-with-textexpander/</guid>
+      <guid>/2013/05/cleaning-urls-with-textexpander/</guid>
       <description>One thing I really dislike about Google Reader is it replaces the links to posts in my RSS feed. My Pinboard account is littered with links that start with http://feedproxy.google.com. I am quite concerned that with the demise of Google Reader on July 1, 2013, these redirects will no longer work.
 It&amp;rsquo;s not just Google that obscures the actually address of links on the internet. The popularity of using link shortening services, both to save characters on Twitter and to collect analytics, has proliferated the Internet of Redirects.</description>
     </item>
     
     <item>
       <title>The Slow Trek to Pelican</title>
-      <link>http://www.json.blog/2012/12/the-slow-trek-to-pelican/</link>
+      <link>/2012/12/the-slow-trek-to-pelican/</link>
       <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/12/the-slow-trek-to-pelican/</guid>
+      <guid>/2012/12/the-slow-trek-to-pelican/</guid>
       <description>Update: Please see below for two solutions.
 I have grown increasingly unhappy with Wordpress lately. My blog is simple. My design tastes are simple. My needs are simple. I like control. I am a geek. And I really need an excuse to learn Python, which seems to be rapidly growing into one of the most important programming languages for a data analyst.
 I have decided to migrate this blog over to Pelican, a static site generator written in Python.</description>
@@ -600,77 +621,77 @@ I have decided to migrate this blog over to Pelican, a static site generator wri
     
     <item>
       <title>A little knowledge is a wonderful (dangerous) thing</title>
-      <link>http://www.json.blog/2012/11/a-little-knowledge-is-a-wonderful-dangerous-thing/</link>
+      <link>/2012/11/a-little-knowledge-is-a-wonderful-dangerous-thing/</link>
       <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/11/a-little-knowledge-is-a-wonderful-dangerous-thing/</guid>
+      <guid>/2012/11/a-little-knowledge-is-a-wonderful-dangerous-thing/</guid>
       <description>It is so tempting to try to apply cognitive science results in education. It seems like an obvious step on the long road of moving education from a field of theory and philosophies to one more grounded in empirical research. Yet, learning myths are persistent. Even scarier, &amp;ldquo;those who know the most about neuroscience also believe the most myths.&amp;ldquo;
 Educators may have the best intentions when trying to infuse their practice with evidence, but they all too often are not equipped as critical consumers of research.</description>
     </item>
     
     <item>
       <title>Frictionless</title>
-      <link>http://www.json.blog/2012/11/frictionless/</link>
+      <link>/2012/11/frictionless/</link>
       <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/11/frictionless/</guid>
+      <guid>/2012/11/frictionless/</guid>
       <description>Apple has released the iPad Mini. Microsoft unveiled the Surface RT. Google has expanded its play with the Nexus 4 (phone) and 10 (tablet) to sandwich the previously released 7. In virtually every review of these new devices the Apple advantage was ecosystem.
 Time and time again, following descriptions of well designed and built hardware 1, reviewers were forced to add some form of, &amp;ldquo;But the ecosystem cannot compete with Apple&amp;rsquo;s 275,000 tablet-optimized application.</description>
     </item>
     
     <item>
       <title>Paul Cuffee Middle School, Addressing Emotional Needs</title>
-      <link>http://www.json.blog/2012/11/paul-cuffee-middle-school-addressing-emotional-needs/</link>
+      <link>/2012/11/paul-cuffee-middle-school-addressing-emotional-needs/</link>
       <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/11/paul-cuffee-middle-school-addressing-emotional-needs/</guid>
+      <guid>/2012/11/paul-cuffee-middle-school-addressing-emotional-needs/</guid>
       <description>I like this piece in Slate on Paul Cuffee Middle School, a charter school right here in Providence. Most of what I know about child development seems to suggest that middle schools are sort of ridiculous. At the moment children are looking for role models and close relationships with adults (and not just the kids around them), we decide that kids should have many teachers, teachers should have higher loads, and the kids stay consistent while the adults change constantly.</description>
     </item>
     
     <item>
       <title>Where I Share</title>
-      <link>http://www.json.blog/2012/10/where-i-share/</link>
+      <link>/2012/10/where-i-share/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/where-i-share/</guid>
+      <guid>/2012/10/where-i-share/</guid>
       <description>I have been meaning to write this post for the past couple of weeks. Like most other people, I am constantly experimenting with different ways to publish and share my thoughts and engage with social networking. Lately, I have settled into what feels like an &amp;ldquo;end state&amp;rdquo; workflow1. I will devote a future post to the details of how I manage my online reading, writing, and sharing workflow but for now I just wanted to let folks know where they can find me.</description>
     </item>
     
     <item>
       <title>Thoughts on Grit</title>
-      <link>http://www.json.blog/2012/10/thoughts-on-grit/</link>
+      <link>/2012/10/thoughts-on-grit/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/thoughts-on-grit/</guid>
+      <guid>/2012/10/thoughts-on-grit/</guid>
       <description>I have not had the opportunity to read Paul Tough&amp;rsquo;s newest book on &amp;ldquo;grit&amp;rdquo;1. I have, however, read Paul Tough&amp;rsquo;s New York Times Magazine article on grit and recently listened to an EconTalk podcast where he discussed How Children Succeed.
 The thrust of Tough&amp;rsquo;s argument, if I were to be so bold, is that there is a definable set of non-cognitive skills, called &amp;ldquo;grit&amp;rdquo;, that are at least as important as academic achievement in determining long-term positive outcomes for kids.</description>
     </item>
     
     <item>
       <title>What Can Management Do? iOS6 Maps Monday-Morning Quarterbacking</title>
-      <link>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
+      <link>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
+      <guid>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
       <description>Philip Elmer-DeWitt has suggested the iOS6 Maps debacle falls on the shoulders of Scott Forstall1. When I first read the piece, I felt like it was unfair to blame management for this kind of failure. In my experience, the Maps application is wonderful software. The turn-by-turn directions are elegant and beautiful. The vector-based maps load fast and use substantially less data. The reality is the Map app is great; the data are less so.</description>
     </item>
     
     <item>
       <title>Thoughts on Grading</title>
-      <link>http://www.json.blog/2012/09/thoughts-on-grading/</link>
+      <link>/2012/09/thoughts-on-grading/</link>
       <pubDate>Wed, 19 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/09/thoughts-on-grading/</guid>
+      <guid>/2012/09/thoughts-on-grading/</guid>
       <description>Bruno is a skeptic on standards-based grading. He seems to think that &amp;ldquo;mastery of content&amp;rdquo; is too abstract for students to work toward and rightly cites evidence that motivation and changed behavior are tightly linked to a sense of efficacy, which in turn is tightly linked to feeling as though you know precisely what to do to get to a particular outcome.
 But isn&amp;rsquo;t mastery of content essentially, &amp;ldquo;Do well on your assignments and tests&amp;rdquo;?</description>
     </item>
     
     <item>
       <title>There must be an easier way... survey questions in R</title>
-      <link>http://www.json.blog/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</link>
+      <link>/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</link>
       <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</guid>
+      <guid>/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</guid>
       <description>So I have this great little custom function I&amp;rsquo;ve used when looking at survey data in R. I call this function pull(). The goal of pull() is to quickly produce frequency tables with n sizes from individual-level survey data.
 Before using pull(), I create a big table that includes information about the survey questions I want to pull. The data are structured like this:
       quest</description>
@@ -678,10 +699,10 @@ Before using pull(), I create a big table that includes information about the su
     
     <item>
       <title>Pay For Quality: Join App.net</title>
-      <link>http://www.json.blog/2012/08/pay-for-quality-join-app.net/</link>
+      <link>/2012/08/pay-for-quality-join-app.net/</link>
       <pubDate>Mon, 06 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/08/pay-for-quality-join-app.net/</guid>
+      <guid>/2012/08/pay-for-quality-join-app.net/</guid>
       <description>I like paying for good software. There are applications I use every day, some for hours a day, that make my experience on the web and on my computers better. I have paid for Reeder on three platforms, Tweetbot on two1, Pinboard, and many others. I like to pay, because I value my time, my experience, and my productivity.
 I also like to pay because I value my privacy.
 Don&amp;rsquo;t get me wrong&amp;ndash; I am a Google addict, using Gmail practically from the beginning, GChat, Google Calendar, Google+, Google Reader, etc, etc.</description>
@@ -689,10 +710,10 @@ Don&amp;rsquo;t get me wrong&amp;ndash; I am a Google addict, using Gmail practi
     
     <item>
       <title>Follow up to Nesi&#39;s Notes Guest Post: Woonsocket School Funding</title>
-      <link>http://www.json.blog/2012/07/follow-up-to-nesis-notes-guest-post-woonsocket-school-funding/</link>
+      <link>/2012/07/follow-up-to-nesis-notes-guest-post-woonsocket-school-funding/</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/follow-up-to-nesis-notes-guest-post-woonsocket-school-funding/</guid>
+      <guid>/2012/07/follow-up-to-nesis-notes-guest-post-woonsocket-school-funding/</guid>
       <description>Ted Nesi was gracious in offering me a guest spot on his blog, Nesi&amp;rsquo;s Notes this week to discuss education funding in Woonsocket. The main conclusions of my post are:
 ​1. Woonsocket has not increased local funding for education over the last fifteen years despite massive increases in education expenditures in Rhode Island and nationwide.
 ​2. General education aid from the state has rapidly increased over the same period, demonstrating that a lack of sufficient revenue at Woonsocket Public Schools is first, if not exclusively, a local revenue problem.</description>
@@ -700,10 +721,10 @@ Don&amp;rsquo;t get me wrong&amp;ndash; I am a Google addict, using Gmail practi
     
     <item>
       <title>Legal Context: Can Woonsocket Successfully Sue the State for Additional Aid?</title>
-      <link>http://www.json.blog/2012/07/legal-context-can-woonsocket-successfully-sue-the-state-for-additional-aid/</link>
+      <link>/2012/07/legal-context-can-woonsocket-successfully-sue-the-state-for-additional-aid/</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/legal-context-can-woonsocket-successfully-sue-the-state-for-additional-aid/</guid>
+      <guid>/2012/07/legal-context-can-woonsocket-successfully-sue-the-state-for-additional-aid/</guid>
       <description>My last post ended with an important question, &amp;ldquo;Who is responsible for ensuring students are receiving a certain minimum quality education?&amp;rdquo;
 This is my attempt at answering that question.
 Does the state have a legal obligation to fiscally ensure that Woonsocket students are receiving an equitable, adequate, and meaningful education? San Antonio v. Rodriquez, a landmark Supreme Court case decided in 1973 determined that there was no fundamental right to education guaranteed by the U.</description>
@@ -711,28 +732,28 @@ Does the state have a legal obligation to fiscally ensure that Woonsocket studen
     
     <item>
       <title>Limitations of the Nesi&#39;s Notes Analysis and Some Additional Questions</title>
-      <link>http://www.json.blog/2012/07/limitations-of-the-nesis-notes-analysis-and-some-additional-questions/</link>
+      <link>/2012/07/limitations-of-the-nesis-notes-analysis-and-some-additional-questions/</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/limitations-of-the-nesis-notes-analysis-and-some-additional-questions/</guid>
+      <guid>/2012/07/limitations-of-the-nesis-notes-analysis-and-some-additional-questions/</guid>
       <description>There are several questions that come to mind when looking over my analysis on Nesi&amp;rsquo;s Notes. The first thing I wondered was whether or not Woonsocket had raised local revenues by similar amounts to other communities but had chosen to spend this money on other municipal services. Ideally, I would use a chart that showed local education revenues compared to all other local revenues over the last 15 years by city in Rhode Island.</description>
     </item>
     
     <item>
       <title>Using the Common Core Data on NCES</title>
-      <link>http://www.json.blog/2012/07/using-the-common-core-data-on-nces/</link>
+      <link>/2012/07/using-the-common-core-data-on-nces/</link>
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/using-the-common-core-data-on-nces/</guid>
+      <guid>/2012/07/using-the-common-core-data-on-nces/</guid>
       <description>My analysis on Nesi&amp;rsquo;s Notes depended entirely on the National Center for Education Statistics&amp;rsquo; Common Core Data. The per pupil amounts reported to NCES may look a bit different from state sources of this information. There are several explanations of this. First, the enrollment counts used to generate per pupil amounts are based on an October 1st headcount. In Rhode Island, we use something called &amp;ldquo;average daily membership&amp;rdquo; (ADM) as the denominator and not a headcount.</description>
     </item>
     
     <item>
       <title>Ranked Likert-Scale Visualization</title>
-      <link>http://www.json.blog/2012/07/ranked-likert-scale-visualization/</link>
+      <link>/2012/07/ranked-likert-scale-visualization/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/ranked-likert-scale-visualization/</guid>
+      <guid>/2012/07/ranked-likert-scale-visualization/</guid>
       <description>Update See below for more information now that Ethan Brown has weighed in with some great code.
 A recent post I came across on r-bloggers asked for input on visualizing ranked Likert-scale data.
 I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch.</description>
@@ -740,10 +761,10 @@ I happen to be working on a substantial project using very similarly structured 
     
     <item>
       <title>Update on Social Promotion</title>
-      <link>http://www.json.blog/2012/07/update-on-social-promotion/</link>
+      <link>/2012/07/update-on-social-promotion/</link>
       <pubDate>Tue, 10 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/update-on-social-promotion/</guid>
+      <guid>/2012/07/update-on-social-promotion/</guid>
       <description>This poignant post from Michael Goldstein ends with a few policy thoughts that largely support my previous post.
 Goldstein&amp;rsquo;s second point is worth highlighting:
  Anyway, in a small school, large-scale research isn&amp;rsquo;t the key determinant anyway. The team&amp;rsquo;s implementation is.
@@ -752,49 +773,49 @@ Goldstein&amp;rsquo;s second point is worth highlighting:
     
     <item>
       <title>Work Place Liberty in the Context of Education</title>
-      <link>http://www.json.blog/2012/07/work-place-liberty-in-the-context-of-education/</link>
+      <link>/2012/07/work-place-liberty-in-the-context-of-education/</link>
       <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/07/work-place-liberty-in-the-context-of-education/</guid>
+      <guid>/2012/07/work-place-liberty-in-the-context-of-education/</guid>
       <description>How can we tell if principal directives are fair to teachers?
 There has been a great conversation circling some blogs I read over the last week about liberty in the work place.1 Issues of fairness in the work place are a constant in today&amp;rsquo;s education conversation. Whether some view it as a form of metaphoric violence on teachers and their profession, while others see a concerted effort to change rigid, bureaucratic systems that prevent effective change2, at the heart of education reform du jour are changes to workplace freedom.</description>
     </item>
     
     <item>
       <title>Algorithms Design and Analysis Part I</title>
-      <link>http://www.json.blog/2012/06/algorithms-design-and-analysis-part-i/</link>
+      <link>/2012/06/algorithms-design-and-analysis-part-i/</link>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/06/algorithms-design-and-analysis-part-i/</guid>
+      <guid>/2012/06/algorithms-design-and-analysis-part-i/</guid>
       <description>Tonight I started Coursera.org&amp;rsquo;s Algorithms: Design and Analysis Part I. This class should pick up right about where I left off my computer science education. I took CS15 as a sophomore in college but didn&amp;rsquo;t have the time to take CS16: Introduction to Algorithms and Data Structures. So, while it&amp;rsquo;s been almost 6 years since I have formally taken a computer science class, it is time to continue my education.</description>
     </item>
     
     <item>
       <title>Fixing Dyer Street</title>
-      <link>http://www.json.blog/2012/06/fixing-dyer-street/</link>
+      <link>/2012/06/fixing-dyer-street/</link>
       <pubDate>Thu, 07 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/06/fixing-dyer-street/</guid>
+      <guid>/2012/06/fixing-dyer-street/</guid>
       <description>The removal of I-195 from the Jewelry District is supposed to help spur Providence&amp;rsquo;s second renaissance by providing ample green- and brown-field development sites for a whole host of biomedical companies apparently dying to move to a state and city in fiscal crisis whose current population does not have the required skills to serve as an employment base.
 Seriously, I am quite optimistic about the once-in-a-generation to develop a massive part of what should be an integral part of Providence&amp;rsquo;s downtown core 1.</description>
     </item>
     
     <item>
       <title>Downtown Improvement District</title>
-      <link>http://www.json.blog/2012/04/downtown-improvement-district/</link>
+      <link>/2012/04/downtown-improvement-district/</link>
       <pubDate>Wed, 25 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/04/downtown-improvement-district/</guid>
+      <guid>/2012/04/downtown-improvement-district/</guid>
       <description>[][][/caption]
 I am a firm believer that some goods should be public. I do not believe that my tax dollars are about providing *direct* personal benefit. I like redistributed tax policy. But it is hard to be a Rhode Islander, surrounded by government institutions that are failing, and feel good about the taxes I pay. Corruption and cronyism is a daily reality of government business. Some agencies have tremendous waste and inefficiency.</description>
     </item>
     
     <item>
       <title>Providence needs a little innovation</title>
-      <link>http://www.json.blog/2012/03/providence-needs-a-little-innovation/</link>
+      <link>/2012/03/providence-needs-a-little-innovation/</link>
       <pubDate>Tue, 20 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/03/providence-needs-a-little-innovation/</guid>
+      <guid>/2012/03/providence-needs-a-little-innovation/</guid>
       <description>Have you ever tried to access public information about Providence on the web? Due to the recent, and new, requirement that residents reapply for their homestead tax exemption in Providence, I decided to poke around the Providence webpage to see what kind of public information on property was available online.
 I was greeted with an IT nightmare1.
 The system was clearly a third-party developed or purchased front end designed for searching public records on property and sold to municipalities throughout the country by winning contracts through the RFP process.</description>
@@ -802,48 +823,48 @@ The system was clearly a third-party developed or purchased front end designed f
     
     <item>
       <title>Social Promotion, Tutoring, and Funding</title>
-      <link>http://www.json.blog/2012/02/social-promotion-tutoring-and-funding/</link>
+      <link>/2012/02/social-promotion-tutoring-and-funding/</link>
       <pubDate>Wed, 15 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/02/social-promotion-tutoring-and-funding/</guid>
+      <guid>/2012/02/social-promotion-tutoring-and-funding/</guid>
       <description>Social promotion, in education circles, refers to the practice of allowing students to move on to the next grade level or course even though they are unable to demonstrate they have mastered the skills and knowledge they were expected to learn. Ending or reducing social promotion has been a major theme in the standards-based education reform of the last 10-15 years. Ending social promotion feels like a sound, obvious consequence of standards-based education.</description>
     </item>
     
     <item>
       <title>Worth It Five Stories from the Last Week</title>
-      <link>http://www.json.blog/2012/02/worth-it-five-stories-from-the-last-week/</link>
+      <link>/2012/02/worth-it-five-stories-from-the-last-week/</link>
       <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/02/worth-it-five-stories-from-the-last-week/</guid>
+      <guid>/2012/02/worth-it-five-stories-from-the-last-week/</guid>
       <description>I read literally hundreds of posts from RSS feeds every day. I use Google Reader as an aggregator, Reeder to actually read through my feeds, and Pinboard for social bookmarking and posting1.
 In order to capture just a small slice of the stories I really enjoyed, I&amp;rsquo;ve decided to start a new feature called &amp;ldquo;Worth It&amp;rdquo;. I hope this will be between 3 and 5 stories each week with some quick commentary that I think are worth anyone&amp;rsquo;s time to read.</description>
     </item>
     
     <item>
       <title>Bank of America will leave 111 Westminster</title>
-      <link>http://www.json.blog/2012/01/bank-of-america-will-leave-111-westminster/</link>
+      <link>/2012/01/bank-of-america-will-leave-111-westminster/</link>
       <pubDate>Tue, 31 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/bank-of-america-will-leave-111-westminster/</guid>
+      <guid>/2012/01/bank-of-america-will-leave-111-westminster/</guid>
       <description>I was pretty disappointed, but not surprised, that Bank of America has chosen to leave 111 Westminster Street. The building is an iconic anchor to downtown Providence. Unfortunately, this space has not been properly refurbished to more modern standards. The entire building has a single, antiquated utilities system&amp;ndash; heating, cooling, electricity, etc are all setup for a single tenant. Weighing in at 350,000 square feet, there is simply no one in Providence who needs an old, out of date workspace of that size.</description>
     </item>
     
     <item>
       <title>Providence Pensions-- Let&#39;s Call a Spade a Spade (or the COLA a Raise)</title>
-      <link>http://www.json.blog/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/</link>
+      <link>/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/</link>
       <pubDate>Wed, 25 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/</guid>
+      <guid>/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/</guid>
       <description>Ted Nesi has done a pretty solid job tracing the history of some awful decisions made by union-dominated boards that resulted in a significant number of retirees in the early-90s receiving 5% or 6% annually compounded interest on their retirement income. These are often called COLAs, or cost-of-living adjustments.
 Today, I am inspired by Nesi&amp;rsquo;s post on the rapid decline of the Providence municipal pension fund health that occurred since 6% &amp;ldquo;COLA&amp;rdquo; was introduced in 1989 through today.</description>
     </item>
     
     <item>
       <title>Providence Real Estate Sales in R</title>
-      <link>http://www.json.blog/2012/01/providence-real-estate-sales-in-r/</link>
+      <link>/2012/01/providence-real-estate-sales-in-r/</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/providence-real-estate-sales-in-r/</guid>
+      <guid>/2012/01/providence-real-estate-sales-in-r/</guid>
       <description>The past few months I&amp;rsquo;ve been learning how to use R. This morning, I decided to try out two first&amp;ndash; importing a table of data that is being read of the web and overlaying location data onto a map.
 With a little bit of Google skills and just enough R know-how I was able to produce this image:
 There were a few things that were kind of tricky for me. First, for sometime I couldn&amp;rsquo;t get latitude and longitude components for the addresses.</description>
@@ -851,19 +872,19 @@ There were a few things that were kind of tricky for me. First, for sometime I c
     
     <item>
       <title>What if the technology revolution in schools is really about the simple stuff?</title>
-      <link>http://www.json.blog/2012/01/what-if-the-technology-revolution-in-schools-is-really-about-the-simple-stuff/</link>
+      <link>/2012/01/what-if-the-technology-revolution-in-schools-is-really-about-the-simple-stuff/</link>
       <pubDate>Wed, 18 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/what-if-the-technology-revolution-in-schools-is-really-about-the-simple-stuff/</guid>
+      <guid>/2012/01/what-if-the-technology-revolution-in-schools-is-really-about-the-simple-stuff/</guid>
       <description>The complicated school day is essentially designed so the minimum number of staff are away from kids at any given time. Some folks are trying to combat this with common planning time and other scheduling gymnastics. These attempts are up against a strong opposing priority&amp;ndash; students must be with an adult essentially 100% of the time. Not only that, but the middle of a hectic day focused on teaching is not really conducive to reflection, strategizing, and deep planning on a tight schedule.</description>
     </item>
     
     <item>
       <title>Value-Added on Core Knowledge Blog-- some thoughts on Chetty, Friedman, and Rockoff</title>
-      <link>http://www.json.blog/2012/01/value-added-on-core-knowledge-blog---some-thoughts-on-chetty-friedman-and-rockoff/</link>
+      <link>/2012/01/value-added-on-core-knowledge-blog---some-thoughts-on-chetty-friedman-and-rockoff/</link>
       <pubDate>Fri, 13 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/value-added-on-core-knowledge-blog---some-thoughts-on-chetty-friedman-and-rockoff/</guid>
+      <guid>/2012/01/value-added-on-core-knowledge-blog---some-thoughts-on-chetty-friedman-and-rockoff/</guid>
       <description>Jessica Lahey wrote an interesting post over on Core Knowledge Blog that I decided to comment on.
 After I read back my comment, I realized it would be worth copying over here as it&amp;rsquo;s own blog post.
 The most interesting part of the Chetty, Friedman, and Rockoff study is precisely the most banal- teachers who improve heir students learning as measured by increased achievement on tandardized tests also improve other more distant and relevant factors n children&amp;rsquo;s lives 1.</description>
@@ -871,29 +892,29 @@ The most interesting part of the Chetty, Friedman, and Rockoff study is precisel
     
     <item>
       <title>Associated Press: Israeli schools not looking so good against OECD peers.</title>
-      <link>http://www.json.blog/2012/01/associated-press-israeli-schools-not-looking-so-good-against-oecd-peers./</link>
+      <link>/2012/01/associated-press-israeli-schools-not-looking-so-good-against-oecd-peers./</link>
       <pubDate>Sat, 07 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/01/associated-press-israeli-schools-not-looking-so-good-against-oecd-peers./</guid>
+      <guid>/2012/01/associated-press-israeli-schools-not-looking-so-good-against-oecd-peers./</guid>
       <description>I read an interesting article this morning on Israeli schools. Facing extreme poverty among Arab-Israeli&amp;rsquo;s and the ultra-orthodox, Israel struggles to maintain three separate school systems and succeed. It reminded me of some interesting centralized policy reforms in Israel that have led to great natural experiments. For example, so-called Maimonides Laws which capped class sizes at 40, allowed for some really interesting regression-discontinuity studies on the impact of class size 1.</description>
     </item>
     
     <item>
       <title>GrapheR is an awesome GUI for R beginners</title>
-      <link>http://www.json.blog/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</link>
+      <link>/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</link>
       <pubDate>Mon, 19 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</guid>
+      <guid>/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</guid>
       <description>If you&amp;rsquo;re just beginning to use R and want a quick and easy way to make some charts/graphs, etc, GrapheR is a great package to quickly produce high quality plots through a self-explanatory GUI. Here&amp;rsquo;s an article in The R Journal today.
 My only complaint is that GrapheR does not appear to have a way to export the code that produced the graph, which would be a very helpful feature for a beginner who wants to learn the guts of producing publication quality charts in R.</description>
     </item>
     
     <item>
       <title>House wants unemployed to earn GEDs against all economic sense</title>
-      <link>http://www.json.blog/2011/12/house-wants-unemployed-to-earn-geds-against-all-economic-sense/</link>
+      <link>/2011/12/house-wants-unemployed-to-earn-geds-against-all-economic-sense/</link>
       <pubDate>Wed, 14 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/house-wants-unemployed-to-earn-geds-against-all-economic-sense/</guid>
+      <guid>/2011/12/house-wants-unemployed-to-earn-geds-against-all-economic-sense/</guid>
       <description>Here is a doozy.
 What is the purpose of the GED? Is it a market signal, indicating your employability to hiring agents or does it follow a human capital path wherein earning a GED is actually a process that increases your skill set?
 The House wants all unemployed workers without a high school diploma to earn their GED. Their explanation is assuming that the GED works purely through human capital theory, e.</description>
@@ -901,49 +922,49 @@ The House wants all unemployed workers without a high school diploma to earn the
     
     <item>
       <title>Diane Ravitch, rebuttals.</title>
-      <link>http://www.json.blog/2011/12/diane-ravitch-rebuttals./</link>
+      <link>/2011/12/diane-ravitch-rebuttals./</link>
       <pubDate>Mon, 12 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/diane-ravitch-rebuttals./</guid>
+      <guid>/2011/12/diane-ravitch-rebuttals./</guid>
       <description>So I wrote a harsh post after reading a harsh article by Kevin Carey in The New Republic about Diane Ravitch. I still standby what I said. Namely, I&amp;rsquo;m very cautious about trusting Ravitch as a reliable narrator of history because I&amp;rsquo;m:
  unfamiliar with good historiography/methodology so it&amp;rsquo;s hard for me to judge the quality of her work simply from the product itself unaware of a rich discourse around education history in NYC and 20th century America in general that wrestles with, or even corroborates, Ravitch&amp;rsquo;s account certain that Ravitch&amp;rsquo;s more recent writings often mischaracterizes the power and meaning behind quantitative research and exhibits selection bias to fit a particular narrative generally distrustful of public academics, particularly when their writing is mainly outside of their primary discipline.</description>
     </item>
     
     <item>
       <title>How to use Picasa with iOS5</title>
-      <link>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5/</link>
+      <link>/2011/12/how-to-use-picasa-with-ios5/</link>
       <pubDate>Sun, 11 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/how-to-use-picasa-with-ios5/</guid>
+      <guid>/2011/12/how-to-use-picasa-with-ios5/</guid>
       <description>I&amp;rsquo;m mostly writing this post because I had a fairly hard time finding a resolution to a real pesky error. For some reason, my iPhone 4S was recognized by Picasa but always failed to import photos. Whenever I tried, the Picasa was clearly scanning through the files and then presented this error:
  An error has occurred while attempting to import. Either the source is unavailable or the destination is full or read only (1).</description>
     </item>
     
     <item>
       <title>How Social Reading Should Work</title>
-      <link>http://www.json.blog/2011/12/how-social-reading-should-work/</link>
+      <link>/2011/12/how-social-reading-should-work/</link>
       <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/how-social-reading-should-work/</guid>
+      <guid>/2011/12/how-social-reading-should-work/</guid>
       <description>I am becoming increasingly frustrated by the failure of all the major players to get social right. I have a very simple dream for how the social web should work and its baffling to me that many obvious use-cases have not been addressed at all by Facebook, Twitter, or Google.
 This is the first of two posts that will describe what I view as a viable framework for a social web experience.</description>
     </item>
     
     <item>
       <title>Contracting Technology in Education</title>
-      <link>http://www.json.blog/2011/11/contracting-technology-in-education/</link>
+      <link>/2011/11/contracting-technology-in-education/</link>
       <pubDate>Tue, 29 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/11/contracting-technology-in-education/</guid>
+      <guid>/2011/11/contracting-technology-in-education/</guid>
       <description>I am glad that Philissa Cramer is reporting on some of the deeper details of the Special Education Student Information System 1 implementation at the New York City Department of Education here. Many people don&amp;rsquo;t really understand the ins and outs of government contracting. Folks really think NASA designs and builds the lunar module, for example, instead of realizing that they issued an RFP and contracting with Northrop Grumman to do that work for them.</description>
     </item>
     
     <item>
       <title>Is Diane Ravitch a reliable historian?</title>
-      <link>http://www.json.blog/2011/11/is-diane-ravitch-a-reliable-historian/</link>
+      <link>/2011/11/is-diane-ravitch-a-reliable-historian/</link>
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/11/is-diane-ravitch-a-reliable-historian/</guid>
+      <guid>/2011/11/is-diane-ravitch-a-reliable-historian/</guid>
       <description>UPDATE: You should also read this page on jasonpbecker for some very strong and interesting rebuttals to Carey&amp;rsquo;s article that I commented on below.
 Do read this article on Diane Ravitch. I personally have two major criticisms of Ravitch, both of which Carey exposes eloquently.
 First, I believe that she leverages her respect and expertise as an historian and professor to present herself as an experts in areas of academic research and policy where she has little expertise.</description>
@@ -951,40 +972,40 @@ First, I believe that she leverages her respect and expertise as an historian an
     
     <item>
       <title>Why isn&#39;t the Core Connector using Westminster with full RoW?</title>
-      <link>http://www.json.blog/2011/11/why-isnt-the-core-connector-using-westminster-with-full-row/</link>
+      <link>/2011/11/why-isnt-the-core-connector-using-westminster-with-full-row/</link>
       <pubDate>Sun, 06 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/11/why-isnt-the-core-connector-using-westminster-with-full-row/</guid>
+      <guid>/2011/11/why-isnt-the-core-connector-using-westminster-with-full-row/</guid>
       <description>I love that Providence is pursuing a streetcar. There are really just two things I don&amp;rsquo;t understand about the Core Connector&amp;rsquo;s proposal. I&amp;rsquo;m going to tackle one in this post.
 Why is the entire streetcar route shared with general traffic with no dedicated right-of-way? Truthfully, this isn&amp;rsquo;t a massive issue except in the core part of Downcity where there is substantial traffic during rush hours along the street car route. But this makes the plan even more perplexing because it&amp;rsquo;s precisely this portion of the route where an obvious solution for dedicated light rail ROW exists- Westminster Street.</description>
     </item>
     
     <item>
       <title>GoLocalProv -- Bad at Math</title>
-      <link>http://www.json.blog/2011/10/golocalprov----bad-at-math/</link>
+      <link>/2011/10/golocalprov----bad-at-math/</link>
       <pubDate>Sun, 16 Oct 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/10/golocalprov----bad-at-math/</guid>
+      <guid>/2011/10/golocalprov----bad-at-math/</guid>
       <description>There are lots of things that are misleading about this story published on GoLocalProv. It is utterly ridiculous to report numbers like how many total tax dollars are being collected by different communities for the sake of comparison. You cannot compare a total number like this which is so dependent upon things like, I don&amp;rsquo;t know, the dramatic difference in the size of these communities?
 In the 2010 Census, Providence had a population of 178,042.</description>
     </item>
     
     <item>
       <title>TEA Party and Occupy Wall Street</title>
-      <link>http://www.json.blog/2011/10/tea-party-and-occupy-wall-street/</link>
+      <link>/2011/10/tea-party-and-occupy-wall-street/</link>
       <pubDate>Sat, 15 Oct 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/10/tea-party-and-occupy-wall-street/</guid>
+      <guid>/2011/10/tea-party-and-occupy-wall-street/</guid>
       <description>I wondered to myself If I could explain these two movements in a few sentences. Is this fair?
  The Taxed Enough Already (TEA) Party movement is a response to two large government spending packages, the &amp;ldquo;bailout&amp;rdquo; and the &amp;ldquo;stimulus&amp;rdquo; package. These people felt that it was inappropriate for the government spend taxpayer money (and foreign debt) in an attempt to prevent deeper economic damage from the collapse of the real estate bubble.</description>
     </item>
     
     <item>
       <title>School facilities-- anachronistic, expensive, isolating, and all around bad public spaces?</title>
-      <link>http://www.json.blog/2011/10/school-facilities---anachronistic-expensive-isolating-and-all-around-bad-public-spaces/</link>
+      <link>/2011/10/school-facilities---anachronistic-expensive-isolating-and-all-around-bad-public-spaces/</link>
       <pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/10/school-facilities---anachronistic-expensive-isolating-and-all-around-bad-public-spaces/</guid>
+      <guid>/2011/10/school-facilities---anachronistic-expensive-isolating-and-all-around-bad-public-spaces/</guid>
       <description>I wanted to write a lot more about this, but I just don&amp;rsquo;t have the time.
 This storyis about rezoning schools in downtown Manhattan which is struggling to meet the demands of emerging residential neighborhoods. Reading this story (and struggle) just brought up something I&amp;rsquo;ve thought about for some time now.
 The cost of school buildings is ridiculous. Schools are generally built for one purpose. They are generally built to last a very long time.</description>
@@ -992,58 +1013,58 @@ The cost of school buildings is ridiculous. Schools are generally built for one
     
     <item>
       <title>Downcity Residents Should Support the Core Connector and the Tax Makes Sense</title>
-      <link>http://www.json.blog/2011/09/downcity-residents-should-support-the-core-connector-and-the-tax-makes-sense/</link>
+      <link>/2011/09/downcity-residents-should-support-the-core-connector-and-the-tax-makes-sense/</link>
       <pubDate>Mon, 26 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/09/downcity-residents-should-support-the-core-connector-and-the-tax-makes-sense/</guid>
+      <guid>/2011/09/downcity-residents-should-support-the-core-connector-and-the-tax-makes-sense/</guid>
       <description>As a resident of Downcity, I have been closely following the development of Providence&amp;rsquo;s Core Connector Study. The official route and payment options have now been proposed, as reported in the Projo.
 Route I&amp;rsquo;m pleased to see that they prioritized frequent service through the main ridership areas (College Hill to Jewelry District and hospital) were prioritized over service to the train station. Jef Nickerson says it best over at GCPVD&amp;ndash; the train station is out-of-the-way and would dramatically increase rider time while having unclear implications for ridership, and the station is already very well served (and could easily be better served) by existing bus routes.</description>
     </item>
     
     <item>
       <title>Justin Baeder asks the Wrong Question on Teacher Evaluation</title>
-      <link>http://www.json.blog/2011/09/justin-baeder-asks-the-wrong-question-on-teacher-evaluation/</link>
+      <link>/2011/09/justin-baeder-asks-the-wrong-question-on-teacher-evaluation/</link>
       <pubDate>Fri, 16 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/09/justin-baeder-asks-the-wrong-question-on-teacher-evaluation/</guid>
+      <guid>/2011/09/justin-baeder-asks-the-wrong-question-on-teacher-evaluation/</guid>
       <description>If you&amp;rsquo;re interested in education, I highly recommend Justin Baeder&amp;rsquo;s1 &amp;rdquo;On Performance&amp;rdquo; blog hosted over on Education Week.
 Today, he ended his post with a question, &amp;ldquo;I would be very interested to learn of any other sector that has achieved substantial performance gains by reforming its evaluation processes. We&amp;rsquo;re putting a lot of eggs in the &amp;lsquo;improve teacher evaluation to improve student learning&amp;rsquo; basket, but no one even seems to be asking whether this strategy has any merit.</description>
     </item>
     
     <item>
       <title>Libertarians and Charity</title>
-      <link>http://www.json.blog/2011/09/libertarians-and-charity/</link>
+      <link>/2011/09/libertarians-and-charity/</link>
       <pubDate>Thu, 15 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/09/libertarians-and-charity/</guid>
+      <guid>/2011/09/libertarians-and-charity/</guid>
       <description>As an undergraduate I largely avoided political science because I couldn&amp;rsquo;t imagine getting interested in reading The Republic, Leviathan, or Wealth of Nations. Political philosophy, and philosophy in general, just seemed like a horrible painful exercise, so I avoided it. Of course now that I&amp;rsquo;m involved in public policy and not organic chemistry, it feels as though I&amp;rsquo;ve done a horrible disservice to myself by not going through and systematically exploring more fundamental questions about the role of the state, ethics and morality, justice, etc.</description>
     </item>
     
     <item>
       <title>Apple Migration Assistant</title>
-      <link>http://www.json.blog/2011/09/apple-migration-assistant/</link>
+      <link>/2011/09/apple-migration-assistant/</link>
       <pubDate>Wed, 14 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/09/apple-migration-assistant/</guid>
+      <guid>/2011/09/apple-migration-assistant/</guid>
       <description>For several years I considered switching to Apple. I&amp;rsquo;ve been a wannabe believer since OSX. I was using Linuxas my every day operating system. This was one part about learning, one part frustration with Windows perpetual funky instabilities, and part a growing appreciation for things like the command line interface and free and open source software. OSX offered many things I liked&amp;ndash; a great CLI I was already getting intimately familiar with, rock hard stability, beautiful graphic effects like those I enjoyed with Compiz, etc.</description>
     </item>
     
     <item>
       <title>Community Voice at the Knowledge District Development Framework Meeting</title>
-      <link>http://www.json.blog/2011/09/community-voice-at-the-knowledge-district-development-framework-meeting/</link>
+      <link>/2011/09/community-voice-at-the-knowledge-district-development-framework-meeting/</link>
       <pubDate>Thu, 08 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/09/community-voice-at-the-knowledge-district-development-framework-meeting/</guid>
+      <guid>/2011/09/community-voice-at-the-knowledge-district-development-framework-meeting/</guid>
       <description>Tonight, I went to a public meeting run by Providence&amp;rsquo;s Department of Planning and Development. A few of upfront observations:
  The folks who work for the Department of Planning and Development (DPD) were professional, kind, and capable, as was the consultants who worked with them. They maintained decorum and a genuine sense of openness even though there was a clear tension in the room between some outspoken (and knowledgeable) community members and activists who had clearly participated in many past meetings.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://www.json.blog/resume/</link>
+      <link>/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/resume/</guid>
+      <guid>/resume/</guid>
       <description>Jason Becker    Skills  Experience     Allovue
 Chief Product Officer Director of Data  Baltimore, MD
 2015&amp;ndash;Present 2014&amp;ndash;2015    Product Management    Define and maintain product roadmap.  Gather business requirements  Produce information architecture diagrams and data flow diagrams   Work collaboratively with designers to generate wireframes   Gather feedback from customers and internal stakeholders on new features and requirements   Test new features to ensure they meet acceptance criteria and do not result in regressions   Onboard, manage, and support product managers   Data Integration    Develop R packages to easily connect to hetergenous remote data sources   Produce ETL process to map any ERP system to Allovue&#39;s data schema within 15 days.</description>
@@ -1051,10 +1072,10 @@ Chief Product Officer Director of Data  Baltimore, MD
     
     <item>
       <title>Archive</title>
-      <link>http://www.json.blog/archive/archive/</link>
+      <link>/archive/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/archive/archive/</guid>
+      <guid>/archive/archive/</guid>
       <description></description>
     </item>
     
