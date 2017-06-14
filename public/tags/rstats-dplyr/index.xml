@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Dplyr on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-dplyr/</link>
+    <link>/tags/rstats-dplyr/</link>
     <description>Recent content in Rstats Dplyr on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/rstats-dplyr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rstats-dplyr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Making Sense of dplyr 0.6</title>
-      <link>http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/</link>
+      <link>/2017/05/making-sense-of-dplyr-0.6/</link>
       <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/</guid>
+      <guid>/2017/05/making-sense-of-dplyr-0.6/</guid>
       <description>Non-standard evaluation is one of R&amp;rsquo;s best features, and also one of it&amp;rsquo;s most perplexing. Recently I have been making good use of wrapr::let to allow me to write reusable functions without a lot of assumptions about my data. For example, let&amp;rsquo;s say I always want to group_by schools when adding up dollars spent, but that sometimes my data calls what is conceptually a school schools, school, location, cost_center, Loc.</description>
     </item>
     

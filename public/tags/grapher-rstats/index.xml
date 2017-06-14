@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grapher Rstats on JSONBecker</title>
-    <link>http://www.json.blog/tags/grapher-rstats/</link>
+    <link>/tags/grapher-rstats/</link>
     <description>Recent content in Grapher Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Dec 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/grapher-rstats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/grapher-rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GrapheR is an awesome GUI for R beginners</title>
-      <link>http://www.json.blog/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</link>
+      <link>/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</link>
       <pubDate>Mon, 19 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</guid>
+      <guid>/2011/12/grapher-is-an-awesome-gui-for-r-beginners/</guid>
       <description>If you&amp;rsquo;re just beginning to use R and want a quick and easy way to make some charts/graphs, etc, GrapheR is a great package to quickly produce high quality plots through a self-explanatory GUI. Here&amp;rsquo;s an article in The R Journal today.
 My only complaint is that GrapheR does not appear to have a way to export the code that produced the graph, which would be a very helpful feature for a beginner who wants to learn the guts of producing publication quality charts in R.</description>
     </item>

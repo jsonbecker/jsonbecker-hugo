@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Providence Urban Transit Parking Downcity on JSONBecker</title>
-    <link>http://www.json.blog/tags/providence-urban-transit-parking-downcity/</link>
+    <link>/tags/providence-urban-transit-parking-downcity/</link>
     <description>Recent content in Providence Urban Transit Parking Downcity on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/providence-urban-transit-parking-downcity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/providence-urban-transit-parking-downcity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Garrahy Complex: Rules for Public Investment in Parking</title>
-      <link>http://www.json.blog/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</link>
+      <link>/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</link>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</guid>
+      <guid>/2014/01/garrahy-complex-rules-for-public-investment-in-parking/</guid>
       <description>James over at TransportPVD has a great post today talking about a Salt Lake City ordinance that makes property owners responsible for providing a bond that funds the landscaping and maintenance of vacant lots left after demolition. I love this as much as he does and would probably add several other provisions (like forfeiting any tax breaks on that property or any other property in the city and potentially forfeiture of the property itself if a demolition was approved based on site plans that are not adhered to within a given time frame).</description>
     </item>
     

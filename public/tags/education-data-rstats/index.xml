@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education Data Rstats on JSONBecker</title>
-    <link>http://www.json.blog/tags/education-data-rstats/</link>
+    <link>/tags/education-data-rstats/</link>
     <description>Recent content in Education Data Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/education-data-rstats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/education-data-rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using R to Calculate Student Moblity</title>
-      <link>http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/</link>
+      <link>/2013/09/using-r-to-calculate-student-moblity/</link>
       <pubDate>Mon, 23 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/</guid>
+      <guid>/2013/09/using-r-to-calculate-student-moblity/</guid>
       <description>In a couple of previous posts, I outlined the importance of documenting business rules for common education statistics and described my take on how to best calculate student mobility. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. 1 At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.</description>
     </item>
     
     <item>
       <title>A New Calculation for Student Mobility</title>
-      <link>http://www.json.blog/2013/09/a-new-calculation-for-student-mobility/</link>
+      <link>/2013/09/a-new-calculation-for-student-mobility/</link>
       <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/a-new-calculation-for-student-mobility/</guid>
+      <guid>/2013/09/a-new-calculation-for-student-mobility/</guid>
       <description>How do we calculate student mobility? I am currently soliciting responses from other data professionals across the country. But when I needed to produce mobility numbers for some of my work a couple of months ago, I decided to develop a set of business rules without any exposure to how the federal government, states, or other existing systems define mobility. 1
 I am fairly proud of my work on mobility.</description>
     </item>
     
     <item>
       <title>Documentation of Business Rules and Analysis</title>
-      <link>http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/</link>
+      <link>/2013/09/documentation-of-business-rules-and-analysis/</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/</guid>
+      <guid>/2013/09/documentation-of-business-rules-and-analysis/</guid>
       <description>One of the most challenging aspects of being a data analyst is translating programmatic terms like &amp;ldquo;student mobility&amp;rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.
 Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&amp;rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.</description>
     </item>

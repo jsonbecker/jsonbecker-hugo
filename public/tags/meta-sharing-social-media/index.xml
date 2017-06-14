@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meta Sharing Social Media on JSONBecker</title>
-    <link>http://www.json.blog/tags/meta-sharing-social-media/</link>
+    <link>/tags/meta-sharing-social-media/</link>
     <description>Recent content in Meta Sharing Social Media on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Oct 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/meta-sharing-social-media/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/meta-sharing-social-media/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Where I Share</title>
-      <link>http://www.json.blog/2012/10/where-i-share/</link>
+      <link>/2012/10/where-i-share/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/10/where-i-share/</guid>
+      <guid>/2012/10/where-i-share/</guid>
       <description>I have been meaning to write this post for the past couple of weeks. Like most other people, I am constantly experimenting with different ways to publish and share my thoughts and engage with social networking. Lately, I have settled into what feels like an &amp;ldquo;end state&amp;rdquo; workflow1. I will devote a future post to the details of how I manage my online reading, writing, and sharing workflow but for now I just wanted to let folks know where they can find me.</description>
     </item>
     

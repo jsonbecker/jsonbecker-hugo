@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pawsox I195 Development on JSONBecker</title>
-    <link>http://www.json.blog/tags/pawsox-i195-development/</link>
+    <link>/tags/pawsox-i195-development/</link>
     <description>Recent content in Pawsox I195 Development on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Apr 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/pawsox-i195-development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/pawsox-i195-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acceptable Terms</title>
-      <link>http://www.json.blog/2015/04/acceptable-terms/</link>
+      <link>/2015/04/acceptable-terms/</link>
       <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/04/acceptable-terms/</guid>
+      <guid>/2015/04/acceptable-terms/</guid>
       <description>An initial proposal has been made to the city of Providence and state of Rhode Island to keep the PawSox in Rhode Island and move them to a new stadium along the river in Providence.
 The team is proposing that they privately finance all of the construction costs of the stadium while the land remains state (or city? I am not clear) owned. The state will lease the land underneath the stadium (the real value) with an option to buy for 30 years at $1 a year.</description>
     </item>

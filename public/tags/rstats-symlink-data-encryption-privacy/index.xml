@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Symlink Data Encryption Privacy on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/</link>
+    <link>/tags/rstats-symlink-data-encryption-privacy/</link>
     <description>Recent content in Rstats Symlink Data Encryption Privacy on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/rstats-symlink-data-encryption-privacy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rstats-symlink-data-encryption-privacy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Symlinking Your Data</title>
-      <link>http://www.json.blog/2014/04/symlinking-your-data/</link>
+      <link>/2014/04/symlinking-your-data/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2014/04/symlinking-your-data/</guid>
+      <guid>/2014/04/symlinking-your-data/</guid>
       <description>I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by creating encrypted disk images with secure passwords (stored in 1Password). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow.</description>
     </item>
     

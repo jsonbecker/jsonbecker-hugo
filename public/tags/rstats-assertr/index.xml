@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Assertr on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-assertr/</link>
+    <link>/tags/rstats-assertr/</link>
     <description>Recent content in Rstats Assertr on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Apr 2017 21:19:30 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/rstats-assertr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/rstats-assertr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Foreign Keys and assertr</title>
-      <link>http://www.json.blog/2017/04/foreign-keys-and-assertr/</link>
+      <link>/2017/04/foreign-keys-and-assertr/</link>
       <pubDate>Sun, 02 Apr 2017 21:19:30 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/04/foreign-keys-and-assertr/</guid>
+      <guid>/2017/04/foreign-keys-and-assertr/</guid>
       <description>I have been fascinated with assertive programming in R since this from 2015 1. Tony Fischetti wrote a great blog post to announce assertr 2.0&amp;rsquo;s release on CRAN that really clarified the package&amp;rsquo;s design.
 UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the assertr package.</description>
     </item>
