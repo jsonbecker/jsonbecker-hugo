@@ -41,18 +41,96 @@
     
         <div class = 'row post-title'>
     <div class = 'col-12'>
-      <h1>Announcing jsonfeedr, a new R package</h1>
-    <h6 class = "date">June 01, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/">&infin;</a></h6>
+      <h1>R, Docker, Circle, and Environments</h1>
+    <h6 class = "date">July 21, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/07/r-docker-circle-and-environments/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
-      <p>I have not yet spent the time to figure out how to generate a <a href="https://jsonfeed.org/">JSON feed</a> in Hugo yet. But I have built an R package to play with JSON feeds. It&rsquo;s called <a href="https://github.com/jsonbecker/jsonfeedr">jsonfeedr</a>, and it&rsquo;s silly simple.</p>
+      
 
-<p>Maybe I&rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about <em>why</em> JSON feed even exists. Working with JSON is fun and easy. Working with XML is not.</p>
+<p>My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&rsquo;s nothing new for me. Almost all the work I&rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.</p>
 
-<p>Anyway, I figured the guy who registered <a href="http://json.blog">json.blog</a> should have a package out there working with JSON.</p>
+<h2 id="a-quick-step-back-about-docker">A quick step back about Docker</h2>
+
+<p>Docker is something you use if you want to be cool on Hacker News. But Docker is also a great way to have a reproducible environment to run your code in, from the operating system up. A full review of Docker is beyond the scope of this post (maybe <a href="https://www.docker.com/what-container">check this out</a>), but I would think of it like this: if you run your code in a Docker container, you can guarantee your code works because you&rsquo;re creating a reproducible environment that can be spun up anywhere. Think of it like making an R package instead of writing an analysis script. Installing the package means you get all your dependency packages and have confidence the functions contained within will work on different machines. Docker takes that to the next level and includes operating system level dependencies like drivers and network configurations in addition to just the thing your R functions use.</p>
+
+<h2 id="some-challenges-with-testing-in-r">Some challenges with testing in R</h2>
+
+<p>Like many folks, I use <code>devtools</code> and <code>testthat</code> extensively when developing packages. I strive for as-near-as-feasible 100% coverage with my tests, and I am constantly hitting Cmd + Shift + T while writing code in RStudio or running <code>devtools::test()</code>. I even use <code>Check</code> in the Build pane in RStudio and <code>goodpractice::gp()</code> to keep me honest even if my code won&rsquo;t make it to CRAN. But I ran into a few things working with CircleCI running my tests inside of a docker container that pushed me to learn a few critical pieces of information about testing in R.</p>
+
+<h3 id="achieving-exit-status-1">Achieving exit status 1</h3>
+
+<p>Only two ways of running tests (that I can tell) will result in a returning an exit status code of 1 (error in Unix systems) and therefore cause a build to fail in a continuous integration system. Without that exit status, failing tests won&rsquo;t fail a build, so don&rsquo;t run <code>devtools::test()</code> and think you&rsquo;re good to go.</p>
+
+<p>This means using <code>R CMD build . &amp;&amp; R CMD check *tar.gz</code> or <code>testthat::test_package($MY_PACKAGE)</code> are your best bet in most cases. I prefer using <code>testthat::test_package()</code> because <code>R CMD check</code> cuts off a ton of useful information about test failures without digging into the <code>*.Rcheck</code> folder. Since I want to see information about test failures directly in my CI tool, this is a pain. Also, although not released yet, because <code>testthat::test_package()</code> supports alternative reporters, I can have jUnit output, which plays very nicely with many CI tools.</p>
+
+<h3 id="methods-for-s4">Methods for S4</h3>
+
+<p>The <code>methods</code> package is not loaded using <code>Rscript -e</code>, so if you use <code>S4</code> classes make sure you call <code>library(methods);</code> as part of your tests. <sup class="footnote-ref" id="fnref:methods"><a rel="footnote" href="#fn:methods">1</a></sup></p>
+
+<h3 id="environment-variables-and-r-cmd-check">Environment Variables and R CMD check</h3>
+
+<p>When using <code>R CMD check</code> and other functions that call to that program, your environment variables from the OS may not &ldquo;make it&rdquo; through to R. That means calls to <code>Sys.getenv()</code> when using <code>devtools::test()</code> might work, but using <code>testthat::test_package()</code> or <code>R CMD check</code> may fail.</p>
+
+<p>This was a big thing I ran into. The way I know the host address and port to talk to in the database container running along side my code is using environment variables. All of my tests that were testing against a test database containers were failing for a while and I couldn&rsquo;t figure out why. The key content was on <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">this page about R startup</a>.</p>
+
+<blockquote>
+<p>R CMD check and R CMD build do not always read the standard startup files, but they do always read specific Renviron files. The location of these can be controlled by the environment variables R_CHECK_ENVIRON and R_BUILD_ENVIRON. If these are set their value is used as the path for the Renviron file; otherwise, files ‘~/.R/check.Renviron’ or ‘~/.R/build.Renviron’ or sub-architecture-specific versions are employed.</p>
+</blockquote>
+
+<p>So it turns out I had to get my environment variables of interest into the <code>R_CHECK_ENVIRON</code>. At first I tried this by using <code>env &gt; ~/.R/check.Renviron</code> but it turns out that <code>docker run</code> runs commands as <code>root</code>, and R doesn&rsquo;t like that very much. Instead, I had to specify <code>R_CHECK_ENVIRON=some_path</code> and then used <code>env &gt; $R_CHECK_ENVIRON</code> to make sure that my environment variables were available during testing.</p>
+
+<p>In the end, I have everything set up quite nice. Here are some snippets that might help.</p>
+
+<h2 id="circle-yml">circle.yml</h2>
+
+<p>At the top I specify my <code>R_CHECK_ENVIRON</code></p>
+
+<pre><code class="language-yml">machine:
+  services:
+    - docker
+  environment:
+    R_CHECK_ENVIRON: /var/$MY_PACKAGE/check.Renviron
+</code></pre>
+
+<p>I run my actual tests roughly like so:</p>
+
+<pre><code class="language-yml">test:
+  override:
+    - docker run --link my_database_container -it -e R_CHECK_ENVIRON=$R_CHECK_ENVIRON my_container:my_tag /bin/bash ./scripts/run_r_tests.sh
+</code></pre>
+
+<p>Docker adds critical environment variables to the container when using <code>--link</code> that point to the host and port I can use to find the database container.</p>
+
+<h2 id="run-r-tests-sh">run_r_tests.sh</h2>
+
+<p>I use a small script that takes care of dumping my environment properly and sets me up to take advantage of <code>test_package()</code>&rsquo;s reporter option rather than directly writing my commands in line with <code>docker run</code>.</p>
+
+<pre><code class="language-bash">#! /bin/bash
+# dump environment into R check.Renviron
+env &gt; /var/my_package/check.Renviron
+
+Rscript -e &quot;library(devtools);devtools::install();library(testthat);library(my_package);test_package('my_package', reporter = 'Summary')&quot;
+</code></pre>
+
+<p>To be honest, I&rsquo;m not convinced I need to do either the <code>install()</code> step or <code>library(my_package)</code>. Also, you can run <code>R CMD build . &amp;&amp; R CMD check *tar.gz</code> instead of using the <code>Rscript</code> line. I am also considering copying the <code>.Rcheck</code> folder to <code>$CIRCLE_ARTIFACTS</code> so that I can download it as desired. To do that, you can just add:</p>
+
+<pre><code class="language-bash">mkdir -p $CIRCLE_ARTIFACTS/test_results
+cp -r *.Rcheck $CIRCLE_ARTIFACTS/test_results
+</code></pre>
+
+<p>I hope that some of this information is useful if you&rsquo;re thinking about mixing R, continuous integration, and Docker. If not, at least when I start searching the internet for this information next time, at least this post will show up and remind me of what I used to know.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:methods">This is only a problem for my older packages. I&rsquo;ve long since decided S4 is horrible and not worth it. Just use S3, although R6 looks very attractive.
+ <a class="footnote-return" href="#fnref:methods"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
     </div>
   </div>
@@ -61,6 +139,27 @@
     
   
 
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>Announcing jsonfeedr, a new R package</h1>
+    <h6 class = "date">June 01, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      I have not yet spent the time to figure out how to generate a JSON feed in Hugo yet. But I have built an R package to play with JSON feeds. It&rsquo;s called jsonfeedr, and it&rsquo;s silly simple.
+Maybe I&rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about why JSON feed even exists. Working with JSON is fun and easy.
+      
+        <h6 class="perma"><a href="/2017/06/announcing-jsonfeedr-a-new-r-package/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
   
       <div class = 'row post-title'>
     <div class = 'col-12'>
@@ -137,26 +236,6 @@ UseRs often do crazy things that no sane developer in another language would do.
    Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.
       
         <h6 class="perma"><a href="/2017/03/labeling-data-with-purrr/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Contributing to vegalite</h1>
-    <h6 class = "date">March 02, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/contributing-to-vegalite/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor rio. It was one of the more rewarding things I did in all of 2016. It wasn&rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.
-      
-        <h6 class="perma"><a href="/2017/03/contributing-to-vegalite/">Read More&hellip;</a></h6>
       
     </div>
     <hr>

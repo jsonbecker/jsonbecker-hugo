@@ -6,10 +6,19 @@
     <description>Recent content in Posts on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.json.blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R, Docker, Circle, and Environments</title>
+      <link>http://www.json.blog/2017/07/r-docker-circle-and-environments/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/07/r-docker-circle-and-environments/</guid>
+      <description>My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&amp;rsquo;s nothing new for me. Almost all the work I&amp;rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.</description>
+    </item>
     
     <item>
       <title>Announcing jsonfeedr, a new R package</title>
