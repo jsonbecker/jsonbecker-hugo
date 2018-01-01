@@ -1,0 +1,112 @@
+<html>
+<head>
+  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
+  <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
+  
+  <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
+  <script src="/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+	<script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-40920108-1', 'auto');
+  	ga('send', 'pageview');
+	</script>
+<body>
+    <div class = "title-bar">
+      <h1 class = "title"> json.blog </h1>
+      <h3 class = "nav">
+          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/archive">Archives</a> |
+          <a href = "http://jsonbecker.com">About</a>
+      </h3>
+    </div>
+  <div class = 'container'>
+
+
+    <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>This Year in My R Code</h1>
+    <h6 class = "date">December 31, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/12/this-year-in-my-r-code/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      
+
+<p>Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and <code>purrr</code> everywhere.</p>
+
+<h2 id="the-end-of-s4">The End of S4</h2>
+
+<p>The first package I ever wrote extensively used S4 classes. I wanted to have the security of things like <code>setValidity</code>. I liked the idea of calling <code>new</code> as it felt more like class systems I was familiar with from that one semester of Java in college. S4 felt more grown up than S3, more like it was utilizing the advantages of object oriented programming, and less exotic than R6, which in 2014 felt riskier to build with and teach future employees. Using S4 was a mistake from day one and never led to any advantages in the code I wrote.</p>
+
+<p>So this year, I rewrote that original package. It&rsquo;s internal (and a core function) at my job so I can&rsquo;t share too much, but this was a long time coming. Not only did I clean up a lot of code that was just plain bad (in the way all old code is), but I got rid of S4 in favor of S3 or more functional code wherever possible. Our test coverage is far more complete, the code is far easier to extend without duplication, and it looks far more idiomatic to the standard non-BioConductor R user.</p>
+
+<p>What&rsquo;s the lesson learned here? From a technical perspective, it would be avoid premature optimization and, of course, that everyone can and wants to throw out old code they revist with greater knowledge and context. But I know those things. What drove me to making the wrong decision here was purely imposter syndrome. I was writing code that had to be run unattended on a regular basis as a part of a product in a new job. I didn&rsquo;t feel up to the task, so I felt working with a new, complex, scary part of R that promised some notion of &ldquo;safety&rdquo; would mean I really knew what I was doing. So my takeaway from walking away from S4 is this: start small, build what you know, have confidence you can solve problems one at a time, and trust yourself.</p>
+
+<h2 id="directly-writing-sql">Directly Writing SQL</h2>
+
+<p>I use SQL far more than R, but almost entirely as a consumer (e.g. <code>SELECT</code> only). I&rsquo;ve almost always directly used SQL for my queries into <em>other people&rsquo;s data</em>, but rarely ventured into the world of <code>INSERT</code> or <code>UPDATE</code> directly, preferring to use interfaces like <code>dbWriteTable</code>. This gets back to imposter syndrome&ndash; there&rsquo;s so little damage that can be done with a <code>SELECT</code> statement, but writing into databases I don&rsquo;t control means taking on risk and responsiblity.</p>
+
+<p>This year I said fuck it&ndash; there&rsquo;s a whole lot of work and complexity going on that&rsquo;s entirely related to me not wanting to write <code>INSERT INTO</code> a PostgreSQL has the amazing <code>ON CONFLICT...</code>-based &ldquo;upserts&rdquo; now. So I started to write a lot of queries, some of them pretty complex <sup class="footnote-ref" id="fnref:lateral"><a rel="footnote" href="#fn:lateral">1</a></sup>. R is a great wrapper language, and it&rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&rsquo;s native table writing support is a little weak, there&rsquo;s no problem at all just using <code>dbSendStatement</code> with complex queries. I&rsquo;ve fallen into a pattern I really like of writing temporary tables (with <code>dplyr::copy_to</code> because it&rsquo;s clean in a pipeline) and then executing complex SQL with <code>dbSendStatement</code>. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).</p>
+
+<h2 id="purrr">purrr</h2>
+
+<p>This is the year that <code>purrr</code> not only clicked, but became my preferred way to write code. Where there was <code>apply</code>, now there was <code>purrr</code>. Everything started to look like a list. I&rsquo;m still only scratching the surface here, but I love code like this:</p>
+
+<pre><code>locations %&gt;%
+  filter(code %in% enrollment$locations) %$%
+  code %&gt;%
+  walk(function(x) render(input = 'schprofiles.Rmd',
+                          html_document(theme = NULL,
+                                        template = NULL,
+                                        self_contained = FALSE,
+                                        css = 'static/styles.css',
+                                        lib_dir = 'cache/demo/output/static/',
+                                        includes = includes('fonts.html')),
+                          params = list(school_code = x),
+                          output_file = paste0(x,'.html'),
+                          output_dir = &quot;cache/demo/output/&quot;))
+</code></pre>
+
+<p>It&rsquo;s a simple way to run through all of the <code>locations</code> (a <code>data.frame</code> with columns <code>code</code> and <code>name</code>) and render an HTML-based profile of each school (defined by having student enrollment). <code>walk</code> is beautiful, and so is <code>purrr</code>. I mean, who does need to do <code>map(., mutate_if, is.numeric, as.character)</code> 10 times a day?</p>
+
+<h2 id="2018-r-goals">2018 R Goals</h2>
+
+<p>One thing that&rsquo;s bittersweet is that 2017 is probably the last year in a long time that writing code is the main thing my every day job is about. With increased responsibility and the growth of my employees, I find myself reviewing code a lot more than writing it, and sometimes not even that. With that in mind, I have a few goals for 2018 that I hope will keep the part of me that loves R engaged.</p>
+
+<p>First, I want to start writing command line utilities using R. I know almost nothing beyond <code>Rscript -e</code> or <code>./script.sh</code> when it comes to writing a CLI. But there are all kinds of tasks I do every day that could be written as small command line scripts. Plus, my favorite part of package authoring is writing interfaces for other people to use. How do I expect someone to want to use R and reason about a problem I&rsquo;m helping to solve? It&rsquo;s no wonder that I work on product every day with this interest. So I figure one way to keep engaged in R is to learn how to design command line utilities in R and get good at it. Rather than write R code purely intended to be called and used from R, my R code is going to get an interface this year.</p>
+
+<p>Like every year, I&rsquo;d like to keep up with this blog. I never do, but this year I had a lot of encouraging signs. I actually got considerable attention for every R-related post (high hundreds of views), so I think it&rsquo;s time to lean into that. I&rsquo;m hoping to write one R related post each week. I think the focus will help me have some chance of pulling this off. Since I also want to keep my R chops alive while I move further and further away from day to day programming responsibilities, it should be a two birds with one stone scenario. One major thing I haven&rsquo;t decided&ndash; do I want to submit to r-bloggers? I&rsquo;m sure it&rsquo;d be a huge source of traffic, but I find it frustrating to have to click through from my RSS reader of choice when finding things there.</p>
+
+<p>Lastly, I&rsquo;d like to start to understand the internals of a core package I use every day. I haven&rsquo;t decided what that&rsquo;ll be. Maybe it&rsquo;ll be something really fundamental like <code>dplyr</code>, <code>DBI</code>, or <code>ggplot2</code>. Maybe it&rsquo;ll be something &ldquo;simpler&rdquo;. But I use a lot more R code than I read. And one thing I&rsquo;ve learned every time I&rsquo;ve forced myself to dig in is that I understand more R than I thought and also that reading code is one of the best ways to learn more. I want to do at least one deep study that advances my sense of self-R-worth. Maybe I&rsquo;ll even have to take the time to learn a little C++ and understand how Rccp is being used to change the R world.</p>
+
+<h2 id="special-thanks">Special Thanks</h2>
+
+<p>The #rstats world on Twitter has been the only reason I can get on that service anymore. It&rsquo;s a great and positive place where I learn a ton and I really appreciate feeling like there is a family of nerds out there talking about stuff that I feel like no one should care about. My tweets are mostly stupid musings that come to me and retweeting enraging political stuff in the dumpster fire that is Trump&rsquo;s America, so I&rsquo;m always surprised and appreciative that anyone follows me. It&rsquo;s so refreshing to get away from that and just read #rstats. So thank you for inspiring me and teaching me and being a fun place to be.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:lateral">I let out quite the &ldquo;fuck yea!&rdquo; when I got that two-common-table-expression, two joins with one lateral join in an upsert query to work.
+ <a class="footnote-return" href="#fnref:lateral"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+  <footer class = "license center">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    </footer>
+    </body>
+</html>
