@@ -1,5 +1,5 @@
 ---
-title:
-author:
-date:
+title: ""
+author: ""
+date: ""
 ---

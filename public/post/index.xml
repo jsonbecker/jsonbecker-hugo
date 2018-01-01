@@ -6,10 +6,20 @@
     <description>Recent content in Posts on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.json.blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>This Year in My R Code</title>
+      <link>http://www.json.blog/2017/12/this-year-in-my-r-code/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2017/12/this-year-in-my-r-code/</guid>
+      <description>Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and purrr everywhere.
+The End of S4 The first package I ever wrote extensively used S4 classes. I wanted to have the security of things like setValidity. I liked the idea of calling new as it felt more like class systems I was familiar with from that one semester of Java in college.</description>
+    </item>
     
     <item>
       <title>R, Docker, Circle, and Environments</title>

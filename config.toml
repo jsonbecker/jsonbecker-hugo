@@ -4,3 +4,4 @@ title = "JSONBecker"
 theme = 'jsonbecker'
 [permalinks]
 post= "/:year/:month/:slug"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]

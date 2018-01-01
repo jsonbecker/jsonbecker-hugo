@@ -1,6 +1,6 @@
 ---
-title:
-author:
-date:
-link:
+title: ""
+author: ""
+date: ""
+link: ""
 ---

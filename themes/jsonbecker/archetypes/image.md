@@ -1,7 +1,7 @@
 ---
-title:
-author:
-date:
-image:
+title: ""
+author: ""
+date: ""
+image: ""
 ---
 

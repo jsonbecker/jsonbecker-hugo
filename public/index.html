@@ -41,94 +41,72 @@
     
         <div class = 'row post-title'>
     <div class = 'col-12'>
-      <h1>R, Docker, Circle, and Environments</h1>
-    <h6 class = "date">July 21, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/07/r-docker-circle-and-environments/">&infin;</a></h6>
+      <h1>This Year in My R Code</h1>
+    <h6 class = "date">December 31, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/12/this-year-in-my-r-code/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       
 
-<p>My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&rsquo;s nothing new for me. Almost all the work I&rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.</p>
+<p>Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and <code>purrr</code> everywhere.</p>
 
-<h2 id="a-quick-step-back-about-docker">A quick step back about Docker</h2>
+<h2 id="the-end-of-s4">The End of S4</h2>
 
-<p>Docker is something you use if you want to be cool on Hacker News. But Docker is also a great way to have a reproducible environment to run your code in, from the operating system up. A full review of Docker is beyond the scope of this post (maybe <a href="https://www.docker.com/what-container">check this out</a>), but I would think of it like this: if you run your code in a Docker container, you can guarantee your code works because you&rsquo;re creating a reproducible environment that can be spun up anywhere. Think of it like making an R package instead of writing an analysis script. Installing the package means you get all your dependency packages and have confidence the functions contained within will work on different machines. Docker takes that to the next level and includes operating system level dependencies like drivers and network configurations in addition to just the thing your R functions use.</p>
+<p>The first package I ever wrote extensively used S4 classes. I wanted to have the security of things like <code>setValidity</code>. I liked the idea of calling <code>new</code> as it felt more like class systems I was familiar with from that one semester of Java in college. S4 felt more grown up than S3, more like it was utilizing the advantages of object oriented programming, and less exotic than R6, which in 2014 felt riskier to build with and teach future employees. Using S4 was a mistake from day one and never led to any advantages in the code I wrote.</p>
 
-<h2 id="some-challenges-with-testing-in-r">Some challenges with testing in R</h2>
+<p>So this year, I rewrote that original package. It&rsquo;s internal (and a core function) at my job so I can&rsquo;t share too much, but this was a long time coming. Not only did I clean up a lot of code that was just plain bad (in the way all old code is), but I got rid of S4 in favor of S3 or more functional code wherever possible. Our test coverage is far more complete, the code is far easier to extend without duplication, and it looks far more idiomatic to the standard non-BioConductor R user.</p>
 
-<p>Like many folks, I use <code>devtools</code> and <code>testthat</code> extensively when developing packages. I strive for as-near-as-feasible 100% coverage with my tests, and I am constantly hitting Cmd + Shift + T while writing code in RStudio or running <code>devtools::test()</code>. I even use <code>Check</code> in the Build pane in RStudio and <code>goodpractice::gp()</code> to keep me honest even if my code won&rsquo;t make it to CRAN. But I ran into a few things working with CircleCI running my tests inside of a docker container that pushed me to learn a few critical pieces of information about testing in R.</p>
+<p>What&rsquo;s the lesson learned here? From a technical perspective, it would be avoid premature optimization and, of course, that everyone can and wants to throw out old code they revist with greater knowledge and context. But I know those things. What drove me to making the wrong decision here was purely imposter syndrome. I was writing code that had to be run unattended on a regular basis as a part of a product in a new job. I didn&rsquo;t feel up to the task, so I felt working with a new, complex, scary part of R that promised some notion of &ldquo;safety&rdquo; would mean I really knew what I was doing. So my takeaway from walking away from S4 is this: start small, build what you know, have confidence you can solve problems one at a time, and trust yourself.</p>
 
-<h3 id="achieving-exit-status-1">Achieving exit status 1</h3>
+<h2 id="directly-writing-sql">Directly Writing SQL</h2>
 
-<p>Only two ways of running tests (that I can tell) will result in a returning an exit status code of 1 (error in Unix systems) and therefore cause a build to fail in a continuous integration system. Without that exit status, failing tests won&rsquo;t fail a build, so don&rsquo;t run <code>devtools::test()</code> and think you&rsquo;re good to go.</p>
+<p>I use SQL far more than R, but almost entirely as a consumer (e.g. <code>SELECT</code> only). I&rsquo;ve almost always directly used SQL for my queries into <em>other people&rsquo;s data</em>, but rarely ventured into the world of <code>INSERT</code> or <code>UPDATE</code> directly, preferring to use interfaces like <code>dbWriteTable</code>. This gets back to imposter syndrome&ndash; there&rsquo;s so little damage that can be done with a <code>SELECT</code> statement, but writing into databases I don&rsquo;t control means taking on risk and responsiblity.</p>
 
-<p>This means using <code>R CMD build . &amp;&amp; R CMD check *tar.gz</code> or <code>testthat::test_package($MY_PACKAGE)</code> are your best bet in most cases. I prefer using <code>testthat::test_package()</code> because <code>R CMD check</code> cuts off a ton of useful information about test failures without digging into the <code>*.Rcheck</code> folder. Since I want to see information about test failures directly in my CI tool, this is a pain. Also, although not released yet, because <code>testthat::test_package()</code> supports alternative reporters, I can have jUnit output, which plays very nicely with many CI tools.</p>
+<p>This year I said fuck it&ndash; there&rsquo;s a whole lot of work and complexity going on that&rsquo;s entirely related to me not wanting to write <code>INSERT INTO</code> a PostgreSQL has the amazing <code>ON CONFLICT...</code>-based &ldquo;upserts&rdquo; now. So I started to write a lot of queries, some of them pretty complex <sup class="footnote-ref" id="fnref:lateral"><a rel="footnote" href="#fn:lateral">1</a></sup>. R is a great wrapper language, and it&rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&rsquo;s native table writing support is a little weak, there&rsquo;s no problem at all just using <code>dbSendStatement</code> with complex queries. I&rsquo;ve fallen into a pattern I really like of writing temporary tables (with <code>dplyr::copy_to</code> because it&rsquo;s clean in a pipeline) and then executing complex SQL with <code>dbSendStatement</code>. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).</p>
 
-<h3 id="methods-for-s4">Methods for S4</h3>
+<h2 id="purrr">purrr</h2>
 
-<p>The <code>methods</code> package is not loaded using <code>Rscript -e</code>, so if you use <code>S4</code> classes make sure you call <code>library(methods);</code> as part of your tests. <sup class="footnote-ref" id="fnref:methods"><a rel="footnote" href="#fn:methods">1</a></sup></p>
+<p>This is the year that <code>purrr</code> not only clicked, but became my preferred way to write code. Where there was <code>apply</code>, now there was <code>purrr</code>. Everything started to look like a list. I&rsquo;m still only scratching the surface here, but I love code like this:</p>
 
-<h3 id="environment-variables-and-r-cmd-check">Environment Variables and R CMD check</h3>
-
-<p>When using <code>R CMD check</code> and other functions that call to that program, your environment variables from the OS may not &ldquo;make it&rdquo; through to R. That means calls to <code>Sys.getenv()</code> when using <code>devtools::test()</code> might work, but using <code>testthat::test_package()</code> or <code>R CMD check</code> may fail.</p>
-
-<p>This was a big thing I ran into. The way I know the host address and port to talk to in the database container running along side my code is using environment variables. All of my tests that were testing against a test database containers were failing for a while and I couldn&rsquo;t figure out why. The key content was on <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">this page about R startup</a>.</p>
-
-<blockquote>
-<p>R CMD check and R CMD build do not always read the standard startup files, but they do always read specific Renviron files. The location of these can be controlled by the environment variables R_CHECK_ENVIRON and R_BUILD_ENVIRON. If these are set their value is used as the path for the Renviron file; otherwise, files ‘~/.R/check.Renviron’ or ‘~/.R/build.Renviron’ or sub-architecture-specific versions are employed.</p>
-</blockquote>
-
-<p>So it turns out I had to get my environment variables of interest into the <code>R_CHECK_ENVIRON</code>. At first I tried this by using <code>env &gt; ~/.R/check.Renviron</code> but it turns out that <code>docker run</code> runs commands as <code>root</code>, and R doesn&rsquo;t like that very much. Instead, I had to specify <code>R_CHECK_ENVIRON=some_path</code> and then used <code>env &gt; $R_CHECK_ENVIRON</code> to make sure that my environment variables were available during testing.</p>
-
-<p>In the end, I have everything set up quite nice. Here are some snippets that might help.</p>
-
-<h2 id="circle-yml">circle.yml</h2>
-
-<p>At the top I specify my <code>R_CHECK_ENVIRON</code></p>
-
-<pre><code class="language-yml">machine:
-  services:
-    - docker
-  environment:
-    R_CHECK_ENVIRON: /var/$MY_PACKAGE/check.Renviron
+<pre><code>locations %&gt;%
+  filter(code %in% enrollment$locations) %$%
+  code %&gt;%
+  walk(function(x) render(input = 'schprofiles.Rmd',
+                          html_document(theme = NULL,
+                                        template = NULL,
+                                        self_contained = FALSE,
+                                        css = 'static/styles.css',
+                                        lib_dir = 'cache/demo/output/static/',
+                                        includes = includes('fonts.html')),
+                          params = list(school_code = x),
+                          output_file = paste0(x,'.html'),
+                          output_dir = &quot;cache/demo/output/&quot;))
 </code></pre>
 
-<p>I run my actual tests roughly like so:</p>
+<p>It&rsquo;s a simple way to run through all of the <code>locations</code> (a <code>data.frame</code> with columns <code>code</code> and <code>name</code>) and render an HTML-based profile of each school (defined by having student enrollment). <code>walk</code> is beautiful, and so is <code>purrr</code>. I mean, who does need to do <code>map(., mutate_if, is.numeric, as.character)</code> 10 times a day?</p>
 
-<pre><code class="language-yml">test:
-  override:
-    - docker run --link my_database_container -it -e R_CHECK_ENVIRON=$R_CHECK_ENVIRON my_container:my_tag /bin/bash ./scripts/run_r_tests.sh
-</code></pre>
+<h2 id="2018-r-goals">2018 R Goals</h2>
 
-<p>Docker adds critical environment variables to the container when using <code>--link</code> that point to the host and port I can use to find the database container.</p>
+<p>One thing that&rsquo;s bittersweet is that 2017 is probably the last year in a long time that writing code is the main thing my every day job is about. With increased responsibility and the growth of my employees, I find myself reviewing code a lot more than writing it, and sometimes not even that. With that in mind, I have a few goals for 2018 that I hope will keep the part of me that loves R engaged.</p>
 
-<h2 id="run-r-tests-sh">run_r_tests.sh</h2>
+<p>First, I want to start writing command line utilities using R. I know almost nothing beyond <code>Rscript -e</code> or <code>./script.sh</code> when it comes to writing a CLI. But there are all kinds of tasks I do every day that could be written as small command line scripts. Plus, my favorite part of package authoring is writing interfaces for other people to use. How do I expect someone to want to use R and reason about a problem I&rsquo;m helping to solve? It&rsquo;s no wonder that I work on product every day with this interest. So I figure one way to keep engaged in R is to learn how to design command line utilities in R and get good at it. Rather than write R code purely intended to be called and used from R, my R code is going to get an interface this year.</p>
 
-<p>I use a small script that takes care of dumping my environment properly and sets me up to take advantage of <code>test_package()</code>&rsquo;s reporter option rather than directly writing my commands in line with <code>docker run</code>.</p>
+<p>Like every year, I&rsquo;d like to keep up with this blog. I never do, but this year I had a lot of encouraging signs. I actually got considerable attention for every R-related post (high hundreds of views), so I think it&rsquo;s time to lean into that. I&rsquo;m hoping to write one R related post each week. I think the focus will help me have some chance of pulling this off. Since I also want to keep my R chops alive while I move further and further away from day to day programming responsibilities, it should be a two birds with one stone scenario. One major thing I haven&rsquo;t decided&ndash; do I want to submit to r-bloggers? I&rsquo;m sure it&rsquo;d be a huge source of traffic, but I find it frustrating to have to click through from my RSS reader of choice when finding things there.</p>
 
-<pre><code class="language-bash">#! /bin/bash
-# dump environment into R check.Renviron
-env &gt; /var/my_package/check.Renviron
+<p>Lastly, I&rsquo;d like to start to understand the internals of a core package I use every day. I haven&rsquo;t decided what that&rsquo;ll be. Maybe it&rsquo;ll be something really fundamental like <code>dplyr</code>, <code>DBI</code>, or <code>ggplot2</code>. Maybe it&rsquo;ll be something &ldquo;simpler&rdquo;. But I use a lot more R code than I read. And one thing I&rsquo;ve learned every time I&rsquo;ve forced myself to dig in is that I understand more R than I thought and also that reading code is one of the best ways to learn more. I want to do at least one deep study that advances my sense of self-R-worth. Maybe I&rsquo;ll even have to take the time to learn a little C++ and understand how Rccp is being used to change the R world.</p>
 
-Rscript -e &quot;library(devtools);devtools::install();library(testthat);library(my_package);test_package('my_package', reporter = 'Summary')&quot;
-</code></pre>
+<h2 id="special-thanks">Special Thanks</h2>
 
-<p>To be honest, I&rsquo;m not convinced I need to do either the <code>install()</code> step or <code>library(my_package)</code>. Also, you can run <code>R CMD build . &amp;&amp; R CMD check *tar.gz</code> instead of using the <code>Rscript</code> line. I am also considering copying the <code>.Rcheck</code> folder to <code>$CIRCLE_ARTIFACTS</code> so that I can download it as desired. To do that, you can just add:</p>
-
-<pre><code class="language-bash">mkdir -p $CIRCLE_ARTIFACTS/test_results
-cp -r *.Rcheck $CIRCLE_ARTIFACTS/test_results
-</code></pre>
-
-<p>I hope that some of this information is useful if you&rsquo;re thinking about mixing R, continuous integration, and Docker. If not, at least when I start searching the internet for this information next time, at least this post will show up and remind me of what I used to know.</p>
+<p>The #rstats world on Twitter has been the only reason I can get on that service anymore. It&rsquo;s a great and positive place where I learn a ton and I really appreciate feeling like there is a family of nerds out there talking about stuff that I feel like no one should care about. My tweets are mostly stupid musings that come to me and retweeting enraging political stuff in the dumpster fire that is Trump&rsquo;s America, so I&rsquo;m always surprised and appreciative that anyone follows me. It&rsquo;s so refreshing to get away from that and just read #rstats. So thank you for inspiring me and teaching me and being a fun place to be.</p>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:methods">This is only a problem for my older packages. I&rsquo;ve long since decided S4 is horrible and not worth it. Just use S3, although R6 looks very attractive.
- <a class="footnote-return" href="#fnref:methods"><sup>[return]</sup></a></li>
+<li id="fn:lateral">I let out quite the &ldquo;fuck yea!&rdquo; when I got that two-common-table-expression, two joins with one lateral join in an upsert query to work.
+ <a class="footnote-return" href="#fnref:lateral"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
@@ -139,6 +117,26 @@ cp -r *.Rcheck $CIRCLE_ARTIFACTS/test_results
     
   
 
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>R, Docker, Circle, and Environments</h1>
+    <h6 class = "date">July 21, 2017</h6> 
+    <h6 class = "perma"><a href = "http://www.json.blog/2017/07/r-docker-circle-and-environments/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&rsquo;s nothing new for me. Almost all the work I&rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.
+      
+        <h6 class="perma"><a href="/2017/07/r-docker-circle-and-environments/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
   
       <div class = 'row post-title'>
     <div class = 'col-12'>
@@ -215,27 +213,6 @@ It is really easy to use calls to Sys.time and difftime when working interactive
 UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the assertr package.
       
         <h6 class="perma"><a href="/2017/04/foreign-keys-and-assertr/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Labeling Data with purrr</h1>
-    <h6 class = "date">March 03, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/labeling-data-with-purrr/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      Here&rsquo;s a fun common task. I have a data set that has a bunch of codes like:
-   Name Abbr Code     Alabama AL 01   Alaska AK 02   Arizona AZ 04   Arkansas AR 05   California CA 06   Colorado CO 08   Connecticut CT 09   Delaware DE 10    All of your data is labeled with the code value.
-      
-        <h6 class="perma"><a href="/2017/03/labeling-data-with-purrr/">Read More&hellip;</a></h6>
       
     </div>
     <hr>
