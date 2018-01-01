@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Dec 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/curation-facebook-google-plus-google-reader-social-twitter/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/curation-facebook-google-plus-google-reader-social-twitter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,35 @@
       <pubDate>Thu, 08 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2011/12/how-social-reading-should-work/</guid>
-      <description>I am becoming increasingly frustrated by the failure of all the major players to get social right. I have a very simple dream for how the social web should work and its baffling to me that many obvious use-cases have not been addressed at all by Facebook, Twitter, or Google.
-This is the first of two posts that will describe what I view as a viable framework for a social web experience.</description>
+      <description>
+
+&lt;p&gt;I am becoming increasingly frustrated by the failure of all the major players to get social right. I have a very simple dream for how the social web should work and its baffling to me that many obvious use-cases have not been addressed at all by Facebook, Twitter, or Google.&lt;/p&gt;
+
+&lt;p&gt;This is the first of two posts that will describe what I view as a viable framework for a social web experience. The whole goal of social web, in my view, is to read, share, discover, and communicate about found content. This post will focus on finding and reading content. The second will focus on sharing and discussing that content.&lt;/p&gt;
+
+&lt;h2 id=&#34;properly-handle-content-sources&#34;&gt;Properly Handle Content Sources&lt;/h2&gt;
+
+&lt;p&gt;One of the major shortcomings of Facebook, Twitter, and Google+ is source content. The backbone of the ideal social experience is not simply sharing inane details of your personal life. It&amp;rsquo;s making the entire web a community activity. It&amp;rsquo;s about making communication on the internet as rich and natural an experience as possible. The branded pages and official accounts simply do not substitute for an excellent content platform. The origin of this problem is simple&amp;ndash; the modern social network is entirely built upon connecting people, and content generators are just considered a hacked up special class of people. Reading (and generating) content is the ground floor of the social
+experience.&lt;/p&gt;
+
+&lt;p&gt;What&amp;rsquo;s my evidence that this model is insufficient? The popularity of services like Google Reader, Flipboard, Feedly, etc. Need more? The three major social players are all introducing new ways to bring content sources into their services and keep my eyes within their system. Facebook has its Social Reader, which is just creepy to me because I can&amp;rsquo;t share outside of Facebook and I don&amp;rsquo;t want everything my eyes glaze over to be shared instantly with everyone. Twitter has its &amp;ldquo;Discover&amp;rdquo; tab that goes well beyond trending and tries to create a pre-curated reader experience. Google has Currents, a Flipboard clone that&amp;rsquo;s based upon casual magazine style reading, complete with a whole new set of subscriptions, a good mobile experience, and easy sharing into Google Plus.&lt;/p&gt;
+
+&lt;p&gt;But none of these solutions recognize that there are at least three major domains of access content.&lt;/p&gt;
+
+&lt;h2 id=&#34;bookmarking&#34;&gt;Bookmarking&lt;/h2&gt;
+
+&lt;p&gt;The first way people find content is from sources they want to read casually. These are the sites you check when you&amp;rsquo;re bored or when there&amp;rsquo;s a massive breaking story. This is your New York Times or CNN.com pushing out massive amounts of timely information that you just want to dip into time to time. This is one form of content that folks are just starting to get right. Flipboard/Google Currents successfully gives a gorgeous platform for casually reading across many sources. There&amp;rsquo;s no need to keep track of every story or go through content methodically. This reading experience is quick and casual and all about stumbling across something.&lt;/p&gt;
+
+&lt;h2 id=&#34;collecting&#34;&gt;Collecting&lt;/h2&gt;
+
+&lt;p&gt;This is the bread and butter for RSS subscribers and one of the major areas that most social players are ignoring. Collecting means you want to read everything someone or some site writes. You want to make sure to come back and glance over things you don&amp;rsquo;t get a chance to see. Read/unread counts are a critical piece of making sure you read every piece of news that comes through. This is content reading you want to tag, save, easily search through, etc. Another way to think of collecting is the set of information you trust only yourself to sort through a curate. This isn&amp;rsquo;t your list of pretty recipes that come streaming in quickly and are throw-aways. These are your trusted insider industry areas that get at the heart of your job or most important hobbies.&lt;/p&gt;
+
+&lt;h2 id=&#34;streaming&#34;&gt;Streaming&lt;/h2&gt;
+
+&lt;p&gt;This is the traditional &amp;ldquo;news feed&amp;rdquo; of social reading. It&amp;rsquo;s how you see what all your &amp;ldquo;friends&amp;rdquo; are sharing, doing, and saying. This is about finding the trends, the conversations that are blowing up, the short funny statements, etc. You almost definitely don&amp;rsquo;t care if you miss something someone posts here, but you want to be able to see the cream that rises to the top. You want a way that conveniently allows you to enter someone else&amp;rsquo;s workspace and interact with the content they&amp;rsquo;ve shared with you. This is the other area that social has some models that work well and was the basis for all other activities on the social web. It&amp;rsquo;s also one of the social webs major problems. The stream is massive and cannot be absorbed in whole. Most of the content is throwaway. But because almost all other social reading is based on the stream, all of our content, even what we collect and bookmark, becomes throwaway and short-lived, given the same priority as your long lost aunt in an old age home playing Farmville.&lt;/p&gt;
+
+&lt;p&gt;For me, the social web has to start with providing me with a single space that aggregates what I want to read on the web. If content is not easy for me to get access to, I&amp;rsquo;m never going to even worry about being satisfied with my options for sharing. Social fails right now because they haven&amp;rsquo;t gotten the reading paradigm right. It&amp;rsquo;s nowhere close to handling the three major domains&amp;ndash;bookmarking, collecting, and streaming&amp;ndash; effectively under a single attractive interface. I think Google is the closest. If you combine some of the features in Currents, their new attractive mobile reader that works great for bookmarking, with some of the critical features in Google Reader, right now the best collector, then I&amp;rsquo;m very close to an ideal reading experience. My hope is that someone will find a way to combine all three and then provide the robust sharing features I&amp;rsquo;ll write about in my next post.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

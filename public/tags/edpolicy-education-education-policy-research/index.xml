@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Nov 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/edpolicy-education-education-policy-research/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/edpolicy-education-education-policy-research/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,30 @@
       <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2012/11/a-little-knowledge-is-a-wonderful-dangerous-thing/</guid>
-      <description>It is so tempting to try to apply cognitive science results in education. It seems like an obvious step on the long road of moving education from a field of theory and philosophies to one more grounded in empirical research. Yet, learning myths are persistent. Even scarier, &amp;ldquo;those who know the most about neuroscience also believe the most myths.&amp;ldquo;
-Educators may have the best intentions when trying to infuse their practice with evidence, but they all too often are not equipped as critical consumers of research.</description>
+      <description>&lt;p&gt;It is so tempting to try to apply cognitive science results in education. It seems like an obvious step on the long road of moving education from a field of theory and philosophies to one more grounded in empirical research. Yet, learning myths are persistent. Even scarier, &amp;ldquo;&lt;a href=&#34;http://cedarsdigest.wordpress.com/2012/11/18/myths-come-from-values-not-from-ignorance/&#34;&gt;those who know the most about neuroscience also believe the most myths.&lt;/a&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;Educators may have the best intentions when trying to infuse their practice with evidence, but they all too often are not equipped as critical consumers of research. Worse, the education profession has historically been wrapped in &amp;ldquo;thoughtworld&amp;rdquo; &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, where schools of education have taught same ideas about effective teaching and learning for decades without a basis in empirical research. These same ideas are taught to principals, district administrators, and teachers, so nary a critical voice can stop the myths from being repeated and mutually reinforcing each other.&lt;/p&gt;
+
+&lt;p&gt;Effectively conducting empirical research, translating research for policymakers, and implementing research-based program design is my job. I came to education purely from a research and policy perspective, and I am equipped to understand some of the empirical research done on effective schooling &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have to confront an awful history of &amp;ldquo;outsiders&amp;rdquo; like myself who have brought round after round of poorly supported, poorly evaluated reforms. I have to confront the history of districts and schools discarding some very effective programs because of leadership changes, lack of resources, and most of all a lack good, systematic evaluation of programs. And I have to be damn good at what I do, because even a small misstep could paint me just like every other &amp;ldquo;expert&amp;rdquo; that has rolled through with the newest great idea.&lt;/p&gt;
+
+&lt;p&gt;I think this is why I tend to favor interventions that are very small. Simple, small, hard to &amp;ldquo;mess up&amp;rdquo; interventions,  based in research, implemented just a few at a time have tremendous potential. I love the oft-cited work on &lt;a href=&#34;http://www.nber.org/papers/w15361&#34;&gt;filling out the FAFSA along with tax filing at H&amp;amp;R Block&lt;/a&gt;. It is simple. There is no fear of &amp;ldquo;dosage&amp;rdquo; or implementation fidelity. There are both sound theoretical reasons and empirical results from other domains that suggest a high likelihood of success. It has the potential to make a huge impact on students without adding any load to teachers who are, say, implementing a brand new and complicated curriculum this year. This is how you earn trust through building
+success.&lt;/p&gt;
+
+&lt;p&gt;I am also a fan of some really big, dramatic changes, but how I get there will have to be the subject of a future post.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;E.D. Hirsch&amp;rsquo;s term
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;In the area of neuroscience and cognitive science, I am probably only marginally better off than most teachers. My Sc.B. is in chemistry. So a background in empirical physical sciences and my knowledge of social science may help me to access some of the research on how people learn, but I would probably be just as susceptible to overconfidence in my ability to process this research and repeat untruths as many very intelligent educators.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

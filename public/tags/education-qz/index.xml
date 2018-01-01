@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Nov 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/education-qz/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/education-qz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,17 @@
       <pubDate>Tue, 19 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2013/11/the-four-ways-to-really-fix-education/</guid>
-      <description>More schooling, reoriented calendar Wider range of higher education Cheaper four-year degrees Eliminate property tax-based public education   This is an interesting list. I don&amp;rsquo;t agree with number four. There are several benefits to using property taxes not the least of which is their stability and lagged response during traditional economic downturns. However, there are many things we should do to reform our revenue system for education. I am keen on more taxes on &amp;ldquo;property&amp;rdquo;, using land value taxes that are levvied either statewide or regionally to address some of the inequities traditional, highly localized property taxes can lead to.</description>
+      <description>&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;More schooling, reoriented calendar&lt;/li&gt;
+&lt;li&gt;Wider range of higher education&lt;/li&gt;
+&lt;li&gt;Cheaper four-year degrees&lt;/li&gt;
+&lt;li&gt;Eliminate property tax-based public education&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is an interesting list. I don&amp;rsquo;t agree with number four. There are several benefits to using property taxes not the least of which is their stability and lagged response during traditional economic downturns. However, there are many things we should do to reform our revenue system for education. I am keen on &lt;em&gt;more&lt;/em&gt; taxes on &amp;ldquo;property&amp;rdquo;, using land value taxes that are levvied either statewide or regionally to address some of the inequities traditional, highly localized property taxes can lead to.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

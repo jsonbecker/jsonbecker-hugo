@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,39 @@
       <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2013/06/linear-thinking/</guid>
-      <description>Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application ecosystem has matured 1, the iOS sandboxing model has felt increasingly limiting and outdated.
-I think that there is a simple change that could dramatically increase the effectiveness of multitasking on iOS by re-examining how application switching works.</description>
+      <description>&lt;p&gt;Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application &lt;a href=&#34;|filename|frictionless.md&#34;&gt;ecosystem&lt;/a&gt; has matured &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:viticci&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:viticci&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, the iOS sandboxing model has felt increasingly limiting and outdated.&lt;/p&gt;
+
+&lt;p&gt;I think that there is a simple change that could dramatically increase the effectiveness of multitasking on iOS by re-examining how application switching works.&lt;/p&gt;
+
+&lt;p&gt;Scrolling through a long list of applications, either through the basement shelf or via the four-finger gesture on an iPad, is both slow and lacking in contextual cues. In a simple case where I am working with two applications simultaneously, how do I switch between them? The list of open applications always places the current application in the first position. The previously used application sits in the second position. The first time I want to change to another application this is not so bad. I move to the &amp;ldquo;right&amp;rdquo; on the list to progress forward into the next application &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:next&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:next&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The trouble comes when I want to return to where I was just working. The most natural mental model for this switch is to move &amp;ldquo;left&amp;rdquo; in the list. I moved &amp;ldquo;right&amp;rdquo; to get here and millions of years of evolution has taught me the the &amp;ldquo;undo button&amp;rdquo; for moving right is to move left &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inform7&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:inform7&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. But of course, when I attempt to move &amp;ldquo;left&amp;rdquo;, I find no destination &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:youcant&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:youcant&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. I can pop an application from anywhere on the list, but I can only prepend new applications to the list &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ignorant&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ignorant&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apple needs to move away from its linear thinking and enter the second dimension.&lt;/p&gt;
+
+&lt;p&gt;What if I could drag apps in the switcher on top of each other to make a new stack, not unlike the option on the OS X launch bar? Throughout this stack, position is maintained regardless of which application is in use/was last used. I can always move &lt;strong&gt;up&lt;/strong&gt; from Chrome to ByWord, and &lt;strong&gt;down&lt;/strong&gt; to Good Reader, for example, if I was writing a report. Apple might call this a Stack, mirroring the term in OSX, but I would prefer this to be called a &lt;em&gt;Flow&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The goal of this feature is to organize a &lt;em&gt;Flow&lt;/em&gt; for a particular task that requires using multiple apps. One feature might be saving a &amp;ldquo;Flow&amp;rdquo;, this way each time I want to write a blog post, I tap the same home screen button and the same four apps in the same order launch in a &lt;em&gt;Flow&lt;/em&gt;, ready for easy switching using the familiar four-finger swipe gesture up and down. I no longer have to worry about the sequence I have recently accessed applications which is confusing and requires me to look at the app switcher draw or needlessly and repeatedly swipe through applications. I never have to worry about lingering too long on one application while swiping through and switching to that app, changing my position to the origin of the list and starting over again.&lt;/p&gt;
+
+&lt;p&gt;For all the calls for complex inter-app communication or having multiple apps active on the screen at the same time, it seems a simple interface change to application switching could complete change the way we multitask on iOS.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:viticci&#34;&gt;And Federico Viticci has either shown us the light or gone completely mad.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:viticci&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:next&#34;&gt;For now, lets assume the right application is next in the stack. I&amp;rsquo;ll get to that issue with my second change.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:next&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:inform7&#34;&gt;&lt;code&gt;You are in a green room. &amp;gt; Go east. You are in a red room. &amp;gt; Go west. You are in a green room.&lt;/code&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:inform7&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:youcant&#34;&gt;&lt;code&gt;You can&#39;t go that way.&lt;/code&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:youcant&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:ignorant&#34;&gt;I don&amp;rsquo;t know enough about data structures yet to name what&amp;rsquo;s going on here. I am tempted to think that the challenge is they have presented a list to users, with a decidedly horizontal metaphor, when they actually have created something more akin to a stack, with a decidedly vertical metaphor. But a stack isn&amp;rsquo;t quite the right way to understand the app switcher. You can &amp;ldquo;pop&amp;rdquo; an app from any arbitrary position on the app switcher, but funny enough can only push a new app on to the top of the switcher.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ignorant&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jul 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/ccd-data-education-education-policy-ggplot2-nces-nesis-notes-politics-rhode-island-ri-rstats-woonsocket/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,279 @@
       <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2012/07/using-the-common-core-data-on-nces/</guid>
-      <description>My analysis on Nesi&amp;rsquo;s Notes depended entirely on the National Center for Education Statistics&amp;rsquo; Common Core Data. The per pupil amounts reported to NCES may look a bit different from state sources of this information. There are several explanations of this. First, the enrollment counts used to generate per pupil amounts are based on an October 1st headcount. In Rhode Island, we use something called &amp;ldquo;average daily membership&amp;rdquo; (ADM) as the denominator and not a headcount.</description>
+      <description>&lt;p&gt;My analysis on &lt;a href=&#34;http://blogs.wpri.com/?p=62059&#34;&gt;Nesi&amp;rsquo;s Notes&lt;/a&gt; depended entirely on the &lt;a href=&#34;http://nces.ed.gov/ccd/bat&#34;&gt;National Center for Education Statistics&amp;rsquo; Common Core Data&lt;/a&gt;. The per pupil amounts reported to NCES may look a bit different from state sources of this information. There are several explanations of this. First, the enrollment counts used to generate per pupil amounts are based on an October 1st headcount. In Rhode Island, we use something called &amp;ldquo;average daily membership&amp;rdquo; (ADM) as the denominator and not a headcount. The ADM of a district is calculated by taking all the students who attended the district at any point in the year and adding up the number of school days they were enrolled for. The total membership (i.e. all the student*days, for those who like to think about this in units) is divided by the number of school days per year, almost always 180 (so student*days / days/year = students/year). Additionally, NCES does not record the final three digits on most financial data. These rounding issues will also make the per pupil data seem different from state reports.&lt;/p&gt;
+
+&lt;p&gt;I wanted to use the NCES to make sure that the data in my post was easily reproducible by any member of the public. I also thought using NCES would serve as a great learning opportunity for the wonks and nerds out there who never even realized how much rich data about schools and school finance are available through the federal government. That being said, I do believe that the state reported numbers are far more accurate than those available from the federal government. That is not to say that the federal data is bad. On the contrary, that data is substantially vetted and validated and is very useful for research. My concern was only that some of the tiny differences in the NCES data that deviated from what I would consider to be ideal data might reach the level where they affected the validity of the conclusions I wanted to draw.&lt;/p&gt;
+
+&lt;p&gt;Although I was writing as a private citizen without the support of the Rhode Island Department of Education, I did use my access to RIDE data to ensure that differences in the federal reports were not significant enough to call into question my analysis. I found that both the direction and magnitude of all the trends that I describe in the Nesi&amp;rsquo;s Notes post held up with the state data. While all of that information is publicly available, it is less easily accessible than NCES data and doesn&amp;rsquo;t provide the same opportunity for analysis outside of financial data. For these reasons, I decided to stick with NCES.&lt;/p&gt;
+
+&lt;p&gt;So how do you reproduce the data I used?&lt;/p&gt;
+
+&lt;p&gt;First, go to  the &lt;a href=&#34;http://nces.ed.gov/ccd/bat&#34;&gt;NCES Common Core Data Build a Table&lt;/a&gt; site. On the drop down, select &amp;ldquo;District&amp;rdquo; as the row variable and select the last fifteen years excluding 2009-10 (since there is no current financial data available for that year).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces1.png&#34; alt=&#34;1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After clicking next, hit &amp;ldquo;I Agree&amp;rdquo; on the pop-up.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces2.png&#34; alt=&#34;2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now select &amp;ldquo;Finance Per Pupil Ratios&amp;rdquo; for the first column.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces3.png&#34; alt=&#34;3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the green arrow that selects all years for local sources per
+student and state sources per student.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces4.png&#34; alt=&#34;4&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click &amp;ldquo;Next&amp;gt;&amp;gt;&amp;rdquo; on the top right. Now select only RI-Rhode Island for
+your row variable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces5.png&#34; alt=&#34;5&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, click view table to see the results. I recommend downloading
+the Test (.csv) file to work with.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.json.blog/img/nces6.png&#34; alt=&#34;6&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And finally, here&amp;rsquo;s the R code to reshape/rejigger the data I used and
+produce the graphics from the Nesi&amp;rsquo;s Notes post.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Using NCES data to analyze education finances to Woonsocket over 15 years.
+## Initialize required packages
+require(plyr)
+require(reshape2)
+require(ggplot2)
+require(scales)
+## Best to ignore this function-- it&#39;s mostly magic to me too. Essentially,
+## multiplot takes in a bunch of plots and then puts them into one image
+## arranging them by columns equal to a paramter cols. Credit to:
+## http://wiki.stdout.org/rcookbook/Graphs/Multiple%20graphs%20on%20one%20page%20(    ggplot2)/
+multiplot &amp;lt;- function(..., plotlist=NULL, cols) {
+  require(grid)
+  # Make a list from the ... arguments and plotlist
+  plots &amp;lt;- c(list(...), plotlist)
+  numPlots = length(plots)
+  # Make the panel
+  plotCols = cols                          # Number of columns of plots
+  plotRows = ceiling(numPlots/plotCols) # Number of rows needed, calculated from #    of cols
+  # Set up the page
+  grid.newpage()
+  pushViewport(viewport(layout = grid.layout(plotRows, plotCols)))
+  vplayout &amp;lt;- function(x, y)
+    viewport(layout.pos.row = x, layout.pos.col = y)
+  # Make each plot, in the correct location
+  for (i in 1:numPlots) {
+    curRow = ceiling(i/plotCols)
+    curCol = (i-1) %% plotCols + 1
+    print(plots[[i]], vp = vplayout(curRow, curCol ))
+  }
+}
+## Load data from the modified CSV. I made the following changes from the NCES
+## downloaded file: 1) I removed all of the description header so that row one
+## of the CSV is the attribute names; 2) I pasted the transposed state values
+## to the final observation so that I have a state observation row analogous to
+## the other LEA rows.
+
+raw_data &amp;lt;- read.csv(&#39;rawdata.csv&#39;)
+## Change name of first column to make things easier for later.
+names(raw_data)[1] &amp;lt;- c(&#39;distname&#39;)
+## Creating Time Series Data for each community of interest.
+## I&#39;m going to use a custom function to automate the steps required to create
+## district level data in a time series.
+
+create_ts &amp;lt;- function(name){
+  # First create a column vector with the local funding
+  # A few things to note: First, t() is the transpose function and helps to
+  # make my &amp;quot;wide&amp;quot; data (lots of columns) &amp;quot;long&amp;quot; (lots of rows). Second, R
+  # has a funny behavior that is very covenient for data anaylsts. It performs
+  # many common mathematical operations element-wise, so the simple division
+  # of two vectors below actually divides element by element through the
+  # vector, e.g. column 17 is divided by column 2 to provide the first element
+  # in the resulting vector. This makes calculating per pupil amounts very
+  # convenient.
+  local &amp;lt;- t(subset(raw_data,distname==name)[,c(17:31)]/
+             subset(raw_data,distname==name)[,c(2:16)])
+  # Performing the same operation for state per pupil amounts.
+  state &amp;lt;- t(subset(raw_data,distname==name)[,c(32:46)]/
+             subset(raw_data,distname==name)[,c(2:16)])
+  # Putting state and local data together and getting rid of the nasty
+  # attribute names from NCES by just naming the rows with a sequence
+  # of integers.
+  results &amp;lt;- data.frame(local,state,row.names=seq(1,15,1))
+  # Naming my two attributes
+  names(results) &amp;lt;- c(&#39;local&#39;,&#39;state&#39;)
+  # Generating the year attribute
+  results[[&#39;year&#39;]] &amp;lt;- seq(1995, 2009, 1)
+  # This command is a bit funky, but basically it makes my data as long as
+  # possible so that each line has an ID (year in this case) and one value
+  # (the dollars in this case). I also have a label that describes that value,
+  # which is local or state.
+  results &amp;lt;- melt(results, id.vars=&#39;year&#39;)
+  # Returning my &amp;quot;results&amp;quot; object
+  results
+}
+## Create the Woonsocket data-- note that R is case sensitive so I must use all
+## capitals to match the NCES convention.
+woonsocket &amp;lt;- create_ts(&#39;WOONSOCKET&#39;)
+pawtucket &amp;lt;- create_ts(&#39;PAWTUCKET&#39;)
+providence &amp;lt;- create_ts(&#39;PROVIDENCE&#39;)
+westwarwick &amp;lt;- create_ts(&#39;WEST WARWICK&#39;)
+state &amp;lt;- create_ts(&#39;STATE&#39;)
+
+## Developing a plot of JUST local revenues for the selected communities
+## First I create a percentage change data frame. I think that looking at
+## percent change overtime is generally more fair. While the nominal dollar
+## changes are revealing, my analysis is drawing attention to the trend rather
+## than the initial values.
+
+## First, I pull out just the local dollars.
+perwoonlocal &amp;lt;- subset(woonsocket,variable==&#39;local&#39;)
+## Now I modify the value to be divided by the starting value - 100%
+perwoonlocal[[&#39;value&#39;]] &amp;lt;- with(perwoonlocal, (value/value[1])-1)
+## A little renaming for the combining step later
+names(perwoonlocal) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perwoonlocal[[&#39;disname&#39;]]&amp;lt;-&#39;Woonsocket&#39;
+
+## I repeat this procedure for all the districts of interest.
+perpawlocal &amp;lt;- subset(pawtucket,variable==&#39;local&#39;)
+perpawlocal[[&#39;value&#39;]] &amp;lt;- with(perpawlocal, (value/value[1])-1)
+names(perpawlocal) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+awlocal[[&#39;disname&#39;]]&amp;lt;-&#39;Pawtucket&#39;
+
+perprolocal &amp;lt;- subset(providence,variable==&#39;local&#39;)
+perprolocal[[&#39;value&#39;]] &amp;lt;- with(perprolocal, (value/value[1])-1)
+names(perprolocal) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perprolocal[[&#39;disname&#39;]]&amp;lt;-&#39;Providence&#39;
+
+perwwlocal &amp;lt;- subset(westwarwick, variable==&#39;local&#39;)
+perwwlocal[[&#39;value&#39;]] &amp;lt;- with(perwwlocal, (value/value[1])-1)
+names(perwwlocal) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perwwlocal[[&#39;disname&#39;]]&amp;lt;-&#39;West Warwick&#39;
+
+perrilocal &amp;lt;- subset(state,variable==&#39;local&#39;)
+perrilocal[[&#39;value&#39;]] &amp;lt;- with(perrilocal, (value/value[1])-1)
+names(perrilocal) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perrilocal[[&#39;disname&#39;]]&amp;lt;-&#39;State Average&#39;
+
+## The same process can be used for state data
+perwoonstate &amp;lt;- subset(woonsocket,variable==&#39;state&#39;)
+## Now I modify the value to be divided by the starting value - 100%
+perwoonstate[[&#39;value&#39;]] &amp;lt;- with(perwoonstate, (value/value[1])-1)
+## A little renaming for the combining step later
+names(perwoonstate) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perwoonstate[[&#39;disname&#39;]]&amp;lt;-&#39;Woonsocket&#39;
+
+## I repeat this procedure for all the districts of interest.
+perpawstate &amp;lt;- subset(pawtucket,variable==&#39;state&#39;)
+perpawstate[[&#39;value&#39;]] &amp;lt;- with(perpawstate, (value/value[1])-1)
+names(perpawstate) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perpawstate[[&#39;disname&#39;]]&amp;lt;-&#39;Pawtucket&#39;
+
+perprostate &amp;lt;- subset(providence,variable==&#39;state&#39;)
+perprostate[[&#39;value&#39;]] &amp;lt;- with(perprostate, (value/value[1])-1)
+names(perprostate) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perprostate[[&#39;disname&#39;]]&amp;lt;-&#39;Providence&#39;
+
+perwwstate &amp;lt;- subset(westwarwick, variable==&#39;state&#39;)
+perwwstate[[&#39;value&#39;]] &amp;lt;- with(perwwstate, (value/value[1])-1)
+names(perwwstate) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perwwstate[[&#39;disname&#39;]]&amp;lt;-&#39;West Warwick&#39;
+
+perristate &amp;lt;- subset(state,variable==&#39;state&#39;)
+perristate[[&#39;value&#39;]] &amp;lt;- with(perristate, (value/value[1])-1)
+names(perristate) &amp;lt;-c(&#39;year&#39;,&#39;disname&#39;,&#39;value&#39;)
+perristate[[&#39;disname&#39;]]&amp;lt;-&#39;State Average&#39;
+
+## Pull together the data sets for the overall picture.
+localfunding &amp;lt;- rbind(perwoonlocal, perpawlocal,perprolocal,perwwlocal,perrilocal)
+statefunding &amp;lt;- rbind(perwoonstate, perpawstate,perprostate,perwwstate,perristate)
+
+## A little ggplot2 line plot magic...
+localperplot &amp;lt;- ggplot(localfunding,aes(year, value, color=disname)) +
+                geom_line() +
+                geom_text(data=subset(localfunding, year==2009),
+                          mapping=aes(year,value,
+                                      label=paste(100*round(value,3),&#39;%&#39;,sep=&#39;&#39;)),
+                          vjust=-.4) +
+                scale_y_continuous(&#39;Percent Change from FY1995&#39;,
+                                   label=percent) +
+                scale_x_continuous(&#39;Year&#39;) +
+                opts(title=&#39;Percent Change in Local Per Pupil Revenue, FY1995-    FY2009&#39;) +
+                opts(plot.title=theme_text(size=16,face=&#39;bold&#39;)) +
+                opts(legend.title=theme_blank()) +
+                opts(legend.position=c(.08,.82))
+stateperplot &amp;lt;- ggplot(statefunding,aes(year, value, color=disname)) +
+                geom_line() +
+                geom_text(data=subset(statefunding, year==2008 | year==2009),
+                          mapping=aes(year,value,
+                          label=paste(100*round(value,3),&#39;%&#39;,sep=&#39;&#39;)),
+                          vjust=-.4) +
+                scale_y_continuous(&#39;Percent Change from FY1995&#39;,
+                                   label=percent) +
+                scale_x_continuous(&#39;Year&#39;) +
+                opts(title=&#39;Percent Change in State Per Pupil Revenue, FY1995-    FY2009&#39;) +
+                opts(plot.title=theme_text(size=16,face=&#39;bold&#39;)) +
+                opts(legend.title=theme_blank()) +
+                opts(legend.position=c(.08,.82))
+ggsave(&#39;localperplot.png&#39;,localperplot,width=10,height=8,units=&#39;in&#39;,dpi=72)
+ggsave(&#39;stateperplot.png&#39;,stateperplot,width=10,height=8,units=&#39;in&#39;,dpi=72)
+    
+## Proportion of Aid
+proportion &amp;lt;- function(data){
+  # This reshapes the data so that there is a year, local, and state column.
+  # The mean function has no purpose, because this data is unique by year
+  # variable combinations.
+  prop &amp;lt;- dcast(data,year~variable,mean)
+  # Adding local and state get our total non-federal dollars
+  prop[[&#39;total&#39;]] &amp;lt;- apply(prop[,2:3],1,sum)
+  prop[[&#39;perlocal&#39;]] &amp;lt;- with(prop, local/total)
+  prop
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Prepare new data frames for proportion graphs
+
+propwoon &amp;lt;- as.data.frame(c(disname=&#39;Woonsocket&#39;,
+                            proportion(woonsocket)))
+proppaw &amp;lt;- as.data.frame(c(disname=&#39;Pawtucket&#39;,
+                           proportion(pawtucket)))
+propprov &amp;lt;- as.data.frame(c(disname=&#39;Providence&#39;,
+                            proportion(providence)))
+propww &amp;lt;- as.data.frame(c(disname=&#39;West Warwick&#39;,
+                          proportion(westwarwick)))
+propri &amp;lt;- as.data.frame(c(disname=&#39;State Average&#39;,
+                          proportion(state)))
+
+## Note, I could have called proportion() inside of the rbind(), but I wanted
+## my code to be clearer and felt there may be some use for the independent
+## proportion data frames in further analysis. Sometimes more lines of code
+## and more objects is easier to maintain and more flexible for exploratory,
+## non-production code. This is especially true when handling such small
+## data sets that there is no impact on performance.
+
+locprop &amp;lt;- rbind(propwoon, proppaw,propprov,propww,propri)
+
+## Some ggplot2 magic time!
+
+localpropplot &amp;lt;- ggplot(locprop,aes(year, perlocal, color=disname)) +
+                 geom_line() +
+                 geom_text(data=subset(locprop, year==1995 | year==2008 |     year==2009),
+                           mapping=aes(year,perlocal,
+                           label=paste(100*round(perlocal,3),&#39;%&#39;,sep=&#39;&#39;)),
+                           vjust=-.4) +
+                 scale_y_continuous(&#39;Percent Change from FY1995&#39;,
+                                     label=percent) +
+                 scale_x_continuous(&#39;Year&#39;) +
+                 opts(title=&#39;Percent Change in Local Proportion of Per Pupil    Revenue\n Excluding Federal Funding, FY1995-FY2009&#39;) +
+                 opts(plot.title=theme_text(size=16,face=&#39;bold&#39;)) +
+                 opts(legend.title=theme_blank()) +
+                 opts(legend.position=c(.9,.65))
+ggsave(&#39;localpropplot.png&#39;,localpropplot,width=10,height=8,units=&#39;in&#39;,dpi=72)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;This post is the third of a three-part follow up on my &lt;a href=&#34;http://blogs.wpri.com/category/nesis-notes/&#34;&gt;guest post&lt;/a&gt; for Nesi&amp;rsquo;s Notes. Parts I and II can be found &lt;a href=&#34;|filename|follow-up-to-nesis-notes-guest-post-woonsocket-school-funding.md&#34;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

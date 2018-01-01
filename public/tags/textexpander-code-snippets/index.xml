@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/textexpander-code-snippets/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/textexpander-code-snippets/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,45 @@
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2013/05/cleaning-urls-with-textexpander/</guid>
-      <description>One thing I really dislike about Google Reader is it replaces the links to posts in my RSS feed. My Pinboard account is littered with links that start with http://feedproxy.google.com. I am quite concerned that with the demise of Google Reader on July 1, 2013, these redirects will no longer work.
-It&amp;rsquo;s not just Google that obscures the actually address of links on the internet. The popularity of using link shortening services, both to save characters on Twitter and to collect analytics, has proliferated the Internet of Redirects.</description>
+      <description>&lt;p&gt;One thing I really dislike about Google Reader is it replaces the links to posts in my RSS feed. My &lt;a href=&#34;http://pinboard.in/u:jasonpbecker&#34;&gt;Pinboard account&lt;/a&gt; is littered with links that start with &lt;code&gt;http://feedproxy.google.com&lt;/code&gt;. I am quite concerned that with the demise of &lt;a href=&#34;http://googlereader.blogspot.com/2013/03/powering-down-google-reader.html&#34;&gt;Google Reader&lt;/a&gt; on July 1, 2013, these redirects will no longer work.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s not just Google that obscures the actually address of links on the internet. The popularity of using link shortening services, both to save characters on Twitter and to collect analytics, has proliferated the &lt;em&gt;Internet of Redirects&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Worse still, after I am done cutting through redirects, I often find that the ultimate link include all kinds of extraneous attributes, most especially a barrage of &lt;code&gt;utm_*&lt;/code&gt; campaign tracking.&lt;/p&gt;
+
+&lt;p&gt;Now, I understand why all of this is happening and the importance of the services and analytics this link cruft provides. I am quite happy to click on shortened links, move through all the redirects, and let sites know just how I found them. But quite often, like when using a bookmarking service or writing a blog post, I just want the simple, plain text URL that gets me directly to the permanent home of the content.&lt;/p&gt;
+
+&lt;p&gt;One part of my workflow to deal with link cruft is a TextExpander snippet I call &lt;code&gt;cleanURL&lt;/code&gt;. It triggers a simple Python script that grabs the URL in my clipboard, traces through the redirects to the final destination, then strips links of campaign tracking attributes, and ultimately pastes a new URL that is much &amp;ldquo;cleaner&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Below I have provided the script. I hope it is useful to some other folks, and I would love some recommendations for additional &amp;ldquo;cleaning&amp;rdquo; that could be performed.&lt;/p&gt;
+
+&lt;p&gt;My next task is expanding this script to work with &lt;a href=&#34;http://pinboard.in&#34;&gt;Pinboard&lt;/a&gt; so that I can clean up all my links before the end of the month when Google Reader goes belly up.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::python
+#!/usr/bin/python
+import requests
+import sys
+from re import search
+from subprocess import check_output
+
+url = check_output(&#39;pbpaste&#39;)
+
+# Go through the redirects to get the destination URL
+r = requests.get(url)
+
+# Look for utm attributes
+match =  search(r&#39;[?&amp;amp;#]utm_&#39;, r.url)
+
+# Because I&#39;m not smart and trigger this with
+# already clean URLs
+if match:
+  cleanURL = r.url.split(match.group())[0]
+else:
+  cleanURL = r.url
+
+print cleanURL
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>

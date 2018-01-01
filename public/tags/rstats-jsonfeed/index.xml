@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/rstats-jsonfeed/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/rstats-jsonfeed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,12 @@
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
-      <description>I have not yet spent the time to figure out how to generate a JSON feed in Hugo yet. But I have built an R package to play with JSON feeds. It&amp;rsquo;s called jsonfeedr, and it&amp;rsquo;s silly simple.
-Maybe I&amp;rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about why JSON feed even exists. Working with JSON is fun and easy.</description>
+      <description>&lt;p&gt;I have not yet spent the time to figure out how to generate a &lt;a href=&#34;https://jsonfeed.org/&#34;&gt;JSON feed&lt;/a&gt; in Hugo yet. But I have built an R package to play with JSON feeds. It&amp;rsquo;s called &lt;a href=&#34;https://github.com/jsonbecker/jsonfeedr&#34;&gt;jsonfeedr&lt;/a&gt;, and it&amp;rsquo;s silly simple.&lt;/p&gt;
+
+&lt;p&gt;Maybe I&amp;rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about &lt;em&gt;why&lt;/em&gt; JSON feed even exists. Working with JSON is fun and easy. Working with XML is not.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I figured the guy who registered &lt;a href=&#34;http://json.blog&#34;&gt;json.blog&lt;/a&gt; should have a package out there working with JSON.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Jan 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/core-knowledge-blog-education-standardized-tests-teacher-evaluation-value-added-measures-vam/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/core-knowledge-blog-education-standardized-tests-teacher-evaluation-value-added-measures-vam/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,9 +17,29 @@
       <pubDate>Fri, 13 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2012/01/value-added-on-core-knowledge-blog---some-thoughts-on-chetty-friedman-and-rockoff/</guid>
-      <description>Jessica Lahey wrote an interesting post over on Core Knowledge Blog that I decided to comment on.
-After I read back my comment, I realized it would be worth copying over here as it&amp;rsquo;s own blog post.
-The most interesting part of the Chetty, Friedman, and Rockoff study is precisely the most banal- teachers who improve heir students learning as measured by increased achievement on tandardized tests also improve other more distant and relevant factors n children&amp;rsquo;s lives 1.</description>
+      <description>&lt;p&gt;Jessica Lahey wrote an &lt;a href=&#34;http://blog.coreknowledge.org/2012/01/12/what-is-the-value-in-a-high-value-added-teacher/&#34;&gt;interesting post&lt;/a&gt; over on &lt;a href=&#34;http://blog.coreknowledge.org/&#34;&gt;Core Knowledge Blog&lt;/a&gt; that I decided to comment on.&lt;/p&gt;
+
+&lt;p&gt;After I read back my comment, I realized it would be worth copying over here as it&amp;rsquo;s own blog post.&lt;/p&gt;
+
+&lt;p&gt;The most interesting part of the &lt;a href=&#34;http://www.economics.harvard.edu/faculty/chetty&#34;&gt;Chetty&lt;/a&gt;, &lt;a href=&#34;http://www.hks.harvard.edu/fs/jfriedm/&#34;&gt;Friedman&lt;/a&gt;, and &lt;a href=&#34;http://www0.gsb.columbia.edu/faculty/jrockoff/&#34;&gt;Rockoff&lt;/a&gt; &lt;a href=&#34;http://nber.org/papers/w17699&#34;&gt;study&lt;/a&gt; is precisely the most banal- teachers who improve heir students learning as measured by increased achievement on tandardized tests also improve other more distant and relevant factors n children&amp;rsquo;s lives &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;This seems obvious to anyone who isn&amp;rsquo;t vehemently anti-testing. For a large group of the anti-testing regime, there is considerable skepticism that the standardized testing intruments being used by states is a valid instrument for the “real” purposes of education. In fact, the line of thinking in this post is a close relative to this critique. Essentially, what is mathematically reliable is not necessarily valid for drawing conclusions.&lt;/p&gt;
+
+&lt;p&gt;CFR in a massive study essentially: 1) Added to a large research base that suggests that teachers can in fact have an impact on standardized test scores; 2) Demonstrate that the impact on standardized test scores are associated with broader, more distant, and, arguably, more important education outcomes; 3) These impacts are persistent throughout the lifetime of students.&lt;/p&gt;
+
+&lt;p&gt;While it does NOT make a great case for teacher dismissal based solely on VAM, like the authors are essentially claiming in popular coverage, it does continue to strengthen the case that standardized tests are relevant, reliable, and meaningful indicators of a successful education system. The impacts on social outcomes (teen pregnancy) and economic outcomes (later earnings) show a broad range of important outcomes we expect from schools are strongly associated with VAMs.&lt;/p&gt;
+
+&lt;p&gt;A good measure does not have to perfectly describe the intracacies of reality, it just has to give a rough, reasonable, and valid facsimile. CFR is just part of a growing tradition that shows there&amp;rsquo;s a good case for VAMs to be a part of that image.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Actually, I think that &lt;a href=&#34;http://schoolfinance101.wordpress.com/2012/01/07/fire-first-ask-questions-later-comments-on-recent-teacher-effectiveness-studies/&#34;&gt;Baker&lt;/a&gt;, &lt;a href=&#34;http://shankerblog.org/?p=4708&#34;&gt;Di Carlo&lt;/a&gt;, nd &lt;a href=&#34;http://shermandorn.com/wordpress/?p=4390&#34;&gt;Dorn&lt;/a&gt; are all probably right that the tests for biasness in VAMs or teachers are the most interesting part, but that&amp;rsquo;s purely from a geeky researcher perspective. I doubt that&amp;rsquo;ll have as much impact as ther portions of the paper, and probably rightfully so
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

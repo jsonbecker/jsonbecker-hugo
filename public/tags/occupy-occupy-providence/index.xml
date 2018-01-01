@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Oct 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/occupy-occupy-providence/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/occupy-occupy-providence/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,27 @@
       <pubDate>Sat, 15 Oct 2011 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2011/10/tea-party-and-occupy-wall-street/</guid>
-      <description>I wondered to myself If I could explain these two movements in a few sentences. Is this fair?
- The Taxed Enough Already (TEA) Party movement is a response to two large government spending packages, the &amp;ldquo;bailout&amp;rdquo; and the &amp;ldquo;stimulus&amp;rdquo; package. These people felt that it was inappropriate for the government spend taxpayer money (and foreign debt) in an attempt to prevent deeper economic damage from the collapse of the real estate bubble.</description>
+      <description>&lt;p&gt;I wondered to myself If I could explain these two movements in a few sentences. Is this fair?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Taxed Enough Already (TEA) Party movement is a response to two
+large government spending packages, the &amp;ldquo;bailout&amp;rdquo; and the &amp;ldquo;stimulus&amp;rdquo;
+package. These people felt that it was inappropriate for the
+government spend taxpayer money (and foreign debt) in an attempt to
+prevent deeper economic damage from the collapse of the real estate
+bubble.&lt;/p&gt;
+
+&lt;p&gt;The Occupy Wall Street movement is a response to the same two large
+government spending packages as well as the subsequently ineffectual
+American government during the first term of the Obama Presidency.
+These people are skeptical that the &amp;ldquo;bailout&amp;rdquo; and &amp;ldquo;stimulus&amp;rdquo; package
+addressed the challenges that the vast majority of Americans face
+every day in favor of addressing the needs of an elite economic and
+political class.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
     </item>
     
   </channel>

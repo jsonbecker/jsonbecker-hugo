@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Oct 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,46 @@
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
-      <description>Philip Elmer-DeWitt has suggested the iOS6 Maps debacle falls on the shoulders of Scott Forstall1. When I first read the piece, I felt like it was unfair to blame management for this kind of failure. In my experience, the Maps application is wonderful software. The turn-by-turn directions are elegant and beautiful. The vector-based maps load fast and use substantially less data. The reality is the Map app is great; the data are less so.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/philiped&#34;&gt;Philip Elmer-DeWitt&lt;/a&gt; has &lt;a href=&#34;http://tech.fortune.cnn.com/2012/09/29/does-apple-have-a-scott-forstall-problem/&#34;&gt;suggested&lt;/a&gt; the &lt;a href=&#34;http://theamazingios6maps.tumblr.com/&#34;&gt;iOS6 Maps debacle&lt;/a&gt; falls on the shoulders of &lt;a href=&#34;http://en.wikipedia.org/wiki/Scott_Forstall&#34;&gt;Scott Forstall&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. When I first read the piece, I felt like it was unfair to blame management for this kind of failure. In my experience, the Maps application is wonderful software. The turn-by-turn directions are elegant and beautiful. The vector-based maps load fast and use &lt;a href=&#34;http://www.loopinsight.com/2012/10/01/apple-maps-up-to-five-times-more-data-efficient-than-google-maps/&#34;&gt;substantially less data&lt;/a&gt;. The reality is the Map app is great; the data are less so.&lt;/p&gt;
+
+&lt;p&gt;Building great mapping data is no easy task. It takes years. &lt;a href=&#34;http://www.theatlantic.com/technology/archive/2012/09/how-google-builds-its-maps-and-what-it-means-for-the-future-of-everything/261913/&#34;&gt;It takes human intervention&lt;/a&gt;. It takes users. Short of a massive acquisition of an existing player, like Garmin, there was little hope of Apple developing a great map application for day one of release. Hell, in my experience, most stand alone GPS data is pretty awful in all the ways the Apple data is awful. That&amp;rsquo;s why I primarily used my iPhone as my GPS the last few years. The experience was consistently better and less frustrating. Perhaps even more critically, Apple is just not a data company. Google is the king of data. The skills required to build great geographic data simply doesn&amp;rsquo;t map well against previous Apple competencies. None of this means that the Apple Map situation is good or even &amp;ldquo;excusable&amp;rdquo;. I just think the map situation is &amp;ldquo;understandable&amp;rdquo; and would not be with different guidance.&lt;/p&gt;
+
+&lt;p&gt;But then I reevaluated and realized that there is a major way that management could have improved Apple Maps for iOS. Managers should set the bar for quality, make sure that bar is met, and adjust both resources and expectations when a project is not meeting user expectations. It must have been obvious to Apple management that the quality expectations were not going to be met.&lt;/p&gt;
+
+&lt;p&gt;What could Forstall have done? Some have suggested thrown substantially more money at the project. Others say he should have &amp;ldquo;&lt;a href=&#34;http://www.mondaynote.com/2012/09/23/apple-maps/&#34;&gt;winked&lt;/a&gt;&amp;rdquo; at Apple users and clearly signaled that Maps were in their infancy. And of course there were those who said he should have waited another year for the Google Maps contract to expire. John Gruber is &lt;a href=&#34;http://daringfireball.net/2012/09/timing_of_apples_map_switch&#34;&gt;rather convincing&lt;/a&gt; that simply waiting another year was not an option. Apple really couldn&amp;rsquo;t swap maps out of iOS in the middle of the OS cycle. It would be jarring and far more frustrating than the current situation.&lt;/p&gt;
+
+&lt;p&gt;I would have recommended a third option.&lt;/p&gt;
+
+&lt;p&gt;Apple should have released iOS6 Maps as US only.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;@&lt;a href=&#34;https://twitter.com/jdalrymple&#34;&gt;jdalrymple&lt;/a&gt; what if Apple execs realized it wasn&amp;rsquo;t going well &amp;amp;
+made maps US only &amp;amp; world in 6-12mo. Still had Google contract time
+for that&lt;/p&gt;
+
+&lt;p&gt;— Jason Becker (@jasonpbecker) &lt;a href=&#34;https://twitter.com/jasonpbecker/status/252128849469526017&#34;&gt;September 29, 2012&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One of the major themes of the iPhone 5 release was that this was a global phone. Global LTE, with day one [launches in more countries and reaches far more countries, faster, than ever before after that][]. In fact, the Verizon CDMA iPhone comes with an &lt;a href=&#34;http://www.theverge.com/2012/9/25/3405610/verizon-iphone-5-unlocked-open-access-fcc&#34;&gt;unlocked GSM radio&lt;/a&gt;. But mapping is hard, and that problem becomes orders of magnitude more difficult with each inch of the planet that needs to be covered. When it became clear that Apple had a beautiful application, but awful data, Forstall and the rest of Apple management should have adjusted expectations and promised a US-only release that met the quality that consumers have come to expect. This would serve to increase resources, while winking at users, and utilizing the remainder of the Google contract for international mapping. With six additional months Apple could make great strides improving international data and possibly signing some additional, high-profile maps data deals with local sources/competitors that would love to be associated with Apple, even if it is just in a footnote. US users would rave about the great vector mapping, the turn by turn directions that are brilliantly integrated into the lock screen and always provide just enough information, and the cool integration into Open Table and Yelp. US maps would get better because they would have constant users. The rest of the world would lap up iPhone 5s and wait anxiously for their chance to taste the Great Apple Maps.&lt;/p&gt;
+
+&lt;p&gt;In this scenario, it is possible that Apple could have had the best of both worlds: a far worse data set in an application that cost just as much, but by limiting the scope to their key market, a reputation for excellence that would lead to excitement for the end of a competitor&amp;rsquo;s product.&lt;/p&gt;
+
+&lt;p&gt;I am sure there were other challenges with producing a US-only&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;that I am not considering. I think this is at least one typical techniques in IT management that Apple could have employed for a smoother, better release of their first efforts into a complicated and competitive space.&lt;/p&gt;
+
+&lt;p&gt;[launches in more countries and reaches far more countries, faster,
+than ever before after that]: &lt;a href=&#34;http://appleinsider.com/articles/12/09/13/apples_aggressive_iphone_5_launch_schedule_to_reach_31_countries_in_sept_quarter&#34;&gt;http://appleinsider.com/articles/12/09/13/apples_aggressive_iphone_5_launch_schedule_to_reach_31_countries_in_sept_quarter&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Of &lt;a href=&#34;http://www.fastcodesign.com/1670760/will-apples-tacky-software-design-philosophy-cause-a-revolt&#34;&gt;iOS skeumorphism fame&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;Or North America only. There are barely any roads in Canada, right?
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>
