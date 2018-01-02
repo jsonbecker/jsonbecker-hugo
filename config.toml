@@ -3,5 +3,6 @@ languageCode = "en-us"
 title = "JSONBecker"
 theme = 'jsonbecker'
 [permalinks]
-post= "/:year/:month/:slug"
+  post = "/:year/:month/:slug"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+googleAnalytics=  "UA-40920108-1"
