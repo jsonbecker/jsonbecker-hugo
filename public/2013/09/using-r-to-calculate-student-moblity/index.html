@@ -380,7 +380,7 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
 
 <p>So <code>output</code> is being subset to only include those records that meet that condition, in other words, the students who should have a move because they entered the school year late.</p>
 
-<p>The second argument of <code>[</code> for <code>data.tables</code> is explained in this footnote <sup class="footnote-ref" id="fnref:increments"><a rel="footnote" href="#fn:increments">3</a></sup> if you&rsquo;re not familiar with it.</p>
+<p>The second argument of <code>[</code> for <code>data.tables</code> is explained in this footnote <sup class="footnote-ref" id="fnref:increments"><a rel="footnote" href="#fn:increments">2</a></sup> if you&rsquo;re not familiar with it.</p>
 
 <h3 id="recursion-which-is-also-known-as-recursion">Recursion. Which is also known as recursion.</h3>
 
@@ -458,8 +458,6 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
  <a class="footnote-return" href="#fnref:optimization"><sup>[return]</sup></a></li>
 <li id="fn:increments">I thought I was going to use <code>data.table</code> for some of its speedier features as I wrote this initial function. I didn&rsquo;t in this go (though I do in Version 2). However, I do find the <code>data.table</code> syntax for assigning values to be really convenient, particularly the <code>:=</code> operator which is common in several other languages. In <code>data.table</code>, the syntax <code>dt[,name:=value]</code> assigns <code>value</code> to an exist (or new) column called <code>name</code>. Because of the need <code>select</code> operator in <code>data.table</code>, I can just use <code>dt[id,moves:=moves+1L]</code> to select only the rows where the table <code>key</code>, in this case <code>sid</code>, matches <code>id</code>, and then increment <code>moves</code>. Nice.
  <a class="footnote-return" href="#fnref:increments"><sup>[return]</sup></a></li>
-<li id="fn:increments">I thought I was going to use <code>data.table</code> for some of its speedier features as I wrote this initial function. I didn&rsquo;t in this go (though I do in Version 2). However, I do find the <code>data.table</code> syntax for assigning values to be really convenient, particularly the <code>:=</code> operator which is common in several other languages. In <code>data.table</code>, the syntax <code>dt[,name:=value]</code> assigns <code>value</code> to an exist (or new) column called <code>name</code>. Because of the need <code>select</code> operator in <code>data.table</code>, I can just use <code>dt[id,moves:=moves+1L]</code> to select only the rows where the table <code>key</code>, in this case <code>sid</code>, matches <code>id</code>, and then increment <code>moves</code>. Nice.
- <a class="footnote-return" href="#fnref:increments"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
@@ -469,7 +467,15 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
   </div>
   <footer class = "license center">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-    
-    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', "UA-40920108-1", 'auto');
+  ga('send', 'pageview');
+</script>
+</footer>
     </body>
 </html>

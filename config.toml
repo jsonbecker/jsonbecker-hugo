@@ -5,4 +5,6 @@ theme = 'jsonbecker'
 [permalinks]
   post = "/:year/:month/:slug"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-googleAnalytics=  "UA-40920108-1"
+
+[params]
+  googleAnalytics=  "UA-40920108-1"
