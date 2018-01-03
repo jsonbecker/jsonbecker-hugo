@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code Markdown R Rstats Survey on JSONBecker</title>
-    <link>http://www.json.blog/tags/code-markdown-r-rstats-survey/</link>
+    <link>/tags/code-markdown-r-rstats-survey/</link>
     <description>Recent content in Code Markdown R Rstats Survey on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Aug 2012 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/code-markdown-r-rstats-survey/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/code-markdown-r-rstats-survey/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>There must be an easier way... survey questions in R</title>
-      <link>http://www.json.blog/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</link>
+      <link>/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</link>
       <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</guid>
+      <guid>/2012/08/there-must-be-an-easier-way...-survey-questions-in-r/</guid>
       <description>&lt;p&gt;So I have this great little custom function I&amp;rsquo;ve used when looking at survey data in R. I call this function &lt;code&gt;pull()&lt;/code&gt;. The goal of &lt;code&gt;pull()&lt;/code&gt; is to quickly produce frequency tables with n sizes from individual-level survey data.&lt;/p&gt;
 
 &lt;p&gt;Before using &lt;code&gt;pull()&lt;/code&gt;, I create a big table that includes information about the survey questions I want to pull. The data are structured like this:&lt;/p&gt;

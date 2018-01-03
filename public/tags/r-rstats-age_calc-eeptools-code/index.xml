@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Rstats Age_calc Eeptools Code on JSONBecker</title>
-    <link>http://www.json.blog/tags/r-rstats-age_calc-eeptools-code/</link>
+    <link>/tags/r-rstats-age_calc-eeptools-code/</link>
     <description>Recent content in R Rstats Age_calc Eeptools Code on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Dec 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/r-rstats-age_calc-eeptools-code/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/r-rstats-age_calc-eeptools-code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Calculating Age with Precision in R</title>
-      <link>http://www.json.blog/2013/12/calculating-age-with-precision-in-r/</link>
+      <link>/2013/12/calculating-age-with-precision-in-r/</link>
       <pubDate>Wed, 04 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/12/calculating-age-with-precision-in-r/</guid>
+      <guid>/2013/12/calculating-age-with-precision-in-r/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;
 &amp;gt; Turns out the original code below was pretty messed up. All kinds of little errors I didn&amp;rsquo;t catch. I&amp;rsquo;ve updated it below. There are a lot of options to refactor this further that I&amp;rsquo;m currently considering. Sometimes it is really hard to know just how flexible something this big really should be. I think I am going to wait until I start developing tests to see where I land. I have a feeling moving toward a more test-driven work flow is going to force me toward a different structure.&lt;/p&gt;
 
-&lt;p&gt;I recently updated the function I &lt;a href=&#34;http://www.json.blog/2013/06/calculating-age-in-r/&#34;&gt;posted&lt;/a&gt; about back in June that calculates the difference between two dates in days, months, or years in R. It is still surprising to me that &lt;code&gt;difftime&lt;/code&gt; can only return units from seconds up until weeks. I suspect this has to do with the challenge of properly defining a &amp;ldquo;month&amp;rdquo; or &amp;ldquo;year&amp;rdquo; as a unit of time, since these are variable.&lt;/p&gt;
+&lt;p&gt;I recently updated the function I &lt;a href=&#34;/2013/06/calculating-age-in-r/&#34;&gt;posted&lt;/a&gt; about back in June that calculates the difference between two dates in days, months, or years in R. It is still surprising to me that &lt;code&gt;difftime&lt;/code&gt; can only return units from seconds up until weeks. I suspect this has to do with the challenge of properly defining a &amp;ldquo;month&amp;rdquo; or &amp;ldquo;year&amp;rdquo; as a unit of time, since these are variable.&lt;/p&gt;
 
 &lt;p&gt;While there was nothing wrong with the original function, it did irk me that it always returned an integer. In other words, function returned only complete months or years. If the start date was on &lt;code&gt;2012-12-13&lt;/code&gt; and the end date was on &lt;code&gt;2013-12-03&lt;/code&gt;, the function would return &lt;code&gt;0&lt;/code&gt; years. Most of the time, this is the behavior I expect when calcuating age. But it is completely reasonable to want to include partial years or months, e.g. in the aforementioned example returning &lt;code&gt;0.9724605&lt;/code&gt;.&lt;/p&gt;
 
