@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Jsonfeed on JSONBecker</title>
-    <link>/tags/rstats-jsonfeed/</link>
+    <link>http://www.json.blog/tags/rstats-jsonfeed/</link>
     <description>Recent content in Rstats Jsonfeed on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/rstats-jsonfeed/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/rstats-jsonfeed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Announcing jsonfeedr, a new R package</title>
-      <link>/2017/06/announcing-jsonfeedr-a-new-r-package/</link>
+      <link>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</link>
       <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
+      <guid>http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/</guid>
       <description>&lt;p&gt;I have not yet spent the time to figure out how to generate a &lt;a href=&#34;https://jsonfeed.org/&#34;&gt;JSON feed&lt;/a&gt; in Hugo yet. But I have built an R package to play with JSON feeds. It&amp;rsquo;s called &lt;a href=&#34;https://github.com/jsonbecker/jsonfeedr&#34;&gt;jsonfeedr&lt;/a&gt;, and it&amp;rsquo;s silly simple.&lt;/p&gt;
 
 &lt;p&gt;Maybe I&amp;rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about &lt;em&gt;why&lt;/em&gt; JSON feed even exists. Working with JSON is fun and easy. Working with XML is not.&lt;/p&gt;

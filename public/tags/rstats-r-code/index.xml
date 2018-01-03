@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats R Code on JSONBecker</title>
-    <link>/tags/rstats-r-code/</link>
+    <link>http://www.json.blog/tags/rstats-r-code/</link>
     <description>Recent content in Rstats R Code on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/rstats-r-code/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/rstats-r-code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Calculating Age in R</title>
-      <link>/2013/06/calculating-age-in-r/</link>
+      <link>http://www.json.blog/2013/06/calculating-age-in-r/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/06/calculating-age-in-r/</guid>
+      <guid>http://www.json.blog/2013/06/calculating-age-in-r/</guid>
       <description>&lt;p&gt;A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data.&lt;/p&gt;
 
 &lt;p&gt;I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:wrote&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:wrote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;

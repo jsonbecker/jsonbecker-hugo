@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple Forstall Ios6 Management Maps Technology on JSONBecker</title>
-    <link>/tags/apple-forstall-ios6-management-maps-technology/</link>
+    <link>http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/</link>
     <description>Recent content in Apple Forstall Ios6 Management Maps Technology on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Oct 2012 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/apple-forstall-ios6-management-maps-technology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What Can Management Do? iOS6 Maps Monday-Morning Quarterbacking</title>
-      <link>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
+      <link>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
+      <guid>http://www.json.blog/2012/10/what-can-management-do-ios6-maps-monday-morning-quarterbacking/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/philiped&#34;&gt;Philip Elmer-DeWitt&lt;/a&gt; has &lt;a href=&#34;http://tech.fortune.cnn.com/2012/09/29/does-apple-have-a-scott-forstall-problem/&#34;&gt;suggested&lt;/a&gt; the &lt;a href=&#34;http://theamazingios6maps.tumblr.com/&#34;&gt;iOS6 Maps debacle&lt;/a&gt; falls on the shoulders of &lt;a href=&#34;http://en.wikipedia.org/wiki/Scott_Forstall&#34;&gt;Scott Forstall&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. When I first read the piece, I felt like it was unfair to blame management for this kind of failure. In my experience, the Maps application is wonderful software. The turn-by-turn directions are elegant and beautiful. The vector-based maps load fast and use &lt;a href=&#34;http://www.loopinsight.com/2012/10/01/apple-maps-up-to-five-times-more-data-efficient-than-google-maps/&#34;&gt;substantially less data&lt;/a&gt;. The reality is the Map app is great; the data are less so.&lt;/p&gt;
 
 &lt;p&gt;Building great mapping data is no easy task. It takes years. &lt;a href=&#34;http://www.theatlantic.com/technology/archive/2012/09/how-google-builds-its-maps-and-what-it-means-for-the-future-of-everything/261913/&#34;&gt;It takes human intervention&lt;/a&gt;. It takes users. Short of a massive acquisition of an existing player, like Garmin, there was little hope of Apple developing a great map application for day one of release. Hell, in my experience, most stand alone GPS data is pretty awful in all the ways the Apple data is awful. That&amp;rsquo;s why I primarily used my iPhone as my GPS the last few years. The experience was consistently better and less frustrating. Perhaps even more critically, Apple is just not a data company. Google is the king of data. The skills required to build great geographic data simply doesn&amp;rsquo;t map well against previous Apple competencies. None of this means that the Apple Map situation is good or even &amp;ldquo;excusable&amp;rdquo;. I just think the map situation is &amp;ldquo;understandable&amp;rdquo; and would not be with different guidance.&lt;/p&gt;

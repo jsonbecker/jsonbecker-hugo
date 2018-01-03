@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Assertr on JSONBecker</title>
-    <link>/tags/rstats-assertr/</link>
+    <link>http://www.json.blog/tags/rstats-assertr/</link>
     <description>Recent content in Rstats Assertr on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Apr 2017 21:19:30 +0000</lastBuildDate>
     
-        <atom:link href="/tags/rstats-assertr/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/rstats-assertr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Foreign Keys and assertr</title>
-      <link>/2017/04/foreign-keys-and-assertr/</link>
+      <link>http://www.json.blog/2017/04/foreign-keys-and-assertr/</link>
       <pubDate>Sun, 02 Apr 2017 21:19:30 +0000</pubDate>
       
-      <guid>/2017/04/foreign-keys-and-assertr/</guid>
+      <guid>http://www.json.blog/2017/04/foreign-keys-and-assertr/</guid>
       <description>
 
-&lt;p&gt;I have been fascinated with assertive programming in R since &lt;a href=&#34;/2015/07/news-on-assertions-in-r/&#34;&gt;this&lt;/a&gt; from 2015 &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:missing&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:missing&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Tony Fischetti wrote a &lt;a href=&#34;http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/&#34;&gt;great blog post&lt;/a&gt; to announce &lt;code&gt;assertr&lt;/code&gt; 2.0&amp;rsquo;s release on CRAN that really clarified the package&amp;rsquo;s design.&lt;/p&gt;
+&lt;p&gt;I have been fascinated with assertive programming in R since &lt;a href=&#34;http://www.json.blog/2015/07/news-on-assertions-in-r/&#34;&gt;this&lt;/a&gt; from 2015 &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:missing&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:missing&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Tony Fischetti wrote a &lt;a href=&#34;http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/&#34;&gt;great blog post&lt;/a&gt; to announce &lt;code&gt;assertr&lt;/code&gt; 2.0&amp;rsquo;s release on CRAN that really clarified the package&amp;rsquo;s design.&lt;/p&gt;
 
 &lt;p&gt;UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the &lt;code&gt;assertr&lt;/code&gt; package.&lt;/p&gt;
 
 &lt;h2 id=&#34;what-do-you-mean-foreign-key-constraints&#34;&gt;What do you mean, foreign key constraints?&lt;/h2&gt;
 
-&lt;p&gt;Well, in many ways this is an extension of my &lt;a href=&#34;/2016/12/a-gateway-drug-to-purrr/&#34;&gt;last post&lt;/a&gt; on using &lt;code&gt;purrr::reduce&lt;/code&gt;. I have a set of data with codes (like FIPS codes, or user ids, etc) and I want to make sure that all of those codes are &amp;ldquo;real&amp;rdquo; codes (as in I have a defintion for that value). So I may have a FIPS code &lt;code&gt;data.frame&lt;/code&gt; with &lt;code&gt;fips_code&lt;/code&gt; and &lt;code&gt;name&lt;/code&gt; as the columns or a user &lt;code&gt;data.frame&lt;/code&gt; with columns &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;fname&lt;/code&gt;, &lt;code&gt;lname&lt;/code&gt;, &lt;code&gt;email&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Well, in many ways this is an extension of my &lt;a href=&#34;http://www.json.blog/2016/12/a-gateway-drug-to-purrr/&#34;&gt;last post&lt;/a&gt; on using &lt;code&gt;purrr::reduce&lt;/code&gt;. I have a set of data with codes (like FIPS codes, or user ids, etc) and I want to make sure that all of those codes are &amp;ldquo;real&amp;rdquo; codes (as in I have a defintion for that value). So I may have a FIPS code &lt;code&gt;data.frame&lt;/code&gt; with &lt;code&gt;fips_code&lt;/code&gt; and &lt;code&gt;name&lt;/code&gt; as the columns or a user &lt;code&gt;data.frame&lt;/code&gt; with columns &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;fname&lt;/code&gt;, &lt;code&gt;lname&lt;/code&gt;, &lt;code&gt;email&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;In a database, I might have a foreign key constraint on my table that just has codes so that I could not create a row that uses an &lt;code&gt;id&lt;/code&gt; or &lt;code&gt;code&lt;/code&gt; value or whatever that did not exist in my lookup table. Of course in R, our data is disconnected and non-relational. New users may exist in my dataset that weren&amp;rsquo;t there the last time I downloaded the &lt;code&gt;users&lt;/code&gt; table, for example.&lt;/p&gt;
 
