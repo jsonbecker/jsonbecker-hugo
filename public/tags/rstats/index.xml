@@ -6,10 +6,83 @@
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack of Glue</title>
+      <link>http://www.json.blog/2018/01/stack-of-glue/</link>
+      <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2018/01/stack-of-glue/</guid>
+      <description>&lt;p&gt;I have some text, but I want the content of that text to be dynamic based on data. This is a case for string interpolation. Lots of languages have the ability to write something like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;pet = &amp;quot;dog&amp;quot;
+puts &amp;quot;This is my {#pet}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pet = &amp;quot;dog&amp;quot;
+print(f&amp;quot;This is my {pet}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There have been ways to do this in R, but I&amp;rsquo;ve mostly hated them until &lt;code&gt;glue&lt;/code&gt; came along. Using &lt;code&gt;glue&lt;/code&gt; in R should look really familiar now:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pet &amp;lt;- &amp;quot;dog&amp;quot;
+glue(&amp;quot;This is my {pet}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Awesome! Now I have a way to make text bend to my bidding using data. But this is pretty simple, and we could have just used something like &lt;code&gt;paste(&amp;quot;This is my&amp;quot;, pet)&lt;/code&gt; and been done with it.&lt;/p&gt;
+
+&lt;p&gt;Let me provide a little motivation in the form of &lt;code&gt;data.frame&lt;/code&gt;s, &lt;code&gt;glue_data&lt;/code&gt;, and some &lt;code&gt;purrr&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pretend we have a field in a database called &lt;code&gt;notes&lt;/code&gt;. I want to set the &lt;code&gt;notes&lt;/code&gt; for each entity to follow the same pattern, but use other data to fill in the blanks. Like maybe something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;notes &amp;lt;- &amp;quot;This item price is valid through {end_date} and will then increase {price_change} to {new_price}.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is a terrible contrived example, but we can imagine displaying this note to someone with different content for each item. Now in most scenarios, the right thing to do for an application is to produce this content dynamically based on what&amp;rsquo;s in the database, but let&amp;rsquo;s pretend no one looked far enough ahead to store this data or like notes can serve lots of different purposes using different data. So there is no place for the application to find &lt;code&gt;end_date&lt;/code&gt;, &lt;code&gt;price_change&lt;/code&gt;, or &lt;code&gt;new_price&lt;/code&gt; in its database. Instead, this was something prepared by sales in Excel yesterday and they want these notes added to all items to warn their customers.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s how to take a table that has &lt;code&gt;item_id&lt;/code&gt;, &lt;code&gt;end_date&lt;/code&gt;, &lt;code&gt;price_change&lt;/code&gt;, and &lt;code&gt;new_price&lt;/code&gt; as columns and turn it into a table with &lt;code&gt;item_id&lt;/code&gt;, and &lt;code&gt;notes&lt;/code&gt; as columns, with your properly formatted note for each item to be updated in a database.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(glue)
+library(purrr)
+
+item_notes &amp;lt;- data.frame(
+  item_id = seq_len(10),
+  end_date = c(rep(as.Date(&#39;2018-03-01&#39;, format = &#39;%Y-%m-%d&#39;), 5),
+               rep(as.Date(&#39;2018-03-05&#39;, format = &#39;%Y-%m-%d&#39;), 3),
+               rep(as.Date(&#39;2018-03-09&#39;, format = &#39;%Y-%m-%d&#39;), 2)),
+  price_change = sample(x = seq_len(5),replace = TRUE,size = 10),
+  new_price = sample(x = 10:20,replace = TRUE,size = 10)
+)
+
+template &amp;lt;- &amp;quot;This item price is valid through {end_date} and will then increase {price_change} to {new_price}.&amp;quot;
+
+map_chr(split(item_notes, item_notes$item_id), 
+    glue_data, 
+    template) %&amp;gt;% 
+stack() %&amp;gt;% 
+rename(item_id = ind,
+       notes = values)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What&amp;rsquo;s going on here? First, I want to apply my &lt;code&gt;glue&lt;/code&gt; technique to rows of a &lt;code&gt;data.frame&lt;/code&gt;,
+so I &lt;code&gt;split&lt;/code&gt; the data into a &lt;code&gt;list&lt;/code&gt; using &lt;code&gt;item_id&lt;/code&gt; as the identifier. That&amp;rsquo;s because at the end of all this I want to preserve that id to match back up in a database. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:rownames&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:rownames&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; The function &lt;code&gt;glue_data&lt;/code&gt; works like &lt;code&gt;glue&lt;/code&gt;, but it accepts things that are &amp;ldquo;listish&amp;rdquo; as it&amp;rsquo;s first argument (like &lt;code&gt;data.frames&lt;/code&gt; and named &lt;code&gt;lists&lt;/code&gt;). So with handy &lt;code&gt;map&lt;/code&gt; over my newly created &lt;code&gt;list&lt;/code&gt; of &amp;ldquo;listish&amp;rdquo; data, I create a named &lt;code&gt;list&lt;/code&gt; with the text I wanted to generate. I then use a base R function that&amp;rsquo;s new to me &lt;code&gt;stack&lt;/code&gt;, which will take a list and make each element a row in a &lt;code&gt;data.frame&lt;/code&gt; with &lt;code&gt;ind&lt;/code&gt; as the name of the &lt;code&gt;list&lt;/code&gt; element and &lt;code&gt;values&lt;/code&gt; as the value.&lt;/p&gt;
+
+&lt;p&gt;Now I&amp;rsquo;ve got a nice &lt;code&gt;data.frame&lt;/code&gt;, ready to be joined with any table that has &lt;code&gt;item_id&lt;/code&gt; so it can have the attached note!&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:rownames&#34;&gt;You can split on &lt;code&gt;row.names&lt;/code&gt; if you don&amp;rsquo;t have a similar identifer and just want to go from &lt;code&gt;data.frame&lt;/code&gt; to a &lt;code&gt;list&lt;/code&gt; of your rows.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:rownames&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Naming Manual Colors with ggplot2</title>
