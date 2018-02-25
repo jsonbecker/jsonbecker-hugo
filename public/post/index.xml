@@ -6,10 +6,52 @@
     <description>Recent content in Posts on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.json.blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I start my work in R</title>
+      <link>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</guid>
+      <description>
+
+&lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
+
+&lt;p&gt;At the start of every project, there&amp;rsquo;s a blinking cursor.&lt;/p&gt;
+
+&lt;p&gt;Actually, that&amp;rsquo;s almost never true for me. If I start staring at a blinking cursor, I&amp;rsquo;m almost guaranteed to keep looking at a blinking cursor, often for hours. The real work almost always starts weeks or months before I actually type anything. I think it&amp;rsquo;s easy for folks for whom their ultimate product is a bunch of code or an analysis report to undervalue that our work is creative. Writing a package or doing data analysis is still fundamentally creative work. We&amp;rsquo;re in the business of using computers to generate evidence to support insights into how things work. If all there was to it was a procedural search through models, then this would all have been automated already.&lt;/p&gt;
+
+&lt;p&gt;When I think, &amp;ldquo;How do I wish I could write my code to solves this problem?&amp;rdquo; I know that I am getting a great idea for a package. Often, I&amp;rsquo;m staring at a function I just wrote to make my work easier and start to think &amp;ldquo;This is still too specific to my work.&amp;rdquo; I can start to see the steps of generalizing my solution a little bit further. Then I start to see how further generalization of this function will require supporting scaffolding and steps that would have been valuable. I start to think through what other problems exist in data sets unlike my own or future data I expect to work with. And I ask myself again and again, &amp;ldquo;How do I wish I could write my code to solves this problem?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Data analysis almost always starts with an existing hypothesis of interest. My guiding thoughts are &amp;ldquo;What do I need to know to understand this data? What kind of evidence would convince me?&amp;rdquo; Sometimes the first thoughts are how I would model the data, but most of the time I begin to picture 2-3 data visualizations that would present the main results of my work. Nothing I produce is meant to convince an academic audience or even other data professionals of my results. Everything I make is about delivering value back to the folks who generate the data I use in the first place. I am trying to deliver value back to organizations by using data on their current work to inform future work. So my hypotheses are &amp;ldquo;What decisions are they making with this data? What decisions are they making without this data that should be informed by it? How can I analyze and present results to influence and improve both of these processes?&amp;rdquo; The answer to that is rarely a table of model specifications. But even if your audience is one of peer technical experts, I think it&amp;rsquo;s valuable to start with what someone should learn from your analysis and how can you present that most clearly and convincingly to that audience.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t rush this process. If you don&amp;rsquo;t know where you&amp;rsquo;re heading, it&amp;rsquo;s hard to do a good job getting there. That doesn&amp;rsquo;t mean that once I &lt;em&gt;do&lt;/em&gt; start writing code, I always know exactly what I am going to do. But I find it far easier to design the right data product if I have a few guiding light ideas of what I want to accomplish from the start.&lt;/p&gt;
+
+&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+
+&lt;p&gt;The next step is not writing code, but it may still happen in your code editor of choice. Once I have some concept of where I am headed, I start to write out my ideas for the project in a &lt;code&gt;README.md&lt;/code&gt; in a new RStudio project. Now is the time to describe who your work is for and how you expect them to interact with that work. Similar to something like a &amp;ldquo;project charter&amp;rdquo;, your README should talk about what the goals are for the project, what form the project will take (a package? an Rmd -&amp;gt; pdf report? a website? a model to be deployed into production for use in this part of the application?), and who the audience is for the end product. If you&amp;rsquo;re working with collaborators, this is a great way to level-set and build common understanding. If you&amp;rsquo;re not working with collaborators, this is a great way to articulate the scope of the project and hold yourself accountable to that scope. It also is helpful for communicating to managers, mentors, and others who may eventually interact with your work even if they will be less involved at the inception.&lt;/p&gt;
+
+&lt;p&gt;For a package, I would write out the primary functions you expect someone to interact with and how those functions interact with each other. Use your first README to specify that this package will have functions to get data from a source, process that data into a more easy to use format, validate that data prior to analysis, and produce common descriptive statistics and visuals that you&amp;rsquo;d want to produce before using that data set for something more complex. That&amp;rsquo;s just an example, but now you have the skeletons for your first functions: &lt;code&gt;fetch&lt;/code&gt;, &lt;code&gt;transform&lt;/code&gt;, &lt;code&gt;validate&lt;/code&gt;, and &lt;code&gt;describe&lt;/code&gt;. Maybe each of those functions will need multiple variants. Maybe &lt;code&gt;validate&lt;/code&gt; will get folded into a step at &lt;code&gt;fetch&lt;/code&gt;. You&amp;rsquo;re not guaranteed to get this stuff right from the start, but you&amp;rsquo;re far more likely to design a clear, clean API made with composable functions that each help with one part of the process if you think this through before writing your first function. Like I said earlier, I often think of writing a package when I look at one of my existing functions and realize I can generalize it further. Who among us hasn&amp;rsquo;t written a monster function that does all of the work of &lt;code&gt;fetch&lt;/code&gt;, &lt;code&gt;transform&lt;/code&gt;, &lt;code&gt;validate&lt;/code&gt;, and &lt;code&gt;describe&lt;/code&gt; all at once?&lt;/p&gt;
+
+&lt;h2 id=&#34;design-your-data&#34;&gt;Design Your Data&lt;/h2&gt;
+
+&lt;p&gt;I always write up a data model at the start of a new project. What are the main data entities I&amp;rsquo;ll be working with? What properties do I expect they will have? How do I expect them to relate to one another? Even when writing a package, I want to think about &amp;ldquo;What are the ideal inputs and outputs for this function?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Importantly, when what I have in mind is a visualization, I actually fake data and get things working in &lt;code&gt;ggplot&lt;/code&gt; or &lt;code&gt;highcharter&lt;/code&gt;, depending on what the final product will be. Why? I want to make sure the visual is compelling with a fairly realistic set of data. I also want to know how to organize my data to make that visualization easy to achieve. It helps me to define the output of my other work far more clearly.&lt;/p&gt;
+
+&lt;p&gt;In many cases, I want to store my data in a database, so I want to start with a simple design of the tables I expect to have, along with validity and referential constraints I want to apply. If I understand what data I will have, how it is related, what are valid values, and how and where I expect the data set to expand, I find it far easier to write useful functions and reproducible work. I think this is perhaps the most unique thing I do and it comes from spending a lot of time thinking about data architectures in general. If I&amp;rsquo;m analyzing school district data, I want to understand what district level properties and measures I&amp;rsquo;ll have, what school properties and measures I&amp;rsquo;ll have, what student property and measures I&amp;rsquo;ll have, what teacher properties and measures I&amp;rsquo;ll have, etc. Even if the analysis is coming from or will ultimately produce a single, flattened out, big rectangle of data, I crave &lt;a href=&#34;https://en.wikipedia.org/wiki/Database_normalization&#34;&gt;normality&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;make-files&#34;&gt;Make Files&lt;/h2&gt;
+
+&lt;p&gt;So now my README defines a purpose, it talks about how I expect someone to interact with my code or what outputs they should expect from the analysis, and has a description of the data to be used and how it&amp;rsquo;s organized. Only then do I start to write &lt;code&gt;.R&lt;/code&gt; files in my &lt;code&gt;R/&lt;/code&gt; directory. Even then I&amp;rsquo;m probably not writing code but instead pseudocode outlines of how I want things to work, or fake example data to be used later. I&amp;rsquo;m not much of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;test-driven development&lt;/a&gt; person, but the first code I write looks a lot like test data and basic functions that are meeting some test assertions. Here&amp;rsquo;s some small bit of data, can I pass it into this function and get what I want out? What if I create this failure state? What if I can&amp;rsquo;t assume column are right?&lt;/p&gt;
+
+&lt;p&gt;Writing code is far more fun when I know where I am heading. So that&amp;rsquo;s how I start my work.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Stack of Glue</title>

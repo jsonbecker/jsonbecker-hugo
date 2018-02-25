@@ -1,11 +1,7 @@
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.32.1" />
   <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
-  
-    <link href="http://www.json.blog/index.xml" rel="alternate" type="application/rss+xml" title="JSONBecker" />
-    <link href="http://www.json.blog/index.xml" rel="feed" type="application/rss+xml" title="JSONBecker" />
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
@@ -24,13 +20,8 @@
     </div>
   <div class = 'container'>
 
-  
 
-
-
-
-    
-        <div class = 'row post-title'>
+    <div class = 'row post-title'>
     <div class = 'col-12'>
       <h1>How I start my work in R</h1>
     <h6 class = "date">February 25, 2018</h6> 
@@ -76,125 +67,6 @@
     </div>
   </div>
 
-      <hr>
-    
-  
-
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Stack of Glue</h1>
-    <h6 class = "date">January 25, 2018</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2018/01/stack-of-glue/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      I have some text, but I want the content of that text to be dynamic based on data. This is a case for string interpolation. Lots of languages have the ability to write something like
-pet = &quot;dog&quot; puts &quot;This is my {#pet}&quot;  pet = &quot;dog&quot; print(f&quot;This is my {pet}&quot;)  There have been ways to do this in R, but I&rsquo;ve mostly hated them until glue came along. Using glue in R should look really familiar now:
-      
-        <h6 class="perma"><a href="/2018/01/stack-of-glue/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Naming Manual Colors with ggplot2</h1>
-    <h6 class = "date">January 03, 2018</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      I have been using ggplot2 for 7 years I think. In all that time, I&rsquo;ve been frustrated that I can never figure out what order to put my color values in for scale_*_manual. Not only is the order mapping seemingly random to me, I know that sometimes if I change something about how I&rsquo;m treating the data, the order switches up.
-Countless hours could have been saved if I knew that this one, in hindsight, obvious thing was possible.
-      
-        <h6 class="perma"><a href="/2018/01/naming-manual-colors-with-ggplot2/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>This Year in My R Code</h1>
-    <h6 class = "date">December 31, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/12/this-year-in-my-r-code/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and purrr everywhere.
-The End of S4 The first package I ever wrote extensively used S4 classes. I wanted to have the security of things like setValidity. I liked the idea of calling new as it felt more like class systems I was familiar with from that one semester of Java in college.
-      
-        <h6 class="perma"><a href="/2017/12/this-year-in-my-r-code/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>R, Docker, Circle, and Environments</h1>
-    <h6 class = "date">July 21, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/07/r-docker-circle-and-environments/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&rsquo;s nothing new for me. Almost all the work I&rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.
-      
-        <h6 class="perma"><a href="/2017/07/r-docker-circle-and-environments/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Announcing jsonfeedr, a new R package</h1>
-    <h6 class = "date">June 01, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/06/announcing-jsonfeedr-a-new-r-package/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      I have not yet spent the time to figure out how to generate a JSON feed in Hugo yet. But I have built an R package to play with JSON feeds. It&rsquo;s called jsonfeedr, and it&rsquo;s silly simple.
-Maybe I&rsquo;ll extend this in the future. I hope people will submit PRs to expand it. For now, I was inspired by all the talk about why JSON feed even exists. Working with JSON is fun and easy.
-      
-        <h6 class="perma"><a href="/2017/06/announcing-jsonfeedr-a-new-r-package/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-
-  <div class ="row">
-    <div class = "col-12">
-      
-      
-        <a href="/page/2/" style = "float: right;">
-          Next Page &rarr;
-        </a>
-      
-    </div>
-  </div>
   </div>
   <footer class = "license center">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
@@ -210,4 +82,3 @@ Maybe I&rsquo;ll extend this in the future. I hope people will submit PRs to exp
 </footer>
     </body>
 </html>
-
