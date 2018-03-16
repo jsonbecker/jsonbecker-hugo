@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>Expressiveness Counts</h1>
     <h6 class = "date">March 10, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/03/expressiveness-counts/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2014/03/expressiveness-counts/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -195,7 +195,7 @@ modal_person_attribute_dt &lt;- function(df, attribute){
 }
 </code></pre>
 
-<p>This approached seemed &ldquo;natural&rdquo; in <code>data.table</code>, although it took me a while to refine and debug since it was my first time using the package <sup class="footnote-ref" id="fnref:2012"><a rel="footnote" href="#fn:2012">1</a></sup>. Essentially, I use <code>rle</code>, a nifty function I used in the past for my <a href="{filename}/ranked-likert-scale-visualization.md">Net-Stacked Likert</a> code to count the number of instances of an attribute each student had in their record. I then subset the data to only the max count value for each student and merge these values back to the original data set. Then I order the data by student id and year in order to select only the last observation per student.</p>
+<p>This approached seemed &ldquo;natural&rdquo; in <code>data.table</code>, although it took me a while to refine and debug since it was my first time using the package <sup class="footnote-ref" id="fnref:2012"><a href="#fn:2012">1</a></sup>. Essentially, I use <code>rle</code>, a nifty function I used in the past for my <a href="{filename}/ranked-likert-scale-visualization.md">Net-Stacked Likert</a> code to count the number of instances of an attribute each student had in their record. I then subset the data to only the max count value for each student and merge these values back to the original data set. Then I order the data by student id and year in order to select only the last observation per student.</p>
 
 <p>I get a quick, accurate answer when I run the test data through this function. Unfortunately, when I ran the same code on approximately 57,000 unique student IDs and 211,000 total records, the results were less inspiring. My Macbook Air&rsquo;s fans spin up to full speed and timings are terrible:</p>
 

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats/</link>
+    <link>/tags/rstats/</link>
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I start my work in R</title>
-      <link>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</link>
+      <link>/2018/02/how-i-start-my-work-in-r/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</guid>
+      <guid>/2018/02/how-i-start-my-work-in-r/</guid>
       <description>
 
 &lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Stack of Glue</title>
-      <link>http://www.json.blog/2018/01/stack-of-glue/</link>
+      <link>/2018/01/stack-of-glue/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2018/01/stack-of-glue/</guid>
+      <guid>/2018/01/stack-of-glue/</guid>
       <description>&lt;p&gt;I have some text, but I want the content of that text to be dynamic based on data. This is a case for string interpolation. Lots of languages have the ability to write something like&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;pet = &amp;quot;dog&amp;quot;
@@ -111,7 +111,7 @@ rename(item_id = ind,
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;What&amp;rsquo;s going on here? First, I want to apply my &lt;code&gt;glue&lt;/code&gt; technique to rows of a &lt;code&gt;data.frame&lt;/code&gt;,
-so I &lt;code&gt;split&lt;/code&gt; the data into a &lt;code&gt;list&lt;/code&gt; using &lt;code&gt;item_id&lt;/code&gt; as the identifier. That&amp;rsquo;s because at the end of all this I want to preserve that id to match back up in a database. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:rownames&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:rownames&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; The function &lt;code&gt;glue_data&lt;/code&gt; works like &lt;code&gt;glue&lt;/code&gt;, but it accepts things that are &amp;ldquo;listish&amp;rdquo; as it&amp;rsquo;s first argument (like &lt;code&gt;data.frames&lt;/code&gt; and named &lt;code&gt;lists&lt;/code&gt;). So with handy &lt;code&gt;map&lt;/code&gt; over my newly created &lt;code&gt;list&lt;/code&gt; of &amp;ldquo;listish&amp;rdquo; data, I create a named &lt;code&gt;list&lt;/code&gt; with the text I wanted to generate. I then use a base R function that&amp;rsquo;s new to me &lt;code&gt;stack&lt;/code&gt;, which will take a list and make each element a row in a &lt;code&gt;data.frame&lt;/code&gt; with &lt;code&gt;ind&lt;/code&gt; as the name of the &lt;code&gt;list&lt;/code&gt; element and &lt;code&gt;values&lt;/code&gt; as the value.&lt;/p&gt;
+so I &lt;code&gt;split&lt;/code&gt; the data into a &lt;code&gt;list&lt;/code&gt; using &lt;code&gt;item_id&lt;/code&gt; as the identifier. That&amp;rsquo;s because at the end of all this I want to preserve that id to match back up in a database. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:rownames&#34;&gt;&lt;a href=&#34;#fn:rownames&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; The function &lt;code&gt;glue_data&lt;/code&gt; works like &lt;code&gt;glue&lt;/code&gt;, but it accepts things that are &amp;ldquo;listish&amp;rdquo; as it&amp;rsquo;s first argument (like &lt;code&gt;data.frames&lt;/code&gt; and named &lt;code&gt;lists&lt;/code&gt;). So with handy &lt;code&gt;map&lt;/code&gt; over my newly created &lt;code&gt;list&lt;/code&gt; of &amp;ldquo;listish&amp;rdquo; data, I create a named &lt;code&gt;list&lt;/code&gt; with the text I wanted to generate. I then use a base R function that&amp;rsquo;s new to me &lt;code&gt;stack&lt;/code&gt;, which will take a list and make each element a row in a &lt;code&gt;data.frame&lt;/code&gt; with &lt;code&gt;ind&lt;/code&gt; as the name of the &lt;code&gt;list&lt;/code&gt; element and &lt;code&gt;values&lt;/code&gt; as the value.&lt;/p&gt;
 
 &lt;p&gt;Now I&amp;rsquo;ve got a nice &lt;code&gt;data.frame&lt;/code&gt;, ready to be joined with any table that has &lt;code&gt;item_id&lt;/code&gt; so it can have the attached note!&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -128,10 +128,10 @@ so I &lt;code&gt;split&lt;/code&gt; the data into a &lt;code&gt;list&lt;/code&gt
     
     <item>
       <title>Naming Manual Colors with ggplot2</title>
-      <link>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</link>
+      <link>/2018/01/naming-manual-colors-with-ggplot2/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</guid>
+      <guid>/2018/01/naming-manual-colors-with-ggplot2/</guid>
       <description>&lt;p&gt;I have been using &lt;code&gt;ggplot2&lt;/code&gt; for 7 years I think. In all that time, I&amp;rsquo;ve been frustrated that I can never figure out what order to put my color values in for &lt;code&gt;scale_*_manual&lt;/code&gt;. Not only is the order mapping seemingly random to me, I know that sometimes if I change something about how I&amp;rsquo;m treating the data, the order switches up.&lt;/p&gt;
 
 &lt;p&gt;Countless hours could have been saved if I knew that this one, in hindsight, obvious thing was possible.&lt;/p&gt;
@@ -149,10 +149,10 @@ scale_blah_manual(values = c(good = &#39;green&#39;, bad = &#39;red&#39;))
     
     <item>
       <title>This Year in My R Code</title>
-      <link>http://www.json.blog/2017/12/this-year-in-my-r-code/</link>
+      <link>/2017/12/this-year-in-my-r-code/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/12/this-year-in-my-r-code/</guid>
+      <guid>/2017/12/this-year-in-my-r-code/</guid>
       <description>
 
 &lt;p&gt;Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and &lt;code&gt;purrr&lt;/code&gt; everywhere.&lt;/p&gt;
@@ -169,7 +169,7 @@ scale_blah_manual(values = c(good = &#39;green&#39;, bad = &#39;red&#39;))
 
 &lt;p&gt;I use SQL far more than R, but almost entirely as a consumer (e.g. &lt;code&gt;SELECT&lt;/code&gt; only). I&amp;rsquo;ve almost always directly used SQL for my queries into &lt;em&gt;other people&amp;rsquo;s data&lt;/em&gt;, but rarely ventured into the world of &lt;code&gt;INSERT&lt;/code&gt; or &lt;code&gt;UPDATE&lt;/code&gt; directly, preferring to use interfaces like &lt;code&gt;dbWriteTable&lt;/code&gt;. This gets back to imposter syndrome&amp;ndash; there&amp;rsquo;s so little damage that can be done with a &lt;code&gt;SELECT&lt;/code&gt; statement, but writing into databases I don&amp;rsquo;t control means taking on risk and responsiblity.&lt;/p&gt;
 
-&lt;p&gt;This year I said fuck it&amp;ndash; there&amp;rsquo;s a whole lot of work and complexity going on that&amp;rsquo;s entirely related to me not wanting to write &lt;code&gt;INSERT INTO&lt;/code&gt; a PostgreSQL has the amazing &lt;code&gt;ON CONFLICT...&lt;/code&gt;-based &amp;ldquo;upserts&amp;rdquo; now. So I started to write a lot of queries, some of them pretty complex &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:lateral&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:lateral&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. R is a great wrapper language, and it&amp;rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&amp;rsquo;s native table writing support is a little weak, there&amp;rsquo;s no problem at all just using &lt;code&gt;dbSendStatement&lt;/code&gt; with complex queries. I&amp;rsquo;ve fallen into a pattern I really like of writing temporary tables (with &lt;code&gt;dplyr::copy_to&lt;/code&gt; because it&amp;rsquo;s clean in a pipeline) and then executing complex SQL with &lt;code&gt;dbSendStatement&lt;/code&gt;. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).&lt;/p&gt;
+&lt;p&gt;This year I said fuck it&amp;ndash; there&amp;rsquo;s a whole lot of work and complexity going on that&amp;rsquo;s entirely related to me not wanting to write &lt;code&gt;INSERT INTO&lt;/code&gt; a PostgreSQL has the amazing &lt;code&gt;ON CONFLICT...&lt;/code&gt;-based &amp;ldquo;upserts&amp;rdquo; now. So I started to write a lot of queries, some of them pretty complex &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:lateral&#34;&gt;&lt;a href=&#34;#fn:lateral&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. R is a great wrapper language, and it&amp;rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&amp;rsquo;s native table writing support is a little weak, there&amp;rsquo;s no problem at all just using &lt;code&gt;dbSendStatement&lt;/code&gt; with complex queries. I&amp;rsquo;ve fallen into a pattern I really like of writing temporary tables (with &lt;code&gt;dplyr::copy_to&lt;/code&gt; because it&amp;rsquo;s clean in a pipeline) and then executing complex SQL with &lt;code&gt;dbSendStatement&lt;/code&gt;. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).&lt;/p&gt;
 
 &lt;h2 id=&#34;purrr&#34;&gt;purrr&lt;/h2&gt;
 
@@ -219,17 +219,17 @@ scale_blah_manual(values = c(good = &#39;green&#39;, bad = &#39;red&#39;))
     
     <item>
       <title>Functions as Arguments in R</title>
-      <link>http://www.json.blog/2017/05/functions-as-arguments-in-r/</link>
+      <link>/2017/05/functions-as-arguments-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/05/functions-as-arguments-in-r/</guid>
-      <description>&lt;p&gt;Sometimes, silly small things about code I write just delight me. There are &lt;a href=&#34;http://www.alexejgossmann.com/benchmarking_r/&#34;&gt;lots of ways to time things&lt;/a&gt; in R. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tictoc&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:tictoc&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Tools like &lt;code&gt;microbenchmark&lt;/code&gt; are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.&lt;/p&gt;
+      <guid>/2017/05/functions-as-arguments-in-r/</guid>
+      <description>&lt;p&gt;Sometimes, silly small things about code I write just delight me. There are &lt;a href=&#34;http://www.alexejgossmann.com/benchmarking_r/&#34;&gt;lots of ways to time things&lt;/a&gt; in R. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tictoc&#34;&gt;&lt;a href=&#34;#fn:tictoc&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Tools like &lt;code&gt;microbenchmark&lt;/code&gt; are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.&lt;/p&gt;
 
 &lt;p&gt;It is really easy to use calls to &lt;code&gt;Sys.time&lt;/code&gt; and &lt;code&gt;difftime&lt;/code&gt; when working interactively, but I didn&amp;rsquo;t want to pepper all of my code with the same log statements all over the place. So instead, I wrote a function.&lt;/p&gt;
 
 &lt;p&gt;Almost all of &lt;code&gt;timing&lt;/code&gt; is straightforward to even a novice R user. I record what time it is using &lt;code&gt;Sys.time&lt;/code&gt;, do a little formatting work to make things look the way I want for reading logs, and pass in an optional message.&lt;/p&gt;
 
-&lt;p&gt;The form of &lt;code&gt;timing&lt;/code&gt; was easy for me to sketch out: &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:realize&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:realize&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The form of &lt;code&gt;timing&lt;/code&gt; was easy for me to sketch out: &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:realize&#34;&gt;&lt;a href=&#34;#fn:realize&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;timing &amp;lt;- function(STUFF, msg = &#39;&#39;) {
   start_time &amp;lt;- format(Sys.time(), &#39;%a %b %d %X %Y&#39;)
@@ -300,10 +300,10 @@ Elapsed Time: 29 secs
     
     <item>
       <title>Labeling Data with purrr</title>
-      <link>http://www.json.blog/2017/03/labeling-data-with-purrr/</link>
+      <link>/2017/03/labeling-data-with-purrr/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr/</guid>
+      <guid>/2017/03/labeling-data-with-purrr/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:&lt;/p&gt;
 
 &lt;table&gt;
@@ -419,7 +419,7 @@ lookups$real_data &amp;lt;- read.csv(&#39;data/real_data.csv&#39;,
 real_data &amp;lt;- reduce_right(lookups, left_join)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Boom, now you went from data with attributes like &lt;code&gt;funds_code&lt;/code&gt;, &lt;code&gt;function_code&lt;/code&gt;, &lt;code&gt;state_code&lt;/code&gt; to data that also has &lt;code&gt;funds_name&lt;/code&gt;, &lt;code&gt;function_name&lt;/code&gt;, &lt;code&gt;state_name&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:namingconventions&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:namingconventions&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. What&amp;rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&amp;rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&amp;rsquo;t care at all.&lt;/p&gt;
+&lt;p&gt;Boom, now you went from data with attributes like &lt;code&gt;funds_code&lt;/code&gt;, &lt;code&gt;function_code&lt;/code&gt;, &lt;code&gt;state_code&lt;/code&gt; to data that also has &lt;code&gt;funds_name&lt;/code&gt;, &lt;code&gt;function_name&lt;/code&gt;, &lt;code&gt;state_name&lt;/code&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:namingconventions&#34;&gt;&lt;a href=&#34;#fn:namingconventions&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. What&amp;rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&amp;rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&amp;rsquo;t care at all.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 
 &lt;hr /&gt;
@@ -434,17 +434,17 @@ real_data &amp;lt;- reduce_right(lookups, left_join)
     
     <item>
       <title>Contributing to vegalite</title>
-      <link>http://www.json.blog/2017/03/contributing-to-vegalite/</link>
+      <link>/2017/03/contributing-to-vegalite/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/03/contributing-to-vegalite/</guid>
+      <guid>/2017/03/contributing-to-vegalite/</guid>
       <description>&lt;p&gt;One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor &lt;a href=&#34;https://www.github.com/leeper/rio&#34;&gt;rio&lt;/a&gt;. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.&lt;/p&gt;
 
 &lt;p&gt;I have been on the lookout for a Javascript powered interactive charting library since &lt;code&gt;ggvis&lt;/code&gt; was announced in 2014. But &lt;code&gt;ggvis&lt;/code&gt; seems to have stalled out in favor of other projects (for now) and the evolution of &lt;code&gt;rCharts&lt;/code&gt; into &lt;code&gt;htmlwidgets&lt;/code&gt; left me feeling like there were far too many options and no clear choices.&lt;/p&gt;
 
 &lt;p&gt;What I was looking for was a plotting library to make clean, attractive graphics with tool tips that came with clear documentation and virtually no knowledge of Javascript required. Frankly, all of the &lt;code&gt;htmlwidgets&lt;/code&gt; stuff was very intimidating. From my vantage point skimming blog posts and watching stuff come by on Twitter, &lt;code&gt;htmlwidgets&lt;/code&gt;-based projects all felt very much directed at Javascript polyglots.&lt;/p&gt;
 
-&lt;p&gt;Vega and Vega-Lite had a lot of the qualities I sought in a plotting library. Reading and writing JSON is very accessible compared to learning Javascript, especially with R&amp;rsquo;s excellent translation from lists to JSON. And although I know almost no Javascript, I found in both Vega and Vega-Lite easy to understand documents that felt a lot like building grammar of graphics &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:thegg&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:thegg&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; plots.&lt;/p&gt;
+&lt;p&gt;Vega and Vega-Lite had a lot of the qualities I sought in a plotting library. Reading and writing JSON is very accessible compared to learning Javascript, especially with R&amp;rsquo;s excellent translation from lists to JSON. And although I know almost no Javascript, I found in both Vega and Vega-Lite easy to understand documents that felt a lot like building grammar of graphics &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:thegg&#34;&gt;&lt;a href=&#34;#fn:thegg&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; plots.&lt;/p&gt;
 
 &lt;p&gt;So I decided to take the plunge&amp;ndash; there was a &lt;code&gt;vegalite&lt;/code&gt; &lt;a href=&#34;https://github.com/hrbrmstr/vegalite&#34;&gt;package&lt;/a&gt; and the examples didn&amp;rsquo;t look so bad. It was time to use my first &lt;code&gt;htmlwidgets&lt;/code&gt; package.&lt;/p&gt;
 
@@ -517,10 +517,10 @@ encode_color &amp;lt;- function(vl, ...) {
     
     <item>
       <title>News on Assertions in R</title>
-      <link>http://www.json.blog/2015/07/news-on-assertions-in-r/</link>
+      <link>/2015/07/news-on-assertions-in-r/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r/</guid>
+      <guid>/2015/07/news-on-assertions-in-r/</guid>
       <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){

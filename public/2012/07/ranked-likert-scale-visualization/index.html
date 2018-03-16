@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>Ranked Likert-Scale Visualization</h1>
     <h6 class = "date">July 10, 2012</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2012/07/ranked-likert-scale-visualization/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2012/07/ranked-likert-scale-visualization/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -38,9 +38,9 @@
 
 <p>A <a href="http://blog.ouseful.info/2012/07/09/fumblings-with-ranked-likert-scale-data-in-r/">recent post</a> I came across on <a href="http://www.r-bloggers.com/">r-bloggers</a> asked for input on visualizing ranked <a href="http://en.wikipedia.org/wiki/Likert_scale">Likert-scale data</a>.</p>
 
-<p>I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch. As I peeled away the layers of context-specific aspects of my nearing-production level code, I ran into all kinds of trouble. So I apologize for the somewhat sloppy and unfinished code<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+<p>I happen to be working on a substantial project using very similarly structured data so I thought I would share some code. In my efforts to be generic as possible, I decided to generate some fake data from scratch. As I peeled away the layers of context-specific aspects of my nearing-production level code, I ran into all kinds of trouble. So I apologize for the somewhat sloppy and unfinished code<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
-<p><img src="/img/rankedlikert.png" alt="Greaterthan" title="Example of a Net Stacked Likert" /> <sup class="footnote-ref" id="fnref:netstacked"><a rel="footnote" href="#fn:netstacked">2</a></sup></p>
+<p><img src="/img/rankedlikert.png" alt="Greaterthan" title="Example of a Net Stacked Likert" /> <sup class="footnote-ref" id="fnref:netstacked"><a href="#fn:netstacked">2</a></sup></p>
 
 <p>My preferred method for visualizing Likert-scale data from surveys is using <a href="http://www.organizationview.com/net-stacked-distribution-a-better-way-to-visualize-likert-data">net stacked distribution graphs</a>. There are two major benefits of these kinds of graphs. First, they immediately draw attention to <em>how strongly</em> respondents feel about a question, particularly when multiple questions are visualized at once. The total width of any bar is equal to the total number of responded who had a non-neutral answer. Second, these graphs make it very easy to distinguish between positive and negative responses. In some cases, it is critical to view the distribution of data to visualize the differences in responses to one question or another. However, most of the time it is informative enough to simply know how positive or negative responses are. I find this is particularly true with 3, 4, and 5-point Likert scales, the most common I come across in education research.</p>
 

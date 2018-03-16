@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rirsa Ri Pension on JSONBecker</title>
-    <link>http://www.json.blog/tags/rirsa-ri-pension/</link>
+    <link>/tags/rirsa-ri-pension/</link>
     <description>Recent content in Rirsa Ri Pension on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/rirsa-ri-pension/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/rirsa-ri-pension/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Economic Policy Institute is Wrong</title>
-      <link>http://www.json.blog/2013/06/economic-policy-institute-is-wrong/</link>
+      <link>/2013/06/economic-policy-institute-is-wrong/</link>
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/economic-policy-institute-is-wrong/</guid>
+      <guid>/2013/06/economic-policy-institute-is-wrong/</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;http://www.epi.org/&#34;&gt;Economic Policy Institute&lt;/a&gt; has release a &lt;a href=&#34;http://www.epi.org/files/2013/ib366-rhode-islands-hybrid-pension-plan.pdf&#34;&gt;short issue brief&lt;/a&gt; on the Rhode Island Retirement Security Act (RIRSA) by &lt;a href=&#34;https://twitter.com/rhiltnsmth&#34;&gt;Robert Hiltonsmith&lt;/a&gt; that manages to get all of the details right but the big picture entirely wrong.&lt;/p&gt;
 
 &lt;p&gt;The EPI Issue Brief details the differences between the retirement system for state workers before and after the passage of RIRSA as accurately and clearly as I have ever seen. Mr. Hiltonsmith has done a notable job explaining the differences between the new system and the old system.&lt;/p&gt;
@@ -47,7 +47,7 @@
 
 &lt;p&gt;I read that and expected to see evidence of skipped payments or a discussion of overly ambitious expectations for investment returns, etc. Instead, it seems that this conclusion is based simply on the fact that the benefits in Rhode Island were not deemed outrageously large, and therefore Rhode Island should just pay the liability hole. The &amp;ldquo;failure&amp;rdquo; here is predicated entirely on the idea that the pensions as offered should be met, period, whatever the cost to the government. This is the &amp;ldquo;required share&amp;rdquo;. Which, of course, is technically true without a change in the law, but feels disingenuous. It is essentially a wholesale agreement with the union interpretation of the state pension system as an immutable contract. The courts will likely resolve whether or not this is true. My objection is that Mr. Hiltonsmith makes a definitive statement on this rationale without describing it. In such a lucid description of how the retirement system has changed, it seems this could only be intentional omission intended to support a predetermined conclusion rather than illuminate the unconvinced.&lt;/p&gt;
 
-&lt;p&gt;Mr. Hiltonsmith also claims that, &amp;ldquo;Over the long term, RIRSA may cost the state upwards of \$15 million a year in additional contributions while providing a smaller benefit for the average full-career worker.&amp;rdquo; I am not 100% certain, but based on his use of the normal cost &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:normal-cost&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:normal-cost&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to do these calculations, it appears this conclusion is drawn only based on the marginal contributions to current employees. In other words, if we &lt;em&gt;completely ignore&lt;/em&gt; the existing liability, the new plan cost the state more money marginally while potentially decreasing benefits for employees. It is my opinion that Mr. Hiltonsmith is intentionally creating the perception that RIRSA costs more than the current plan while providing fewer benefits. Again, this is true for future liabilities, but ignores that RIRSA also dramatically decreased the unfunded liabilities through cutting existing retiree benefits. So the overall cost for the act is far less, while the marginal cost was increased with the objective of decreasing the instability in government appropriations.&lt;/p&gt;
+&lt;p&gt;Mr. Hiltonsmith also claims that, &amp;ldquo;Over the long term, RIRSA may cost the state upwards of \$15 million a year in additional contributions while providing a smaller benefit for the average full-career worker.&amp;rdquo; I am not 100% certain, but based on his use of the normal cost &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:normal-cost&#34;&gt;&lt;a href=&#34;#fn:normal-cost&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to do these calculations, it appears this conclusion is drawn only based on the marginal contributions to current employees. In other words, if we &lt;em&gt;completely ignore&lt;/em&gt; the existing liability, the new plan cost the state more money marginally while potentially decreasing benefits for employees. It is my opinion that Mr. Hiltonsmith is intentionally creating the perception that RIRSA costs more than the current plan while providing fewer benefits. Again, this is true for future liabilities, but ignores that RIRSA also dramatically decreased the unfunded liabilities through cutting existing retiree benefits. So the overall cost for the act is far less, while the marginal cost was increased with the objective of decreasing the instability in government appropriations.&lt;/p&gt;
 
 &lt;p&gt;We can have a serious debate about whether there is value in the state goals of a defined contribution plan. In my view, the purpose of switching to this structure is about:&lt;/p&gt;
 

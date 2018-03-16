@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Highered Mooc Edutech Education on JSONBecker</title>
-    <link>http://www.json.blog/tags/highered-mooc-edutech-education/</link>
+    <link>/tags/highered-mooc-edutech-education/</link>
     <description>Recent content in Highered Mooc Edutech Education on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/highered-mooc-edutech-education/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/highered-mooc-edutech-education/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Stubborn Problem with MOOCs</title>
-      <link>http://www.json.blog/2013/06/stubborn-problem-with-moocs/</link>
+      <link>/2013/06/stubborn-problem-with-moocs/</link>
       <pubDate>Wed, 05 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/stubborn-problem-with-moocs/</guid>
+      <guid>/2013/06/stubborn-problem-with-moocs/</guid>
       <description>
 
 &lt;p&gt;Kevin Carey has a &lt;a href=&#34;http://higheredwatch.newamerica.net/blogposts/2013/moocs_robots_and_the_secret_of_life-85293&#34;&gt;great new piece&lt;/a&gt; on his experience taking a Massive Open Online Course (MOOC). If you have any interest in blended learning, online education, and higher education policy, I would consider this a must read.&lt;/p&gt;
@@ -27,15 +27,15 @@
 
 &lt;p&gt;The implication for Carey is clear: online education done extremely well can be as effective as some university courses today, and most university courses tomorrow.&lt;/p&gt;
 
-&lt;p&gt;I agree that lectures in person are not better than online lectures. I also agree that intellectually stimulating conversation about content/material can happen online in forums, over video chats, using popular social networks, etc. I even agree that it is possible to do rigorous assessment in many domains &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:humanities&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:humanities&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. I am quite confident that a well-implemented MOOC could replace the typical college lecture course today on many campuses. The problem with MOOCs is not their ability to replicate the quality material aspects of a college course.&lt;/p&gt;
+&lt;p&gt;I agree that lectures in person are not better than online lectures. I also agree that intellectually stimulating conversation about content/material can happen online in forums, over video chats, using popular social networks, etc. I even agree that it is possible to do rigorous assessment in many domains &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:humanities&#34;&gt;&lt;a href=&#34;#fn:humanities&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. I am quite confident that a well-implemented MOOC could replace the typical college lecture course today on many campuses. The problem with MOOCs is not their ability to replicate the quality material aspects of a college course.&lt;/p&gt;
 
 &lt;h2 id=&#34;what-is-the-problem-with-moocs&#34;&gt;What is the Problem with MOOCs?&lt;/h2&gt;
 
-&lt;p&gt;Carey spent 15 hours a week watching lectures, working through problem sets, and communicating with fellow students to complete the course work with satisfactory outcomes. Think about the amount of perseverance it takes to work that hard independently from a computer in your home. There is an entire world of books and webpages dedicated to helping upperclass, knowledge economy employees work productively from their home offices because while some thrive, many struggle to be productive. Professionals find they have to be careful to close their doors, set clear boundaries with family members around work hours, put on a suit and a tie like they are going into work, and not use the office for non-work activities, to name a few techniques, to ensure they are productive working remotely &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:remote&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:remote&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Carey spent 15 hours a week watching lectures, working through problem sets, and communicating with fellow students to complete the course work with satisfactory outcomes. Think about the amount of perseverance it takes to work that hard independently from a computer in your home. There is an entire world of books and webpages dedicated to helping upperclass, knowledge economy employees work productively from their home offices because while some thrive, many struggle to be productive. Professionals find they have to be careful to close their doors, set clear boundaries with family members around work hours, put on a suit and a tie like they are going into work, and not use the office for non-work activities, to name a few techniques, to ensure they are productive working remotely &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:remote&#34;&gt;&lt;a href=&#34;#fn:remote&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;Non-traditional students, first-generation college students, and poor students are all likely to face challenges recreating effective work spaces. This is not a matter of bandwidth, quality computer access, or digital skills. All of these things are real challenges, but will disappear within the next decade. What&amp;rsquo;s not likely to change is the need for quiet, comfortable space to work seriously for hours on end, uninterrupted.&lt;/p&gt;
 
-&lt;p&gt;But these students will also miss out on another key part of what makes college an effective place for learning&amp;ndash; you&amp;rsquo;re in a place that&amp;rsquo;s dedicated to learning surrounded by people dedicated to the same pursuit. When you see people every day who are walking into class &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:toclass&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:toclass&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; there is a sense that you are a part of a learning community. There is a pressure to succeed because you see the hard work of your peers. I truly believe that making going to class and studying a habit is greatly supported by being surrounded by that habit. Look no further than group study areas and coffee shops around universities to see tons of students, outside of their dorms and in pop up communal office. This is true even at Research I universities, even among students who do not share classes. Those students know how to use forums, social networking, instant messages and more.&lt;/p&gt;
+&lt;p&gt;But these students will also miss out on another key part of what makes college an effective place for learning&amp;ndash; you&amp;rsquo;re in a place that&amp;rsquo;s dedicated to learning surrounded by people dedicated to the same pursuit. When you see people every day who are walking into class &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:toclass&#34;&gt;&lt;a href=&#34;#fn:toclass&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; there is a sense that you are a part of a learning community. There is a pressure to succeed because you see the hard work of your peers. I truly believe that making going to class and studying a habit is greatly supported by being surrounded by that habit. Look no further than group study areas and coffee shops around universities to see tons of students, outside of their dorms and in pop up communal office. This is true even at Research I universities, even among students who do not share classes. Those students know how to use forums, social networking, instant messages and more.&lt;/p&gt;
 
 &lt;p&gt;I am not saying that college is about unexpected collisions of people or ideas in some nebulous way. I mean quite literally that being a good student is partly possible because you&amp;rsquo;re surrounded by students.&lt;/p&gt;
 

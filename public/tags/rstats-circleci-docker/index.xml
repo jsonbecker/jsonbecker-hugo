@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats Circleci Docker on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-circleci-docker/</link>
+    <link>/tags/rstats-circleci-docker/</link>
     <description>Recent content in Rstats Circleci Docker on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/rstats-circleci-docker/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/rstats-circleci-docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R, Docker, Circle, and Environments</title>
-      <link>http://www.json.blog/2017/07/r-docker-circle-and-environments/</link>
+      <link>/2017/07/r-docker-circle-and-environments/</link>
       <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2017/07/r-docker-circle-and-environments/</guid>
+      <guid>/2017/07/r-docker-circle-and-environments/</guid>
       <description>
 
 &lt;p&gt;My latest project at work involves (surprise!) an R package that interacts with a database. For the most part, that&amp;rsquo;s nothing new for me. Almost all the work I&amp;rsquo;ve done in R in the last 7 years has interacted with databases in some way. What was new for this project is that the database would not be remote, but instead would be running alongside my code in a linked Docker container.&lt;/p&gt;
@@ -37,7 +37,7 @@
 
 &lt;h3 id=&#34;methods-for-s4&#34;&gt;Methods for S4&lt;/h3&gt;
 
-&lt;p&gt;The &lt;code&gt;methods&lt;/code&gt; package is not loaded using &lt;code&gt;Rscript -e&lt;/code&gt;, so if you use &lt;code&gt;S4&lt;/code&gt; classes make sure you call &lt;code&gt;library(methods);&lt;/code&gt; as part of your tests. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:methods&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:methods&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;methods&lt;/code&gt; package is not loaded using &lt;code&gt;Rscript -e&lt;/code&gt;, so if you use &lt;code&gt;S4&lt;/code&gt; classes make sure you call &lt;code&gt;library(methods);&lt;/code&gt; as part of your tests. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:methods&#34;&gt;&lt;a href=&#34;#fn:methods&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;environment-variables-and-r-cmd-check&#34;&gt;Environment Variables and R CMD check&lt;/h3&gt;
 

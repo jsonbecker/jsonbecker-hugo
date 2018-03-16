@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ggplot2 on JSONBecker</title>
-    <link>http://www.json.blog/tags/ggplot2/</link>
+    <link>/tags/ggplot2/</link>
     <description>Recent content in Ggplot2 on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Naming Manual Colors with ggplot2</title>
-      <link>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</link>
+      <link>/2018/01/naming-manual-colors-with-ggplot2/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</guid>
+      <guid>/2018/01/naming-manual-colors-with-ggplot2/</guid>
       <description>&lt;p&gt;I have been using &lt;code&gt;ggplot2&lt;/code&gt; for 7 years I think. In all that time, I&amp;rsquo;ve been frustrated that I can never figure out what order to put my color values in for &lt;code&gt;scale_*_manual&lt;/code&gt;. Not only is the order mapping seemingly random to me, I know that sometimes if I change something about how I&amp;rsquo;m treating the data, the order switches up.&lt;/p&gt;
 
 &lt;p&gt;Countless hours could have been saved if I knew that this one, in hindsight, obvious thing was possible.&lt;/p&gt;

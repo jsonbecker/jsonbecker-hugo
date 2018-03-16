@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats R Code on JSONBecker</title>
-    <link>http://www.json.blog/tags/rstats-r-code/</link>
+    <link>/tags/rstats-r-code/</link>
     <description>Recent content in Rstats R Code on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/rstats-r-code/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/rstats-r-code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Calculating Age in R</title>
-      <link>http://www.json.blog/2013/06/calculating-age-in-r/</link>
+      <link>/2013/06/calculating-age-in-r/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/calculating-age-in-r/</guid>
+      <guid>/2013/06/calculating-age-in-r/</guid>
       <description>&lt;p&gt;A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data.&lt;/p&gt;
 
-&lt;p&gt;I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:wrote&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:wrote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:wrote&#34;&gt;&lt;a href=&#34;#fn:wrote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;age_calc &amp;lt;- function(dob, enddate=Sys.Date(), units=&#39;months&#39;){
   if (!inherits(dob, &amp;quot;Date&amp;quot;) | !inherits(enddate, &amp;quot;Date&amp;quot;))
@@ -52,7 +52,7 @@
 &lt;li&gt;This function always returns an integer. Calculating age in years will never return, say, 26.2. Instead, it assumes that the correct behavior for age calculations is something like a &lt;code&gt;floor&lt;/code&gt; function. For examle, the function will only return 27 if &lt;code&gt;enddate&lt;/code&gt; is minimally your 27th birthday. Up until that day you are considered 26. The same is true for age in months.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This is probably the first custom function in almost 3 years using R that I wrote to be truly generalizable. I was inspired by three factors. First, this is a truly frequent task that I will have to apply to many data sets in the future that I don&amp;rsquo;t want to have to revisit. Second, a professional acquaintance, &lt;a href=&#34;http://jaredknowles.com/&#34;&gt;Jared Knowles&lt;/a&gt;, is putting together a CRAN package with various convenience functions for folks who are new to R and using it to analyze education data &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:https-github-com-jknowles-eeptools&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:https-github-com-jknowles-eeptools&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. This seemed like an appropriate addition to that package, so I wanted to write it to that standard. In fact, it was my first (and to date, only) submitted and accepted pull request on Github. Third, it is a tiny, simple function so it was easy to wrap my head around and write it well. I will let you be the judge of my success or failure &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inspiration&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:inspiration&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;This is probably the first custom function in almost 3 years using R that I wrote to be truly generalizable. I was inspired by three factors. First, this is a truly frequent task that I will have to apply to many data sets in the future that I don&amp;rsquo;t want to have to revisit. Second, a professional acquaintance, &lt;a href=&#34;http://jaredknowles.com/&#34;&gt;Jared Knowles&lt;/a&gt;, is putting together a CRAN package with various convenience functions for folks who are new to R and using it to analyze education data &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:https-github-com-jknowles-eeptools&#34;&gt;&lt;a href=&#34;#fn:https-github-com-jknowles-eeptools&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. This seemed like an appropriate addition to that package, so I wanted to write it to that standard. In fact, it was my first (and to date, only) submitted and accepted pull request on Github. Third, it is a tiny, simple function so it was easy to wrap my head around and write it well. I will let you be the judge of my success or failure &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inspiration&#34;&gt;&lt;a href=&#34;#fn:inspiration&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 
 &lt;hr /&gt;

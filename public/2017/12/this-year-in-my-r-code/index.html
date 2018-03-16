@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>This Year in My R Code</h1>
     <h6 class = "date">December 31, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/12/this-year-in-my-r-code/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2017/12/this-year-in-my-r-code/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -46,7 +46,7 @@
 
 <p>I use SQL far more than R, but almost entirely as a consumer (e.g. <code>SELECT</code> only). I&rsquo;ve almost always directly used SQL for my queries into <em>other people&rsquo;s data</em>, but rarely ventured into the world of <code>INSERT</code> or <code>UPDATE</code> directly, preferring to use interfaces like <code>dbWriteTable</code>. This gets back to imposter syndrome&ndash; there&rsquo;s so little damage that can be done with a <code>SELECT</code> statement, but writing into databases I don&rsquo;t control means taking on risk and responsiblity.</p>
 
-<p>This year I said fuck it&ndash; there&rsquo;s a whole lot of work and complexity going on that&rsquo;s entirely related to me not wanting to write <code>INSERT INTO</code> a PostgreSQL has the amazing <code>ON CONFLICT...</code>-based &ldquo;upserts&rdquo; now. So I started to write a lot of queries, some of them pretty complex <sup class="footnote-ref" id="fnref:lateral"><a rel="footnote" href="#fn:lateral">1</a></sup>. R is a great wrapper language, and it&rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&rsquo;s native table writing support is a little weak, there&rsquo;s no problem at all just using <code>dbSendStatement</code> with complex queries. I&rsquo;ve fallen into a pattern I really like of writing temporary tables (with <code>dplyr::copy_to</code> because it&rsquo;s clean in a pipeline) and then executing complex SQL with <code>dbSendStatement</code>. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).</p>
+<p>This year I said fuck it&ndash; there&rsquo;s a whole lot of work and complexity going on that&rsquo;s entirely related to me not wanting to write <code>INSERT INTO</code> a PostgreSQL has the amazing <code>ON CONFLICT...</code>-based &ldquo;upserts&rdquo; now. So I started to write a lot of queries, some of them pretty complex <sup class="footnote-ref" id="fnref:lateral"><a href="#fn:lateral">1</a></sup>. R is a great wrapper language, and it&rsquo;s database story is getting even better with the new DBI, odbc, and RPostgres packages. Although it&rsquo;s native table writing support is a little weak, there&rsquo;s no problem at all just using <code>dbSendStatement</code> with complex queries. I&rsquo;ve fallen into a pattern I really like of writing temporary tables (with <code>dplyr::copy_to</code> because it&rsquo;s clean in a pipeline) and then executing complex SQL with <code>dbSendStatement</code>. In the future, I might be inclined to make these database functions, but either way this change has been great. I feel more confident than ever working with databases and R (my two favorite places to be) and I have been able to simplify a whole lot of code that involved passing around text files (and boy do I hate the type inference and other madness that can happen with CSVs. Oy.).</p>
 
 <h2 id="purrr">purrr</h2>
 

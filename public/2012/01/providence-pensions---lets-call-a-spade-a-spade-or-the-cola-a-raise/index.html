@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,16 +25,16 @@
     <div class = 'col-12'>
       <h1>Providence Pensions-- Let&#39;s Call a Spade a Spade (or the COLA a Raise)</h1>
     <h6 class = "date">January 25, 2012</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2012/01/providence-pensions---lets-call-a-spade-a-spade-or-the-cola-a-raise/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       <p><a href="https://twitter.com/#!/tednesi">Ted Nesi</a> has done a pretty solid job tracing the <a href="http://www.wpri.com/dpp/news/local_news/providence/prov-pensions-hit-by-comedy-of-errors?2">history</a> of some awful decisions made by union-dominated boards that resulted in a significant number of retirees in the early-90s receiving 5% or 6% annually compounded interest on their retirement income. These are often called COLAs, or <a href="http://en.wikipedia.org/wiki/Cost-of-living_adjustment">cost-of-living adjustments</a>.</p>
 
-<p>Today, I am inspired by Nesi&rsquo;s <a href="http://blogs.wpri.com/2012/01/25/chart-the-decline-and-fall-of-the-providence-pension-system/">post</a> on the rapid decline of the Providence municipal pension fund health that occurred since 6% &ldquo;COLA&rdquo; was introduced in 1989 through today. You see, something has really been bugging me about the conversation on municipal pensions in Rhode Island. A true COLA is key to ensuring that purchasing power is maintained throughout retirement. Essentially, quality of life and ability to buy required goods should be consistent from the day you retire until the day you die. This is a goal that makes a lot of sense. But the cost of goods has not increased 5% or 6% year-over-year ever in the past twenty years <sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+<p>Today, I am inspired by Nesi&rsquo;s <a href="http://blogs.wpri.com/2012/01/25/chart-the-decline-and-fall-of-the-providence-pension-system/">post</a> on the rapid decline of the Providence municipal pension fund health that occurred since 6% &ldquo;COLA&rdquo; was introduced in 1989 through today. You see, something has really been bugging me about the conversation on municipal pensions in Rhode Island. A true COLA is key to ensuring that purchasing power is maintained throughout retirement. Essentially, quality of life and ability to buy required goods should be consistent from the day you retire until the day you die. This is a goal that makes a lot of sense. But the cost of goods has not increased 5% or 6% year-over-year ever in the past twenty years <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
-<p>So I chose a key moment in the history of Providence municipal pensions&ndash; a 1991 consent decree <sup class="footnote-ref" id="fnref:decree"><a rel="footnote" href="#fn:decree">2</a></sup> that then Mayor Buddy Cianci signed, solidifying and legitimizing the extremely high &ldquo;COLA&rdquo; for workers. I wanted to know, &ldquo;What would a worker retiring in the following year (1992) be making today if they retired with a \$25,000 annual pension and had a 6% &lsquo;COLA&rsquo;, 5% &lsquo;COLA&rsquo;, or a COLA based on the Northeast CPI-U?&rdquo; Not wanting to make a key mistake and <a href="http://en.wikipedia.org/wiki/Cost-of-living_adjustment#CPI_is_not_a_COLA">equate a CPI with a COLA</a>, I increased the CPI-U for each year by 25%, figuring that this is a reasonable approximation of the marginal taxes that would be paid on additional income by these retirees.</p>
+<p>So I chose a key moment in the history of Providence municipal pensions&ndash; a 1991 consent decree <sup class="footnote-ref" id="fnref:decree"><a href="#fn:decree">2</a></sup> that then Mayor Buddy Cianci signed, solidifying and legitimizing the extremely high &ldquo;COLA&rdquo; for workers. I wanted to know, &ldquo;What would a worker retiring in the following year (1992) be making today if they retired with a \$25,000 annual pension and had a 6% &lsquo;COLA&rsquo;, 5% &lsquo;COLA&rsquo;, or a COLA based on the Northeast CPI-U?&rdquo; Not wanting to make a key mistake and <a href="http://en.wikipedia.org/wiki/Cost-of-living_adjustment#CPI_is_not_a_COLA">equate a CPI with a COLA</a>, I increased the CPI-U for each year by 25%, figuring that this is a reasonable approximation of the marginal taxes that would be paid on additional income by these retirees.</p>
 
 <p>I suspected that 5% and 6% do not really result in a cost-of-living adjustment, but rather a clear wage increase for retired workers. I have no problem maintaining parity or near-parity with retirement level income, but there&rsquo;s absolute no reason someone who retired should receive a wage. My support for a true COLA is so strong that I made the adjustment for taxes on income!</p>
 
@@ -50,7 +50,7 @@
 
 <p>Over 20 years, an individual who has a 6% raise per year will have collected \$228,672 more than someone who had a COLA. An individual with a 5% raise per year will have collected \$135,681.10 over the same 20 year period.</p>
 
-<p>And of course, here&rsquo;s the code I used to produce the graph above in R<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">3</a></sup>:</p>
+<p>And of course, here&rsquo;s the code I used to produce the graph above in R<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">3</a></sup>:</p>
 
 <pre><code class="language-r">compound &lt;- function(start,rate,timespan){
   x &lt;- vector(mode = 'numeric', length = timespan)

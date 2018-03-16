@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,14 +25,14 @@
     <div class = 'col-12'>
       <h1>Using R to Calculate Student Moblity</h1>
     <h6 class = "date">September 23, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2013/09/using-r-to-calculate-student-moblity/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       
 
-<p>In a couple of previous posts, I outlined the importance of <a href="filename|documentation-of-business-rules-and-analysis.md">documenting business rules for common education statistics</a> and described my take on how to <a href="new-calculation-for-student-mobility.md">best calculate student mobility</a>. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. <sup class="footnote-ref" id="fnref:optimization"><a rel="footnote" href="#fn:optimization">1</a></sup> At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.</p>
+<p>In a couple of previous posts, I outlined the importance of <a href="filename|documentation-of-business-rules-and-analysis.md">documenting business rules for common education statistics</a> and described my take on how to <a href="new-calculation-for-student-mobility.md">best calculate student mobility</a>. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. <sup class="footnote-ref" id="fnref:optimization"><a href="#fn:optimization">1</a></sup> At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.</p>
 
 <h2 id="version-0-where-do-i-begin">Version 0: Where Do I Begin?</h2>
 
@@ -197,7 +197,7 @@ df &lt;- arrange(df, sid, enroll_date)
   }
 </code></pre>
 
-<p>The first bit of logic checks if <code>sid</code> in row <code>i</code> is not equal to the <code>sid</code> in the <code>i-1</code> row. In other words, is this the first time we are observing this student? If it is, then row <code>i</code> is the first observation for that student and therefore has the minimum enrollment date. The <code>enroll_date</code> is checked against <code>enrollby</code>. When <code>enroll_date</code> is after <code>enrollby</code>, then the <code>moves</code> attribute for that <code>sid</code> is incremented by 1. <sup class="footnote-ref" id="fnref:increments"><a rel="footnote" href="#fn:increments">2</a></sup></p>
+<p>The first bit of logic checks if <code>sid</code> in row <code>i</code> is not equal to the <code>sid</code> in the <code>i-1</code> row. In other words, is this the first time we are observing this student? If it is, then row <code>i</code> is the first observation for that student and therefore has the minimum enrollment date. The <code>enroll_date</code> is checked against <code>enrollby</code>. When <code>enroll_date</code> is after <code>enrollby</code>, then the <code>moves</code> attribute for that <code>sid</code> is incremented by 1. <sup class="footnote-ref" id="fnref:increments"><a href="#fn:increments">2</a></sup></p>
 
 <p>Now, I didn&rsquo;t really mention the conditional that <code>i&gt;1</code>. This is needed because there is no <code>i-1</code> observation for the very first row of the <code>data.table</code>. Therefore, <code>i==1</code> is a special case where we once again perform the same check for <code>enroll_date</code> and <code>enrollby</code>. The <code>i&gt;1</code> condition is before the <code>&amp;&amp;</code> operator, which ensures the statement after the <code>&amp;&amp;</code> is not evaluated when the first conditional is <code>FALSE</code>. This avoids an &ldquo;out of bounds&rdquo;-type error where R tries to check <code>df[0]</code>.</p>
 
@@ -380,7 +380,7 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
 
 <p>So <code>output</code> is being subset to only include those records that meet that condition, in other words, the students who should have a move because they entered the school year late.</p>
 
-<p>The second argument of <code>[</code> for <code>data.tables</code> is explained in this footnote <sup class="footnote-ref" id="fnref:increments"><a rel="footnote" href="#fn:increments">2</a></sup> if you&rsquo;re not familiar with it.</p>
+<p>The second argument of <code>[</code> for <code>data.tables</code> is explained in this footnote <sup class="footnote-ref" id="fnref:increments"><a href="#fn:increments">2</a></sup> if you&rsquo;re not familiar with it.</p>
 
 <h3 id="recursion-which-is-also-known-as-recursion">Recursion. Which is also known as recursion.</h3>
 

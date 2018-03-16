@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>Stack of Glue</h1>
     <h6 class = "date">January 25, 2018</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2018/01/stack-of-glue/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2018/01/stack-of-glue/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -82,7 +82,7 @@ rename(item_id = ind,
 </code></pre>
 
 <p>What&rsquo;s going on here? First, I want to apply my <code>glue</code> technique to rows of a <code>data.frame</code>,
-so I <code>split</code> the data into a <code>list</code> using <code>item_id</code> as the identifier. That&rsquo;s because at the end of all this I want to preserve that id to match back up in a database. <sup class="footnote-ref" id="fnref:rownames"><a rel="footnote" href="#fn:rownames">1</a></sup> The function <code>glue_data</code> works like <code>glue</code>, but it accepts things that are &ldquo;listish&rdquo; as it&rsquo;s first argument (like <code>data.frames</code> and named <code>lists</code>). So with handy <code>map</code> over my newly created <code>list</code> of &ldquo;listish&rdquo; data, I create a named <code>list</code> with the text I wanted to generate. I then use a base R function that&rsquo;s new to me <code>stack</code>, which will take a list and make each element a row in a <code>data.frame</code> with <code>ind</code> as the name of the <code>list</code> element and <code>values</code> as the value.</p>
+so I <code>split</code> the data into a <code>list</code> using <code>item_id</code> as the identifier. That&rsquo;s because at the end of all this I want to preserve that id to match back up in a database. <sup class="footnote-ref" id="fnref:rownames"><a href="#fn:rownames">1</a></sup> The function <code>glue_data</code> works like <code>glue</code>, but it accepts things that are &ldquo;listish&rdquo; as it&rsquo;s first argument (like <code>data.frames</code> and named <code>lists</code>). So with handy <code>map</code> over my newly created <code>list</code> of &ldquo;listish&rdquo; data, I create a named <code>list</code> with the text I wanted to generate. I then use a base R function that&rsquo;s new to me <code>stack</code>, which will take a list and make each element a row in a <code>data.frame</code> with <code>ind</code> as the name of the <code>list</code> element and <code>values</code> as the value.</p>
 
 <p>Now I&rsquo;ve got a nice <code>data.frame</code>, ready to be joined with any table that has <code>item_id</code> so it can have the attached note!</p>
 <div class="footnotes">

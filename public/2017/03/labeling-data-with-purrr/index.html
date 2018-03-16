@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>Labeling Data with purrr</h1>
     <h6 class = "date">March 03, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/03/labeling-data-with-purrr/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2017/03/labeling-data-with-purrr/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -145,7 +145,7 @@ lookups$real_data &lt;- read.csv('data/real_data.csv',
 real_data &lt;- reduce_right(lookups, left_join)
 </code></pre>
 
-<p>Boom, now you went from data with attributes like <code>funds_code</code>, <code>function_code</code>, <code>state_code</code> to data that also has <code>funds_name</code>, <code>function_name</code>, <code>state_name</code><sup class="footnote-ref" id="fnref:namingconventions"><a rel="footnote" href="#fn:namingconventions">1</a></sup>. What&rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&rsquo;t care at all.</p>
+<p>Boom, now you went from data with attributes like <code>funds_code</code>, <code>function_code</code>, <code>state_code</code> to data that also has <code>funds_name</code>, <code>function_name</code>, <code>state_name</code><sup class="footnote-ref" id="fnref:namingconventions"><a href="#fn:namingconventions">1</a></sup>. What&rsquo;s great is that this same code can be reused no matter how many fields require a hookup. I&rsquo;m oftent dealing with accounting data where the accounts are defined by a different number of data fields, but my code doesn&rsquo;t care at all.</p>
 <div class="footnotes">
 
 <hr />

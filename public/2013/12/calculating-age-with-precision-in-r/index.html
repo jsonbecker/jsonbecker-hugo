@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,7 +25,7 @@
     <div class = 'col-12'>
       <h1>Calculating Age with Precision in R</h1>
     <h6 class = "date">December 04, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/12/calculating-age-with-precision-in-r/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2013/12/calculating-age-with-precision-in-r/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -37,7 +37,7 @@
 
 <p>While there was nothing wrong with the original function, it did irk me that it always returned an integer. In other words, function returned only complete months or years. If the start date was on <code>2012-12-13</code> and the end date was on <code>2013-12-03</code>, the function would return <code>0</code> years. Most of the time, this is the behavior I expect when calcuating age. But it is completely reasonable to want to include partial years or months, e.g. in the aforementioned example returning <code>0.9724605</code>.</p>
 
-<p>So after several failed attempts because of silly errors in my algorithm, here is the final code. It will be released as part of <a href="https://github.com/jknowles/eeptools/">eeptools 0.3</a> which should be avialable on CRAN soon <sup class="footnote-ref" id="fnref:moves"><a rel="footnote" href="#fn:moves">1</a></sup>.</p>
+<p>So after several failed attempts because of silly errors in my algorithm, here is the final code. It will be released as part of <a href="https://github.com/jknowles/eeptools/">eeptools 0.3</a> which should be avialable on CRAN soon <sup class="footnote-ref" id="fnref:moves"><a href="#fn:moves">1</a></sup>.</p>
 
 <pre><code class="language-r">age_calc &lt;- function(dob, enddate=Sys.Date(), units='months', precise=TRUE){
   if (!inherits(dob, &quot;Date&quot;) | !inherits(enddate, &quot;Date&quot;)){

@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,18 +25,18 @@
     <div class = 'col-12'>
       <h1>Functions as Arguments in R</h1>
     <h6 class = "date">May 29, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/05/functions-as-arguments-in-r/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2017/05/functions-as-arguments-in-r/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
-      <p>Sometimes, silly small things about code I write just delight me. There are <a href="http://www.alexejgossmann.com/benchmarking_r/">lots of ways to time things</a> in R. <sup class="footnote-ref" id="fnref:tictoc"><a rel="footnote" href="#fn:tictoc">1</a></sup> Tools like <code>microbenchmark</code> are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.</p>
+      <p>Sometimes, silly small things about code I write just delight me. There are <a href="http://www.alexejgossmann.com/benchmarking_r/">lots of ways to time things</a> in R. <sup class="footnote-ref" id="fnref:tictoc"><a href="#fn:tictoc">1</a></sup> Tools like <code>microbenchmark</code> are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.</p>
 
 <p>It is really easy to use calls to <code>Sys.time</code> and <code>difftime</code> when working interactively, but I didn&rsquo;t want to pepper all of my code with the same log statements all over the place. So instead, I wrote a function.</p>
 
 <p>Almost all of <code>timing</code> is straightforward to even a novice R user. I record what time it is using <code>Sys.time</code>, do a little formatting work to make things look the way I want for reading logs, and pass in an optional message.</p>
 
-<p>The form of <code>timing</code> was easy for me to sketch out: <sup class="footnote-ref" id="fnref:realize"><a rel="footnote" href="#fn:realize">2</a></sup></p>
+<p>The form of <code>timing</code> was easy for me to sketch out: <sup class="footnote-ref" id="fnref:realize"><a href="#fn:realize">2</a></sup></p>
 
 <pre><code class="language-r">timing &lt;- function(STUFF, msg = '') {
   start_time &lt;- format(Sys.time(), '%a %b %d %X %Y')

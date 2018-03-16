@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,14 +25,14 @@
     <div class = 'col-12'>
       <h1>Foreign Keys and assertr</h1>
     <h6 class = "date">April 02, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/04/foreign-keys-and-assertr/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2017/04/foreign-keys-and-assertr/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       
 
-<p>I have been fascinated with assertive programming in R since <a href="/2015/07/news-on-assertions-in-r/">this</a> from 2015 <sup class="footnote-ref" id="fnref:missing"><a rel="footnote" href="#fn:missing">1</a></sup>. Tony Fischetti wrote a <a href="http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/">great blog post</a> to announce <code>assertr</code> 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.</p>
+<p>I have been fascinated with assertive programming in R since <a href="/2015/07/news-on-assertions-in-r/">this</a> from 2015 <sup class="footnote-ref" id="fnref:missing"><a href="#fn:missing">1</a></sup>. Tony Fischetti wrote a <a href="http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/">great blog post</a> to announce <code>assertr</code> 2.0&rsquo;s release on CRAN that really clarified the package&rsquo;s design.</p>
 
 <p>UseRs often do crazy things that no sane developer in another language would do. Today I decided to build a way to check foreign key constraints in R to help me learn the <code>assertr</code> package.</p>
 
@@ -131,7 +131,7 @@ attr(my_df, 'assertr_errors')
                         reduce(append)
 </code></pre>
 
-<p>Using <code>map</code>, I am able to call <code>is_valid_fk</code> on each of the columns in <code>data</code> that have a corresponding lookup table in <code>fk_list</code>. The valid values are <code>fk_list[[.x]][[id]]</code>, where <code>.x</code> is the name of the <code>data.frame</code> in <code>fk_list</code> (which corresponds to the name of the code we&rsquo;re looking up in <code>data</code> and exists for sure, thanks to that <code>verify</code> call) and <code>id</code> is the name of the key in that <code>data.frame</code> as stated earlier. I&rsquo;ve replaced <code>error_fun</code> and <code>success_fun</code> so that the code does not exist <code>map</code> as soon there are any problems. Instead, the data is returned for each assertion with the error attribute if one exists. <sup class="footnote-ref" id="fnref:memory"><a rel="footnote" href="#fn:memory">2</a></sup> Immediately, <code>map</code> is called on the resulting list of <code>data.frame</code>s to collect the <code>assertr_errors</code>, which are <code>reduce</code>d using <code>append</code> into a flattened list.</p>
+<p>Using <code>map</code>, I am able to call <code>is_valid_fk</code> on each of the columns in <code>data</code> that have a corresponding lookup table in <code>fk_list</code>. The valid values are <code>fk_list[[.x]][[id]]</code>, where <code>.x</code> is the name of the <code>data.frame</code> in <code>fk_list</code> (which corresponds to the name of the code we&rsquo;re looking up in <code>data</code> and exists for sure, thanks to that <code>verify</code> call) and <code>id</code> is the name of the key in that <code>data.frame</code> as stated earlier. I&rsquo;ve replaced <code>error_fun</code> and <code>success_fun</code> so that the code does not exist <code>map</code> as soon there are any problems. Instead, the data is returned for each assertion with the error attribute if one exists. <sup class="footnote-ref" id="fnref:memory"><a href="#fn:memory">2</a></sup> Immediately, <code>map</code> is called on the resulting list of <code>data.frame</code>s to collect the <code>assertr_errors</code>, which are <code>reduce</code>d using <code>append</code> into a flattened list.</p>
 
 <p>If there are no errors accumulated, <code>accumulated_errors</code> is <code>NULL</code>, and the function exits early.</p>
 

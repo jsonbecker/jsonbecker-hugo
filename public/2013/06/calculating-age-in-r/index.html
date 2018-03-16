@@ -13,7 +13,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -25,14 +25,14 @@
     <div class = 'col-12'>
       <h1>Calculating Age in R</h1>
     <h6 class = "date">June 12, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/06/calculating-age-in-r/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2013/06/calculating-age-in-r/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
     <div class = 'col-12'>
       <p>A few months back I wrote some code to calculate age from a date of birth and arbitrary end date. It is not a real tricky task, but it is certainly one that comes up often when doing research on individual-level data.</p>
 
-<p>I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote <sup class="footnote-ref" id="fnref:wrote"><a rel="footnote" href="#fn:wrote">1</a></sup>:</p>
+<p>I was a bit surprised to only find bits and pieces of code and advice on how to best go about this task. After reading through some old R-help and Stack Overflow responses on various ways to do date math in R, this is the function I wrote <sup class="footnote-ref" id="fnref:wrote"><a href="#fn:wrote">1</a></sup>:</p>
 
 <pre><code class="language-r">age_calc &lt;- function(dob, enddate=Sys.Date(), units='months'){
   if (!inherits(dob, &quot;Date&quot;) | !inherits(enddate, &quot;Date&quot;))
@@ -65,7 +65,7 @@
 <li>This function always returns an integer. Calculating age in years will never return, say, 26.2. Instead, it assumes that the correct behavior for age calculations is something like a <code>floor</code> function. For examle, the function will only return 27 if <code>enddate</code> is minimally your 27th birthday. Up until that day you are considered 26. The same is true for age in months.</li>
 </ul>
 
-<p>This is probably the first custom function in almost 3 years using R that I wrote to be truly generalizable. I was inspired by three factors. First, this is a truly frequent task that I will have to apply to many data sets in the future that I don&rsquo;t want to have to revisit. Second, a professional acquaintance, <a href="http://jaredknowles.com/">Jared Knowles</a>, is putting together a CRAN package with various convenience functions for folks who are new to R and using it to analyze education data <sup class="footnote-ref" id="fnref:https-github-com-jknowles-eeptools"><a rel="footnote" href="#fn:https-github-com-jknowles-eeptools">2</a></sup>. This seemed like an appropriate addition to that package, so I wanted to write it to that standard. In fact, it was my first (and to date, only) submitted and accepted pull request on Github. Third, it is a tiny, simple function so it was easy to wrap my head around and write it well. I will let you be the judge of my success or failure <sup class="footnote-ref" id="fnref:inspiration"><a rel="footnote" href="#fn:inspiration">3</a></sup>.</p>
+<p>This is probably the first custom function in almost 3 years using R that I wrote to be truly generalizable. I was inspired by three factors. First, this is a truly frequent task that I will have to apply to many data sets in the future that I don&rsquo;t want to have to revisit. Second, a professional acquaintance, <a href="http://jaredknowles.com/">Jared Knowles</a>, is putting together a CRAN package with various convenience functions for folks who are new to R and using it to analyze education data <sup class="footnote-ref" id="fnref:https-github-com-jknowles-eeptools"><a href="#fn:https-github-com-jknowles-eeptools">2</a></sup>. This seemed like an appropriate addition to that package, so I wanted to write it to that standard. In fact, it was my first (and to date, only) submitted and accepted pull request on Github. Third, it is a tiny, simple function so it was easy to wrap my head around and write it well. I will let you be the judge of my success or failure <sup class="footnote-ref" id="fnref:inspiration"><a href="#fn:inspiration">3</a></sup>.</p>
 <div class="footnotes">
 
 <hr />

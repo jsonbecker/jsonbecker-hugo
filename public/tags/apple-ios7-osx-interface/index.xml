@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple Ios7 Osx Interface on JSONBecker</title>
-    <link>http://www.json.blog/tags/apple-ios7-osx-interface/</link>
+    <link>/tags/apple-ios7-osx-interface/</link>
     <description>Recent content in Apple Ios7 Osx Interface on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 Jun 2013 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://www.json.blog/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/apple-ios7-osx-interface/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linear Thinking</title>
-      <link>http://www.json.blog/2013/06/linear-thinking/</link>
+      <link>/2013/06/linear-thinking/</link>
       <pubDate>Sun, 02 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://www.json.blog/2013/06/linear-thinking/</guid>
-      <description>&lt;p&gt;Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application &lt;a href=&#34;|filename|frictionless.md&#34;&gt;ecosystem&lt;/a&gt; has matured &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:viticci&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:viticci&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, the iOS sandboxing model has felt increasingly limiting and outdated.&lt;/p&gt;
+      <guid>/2013/06/linear-thinking/</guid>
+      <description>&lt;p&gt;Apple will be revealing new details for both of its major operating systems at WWDC on June 10, 2013. The focus of much speculation has been how Apple will improve multi-tasking and inter-app communication in iOS7. As batteries have grown, CPUs have become increasingly powerful, and the application &lt;a href=&#34;|filename|frictionless.md&#34;&gt;ecosystem&lt;/a&gt; has matured &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:viticci&#34;&gt;&lt;a href=&#34;#fn:viticci&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, the iOS sandboxing model has felt increasingly limiting and outdated.&lt;/p&gt;
 
 &lt;p&gt;I think that there is a simple change that could dramatically increase the effectiveness of multitasking on iOS by re-examining how application switching works.&lt;/p&gt;
 
-&lt;p&gt;Scrolling through a long list of applications, either through the basement shelf or via the four-finger gesture on an iPad, is both slow and lacking in contextual cues. In a simple case where I am working with two applications simultaneously, how do I switch between them? The list of open applications always places the current application in the first position. The previously used application sits in the second position. The first time I want to change to another application this is not so bad. I move to the &amp;ldquo;right&amp;rdquo; on the list to progress forward into the next application &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:next&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:next&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Scrolling through a long list of applications, either through the basement shelf or via the four-finger gesture on an iPad, is both slow and lacking in contextual cues. In a simple case where I am working with two applications simultaneously, how do I switch between them? The list of open applications always places the current application in the first position. The previously used application sits in the second position. The first time I want to change to another application this is not so bad. I move to the &amp;ldquo;right&amp;rdquo; on the list to progress forward into the next application &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:next&#34;&gt;&lt;a href=&#34;#fn:next&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;p&gt;The trouble comes when I want to return to where I was just working. The most natural mental model for this switch is to move &amp;ldquo;left&amp;rdquo; in the list. I moved &amp;ldquo;right&amp;rdquo; to get here and millions of years of evolution has taught me the the &amp;ldquo;undo button&amp;rdquo; for moving right is to move left &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inform7&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:inform7&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. But of course, when I attempt to move &amp;ldquo;left&amp;rdquo;, I find no destination &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:youcant&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:youcant&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. I can pop an application from anywhere on the list, but I can only prepend new applications to the list &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ignorant&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ignorant&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The trouble comes when I want to return to where I was just working. The most natural mental model for this switch is to move &amp;ldquo;left&amp;rdquo; in the list. I moved &amp;ldquo;right&amp;rdquo; to get here and millions of years of evolution has taught me the the &amp;ldquo;undo button&amp;rdquo; for moving right is to move left &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:inform7&#34;&gt;&lt;a href=&#34;#fn:inform7&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. But of course, when I attempt to move &amp;ldquo;left&amp;rdquo;, I find no destination &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:youcant&#34;&gt;&lt;a href=&#34;#fn:youcant&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. I can pop an application from anywhere on the list, but I can only prepend new applications to the list &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ignorant&#34;&gt;&lt;a href=&#34;#fn:ignorant&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;Apple needs to move away from its linear thinking and enter the second dimension.&lt;/p&gt;
 

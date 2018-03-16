@@ -1,11 +1,11 @@
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.32.1" />
+	<meta name="generator" content="Hugo 0.37.1" />
   <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
-    <link href="http://www.json.blog/index.xml" rel="alternate" type="application/rss+xml" title="JSONBecker" />
-    <link href="http://www.json.blog/index.xml" rel="feed" type="application/rss+xml" title="JSONBecker" />
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="JSONBecker" />
+    <link href="/index.xml" rel="feed" type="application/rss+xml" title="JSONBecker" />
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css">
@@ -17,7 +17,7 @@
     <div class = "title-bar">
       <h1 class = "title"> json.blog </h1>
       <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
+          <a href = "/">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
       </h3>
@@ -32,9 +32,74 @@
   
       <div class = 'row post-title'>
     <div class = 'col-12'>
+      <h1>A PostgreSQL Cheat Sheet for OSX and R</h1>
+    <h6 class = "date">January 23, 2015</h6> 
+    <h6 class = "perma"><a href = "/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      I keep this on my desktop.
+Install:
+brew install postgresql initdb /usr/local/var/postgres -E utf8 gem install lunchy ### Start postgres with lunchy mkdir -p ~/Library/LaunchAgents cp /usr/local/Cellar/postgresql/9.3.3/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/  Setup DB from SQL file:
+### Setup DB lunchy start postgres created $DBNAME psql -d $DBNAME -f '/path/to/file.sql' lunchy stop postgres  Starting and Stopping PostgreSQL
+lunchy start postgres lunchy stop postgres  may run into trouble with local socket… try this:
+      
+        <h6 class="perma"><a href="/2015/01/a-postgresql-cheat-sheet-for-osx-and-r/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>Taking Control</h1>
+    <h6 class = "date">January 11, 2015</h6> 
+    <h6 class = "perma"><a href = "/2015/01/taking-control/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      Severing My Daemon When I was in high school, I piggy-backed on a friend&rsquo;s website to host a page for my band. We could post pictures, show locations and dates, lyrics, and pretend like we produced music people cared about. It was mostly a fun way for me to play with the web and something to show folks when I said I played guitar and sang in a band. One day, my friend canceled his hosting.
+      
+        <h6 class="perma"><a href="/2015/01/taking-control/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
+      <h1>Amazon Creating A Services Marketplace Online</h1>
+    <h6 class = "date">November 28, 2014</h6> 
+    <h6 class = "perma"><a href = "/2014/11/amazon-creating-a-services-marketplace-online/">&infin;</a></h6>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class = 'col-12'>
+      A few thoughts:
+ This is a very interesting way to take advantage of a number of existing Amazon technologies&ndash;primarily their payment processing and review system. Services are an increasingly important part of the economy and is less subject to commoditization. This is Amazon dipping into a massive growth area by commoditizing discovery and payment. It also offloads some of the risk from both sides of the transaction. It&rsquo;s very bold, possibly brilliant.
+      
+        <h6 class="perma"><a href="/2014/11/amazon-creating-a-services-marketplace-online/">Read More&hellip;</a></h6>
+      
+    </div>
+    <hr>
+  </div>
+
+
+  
+  
+      <div class = 'row post-title'>
+    <div class = 'col-12'>
       <h1>The Power Of Sound</h1>
     <h6 class = "date">November 28, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/11/the-power-of-sound/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2014/11/the-power-of-sound/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -55,7 +120,7 @@ Watch that trailer. It has moments that look an awful lot like Star Wars&ndash; 
     <div class = 'col-12'>
       <h1>School Funding Reform, Hard Work and Fraught with Potential</h1>
     <h6 class = "date">November 19, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/">&infin;</a></h6>
+    <h6 class = "perma"><a href = "/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/">&infin;</a></h6>
     </div>
   </div>
   <div class = 'row'>
@@ -64,72 +129,6 @@ Watch that trailer. It has moments that look an awful lot like Star Wars&ndash; 
  I think it is worth contrasting the political realities of constructing school finance law with the need and justification for state funding of education in the first place.
       
         <h6 class="perma"><a href="/2014/11/school-funding-reform-hard-work-and-fraught-with-potential/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>How do we attract the best teachers to struggling schools?</h1>
-    <h6 class = "date">November 13, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      There are some basic facts about the teacher labor market that are inconvenient for many folks working to improve education. I am going to go through a few premises that I think should be broadly accepted and several lemma and contentions that I hope clarifies my own view on education resources and human capital management.
-Teaching in low performing schools is challenging.
-If I am looking for a job, all else being equal, I will generally not choose the more challenging one.
-      
-        <h6 class="perma"><a href="/2014/11/how-do-we-attract-the-best-teachers-to-struggling-schools/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>NaNo(Blo)WriMo</h1>
-    <h6 class = "date">November 02, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/11/nanoblowrimo/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      November marks the start of National Novel Writing Month (NaNoWriMo). The quick version is folks band together and support each other to write 50,000 words in November.
-I would love to write a novel one day. I am not sure I could do it well, but I am pretty sure I could hit 50,000-80,000 words if I dedicated time to tell a story.
-I don&rsquo;t have a story to tell.
-      
-        <h6 class="perma"><a href="/2014/11/nanoblowrimo/">Read More&hellip;</a></h6>
-      
-    </div>
-    <hr>
-  </div>
-
-
-  
-  
-      <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Growing Up in the Internet Hate Machine</h1>
-    <h6 class = "date">October 06, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/10/growing-up-in-the-internet-hate-machine/">&infin;</a></h6>
-    </div>
-  </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      A terrible thing is happening this year. Women all across the internet are finding themselves the target of violence, simply for existing. Women are being harassed for talking about video games, women are being harassed for talking about the technology industry, women are being harassed for talking, women are being harassed.
-A terrible thing is happening. Women are finding themselves the target of violence.
-A terrible thing has always happened.
-      
-        <h6 class="perma"><a href="/2014/10/growing-up-in-the-internet-hate-machine/">Read More&hellip;</a></h6>
       
     </div>
     <hr>
