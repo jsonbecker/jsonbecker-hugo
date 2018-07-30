@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on JSONBecker</title>
-    <link>/tags/rstats/</link>
+    <link>http://www.json.blog/tags/rstats/</link>
     <description>Recent content in Rstats on JSONBecker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.json.blog/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How I start my work in R</title>
-      <link>/2018/02/how-i-start-my-work-in-r/</link>
+      <link>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/02/how-i-start-my-work-in-r/</guid>
+      <guid>http://www.json.blog/2018/02/how-i-start-my-work-in-r/</guid>
       <description>
 
 &lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Stack of Glue</title>
-      <link>/2018/01/stack-of-glue/</link>
+      <link>http://www.json.blog/2018/01/stack-of-glue/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/stack-of-glue/</guid>
+      <guid>http://www.json.blog/2018/01/stack-of-glue/</guid>
       <description>&lt;p&gt;I have some text, but I want the content of that text to be dynamic based on data. This is a case for string interpolation. Lots of languages have the ability to write something like&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;pet = &amp;quot;dog&amp;quot;
@@ -128,10 +128,10 @@ so I &lt;code&gt;split&lt;/code&gt; the data into a &lt;code&gt;list&lt;/code&gt
     
     <item>
       <title>Naming Manual Colors with ggplot2</title>
-      <link>/2018/01/naming-manual-colors-with-ggplot2/</link>
+      <link>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/naming-manual-colors-with-ggplot2/</guid>
+      <guid>http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/</guid>
       <description>&lt;p&gt;I have been using &lt;code&gt;ggplot2&lt;/code&gt; for 7 years I think. In all that time, I&amp;rsquo;ve been frustrated that I can never figure out what order to put my color values in for &lt;code&gt;scale_*_manual&lt;/code&gt;. Not only is the order mapping seemingly random to me, I know that sometimes if I change something about how I&amp;rsquo;m treating the data, the order switches up.&lt;/p&gt;
 
 &lt;p&gt;Countless hours could have been saved if I knew that this one, in hindsight, obvious thing was possible.&lt;/p&gt;
@@ -149,10 +149,10 @@ scale_blah_manual(values = c(good = &#39;green&#39;, bad = &#39;red&#39;))
     
     <item>
       <title>This Year in My R Code</title>
-      <link>/2017/12/this-year-in-my-r-code/</link>
+      <link>http://www.json.blog/2017/12/this-year-in-my-r-code/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/12/this-year-in-my-r-code/</guid>
+      <guid>http://www.json.blog/2017/12/this-year-in-my-r-code/</guid>
       <description>
 
 &lt;p&gt;Looking back on 2017, there were three major trends in my R code: the end of S4, directly writing to SQL database, and &lt;code&gt;purrr&lt;/code&gt; everywhere.&lt;/p&gt;
@@ -219,10 +219,10 @@ scale_blah_manual(values = c(good = &#39;green&#39;, bad = &#39;red&#39;))
     
     <item>
       <title>Functions as Arguments in R</title>
-      <link>/2017/05/functions-as-arguments-in-r/</link>
+      <link>http://www.json.blog/2017/05/functions-as-arguments-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/functions-as-arguments-in-r/</guid>
+      <guid>http://www.json.blog/2017/05/functions-as-arguments-in-r/</guid>
       <description>&lt;p&gt;Sometimes, silly small things about code I write just delight me. There are &lt;a href=&#34;http://www.alexejgossmann.com/benchmarking_r/&#34;&gt;lots of ways to time things&lt;/a&gt; in R. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:tictoc&#34;&gt;&lt;a href=&#34;#fn:tictoc&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Tools like &lt;code&gt;microbenchmark&lt;/code&gt; are great for profiling code, but what I do all the time is log how long database queries that are scheduled to run each night are taking.&lt;/p&gt;
 
 &lt;p&gt;It is really easy to use calls to &lt;code&gt;Sys.time&lt;/code&gt; and &lt;code&gt;difftime&lt;/code&gt; when working interactively, but I didn&amp;rsquo;t want to pepper all of my code with the same log statements all over the place. So instead, I wrote a function.&lt;/p&gt;
@@ -300,10 +300,10 @@ Elapsed Time: 29 secs
     
     <item>
       <title>Labeling Data with purrr</title>
-      <link>/2017/03/labeling-data-with-purrr/</link>
+      <link>http://www.json.blog/2017/03/labeling-data-with-purrr/</link>
       <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/labeling-data-with-purrr/</guid>
+      <guid>http://www.json.blog/2017/03/labeling-data-with-purrr/</guid>
       <description>&lt;p&gt;Here&amp;rsquo;s a fun common task. I have a data set that has a bunch of codes like:&lt;/p&gt;
 
 &lt;table&gt;
@@ -434,10 +434,10 @@ real_data &amp;lt;- reduce_right(lookups, left_join)
     
     <item>
       <title>Contributing to vegalite</title>
-      <link>/2017/03/contributing-to-vegalite/</link>
+      <link>http://www.json.blog/2017/03/contributing-to-vegalite/</link>
       <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/contributing-to-vegalite/</guid>
+      <guid>http://www.json.blog/2017/03/contributing-to-vegalite/</guid>
       <description>&lt;p&gt;One of my goals for 2017 is to contribute more to the R open source community. At the beginning of last year, I spent a little time helping to refactor &lt;a href=&#34;https://www.github.com/leeper/rio&#34;&gt;rio&lt;/a&gt;. It was one of the more rewarding things I did in all of 2016. It wasn&amp;rsquo;t a ton of work, and I feel like I gained a lot of confidence in writing R packages and using S3 methods. I wrote code that R users download and use thousands of times a month.&lt;/p&gt;
 
 &lt;p&gt;I have been on the lookout for a Javascript powered interactive charting library since &lt;code&gt;ggvis&lt;/code&gt; was announced in 2014. But &lt;code&gt;ggvis&lt;/code&gt; seems to have stalled out in favor of other projects (for now) and the evolution of &lt;code&gt;rCharts&lt;/code&gt; into &lt;code&gt;htmlwidgets&lt;/code&gt; left me feeling like there were far too many options and no clear choices.&lt;/p&gt;
@@ -517,10 +517,10 @@ encode_color &amp;lt;- function(vl, ...) {
     
     <item>
       <title>News on Assertions in R</title>
-      <link>/2015/07/news-on-assertions-in-r/</link>
+      <link>http://www.json.blog/2015/07/news-on-assertions-in-r/</link>
       <pubDate>Sun, 05 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/07/news-on-assertions-in-r/</guid>
+      <guid>http://www.json.blog/2015/07/news-on-assertions-in-r/</guid>
       <description>&lt;p&gt;How many times have you written R functions that start with a bunch of code that looks like this?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_funct &amp;lt;- function(dob, enddate = &amp;quot;2015-07-05&amp;quot;){
