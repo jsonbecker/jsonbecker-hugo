@@ -1,26 +1,15 @@
 {{ partial "header.html" . }}  
 
-{{ $paginator := .Paginate (after 1 .Site.Pages) 5 }}
-
-{{ if not .Paginator.HasPrev }}
-  {{- range first 1 .Site.Pages }}
-    {{ if eq .Type "post" }}
-      {{ partial "idx_post.html" . }}
-      <hr>
-    {{- end }}
-    {{ if eq .Type "image" }}
-      {{ partial "idx_image.html" . }}
-      <hr>
-    {{- end }}
-  {{ end }}
-{{ end }}
+{{ $paginator := .Paginate (after 1 .Site.Pages) 20 }}
 
 {{- range $paginator.Pages }}
   {{ if eq .Type "post" }}
     {{ .Render "summary" }}
   {{- end }}
   {{ if eq .Type "image" }}
-    {{ partial "idx_image.html" . }}
+      {{ partial "post_header.html" . }}
+        {{ .Render "summary" }}
+      {{ partial "post_footer.html" . }}
   {{- end }}
 {{- end }}
 
