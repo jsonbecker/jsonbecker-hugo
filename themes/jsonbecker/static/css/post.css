@@ -282,3 +282,9 @@ footer img {
 .paginator {
   margin: 2em 0 2em 0;
 }
+
+.twitter-tweet {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
