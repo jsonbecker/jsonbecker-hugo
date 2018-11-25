@@ -36,6 +36,10 @@ pre, code {
   font-size: 1rem;
 }
 
+.p-author {
+  display: none;
+}
+
 .post-list {
   
 }
@@ -78,10 +82,13 @@ pre, code {
 
 .date {
   float: left;
+  font-size: 0.875 rem;
+  color: #00997C;
 }
 
 .perma {
   float: right;
+  font-size: 1 rem;
 }
 
 .perma a {
