@@ -173,13 +173,14 @@ pre, code {
 
 .date {
   float: left;
-  font-size: 0.875 rem;
+  font-size: 1em; 
+  font-weight: 400;
   color: #00997C;
 }
 
 .perma {
   float: right;
-  font-size: 1 rem;
+  font-size: 1em;
 }
 
 .perma a {
@@ -196,7 +197,8 @@ pre, code {
 }
 
 .post-title h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  margin-bottom: 0.25em;
 }
 
 .post-title {
