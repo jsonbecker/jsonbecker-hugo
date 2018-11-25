@@ -1,17 +1,18 @@
-  <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>{{ .Title }}</h1>
-    <h6 class = "date">{{ .Date.Format "January 02, 2006" }}</h6> 
-    <h6 class = "perma"><a href = "{{ .Permalink }}">&infin;</a></h6>
-    </div>
+<article class = "h-entry col-9">
+  <div class = "row post-title">
+      <h1 class = "p-name" itemprop = "name headline">{{ .Title }}</h1>
+    <div class = "date dt-published">{{ .Date.Format "January 02, 2006" }}</div> 
+    <div class = "perma"><a class = "u-url" href = "{{ .Permalink }}">&infin;</a></div>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
+  <div class = "row p-summary">
       {{ .Summary }}
       {{ if .Truncated }}
-        <h6 class="perma"><a href="{{ .RelPermalink }}">Read More&hellip;</a></h6>
+        <div class="perma">
+          <a href="{{ .RelPermalink }}">Read More&hellip;</a>
+        </div>
       {{ end }}
-    </div>
-    <hr>
   </div>
+  <span class = "p-author"> {{ .Params.author | default .Site.Author.name }}</span>
+  <hr>
+</article>
 
