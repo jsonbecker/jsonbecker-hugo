@@ -1,4 +1,19 @@
 {{ partial "header.html" . }}
-  {{ partial "idx_image.html" . }}
+  {{ partial "post_header.html" . }}
+  <div class = 'row center'>
+      <a href= {{ (print "#" .Title) | urlize }}>
+       <figure>
+         <img src = {{ .Params.image }}>
+         <figcaption> {{ .Params.caption }} </figcaption>
+       </figure>
+     </a>
+     <a href="#_" class="lightbox" id = {{ .Title | urlize }}>
+       <figure>
+         <img src = {{ .Params.image }}>
+         <figcaption> {{ .Params.caption }} </figcaption>
+       </figure>
+     </a>
+  </div>
+  {{ partial "post_footer.html" . }}
 {{ partial "footer.html" . -}}
 
