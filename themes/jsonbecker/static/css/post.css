@@ -78,6 +78,17 @@ p {
   grid-auto-rows: auto 1fr auto;
 }
 
+@media screen and (max-width: 600px) {
+  .site {
+    grid-template-areas: "header"
+                         "content"
+                         "sidebar"
+                         "footer";
+    grid-template-columns: 90%;
+    grid-auto_rows: auto 1fr auto auto;
+  }
+}
+
 main {
   grid-area: content;
 }
