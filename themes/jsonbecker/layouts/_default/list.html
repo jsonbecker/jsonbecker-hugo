@@ -1,12 +1,8 @@
-{{ partial "header.html" . }}  
-  <div class = 'container'>
-      <div class = 'col-12'>
-        {{- range .Site.Pages }}
-          {{ if or (eq .Type "post") (eq .Type "image") }} 
-            {{ partial "li.html" . }}
-          {{- end}}
-        {{- end}}
-      </div>
-  </div>
+<html>
+<body>
+  <h1> Archive of Posts </h1>
+  {{- range .Data.Pages.ByDate }}
+    {{ partial "li.html" . }}
+  {{- end}}
 </body>
 </html>
