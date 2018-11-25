@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   {{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -13,14 +12,14 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
+<body class='site'>
+    <header class = "title-bar">
+      <span class = "site-title"> json.blog </span>
+      <nav class = "nav">
           <a href = "{{ .Site.BaseURL }}">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+      </nav>
+    </header>
+  <main> 
 
