@@ -150,18 +150,19 @@ pre, code {
   left: 0;
   top: 0;
   padding: 0 20 0 20;
+  display: flex;
+  align-items: center;
 }
 
-.title-bar .title {
+.site-title {
   float: left;
-  bottom: 0;
   color: #FFFFFF;
+  font-size: 2em;
+  width: 80%;
 }
 
 .title-bar .nav {
   float: right;
-  bottom: 0;
-  -webkit-margin-before: 1.25em;
   color: #FFFFFF;
 }
 
