@@ -12,19 +12,12 @@
       {{ partial "post_footer.html" . }}
   {{- end }}
 {{- end }}
-
-  <div class ="row">
-    <div class = "col-12">
-      {{ if .Paginator.HasPrev }}
-        <a class = "left" href="{{ .Paginator.Prev.URL }}">
-          &larr; Previous Page
-        </a>
-      {{ end }}
-      {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}" style = "float: right;">
-          Next Page &rarr;
-        </a>
-      {{ end }}
-    </div>
-  </div>
+<div class = "paginator">
+{{ if .Paginator.HasPrev }}
+  <a class = "left" href="{{ .Paginator.Prev.URL }}">&larr;Previous Page</a>
+{{ end }}
+{{ if .Paginator.HasNext }}
+  <a href="{{ .Paginator.Next.URL }}" style = "float: right;">Next Page&rarr;</a>
+{{ end }}
+</div>
 {{ partial "footer.html" . }}

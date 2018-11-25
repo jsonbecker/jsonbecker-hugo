@@ -74,7 +74,7 @@ p {
   grid-template-areas: "header header header"
                        ". content sidebar"
                        "footer footer footer";
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 2fr;
   grid-auto-rows: minmax(4em, auto);
 }
 
@@ -274,4 +274,8 @@ footer {
 footer img {
 	display: block;
 	margin: auto;
+}
+
+.paginator {
+  margin: 2em 0 2em 0;
 }
