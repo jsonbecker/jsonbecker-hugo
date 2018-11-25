@@ -75,7 +75,7 @@ p {
                        ". content sidebar"
                        "footer footer footer";
   grid-template-columns: 1fr 3fr 2fr;
-  grid-auto-rows: minmax(4em, auto);
+  grid-auto-rows: auto 1fr auto;
 }
 
 main {
@@ -86,7 +86,7 @@ article {
   display: grid;
   grid-template-areas: "post-title"
                        "post-content";
-  grid-auto-rows: minmax(4em, auto);
+  grid-auto-rows: auto 1fr;
 }
 
 * {
