@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -10,28 +9,27 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
+<body class='site'>
+    <header class = "title-bar">
+      <span class = "site-title"> json.blog </span>
+      <nav class = "nav">
           <a href = "http://www.json.blog">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Symlinking Your Data</h1>
-    <h6 class = "date">April 02, 2014</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2014/04/symlinking-your-data/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+      <h1 class = "p-name">Symlinking Your Data</h1>
+    <time class = "date dt-published">April 02, 2014</time> 
+    <div class = "perma"><a class = "u-url" href = "http://www.json.blog/2014/04/symlinking-your-data/">&infin;</a></div>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      <p>I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by <a href="http://support.apple.com/kb/HT1578?viewlocale=en_US&amp;locale=en_US">creating encrypted disk images</a> with secure passwords (stored in <a href="https://agilebits.com">1Password</a>). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow. I just have to remember to mount and unmount the disk images.</p>
+
+ <div class = "post-content e-content">
+   <p>I frequently work with private data. Sometimes, it lives on my personal machine rather than on a database server. Sometimes, even if it lives on a remote database server, it is better that I use locally cached data than query the database each time I want to do analysis on the data set. I have always dealt with this by <a href="http://support.apple.com/kb/HT1578?viewlocale=en_US&amp;locale=en_US">creating encrypted disk images</a> with secure passwords (stored in <a href="https://agilebits.com">1Password</a>). This is a nice extra layer of protection for private data served on a laptop, and it adds little complication to my workflow. I just have to remember to mount and unmount the disk images.</p>
 
 <p>However, it can be inconvenient from a project perspective to refer to data in a distant location like <code>/Volumes/ClientData/Entity/facttable.csv</code>. In most cases, I would prefer the data &ldquo;reside&rdquo; in <code>data/</code> or <code>cache/</code> &ldquo;inside&rdquo; of my project directory.</p>
 
@@ -53,10 +51,14 @@
 
 <p>One of the first things I do when setting up a new analysis is add common data storage file extensions like <code>.csv</code> and <code>.xls</code> to my <code>.gitignore</code> file so that I do not mistakenly put any data in a remote repository. The second thing I do is set up symlinks to the mount location of the encrypted data.</p>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason P. Becker</a>
+  </span>
+</article>
 
-  </div>
+
+  </main>
   <footer class = "license center">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
     <script>

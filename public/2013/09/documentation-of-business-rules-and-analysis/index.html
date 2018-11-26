@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -10,28 +9,27 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
+<body class='site'>
+    <header class = "title-bar">
+      <span class = "site-title"> json.blog </span>
+      <nav class = "nav">
           <a href = "http://www.json.blog">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Documentation of Business Rules and Analysis</h1>
-    <h6 class = "date">September 13, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+      <h1 class = "p-name">Documentation of Business Rules and Analysis</h1>
+    <time class = "date dt-published">September 13, 2013</time> 
+    <div class = "perma"><a class = "u-url" href = "http://www.json.blog/2013/09/documentation-of-business-rules-and-analysis/">&infin;</a></div>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      <p>One of the most challenging aspects of being a data analyst is translating programmatic terms like &ldquo;student mobility&rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.</p>
+
+ <div class = "post-content e-content">
+   <p>One of the most challenging aspects of being a data analyst is translating programmatic terms like &ldquo;student mobility&rdquo; into precise business rules. Almost any simple statistic involves a series of decisions that are often opaque to the ultimate users of that statistic.</p>
 
 <p>Documentation of business rules is a critical aspect of a data analysts job that, in my experience, is often regrettably overlooked. If you have ever tried to reproduce someone else&rsquo;s analysis, asked different people for the same statistic, or tried to compare data from multiple years, you have probably encountered difficulties getting a consistent answer on standard statistics, e.g. how many students were proficient in math, how many students graduated in four years, what proportion of students were chronically absent? All too often documentation of business rules is poor or non-existent. The result is that two analysts with the same data will produce inconsistent statistics. This is not because of something inherent in the quality of the data or an indictment of the analyst&rsquo;s skills. In most cases, the undocumented business rules are essentially trivial, in that the results of any decision has a small impact on the final result and any of the decisions made by the analysts are equally defensible.</p>
 
@@ -67,10 +65,14 @@
 </ol>
 </div>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason P. Becker</a>
+  </span>
+</article>
 
-  </div>
+
+  </main>
   <footer class = "license center">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
     <script>

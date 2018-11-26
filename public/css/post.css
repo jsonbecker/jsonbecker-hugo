@@ -2,6 +2,104 @@
 
 /* Root Fonts */
 
+body {
+  margin: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+.site {
+  display: grid;
+  grid-template-areas: "header header header"
+                       ". content sidebar"
+                       "footer footer footer";
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-auto-rows: auto 1fr auto;
+}
+
+@media screen and (max-width: 600px) {
+  .site {
+    grid-template-areas: "header"
+                         "content"
+                         "sidebar"
+                         "footer";
+    grid-template-columns: 90%;
+    grid-auto_rows: auto 1fr auto auto;
+  }
+}
+
+main {
+  grid-area: content;
+}
+
+article {
+  display: grid;
+  grid-template-areas: "post-title"
+                       "post-content";
+  grid-auto-rows: auto 1fr;
+}
+
 * {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -36,6 +134,10 @@ pre, code {
   font-size: 1rem;
 }
 
+.h-card{
+  display: none;
+}
+
 .post-list {
   
 }
@@ -43,6 +145,7 @@ pre, code {
 .gutter{
   clear: both;
 }
+
 .post-item {
   list-style-type: none;
   clear: both;
@@ -53,21 +156,24 @@ pre, code {
 
 .title-bar {
   background-color: #00997C;
-  height: 4em;
+  grid-area: header;
   max-width: 100vw;
+  left: 0;
+  top: 0;
   padding: 0 20 0 20;
+  display: flex;
+  align-items: center;
 }
 
-.title-bar .title {
+.site-title {
   float: left;
-  bottom: 0;
   color: #FFFFFF;
+  font-size: 2em;
+  width: 80%;
 }
 
 .title-bar .nav {
   float: right;
-  bottom: 0;
-  -webkit-margin-before: 1.25em;
   color: #FFFFFF;
 }
 
@@ -78,10 +184,14 @@ pre, code {
 
 .date {
   float: left;
+  font-size: 1em; 
+  font-weight: 400;
+  color: #00997C;
 }
 
 .perma {
   float: right;
+  font-size: 1em;
 }
 
 .perma a {
@@ -98,7 +208,16 @@ pre, code {
 }
 
 .post-title h1 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  margin-bottom: 0.25em;
+}
+
+.post-title {
+  grid-area: post-title;
+}
+
+.post-content {
+  grid-area: post-content;
 }
 
 figure {
@@ -157,15 +276,26 @@ th {
   border-collapse: collapse;
   font-weight: 700;
 }
-
-footer.license {
+footer {
+  grid-area: footer;
   background-color: #00997C;
   color: #fff;
   padding: 10 0 10 0;
   font-size: 0.75em;
+  width: 100%
 }
 
 footer img {
 	display: block;
 	margin: auto;
+}
+
+.paginator {
+  margin: 2em 0 2em 0;
+}
+
+.twitter-tweet {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

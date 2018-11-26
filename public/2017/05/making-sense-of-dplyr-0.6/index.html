@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -10,28 +9,27 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
+<body class='site'>
+    <header class = "title-bar">
+      <span class = "site-title"> json.blog </span>
+      <nav class = "nav">
           <a href = "http://www.json.blog">Home</a> |
           <a href = "/archive">Archives</a> |
           <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Making Sense of dplyr 0.6</h1>
-    <h6 class = "date">May 18, 2017</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+      <h1 class = "p-name">Making Sense of dplyr 0.6</h1>
+    <time class = "date dt-published">May 18, 2017</time> 
+    <div class = "perma"><a class = "u-url" href = "http://www.json.blog/2017/05/making-sense-of-dplyr-0.6/">&infin;</a></div>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      
+
+ <div class = "post-content e-content">
+   
 
 <p>Non-standard evaluation is one of R&rsquo;s best features, and also one of it&rsquo;s most perplexing. Recently I have been making good use of <code>wrapr::let</code> to allow me to write reusable functions without a lot of assumptions about my data. For example, let&rsquo;s say I always want to <code>group_by</code> schools when adding up dollars spent, but that sometimes my data calls what is conceptually a school <code>schools</code>, <code>school</code>, <code>location</code>, <code>cost_center</code>, <code>Loc.Name</code>, etc. What I have been doing is storing a set of parameters in a <code>list</code> that mapped the actual names in my data to consistent names I want to use in my code. Sometimes that comes from using <code>params</code> in an Rmd file. So the top of my file may say something like:</p>
 
@@ -103,10 +101,14 @@ parse(text = body)
 
 <p>I originally wrote this post trying to understand <code>enquo</code>, but I never got it to work right and it makes no sense to me yet. What&rsquo;s great is that <code>rlang::sym</code> and <code>rlang::syms</code> with <code>!!</code> and <code>!!!</code> respectively work really well so far. There is definitely less flexibility&ndash; with the full on <code>quosure</code> stuff you can have very complex evaluations. But I&rsquo;m mostly worried about having very generic names for my data so <code>sym</code> and <code>syms</code> seems to work great.</p>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason P. Becker</a>
+  </span>
+</article>
 
-  </div>
+
+  </main>
   <footer class = "license center">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
     <script>
