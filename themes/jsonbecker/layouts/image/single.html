@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
   {{ partial "post_header.html" . }}
-  <div class = 'row center'>
+  <div class = 'post-content e-content center'>
       <a href= {{ (print "#" .Title) | urlize }}>
        <figure>
          <img src = {{ .Params.image }}>
