@@ -9,13 +9,16 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body class='site'>
+<body>
+  <div class = "site">
     <header class = "title-bar">
-      <span class = "site-title"> json.blog </span>
-      <nav class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
-          <a href = "/archive">Archives</a> |
-          <a href = "http://jsonbecker.com">About</a>
+      <nav>
+        <span class = "site-title"> <a href = "http://www.json.blog">json.blog </a></span>
+        <span class = "nav">
+          <a href = "https://jsonbecker.com">About</a>
+          <a href = "https://micro.json.blog" rel="me">Micro</a>
+          <a href = "https://www.github.com/jsonbecker">Github</a>
+        </span>
       </nav>
     </header>
   <main> 
@@ -23,9 +26,8 @@
 
  <article class = "h-entry">
   <div class = "post-title">
-      <h1 class = "p-name">Naming Manual Colors with ggplot2</h1>
     <time class = "date dt-published">January 03, 2018</time> 
-    <div class = "perma"><a class = "u-url" href = "http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/">&infin;</a></div>
+    <h1 class = "p-name"><a class = "u-url" href = "http://www.json.blog/2018/01/naming-manual-colors-with-ggplot2/">Naming Manual Colors with ggplot2</a></h1>
   </div>
 
  <div class = "post-content e-content">
@@ -50,8 +52,7 @@ scale_blah_manual(values = c(good = 'green', bad = 'red'))
 
 
   </main>
-  <footer class = "license center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  <footer> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -62,5 +63,6 @@ scale_blah_manual(values = c(good = 'green', bad = 'red'))
   ga('send', 'pageview');
 </script>
 </footer>
+    </div>
     </body>
 </html>
