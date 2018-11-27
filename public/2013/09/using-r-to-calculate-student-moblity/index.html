@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -11,27 +10,28 @@
     hljs.initHighlightingOnLoad();
   </script>
 <body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
-          <a href = "/archive">Archives</a> |
-          <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+  <div class = "site">
+    <header class = "title-bar">
+      <nav>
+        <span class = "site-title"> <a href = "http://www.json.blog">json.blog </a></span>
+        <span class = "nav">
+          <a href = "https://jsonbecker.com">About</a>
+          <a href = "https://micro.json.blog" rel="me">Micro</a>
+          <a href = "https://www.github.com/jsonbecker">Github</a>
+        </span>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Using R to Calculate Student Moblity</h1>
-    <h6 class = "date">September 23, 2013</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+    <time class = "date dt-published">September 23, 2013</time> 
+    <h1 class = "p-name"><a class = "u-url" href = "http://www.json.blog/2013/09/using-r-to-calculate-student-moblity/">Using R to Calculate Student Moblity</a></h1>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      
+
+ <div class = "post-content e-content">
+   
 
 <p>In a couple of previous posts, I outlined the importance of <a href="filename|documentation-of-business-rules-and-analysis.md">documenting business rules for common education statistics</a> and described my take on how to <a href="new-calculation-for-student-mobility.md">best calculate student mobility</a>. In this post, I will be sharing two versions of R function I wrote to implement this mobility calculation, reviewing their different structure and methods to reveal how I achieved an order of magnitude speed up between the two versions. <sup class="footnote-ref" id="fnref:optimization"><a href="#fn:optimization">1</a></sup> At the end of this post, I will propose several future routes for optimization that I believe should lead to the ability to handle millions of student records in seconds.</p>
 
@@ -462,12 +462,15 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
 </ol>
 </div>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason P. Becker</a>
+  </span>
+</article>
 
-  </div>
-  <footer class = "license center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  </main>
+  <footer> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -478,5 +481,6 @@ output[id %in% last[exit_date&lt;exitby][[sid]], moves:=moves+1L]
   ga('send', 'pageview');
 </script>
 </footer>
+    </div>
     </body>
 </html>

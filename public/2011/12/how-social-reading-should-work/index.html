@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -11,27 +10,28 @@
     hljs.initHighlightingOnLoad();
   </script>
 <body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
-          <a href = "/archive">Archives</a> |
-          <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+  <div class = "site">
+    <header class = "title-bar">
+      <nav>
+        <span class = "site-title"> <a href = "http://www.json.blog">json.blog </a></span>
+        <span class = "nav">
+          <a href = "https://jsonbecker.com">About</a>
+          <a href = "https://micro.json.blog" rel="me">Micro</a>
+          <a href = "https://www.github.com/jsonbecker">Github</a>
+        </span>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>How Social Reading Should Work</h1>
-    <h6 class = "date">December 08, 2011</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2011/12/how-social-reading-should-work/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+    <time class = "date dt-published">December 08, 2011</time> 
+    <h1 class = "p-name"><a class = "u-url" href = "http://www.json.blog/2011/12/how-social-reading-should-work/">How Social Reading Should Work</a></h1>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      
+
+ <div class = "post-content e-content">
+   
 
 <p>I am becoming increasingly frustrated by the failure of all the major players to get social right. I have a very simple dream for how the social web should work and its baffling to me that many obvious use-cases have not been addressed at all by Facebook, Twitter, or Google.</p>
 
@@ -60,12 +60,15 @@ experience.</p>
 
 <p>For me, the social web has to start with providing me with a single space that aggregates what I want to read on the web. If content is not easy for me to get access to, I&rsquo;m never going to even worry about being satisfied with my options for sharing. Social fails right now because they haven&rsquo;t gotten the reading paradigm right. It&rsquo;s nowhere close to handling the three major domains&ndash;bookmarking, collecting, and streaming&ndash; effectively under a single attractive interface. I think Google is the closest. If you combine some of the features in Currents, their new attractive mobile reader that works great for bookmarking, with some of the critical features in Google Reader, right now the best collector, then I&rsquo;m very close to an ideal reading experience. My hope is that someone will find a way to combine all three and then provide the robust sharing features I&rsquo;ll write about in my next post.</p>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason</a>
+  </span>
+</article>
 
-  </div>
-  <footer class = "license center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  </main>
+  <footer> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -76,5 +79,6 @@ experience.</p>
   ga('send', 'pageview');
 </script>
 </footer>
+    </div>
     </body>
 </html>

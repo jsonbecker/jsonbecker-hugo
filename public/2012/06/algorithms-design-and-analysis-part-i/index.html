@@ -1,7 +1,6 @@
 <html>
 <head>
   <link href = "https://micro.blog/jsonbecker" rel = "me" />
-  <link href = "/css/simple-grid.css" rel = "stylesheet" type = "text/css">
   <link href = "/css/post.css" rel = "stylesheet" type = "text/css">
   
   <link rel="stylesheet" href="/css/tomorrow-night-bright.css">
@@ -11,27 +10,28 @@
     hljs.initHighlightingOnLoad();
   </script>
 <body>
-    <div class = "title-bar">
-      <h1 class = "title"> json.blog </h1>
-      <h3 class = "nav">
-          <a href = "http://www.json.blog">Home</a> |
-          <a href = "/archive">Archives</a> |
-          <a href = "http://jsonbecker.com">About</a>
-      </h3>
-    </div>
-  <div class = 'container'>
+  <div class = "site">
+    <header class = "title-bar">
+      <nav>
+        <span class = "site-title"> <a href = "http://www.json.blog">json.blog </a></span>
+        <span class = "nav">
+          <a href = "https://jsonbecker.com">About</a>
+          <a href = "https://micro.json.blog" rel="me">Micro</a>
+          <a href = "https://www.github.com/jsonbecker">Github</a>
+        </span>
+      </nav>
+    </header>
+  <main> 
 
 
-    <div class = 'row post-title'>
-    <div class = 'col-12'>
-      <h1>Algorithms Design and Analysis Part I</h1>
-    <h6 class = "date">June 13, 2012</h6> 
-    <h6 class = "perma"><a href = "http://www.json.blog/2012/06/algorithms-design-and-analysis-part-i/">&infin;</a></h6>
-    </div>
+ <article class = "h-entry">
+  <div class = "post-title">
+    <time class = "date dt-published">June 13, 2012</time> 
+    <h1 class = "p-name"><a class = "u-url" href = "http://www.json.blog/2012/06/algorithms-design-and-analysis-part-i/">Algorithms Design and Analysis Part I</a></h1>
   </div>
-  <div class = 'row'>
-    <div class = 'col-12'>
-      
+
+ <div class = "post-content e-content">
+   
 
 <p>Tonight I started Coursera.org&rsquo;s <a href="http://www.algo-class.org">Algorithms: Design and Analysis Part I</a>. This class should pick up right about where I left off my computer science education. I took <a href="http://www.cs.brown.edu/courses/csci0150.html">CS15</a> as a sophomore in college but didn&rsquo;t have the time to take <a href="http://www.cs.brown.du/courses/csci0160html">CS16: Introduction to Algorithms and Data Structures</a>. So, while it&rsquo;s been almost 6 years since I have formally taken a computer science class, it is time to continue my education.</p>
 
@@ -57,12 +57,15 @@ my mind when a few minutes later it hit me; the two terms kept the place inform
 </ol>
 </div>
 
-    </div>
-  </div>
+ </div>
+ <span class = "h-card">
+    <a class ="p-author u-url"a href="http://jsonbecker.com"> Jason</a>
+  </span>
+</article>
 
-  </div>
-  <footer class = "license center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: #fff;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  </main>
+  <footer> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,5 +76,6 @@ my mind when a few minutes later it hit me; the two terms kept the place inform
   ga('send', 'pageview');
 </script>
 </footer>
+    </div>
     </body>
 </html>

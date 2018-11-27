@@ -12,13 +12,16 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-<body class='site'>
+<body>
+  <div class = "site">
     <header class = "title-bar">
-      <span class = "site-title"> json.blog </span>
-      <nav class = "nav">
-          <a href = "{{ .Site.BaseURL }}">Home</a> |
-          <a href = "/archive">Archives</a> |
-          <a href = "http://jsonbecker.com">About</a>
+      <nav>
+        <span class = "site-title"> <a href = "{{ .Site.BaseURL }}">json.blog </a></span>
+        <span class = "nav">
+          <a href = "https://jsonbecker.com">About</a>
+          <a href = "https://micro.json.blog" rel="me">Micro</a>
+          <a href = "https://www.github.com/jsonbecker">Github</a>
+        </span>
       </nav>
     </header>
   <main> 
