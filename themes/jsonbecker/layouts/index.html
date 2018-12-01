@@ -1,8 +1,6 @@
 {{ partial "header.html" . }}  
 
-{{ $paginator := .Paginate (after 1 .Site.Pages) 20 }}
-
-{{- range $paginator.Pages }}
+{{- range .Paginator.Pages }}
   {{ if eq .Type "post" }}
     {{ .Render "summary" }}
   {{- end }}
