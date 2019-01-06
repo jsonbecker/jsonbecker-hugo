@@ -41,8 +41,6 @@ to get into Downcity without a car, hopefully reducing the need for
 parking. There are also substantial parking capacity that's
 underutilized in the many surface lots and parking garages in the area.
 
-![A great shot from Flickr of Westminster at night][] [^sourceone]
-
 As far as I can tell, there is really no need for Westminster to have
 street traffic. A dedicated ROW will increase the speed and
 predictability of the streetcar. Additional pedestrian space along
@@ -65,7 +63,4 @@ question.
 [boutique]: http://www.queenofheartsandmodernlove.com/
 [shopping]: http://www.shopwarf.com
 [URI]: http://www.uri.edu/prov/
-[A great shot from Flickr of Westminster at night]: http://blog.jasonpbecker.com/wp-content/uploads/2011/11/4256071978_aaf18cb143_z.jpg
-  "Westminster at Night"
 
-[^sourceone]: Sourced from http://www.flickr.com/photos/ranjith-pix/

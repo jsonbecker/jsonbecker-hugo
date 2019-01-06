@@ -1,4 +1,4 @@
-baseurl = "http://www.json.blog"
+baseurl = "https://www.json.blog"
 languageCode = "en-us"
 title = "JSONBecker"
 theme = 'jsonbecker'
