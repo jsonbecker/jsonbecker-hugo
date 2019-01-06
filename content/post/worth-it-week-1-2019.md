@@ -8,7 +8,7 @@ date: "2019-01-05"
 
 A good read on Adam's decision to dive away from reading as much philosophy as he can get his hands on and instead begin diving into fiction and poetry. While I share his view that he has "set [himself] up to argue with the Jamesons rather than the Geoghegans", and believe me this is worth reading just to appreciate that line, I am decidely less optimistic than he is on the power of the humanities and literature to reveal truth.
 
-## [The relentless honesty of Ludwig Wittgenstein] https://www.the-tls.co.uk/articles/public/ludwig-wittgenstein-honesty-ground/
+## [The relentless honesty of Ludwig Wittgenstein](https://www.the-tls.co.uk/articles/public/ludwig-wittgenstein-honesty-ground/)
 
 Why not pair someone walking away from philosophy with an account of a famed philosopher whose philsophy was, itself, rejecting modern philosophy (and post-Enlightenment leanings of all kinds, it seems).
 
