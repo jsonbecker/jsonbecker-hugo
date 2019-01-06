@@ -2,6 +2,8 @@
 title: "Reading Women the Last Three Years"
 author: "Jason Beckedr"
 date: "2019-01-01"
+image: 
+ - books_by_year_and_gender.png
 ---
 
 A lot of people in my life are trying to diversify who they read. I know I'm doing poorly on reading people of color, but I felt subconsciously like I read quite a few books by women. So I decided to check the last three years of books I've read.
