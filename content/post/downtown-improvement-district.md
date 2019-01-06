@@ -7,8 +7,6 @@ tags: core connector, department of planning and development, downcity, jewelry 
 summary: My favorite tax bill.
 ---
 
-[![DID taking care of Downcity planters][]][][/caption]
-
 I am a firm believer that some goods *should be* [public][]. I do not believe that my tax dollars are about providing *direct* personal benefit. I like redistributed tax policy. But it is hard to be a Rhode Islander, surrounded by government institutions [that][] are
 [failing][], and feel good about the taxes I pay. Corruption and [cronyism][] is a daily reality of government business. Some agencies have [tremendous waste and inefficiency][]. Worse, many public institutions that are failing their mission and wasting money are actually woefully underfunded. [^underfunded]
 
@@ -31,8 +29,6 @@ When the currently dormant[^0] [Providence Core Connector][] announced they woul
 portion of my support came from the simple economics, but I would be lying if I did not admit that the wonderful relationship I have with the Downtown Improvement District was not a part of my consideration. The DID has provided an excellent model to Downcity residents demonstratingthe efficacy of using the greatest (but not sole) beneficiary of place-bound services as a revenue source. Does anyone really believe that Downtown would have doubled its residency from 2000-2010 [^census] if the DID were not around?
 
  
-[DID taking care of Downcity planters]: http://blog.jasonpbecker.com/wp-content/uploads/2012/04/did5.jpeg "DID Doing a Great Job"
-[![DID taking care of Downcity planters][]]: http://www.providenceri.com/CityNews/newsletter2.php?id=290
 [public]: http://en.wikipedia.org/wiki/Public_goods
 [that]: http://www.golocalprov.com/news/julia-steiny-woonsockets-nosedive-a-cautionary-tale/
 [failing]: http://www.golocalprov.com/news/procap/
