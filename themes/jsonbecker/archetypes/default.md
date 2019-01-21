@@ -1,5 +1,5 @@
 ---
 title: ""
 author: ""
-date: ""
+date: {{ .Date }}
 ---
