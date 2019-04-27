@@ -15,8 +15,8 @@ The future used to have sharp angles, and I miss this aesthetic.
 
 ## [Steve King shows how "racism" went off-limits](https://www.vox.com/policy-and-politics/2019/1/16/18183799/gop-steve-king-conservatism-racism-language-politics)
 
-> “I think that the way a better part of America defines what a racist is someone who self identifies as a white nationalist or a white supremacist,” said Ibram X. Kendi, a historian at American University and author of Stamped From the Beginning: The Definitive History of Racist Ideas in America. “Someone who is in the Ku Klux Klan, someone who says the n-word, someone who engages in racial violence. Anything else, according to them, is not racist.”
-> We tend to define racism in a way that will not implicate our own views or ideas. “I think people define racism in a way that exonerates them. If they can narrow [the definition of racism] as much as possible to things they are not saying or doing or are about, that leaves them off the hook,” Kendi continued.
+> "I think that the way a better part of America defines what a racist is someone who self identifies as a white nationalist or a white supremacist," said Ibram X. Kendi, a historian at American University and author of Stamped From the Beginning: The Definitive History of Racist Ideas in America. "Someone who is in the Ku Klux Klan, someone who says the n-word, someone who engages in racial violence. Anything else, according to them, is not racist."
+> We tend to define racism in a way that will not implicate our own views or ideas. "I think people define racism in a way that exonerates them. If they can narrow [the definition of racism] as much as possible to things they are not saying or doing or are about, that leaves them off the hook," Kendi continued.
 
 When we can't call a thing racist any more, we can't deal with racism. It's as though it does not exist.
 
