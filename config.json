@@ -1,0 +1,98 @@
+{
+    "title": "micro",
+    "theme": "jsonbecker",
+    "author": {
+    	"name": "micro",
+    	"avatar": "https://micro.blog/jsonbecker/avatar.jpg",
+    	"username": "jsonbecker"
+    },
+    "baseURL": "https://micro.json.blog",
+    "outputFormats": {
+	  	"RSS": {
+	  		"baseName": "feed"
+	  	},
+    	"JSON": {
+	  		"baseName": "feed"
+	  	},
+	  	"RSD": {
+	  		"mediaType": "application/xml",
+	  		"baseName": "rsd",
+	  		"isPlainText": true,
+	  		"notAlternative": true
+  		},
+    	"ArchiveHTML": {
+	  		"mediaType": "text/html",
+	  		"path": "archive",
+	  		"baseName": "index",
+	  		"isPlainText": false,
+	  		"notAlternative": true
+	  	},
+	  	"ArchiveJSON": {
+	  		"mediaType": "application/json",
+	  		"path": "archive",
+	  		"baseName": "index",
+	  		"isPlainText": true,
+	  		"notAlternative": true
+	  	},
+      "PhotosJSON": {
+  			"mediaType": "application/json",
+			  "path": "photos",
+  			"baseName": "index",
+  			"isPlainText": true,
+  			"notAlternative": true
+  		},
+  		"PodcastXML": {
+  			"mediaType": "application/rss+xml",
+  			"baseName": "podcast",
+  			"isPlainText": true,
+  			"notAlternative": true
+  		}
+	  },
+	"outputs": {
+		"home": [ "HTML", "RSS", "JSON"],
+		"section": [ "HTML" ]
+	},
+	"taxonomies": {
+		"category": "categories"
+  },	
+	"rssLimit": 25,
+	"uglyURLs": false,
+	"blackfriday": {
+		"fractions": false
+	},
+	"languageCode": "en",
+	"params": {
+		"description": "Follow <a href=\"https://micro.blog/jsonbecker\">@jsonbecker on Micro.blog</a>.",
+		"twitter_username": "jsonbecker",
+		"github_username": "jsonbecker",
+		"instagram_username": "jsonbecker",
+		"site_id": "micro.json.blog"
+	},
+  "markup": {
+      "blackFriday": {
+         "angledQuotes": false,
+         "extensions": null,
+         "extensionsMask": null,
+         "footnoteAnchorPrefix": "",
+         "footnoteReturnLinkContents": "",
+         "fractions": true,
+         "hrefTargetBlank": false,
+         "latexDashes": true,
+         "nofollowLinks": false,
+         "noreferrerLinks": false,
+         "plainIDAnchors": true,
+         "skipHTML": false,
+         "smartDashes": true,
+         "smartypants": true,
+         "smartypantsQuotesNBSP": false,
+        "style": "dracula",
+         "taskLists": true
+      },
+    "goldmark": {
+      "renderer": {
+        "unsafe" : true
+      }
+    }
+  }
+}
+
